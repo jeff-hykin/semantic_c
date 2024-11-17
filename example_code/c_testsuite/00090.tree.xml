@@ -1,0 +1,109 @@
+<translation_unit>
+    <declaration>
+        <primitive_type text="int" />
+        <init_declarator>
+            <array_declarator>
+                <identifier text="a" />
+                <"[" text="[" />
+                <number_literal text="3" />
+                <"]" text="]" />
+            </array_declarator>
+            <"=" text="=" />
+            <initializer_list>
+                <"{" text="{" />
+                <number_literal text="0" />
+                <"," text="," />
+                <number_literal text="1" />
+                <"," text="," />
+                <number_literal text="2" />
+                <"}" text="}" />
+            </initializer_list>
+        </init_declarator>
+        <";" text=";" />
+    </declaration>
+    <function_definition>
+        <primitive_type text="int" />
+        <function_declarator>
+            <identifier text="main" />
+            <parameter_list>
+                <"(" text="(" />
+                <")" text=")" />
+            </parameter_list>
+        </function_declarator>
+        <compound_statement>
+            <"{" text="{" />
+            <if_statement>
+                <if text="if" />
+                <parenthesized_expression>
+                    <"(" text="(" />
+                    <binary_expression>
+                        <subscript_expression>
+                            <identifier text="a" />
+                            <"[" text="[" />
+                            <number_literal text="0" />
+                            <"]" text="]" />
+                        </subscript_expression>
+                        <"!=" text="!=" />
+                        <number_literal text="0" />
+                    </binary_expression>
+                    <")" text=")" />
+                </parenthesized_expression>
+                <return_statement>
+                    <return text="return" />
+                    <number_literal text="1" />
+                    <";" text=";" />
+                </return_statement>
+            </if_statement>
+            <if_statement>
+                <if text="if" />
+                <parenthesized_expression>
+                    <"(" text="(" />
+                    <binary_expression>
+                        <subscript_expression>
+                            <identifier text="a" />
+                            <"[" text="[" />
+                            <number_literal text="1" />
+                            <"]" text="]" />
+                        </subscript_expression>
+                        <"!=" text="!=" />
+                        <number_literal text="1" />
+                    </binary_expression>
+                    <")" text=")" />
+                </parenthesized_expression>
+                <return_statement>
+                    <return text="return" />
+                    <number_literal text="2" />
+                    <";" text=";" />
+                </return_statement>
+            </if_statement>
+            <if_statement>
+                <if text="if" />
+                <parenthesized_expression>
+                    <"(" text="(" />
+                    <binary_expression>
+                        <subscript_expression>
+                            <identifier text="a" />
+                            <"[" text="[" />
+                            <number_literal text="2" />
+                            <"]" text="]" />
+                        </subscript_expression>
+                        <"!=" text="!=" />
+                        <number_literal text="2" />
+                    </binary_expression>
+                    <")" text=")" />
+                </parenthesized_expression>
+                <return_statement>
+                    <return text="return" />
+                    <number_literal text="3" />
+                    <";" text=";" />
+                </return_statement>
+            </if_statement>
+            <return_statement>
+                <return text="return" />
+                <number_literal text="0" />
+                <";" text=";" />
+            </return_statement>
+            <"}" text="}" />
+        </compound_statement>
+    </function_definition>
+</translation_unit>

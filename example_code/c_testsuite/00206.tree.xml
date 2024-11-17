@@ -1,0 +1,165 @@
+<translation_unit>
+    <preproc_include>
+        <#include text="#include" />
+        <system_lib_string text="<stdio.h>" />
+    </preproc_include>
+    <function_definition>
+        <primitive_type text="int" />
+        <function_declarator>
+            <identifier text="main" />
+            <parameter_list>
+                <"(" text="(" />
+                <")" text=")" />
+            </parameter_list>
+        </function_declarator>
+        <compound_statement>
+            <"{" text="{" />
+            <comment text="/* must not affect how #pragma ppop_macro works */" />
+            <preproc_def>
+                <#define text="#define" />
+                <identifier text="pop_macro" />
+                <preproc_arg text="foobar1" />
+            </preproc_def>
+            <comment text="/* must not affect how #pragma push_macro works */" />
+            <preproc_def>
+                <#define text="#define" />
+                <identifier text="push_macro" />
+                <preproc_arg text="foobar2" />
+            </preproc_def>
+            <preproc_call>
+                <preproc_directive text="#undef" />
+                <preproc_arg text="abort" />
+            </preproc_call>
+            <preproc_def>
+                <#define text="#define" />
+                <identifier text="abort" />
+                <preproc_arg text="\"111\"" />
+            </preproc_def>
+            <expression_statement>
+                <call_expression>
+                    <identifier text="printf" />
+                    <argument_list>
+                        <"(" text="(" />
+                        <string_literal>
+                            <"\"" text="\"" />
+                            <string_content text="abort = %s" />
+                            <escape_sequence text="\\n" />
+                            <"\"" text="\"" />
+                        </string_literal>
+                        <"," text="," />
+                        <identifier text="abort" />
+                        <")" text=")" />
+                    </argument_list>
+                </call_expression>
+                <";" text=";" />
+            </expression_statement>
+            <preproc_call>
+                <preproc_directive text="#pragma" />
+                <preproc_arg text="push_macro(\"abort\")" />
+            </preproc_call>
+            <preproc_call>
+                <preproc_directive text="#undef" />
+                <preproc_arg text="abort" />
+            </preproc_call>
+            <preproc_def>
+                <#define text="#define" />
+                <identifier text="abort" />
+                <preproc_arg text="\"222\"" />
+            </preproc_def>
+            <expression_statement>
+                <call_expression>
+                    <identifier text="printf" />
+                    <argument_list>
+                        <"(" text="(" />
+                        <string_literal>
+                            <"\"" text="\"" />
+                            <string_content text="abort = %s" />
+                            <escape_sequence text="\\n" />
+                            <"\"" text="\"" />
+                        </string_literal>
+                        <"," text="," />
+                        <identifier text="abort" />
+                        <")" text=")" />
+                    </argument_list>
+                </call_expression>
+                <";" text=";" />
+            </expression_statement>
+            <preproc_call>
+                <preproc_directive text="#pragma" />
+                <preproc_arg text="push_macro(\"abort\")" />
+            </preproc_call>
+            <preproc_call>
+                <preproc_directive text="#undef" />
+                <preproc_arg text="abort" />
+            </preproc_call>
+            <preproc_def>
+                <#define text="#define" />
+                <identifier text="abort" />
+                <preproc_arg text="\"333\"" />
+            </preproc_def>
+            <expression_statement>
+                <call_expression>
+                    <identifier text="printf" />
+                    <argument_list>
+                        <"(" text="(" />
+                        <string_literal>
+                            <"\"" text="\"" />
+                            <string_content text="abort = %s" />
+                            <escape_sequence text="\\n" />
+                            <"\"" text="\"" />
+                        </string_literal>
+                        <"," text="," />
+                        <identifier text="abort" />
+                        <")" text=")" />
+                    </argument_list>
+                </call_expression>
+                <";" text=";" />
+            </expression_statement>
+            <preproc_call>
+                <preproc_directive text="#pragma" />
+                <preproc_arg text="pop_macro(\"abort\")" />
+            </preproc_call>
+            <expression_statement>
+                <call_expression>
+                    <identifier text="printf" />
+                    <argument_list>
+                        <"(" text="(" />
+                        <string_literal>
+                            <"\"" text="\"" />
+                            <string_content text="abort = %s" />
+                            <escape_sequence text="\\n" />
+                            <"\"" text="\"" />
+                        </string_literal>
+                        <"," text="," />
+                        <identifier text="abort" />
+                        <")" text=")" />
+                    </argument_list>
+                </call_expression>
+                <";" text=";" />
+            </expression_statement>
+            <preproc_call>
+                <preproc_directive text="#pragma" />
+                <preproc_arg text="pop_macro(\"abort\")" />
+            </preproc_call>
+            <expression_statement>
+                <call_expression>
+                    <identifier text="printf" />
+                    <argument_list>
+                        <"(" text="(" />
+                        <string_literal>
+                            <"\"" text="\"" />
+                            <string_content text="abort = %s" />
+                            <escape_sequence text="\\n" />
+                            <"\"" text="\"" />
+                        </string_literal>
+                        <"," text="," />
+                        <identifier text="abort" />
+                        <")" text=")" />
+                    </argument_list>
+                </call_expression>
+                <";" text=";" />
+            </expression_statement>
+            <"}" text="}" />
+        </compound_statement>
+    </function_definition>
+</translation_unit>

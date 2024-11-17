@@ -1,0 +1,26 @@
+<translation_unit>
+    <preproc_def>
+        <#define text="#define" />
+        <identifier text="FOO" />
+        <preproc_arg text="0" />
+    </preproc_def>
+    <function_definition>
+        <primitive_type text="int" />
+        <function_declarator>
+            <identifier text="main" />
+            <parameter_list>
+                <"(" text="(" />
+                <")" text=")" />
+            </parameter_list>
+        </function_declarator>
+        <compound_statement>
+            <"{" text="{" />
+            <return_statement>
+                <return text="return" />
+                <identifier text="FOO" />
+                <";" text=";" />
+            </return_statement>
+            <"}" text="}" />
+        </compound_statement>
+    </function_definition>
+</translation_unit>

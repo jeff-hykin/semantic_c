@@ -1,0 +1,223 @@
+<translation_unit>
+    <preproc_function_def>
+        <#define text="#define" />
+        <identifier text="ZERO_0" />
+        <preproc_params>
+            <"(" text="(" />
+            <")" text=")" />
+        </preproc_params>
+        <preproc_arg text="0" />
+    </preproc_function_def>
+    <preproc_function_def>
+        <#define text="#define" />
+        <identifier text="ZERO_1" />
+        <preproc_params>
+            <"(" text="(" />
+            <identifier text="A" />
+            <")" text=")" />
+        </preproc_params>
+        <preproc_arg text="0" />
+    </preproc_function_def>
+    <preproc_function_def>
+        <#define text="#define" />
+        <identifier text="ZERO_2" />
+        <preproc_params>
+            <"(" text="(" />
+            <identifier text="A" />
+            <"," text="," />
+            <identifier text="B" />
+            <")" text=")" />
+        </preproc_params>
+        <preproc_arg text="0" />
+    </preproc_function_def>
+    <preproc_function_def>
+        <#define text="#define" />
+        <identifier text="ZERO_VAR" />
+        <preproc_params>
+            <"(" text="(" />
+            <"..." text="..." />
+            <")" text=")" />
+        </preproc_params>
+        <preproc_arg text="0" />
+    </preproc_function_def>
+    <preproc_function_def>
+        <#define text="#define" />
+        <identifier text="ZERO_1_VAR" />
+        <preproc_params>
+            <"(" text="(" />
+            <identifier text="A" />
+            <"," text="," />
+            <"..." text="..." />
+            <")" text=")" />
+        </preproc_params>
+        <preproc_arg text="0" />
+    </preproc_function_def>
+    <function_definition>
+        <primitive_type text="int" />
+        <function_declarator>
+            <identifier text="main" />
+            <parameter_list>
+                <"(" text="(" />
+                <")" text=")" />
+            </parameter_list>
+        </function_declarator>
+        <compound_statement>
+            <"{" text="{" />
+            <if_statement>
+                <if text="if" />
+                <parenthesized_expression>
+                    <"(" text="(" />
+                    <call_expression>
+                        <identifier text="ZERO_0" />
+                        <argument_list>
+                            <"(" text="(" />
+                            <")" text=")" />
+                        </argument_list>
+                    </call_expression>
+                    <")" text=")" />
+                </parenthesized_expression>
+                <return_statement>
+                    <return text="return" />
+                    <number_literal text="1" />
+                    <";" text=";" />
+                </return_statement>
+            </if_statement>
+            <if_statement>
+                <if text="if" />
+                <parenthesized_expression>
+                    <"(" text="(" />
+                    <call_expression>
+                        <identifier text="ZERO_1" />
+                        <argument_list>
+                            <"(" text="(" />
+                            <number_literal text="1" />
+                            <")" text=")" />
+                        </argument_list>
+                    </call_expression>
+                    <")" text=")" />
+                </parenthesized_expression>
+                <return_statement>
+                    <return text="return" />
+                    <number_literal text="1" />
+                    <";" text=";" />
+                </return_statement>
+            </if_statement>
+            <if_statement>
+                <if text="if" />
+                <parenthesized_expression>
+                    <"(" text="(" />
+                    <call_expression>
+                        <identifier text="ZERO_2" />
+                        <argument_list>
+                            <"(" text="(" />
+                            <number_literal text="1" />
+                            <"," text="," />
+                            <number_literal text="2" />
+                            <")" text=")" />
+                        </argument_list>
+                    </call_expression>
+                    <")" text=")" />
+                </parenthesized_expression>
+                <return_statement>
+                    <return text="return" />
+                    <number_literal text="1" />
+                    <";" text=";" />
+                </return_statement>
+            </if_statement>
+            <if_statement>
+                <if text="if" />
+                <parenthesized_expression>
+                    <"(" text="(" />
+                    <call_expression>
+                        <identifier text="ZERO_VAR" />
+                        <argument_list>
+                            <"(" text="(" />
+                            <number_literal text="1" />
+                            <")" text=")" />
+                        </argument_list>
+                    </call_expression>
+                    <")" text=")" />
+                </parenthesized_expression>
+                <return_statement>
+                    <return text="return" />
+                    <number_literal text="1" />
+                    <";" text=";" />
+                </return_statement>
+            </if_statement>
+            <if_statement>
+                <if text="if" />
+                <parenthesized_expression>
+                    <"(" text="(" />
+                    <call_expression>
+                        <identifier text="ZERO_VAR" />
+                        <argument_list>
+                            <"(" text="(" />
+                            <number_literal text="1" />
+                            <"," text="," />
+                            <number_literal text="2" />
+                            <")" text=")" />
+                        </argument_list>
+                    </call_expression>
+                    <")" text=")" />
+                </parenthesized_expression>
+                <return_statement>
+                    <return text="return" />
+                    <number_literal text="1" />
+                    <";" text=";" />
+                </return_statement>
+            </if_statement>
+            <if_statement>
+                <if text="if" />
+                <parenthesized_expression>
+                    <"(" text="(" />
+                    <call_expression>
+                        <identifier text="ZERO_1_VAR" />
+                        <argument_list>
+                            <"(" text="(" />
+                            <number_literal text="1" />
+                            <"," text="," />
+                            <number_literal text="2" />
+                            <")" text=")" />
+                        </argument_list>
+                    </call_expression>
+                    <")" text=")" />
+                </parenthesized_expression>
+                <return_statement>
+                    <return text="return" />
+                    <number_literal text="1" />
+                    <";" text=";" />
+                </return_statement>
+            </if_statement>
+            <if_statement>
+                <if text="if" />
+                <parenthesized_expression>
+                    <"(" text="(" />
+                    <call_expression>
+                        <identifier text="ZERO_1_VAR" />
+                        <argument_list>
+                            <"(" text="(" />
+                            <number_literal text="1" />
+                            <"," text="," />
+                            <number_literal text="2" />
+                            <"," text="," />
+                            <number_literal text="3" />
+                            <")" text=")" />
+                        </argument_list>
+                    </call_expression>
+                    <")" text=")" />
+                </parenthesized_expression>
+                <return_statement>
+                    <return text="return" />
+                    <number_literal text="1" />
+                    <";" text=";" />
+                </return_statement>
+            </if_statement>
+            <return_statement>
+                <return text="return" />
+                <number_literal text="0" />
+                <";" text=";" />
+            </return_statement>
+            <"}" text="}" />
+        </compound_statement>
+    </function_definition>
+</translation_unit>

@@ -1,0 +1,135 @@
+<translation_unit>
+    <preproc_include>
+        <#include text="#include" />
+        <system_lib_string text="<stdio.h>" />
+    </preproc_include>
+    <function_definition>
+        <primitive_type text="int" />
+        <function_declarator>
+            <identifier text="main" />
+            <parameter_list>
+                <"(" text="(" />
+                <")" text=")" />
+            </parameter_list>
+        </function_declarator>
+        <compound_statement>
+            <"{" text="{" />
+            <declaration>
+                <primitive_type text="int" />
+                <identifier text="Count" />
+                <";" text=";" />
+            </declaration>
+            <declaration>
+                <primitive_type text="int" />
+                <array_declarator>
+                    <identifier text="Array" />
+                    <"[" text="[" />
+                    <number_literal text="10" />
+                    <"]" text="]" />
+                </array_declarator>
+                <";" text=";" />
+            </declaration>
+            <for_statement>
+                <for text="for" />
+                <"(" text="(" />
+                <assignment_expression>
+                    <identifier text="Count" />
+                    <"=" text="=" />
+                    <number_literal text="1" />
+                </assignment_expression>
+                <";" text=";" />
+                <binary_expression>
+                    <identifier text="Count" />
+                    <"<=" text="<=" />
+                    <number_literal text="10" />
+                </binary_expression>
+                <";" text=";" />
+                <update_expression>
+                    <identifier text="Count" />
+                    <"++" text="++" />
+                </update_expression>
+                <")" text=")" />
+                <compound_statement>
+                    <"{" text="{" />
+                    <expression_statement>
+                        <assignment_expression>
+                            <subscript_expression>
+                                <identifier text="Array" />
+                                <"[" text="[" />
+                                <binary_expression>
+                                    <identifier text="Count" />
+                                    <"-" text="-" />
+                                    <number_literal text="1" />
+                                </binary_expression>
+                                <"]" text="]" />
+                            </subscript_expression>
+                            <"=" text="=" />
+                            <binary_expression>
+                                <identifier text="Count" />
+                                <"*" text="*" />
+                                <identifier text="Count" />
+                            </binary_expression>
+                        </assignment_expression>
+                        <";" text=";" />
+                    </expression_statement>
+                    <"}" text="}" />
+                </compound_statement>
+            </for_statement>
+            <for_statement>
+                <for text="for" />
+                <"(" text="(" />
+                <assignment_expression>
+                    <identifier text="Count" />
+                    <"=" text="=" />
+                    <number_literal text="0" />
+                </assignment_expression>
+                <";" text=";" />
+                <binary_expression>
+                    <identifier text="Count" />
+                    <"<" text="<" />
+                    <number_literal text="10" />
+                </binary_expression>
+                <";" text=";" />
+                <update_expression>
+                    <identifier text="Count" />
+                    <"++" text="++" />
+                </update_expression>
+                <")" text=")" />
+                <compound_statement>
+                    <"{" text="{" />
+                    <expression_statement>
+                        <call_expression>
+                            <identifier text="printf" />
+                            <argument_list>
+                                <"(" text="(" />
+                                <string_literal>
+                                    <"\"" text="\"" />
+                                    <string_content text="%d" />
+                                    <escape_sequence text="\\n" />
+                                    <"\"" text="\"" />
+                                </string_literal>
+                                <"," text="," />
+                                <subscript_expression>
+                                    <identifier text="Array" />
+                                    <"[" text="[" />
+                                    <identifier text="Count" />
+                                    <"]" text="]" />
+                                </subscript_expression>
+                                <")" text=")" />
+                            </argument_list>
+                        </call_expression>
+                        <";" text=";" />
+                    </expression_statement>
+                    <"}" text="}" />
+                </compound_statement>
+            </for_statement>
+            <return_statement>
+                <return text="return" />
+                <number_literal text="0" />
+                <";" text=";" />
+            </return_statement>
+            <"}" text="}" />
+        </compound_statement>
+    </function_definition>
+    <comment text="// vim: set expandtab ts=4 sw=3 sts=3 tw=80 :" />
+</translation_unit>

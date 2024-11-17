@@ -1,0 +1,49 @@
+<translation_unit>
+    <function_definition>
+        <primitive_type text="int" />
+        <function_declarator>
+            <identifier text="main" />
+            <parameter_list>
+                <"(" text="(" />
+                <")" text=")" />
+            </parameter_list>
+        </function_declarator>
+        <compound_statement>
+            <"{" text="{" />
+            <declaration>
+                <struct_specifier>
+                    <struct text="struct" />
+                    <field_declaration_list>
+                        <"{" text="{" />
+                        <field_declaration>
+                            <primitive_type text="int" />
+                            <field_identifier text="x" />
+                            <";" text=";" />
+                        </field_declaration>
+                        <"}" text="}" />
+                    </field_declaration_list>
+                </struct_specifier>
+                <init_declarator>
+                    <identifier text="s" />
+                    <"=" text="=" />
+                    <initializer_list>
+                        <"{" text="{" />
+                        <number_literal text="0" />
+                        <"}" text="}" />
+                    </initializer_list>
+                </init_declarator>
+                <";" text=";" />
+            </declaration>
+            <return_statement>
+                <return text="return" />
+                <field_expression>
+                    <identifier text="s" />
+                    <"." text="." />
+                    <field_identifier text="x" />
+                </field_expression>
+                <";" text=";" />
+            </return_statement>
+            <"}" text="}" />
+        </compound_statement>
+    </function_definition>
+</translation_unit>

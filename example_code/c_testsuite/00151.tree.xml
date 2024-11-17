@@ -1,0 +1,154 @@
+<translation_unit>
+    <declaration>
+        <primitive_type text="int" />
+        <init_declarator>
+            <array_declarator>
+                <array_declarator>
+                    <array_declarator>
+                        <identifier text="arr" />
+                        <"[" text="[" />
+                        <"]" text="]" />
+                    </array_declarator>
+                    <"[" text="[" />
+                    <number_literal text="3" />
+                    <"]" text="]" />
+                </array_declarator>
+                <"[" text="[" />
+                <number_literal text="5" />
+                <"]" text="]" />
+            </array_declarator>
+            <"=" text="=" />
+            <initializer_list>
+                <"{" text="{" />
+                <initializer_list>
+                    <"{" text="{" />
+                    <initializer_list>
+                        <"{" text="{" />
+                        <number_literal text="0" />
+                        <"," text="," />
+                        <number_literal text="0" />
+                        <"," text="," />
+                        <number_literal text="3" />
+                        <"," text="," />
+                        <number_literal text="5" />
+                        <"}" text="}" />
+                    </initializer_list>
+                    <"," text="," />
+                    <initializer_list>
+                        <"{" text="{" />
+                        <number_literal text="1" />
+                        <"," text="," />
+                        <initializer_pair>
+                            <subscript_designator>
+                                <"[" text="[" />
+                                <number_literal text="3" />
+                                <"]" text="]" />
+                            </subscript_designator>
+                            <"=" text="=" />
+                            <number_literal text="6" />
+                        </initializer_pair>
+                        <"," text="," />
+                        <number_literal text="7" />
+                        <"}" text="}" />
+                    </initializer_list>
+                    <"," text="," />
+                    <"}" text="}" />
+                </initializer_list>
+                <"," text="," />
+                <initializer_list>
+                    <"{" text="{" />
+                    <initializer_list>
+                        <"{" text="{" />
+                        <number_literal text="1" />
+                        <"," text="," />
+                        <number_literal text="2" />
+                        <"}" text="}" />
+                    </initializer_list>
+                    <"," text="," />
+                    <initializer_list>
+                        <"{" text="{" />
+                        <initializer_pair>
+                            <subscript_designator>
+                                <"[" text="[" />
+                                <number_literal text="4" />
+                                <"]" text="]" />
+                            </subscript_designator>
+                            <"=" text="=" />
+                            <number_literal text="7" />
+                        </initializer_pair>
+                        <"," text="," />
+                        <"}" text="}" />
+                    </initializer_list>
+                    <"," text="," />
+                    <"}" text="}" />
+                </initializer_list>
+                <"," text="," />
+                <"}" text="}" />
+            </initializer_list>
+        </init_declarator>
+        <";" text=";" />
+    </declaration>
+    <function_definition>
+        <primitive_type text="int" />
+        <function_declarator>
+            <identifier text="main" />
+            <parameter_list>
+                <"(" text="(" />
+                <parameter_declaration>
+                    <primitive_type text="void" />
+                </parameter_declaration>
+                <")" text=")" />
+            </parameter_list>
+        </function_declarator>
+        <compound_statement>
+            <"{" text="{" />
+            <return_statement>
+                <return text="return" />
+                <unary_expression>
+                    <"!" text="!" />
+                    <parenthesized_expression>
+                        <"(" text="(" />
+                        <binary_expression>
+                            <subscript_expression>
+                                <subscript_expression>
+                                    <subscript_expression>
+                                        <identifier text="arr" />
+                                        <"[" text="[" />
+                                        <number_literal text="0" />
+                                        <"]" text="]" />
+                                    </subscript_expression>
+                                    <"[" text="[" />
+                                    <number_literal text="1" />
+                                    <"]" text="]" />
+                                </subscript_expression>
+                                <"[" text="[" />
+                                <number_literal text="4" />
+                                <"]" text="]" />
+                            </subscript_expression>
+                            <"==" text="==" />
+                            <subscript_expression>
+                                <subscript_expression>
+                                    <subscript_expression>
+                                        <identifier text="arr" />
+                                        <"[" text="[" />
+                                        <number_literal text="1" />
+                                        <"]" text="]" />
+                                    </subscript_expression>
+                                    <"[" text="[" />
+                                    <number_literal text="1" />
+                                    <"]" text="]" />
+                                </subscript_expression>
+                                <"[" text="[" />
+                                <number_literal text="4" />
+                                <"]" text="]" />
+                            </subscript_expression>
+                        </binary_expression>
+                        <")" text=")" />
+                    </parenthesized_expression>
+                </unary_expression>
+                <";" text=";" />
+            </return_statement>
+            <"}" text="}" />
+        </compound_statement>
+    </function_definition>
+</translation_unit>

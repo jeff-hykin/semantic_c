@@ -1,0 +1,68 @@
+<translation_unit>
+    <preproc_def>
+        <#define text="#define" />
+        <identifier text="BAR" />
+        <preproc_arg text="0" />
+    </preproc_def>
+    <preproc_ifdef>
+        <#ifdef text="#ifdef" />
+        <identifier text="BAR" />
+        <preproc_ifdef>
+            <#ifdef text="#ifdef" />
+            <identifier text="FOO" />
+            <ERROR>
+                <identifier text="XXX" />
+            </ERROR>
+            <preproc_ifdef>
+                <#ifdef text="#ifdef" />
+                <identifier text="FOO" />
+                <ERROR>
+                    <identifier text="XXX" />
+                </ERROR>
+                <#endif text="#endif" />
+            </preproc_ifdef>
+            <preproc_else>
+                <#else text="#else" />
+                <preproc_def>
+                    <#define text="#define" />
+                    <identifier text="FOO" />
+                </preproc_def>
+                <preproc_ifdef>
+                    <#ifdef text="#ifdef" />
+                    <identifier text="FOO" />
+                    <declaration>
+                        <primitive_type text="int" />
+                        <init_declarator>
+                            <identifier text="x" />
+                            <"=" text="=" />
+                            <identifier text="BAR" />
+                        </init_declarator>
+                        <";" text=";" />
+                    </declaration>
+                    <#endif text="#endif" />
+                </preproc_ifdef>
+            </preproc_else>
+            <#endif text="#endif" />
+        </preproc_ifdef>
+        <#endif text="#endif" />
+    </preproc_ifdef>
+    <function_definition>
+        <primitive_type text="int" />
+        <function_declarator>
+            <identifier text="main" />
+            <parameter_list>
+                <"(" text="(" />
+                <")" text=")" />
+            </parameter_list>
+        </function_declarator>
+        <compound_statement>
+            <"{" text="{" />
+            <return_statement>
+                <return text="return" />
+                <identifier text="BAR" />
+                <";" text=";" />
+            </return_statement>
+            <"}" text="}" />
+        </compound_statement>
+    </function_definition>
+</translation_unit>

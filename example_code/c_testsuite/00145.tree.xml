@@ -1,0 +1,113 @@
+<translation_unit>
+    <preproc_if>
+        <#if text="#if" />
+        <binary_expression>
+            <number_literal text="0" />
+            <"!=" text="!=" />
+            <parenthesized_expression>
+                <"(" text="(" />
+                <binary_expression>
+                    <number_literal text="0" />
+                    <"&&" text="&&" />
+                    <parenthesized_expression>
+                        <"(" text="(" />
+                        <binary_expression>
+                            <number_literal text="0" />
+                            <"/" text="/" />
+                            <number_literal text="0" />
+                        </binary_expression>
+                        <")" text=")" />
+                    </parenthesized_expression>
+                </binary_expression>
+                <")" text=")" />
+            </parenthesized_expression>
+        </binary_expression>
+        <"\n" text="\n" />
+        <preproc_call>
+            <preproc_directive text="#error" />
+            <preproc_arg text="0 != (0 && (0/0))" />
+        </preproc_call>
+        <#endif text="#endif" />
+    </preproc_if>
+    <preproc_if>
+        <#if text="#if" />
+        <binary_expression>
+            <number_literal text="1" />
+            <"!=" text="!=" />
+            <parenthesized_expression>
+                <"(" text="(" />
+                <binary_expression>
+                    <number_literal text="-1" />
+                    <"||" text="||" />
+                    <parenthesized_expression>
+                        <"(" text="(" />
+                        <binary_expression>
+                            <number_literal text="0" />
+                            <"/" text="/" />
+                            <number_literal text="0" />
+                        </binary_expression>
+                        <")" text=")" />
+                    </parenthesized_expression>
+                </binary_expression>
+                <")" text=")" />
+            </parenthesized_expression>
+        </binary_expression>
+        <"\n" text="\n" />
+        <preproc_call>
+            <preproc_directive text="#error" />
+            <preproc_arg text="1 != (-1 || (0/0))" />
+        </preproc_call>
+        <#endif text="#endif" />
+    </preproc_if>
+    <preproc_if>
+        <#if text="#if" />
+        <binary_expression>
+            <number_literal text="3" />
+            <"!=" text="!=" />
+            <parenthesized_expression>
+                <"(" text="(" />
+                <ERROR>
+                    <number_literal text="-1" />
+                    <"?" text="?" />
+                    <number_literal text="3" />
+                    <":" text=":" />
+                </ERROR>
+                <parenthesized_expression>
+                    <"(" text="(" />
+                    <binary_expression>
+                        <number_literal text="0" />
+                        <"/" text="/" />
+                        <number_literal text="0" />
+                    </binary_expression>
+                    <")" text=")" />
+                </parenthesized_expression>
+                <")" text=")" />
+            </parenthesized_expression>
+        </binary_expression>
+        <"\n" text="\n" />
+        <preproc_call>
+            <preproc_directive text="#error" />
+            <preproc_arg text="3 != (-1 ? 3 : (0/0))" />
+        </preproc_call>
+        <#endif text="#endif" />
+    </preproc_if>
+    <function_definition>
+        <primitive_type text="int" />
+        <function_declarator>
+            <identifier text="main" />
+            <parameter_list>
+                <"(" text="(" />
+                <")" text=")" />
+            </parameter_list>
+        </function_declarator>
+        <compound_statement>
+            <"{" text="{" />
+            <return_statement>
+                <return text="return" />
+                <number_literal text="0" />
+                <";" text=";" />
+            </return_statement>
+            <"}" text="}" />
+        </compound_statement>
+    </function_definition>
+</translation_unit>

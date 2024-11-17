@@ -1,0 +1,178 @@
+<translation_unit>
+    <function_definition>
+        <primitive_type text="int" />
+        <function_declarator>
+            <identifier text="zero" />
+            <parameter_list>
+                <"(" text="(" />
+                <")" text=")" />
+            </parameter_list>
+        </function_declarator>
+        <compound_statement>
+            <"{" text="{" />
+            <return_statement>
+                <return text="return" />
+                <number_literal text="0" />
+                <";" text=";" />
+            </return_statement>
+            <"}" text="}" />
+        </compound_statement>
+    </function_definition>
+    <declaration>
+        <struct_specifier>
+            <struct text="struct" />
+            <type_identifier text="S" />
+            <field_declaration_list>
+                <"{" text="{" />
+                <field_declaration>
+                    <primitive_type text="int" />
+                    <function_declarator>
+                        <parenthesized_declarator>
+                            <"(" text="(" />
+                            <pointer_declarator>
+                                <"*" text="*" />
+                                <field_identifier text="zerofunc" />
+                            </pointer_declarator>
+                            <")" text=")" />
+                        </parenthesized_declarator>
+                        <parameter_list>
+                            <"(" text="(" />
+                            <")" text=")" />
+                        </parameter_list>
+                    </function_declarator>
+                    <";" text=";" />
+                </field_declaration>
+                <"}" text="}" />
+            </field_declaration_list>
+        </struct_specifier>
+        <init_declarator>
+            <identifier text="s" />
+            <"=" text="=" />
+            <initializer_list>
+                <"{" text="{" />
+                <pointer_expression>
+                    <"&" text="&" />
+                    <identifier text="zero" />
+                </pointer_expression>
+                <"}" text="}" />
+            </initializer_list>
+        </init_declarator>
+        <";" text=";" />
+    </declaration>
+    <function_definition>
+        <struct_specifier>
+            <struct text="struct" />
+            <type_identifier text="S" />
+        </struct_specifier>
+        <pointer_declarator>
+            <"*" text="*" />
+            <function_declarator>
+                <identifier text="anon" />
+                <parameter_list>
+                    <"(" text="(" />
+                    <")" text=")" />
+                </parameter_list>
+            </function_declarator>
+        </pointer_declarator>
+        <compound_statement>
+            <"{" text="{" />
+            <return_statement>
+                <return text="return" />
+                <pointer_expression>
+                    <"&" text="&" />
+                    <identifier text="s" />
+                </pointer_expression>
+                <";" text=";" />
+            </return_statement>
+            <"}" text="}" />
+        </compound_statement>
+    </function_definition>
+    <type_definition>
+        <typedef text="typedef" />
+        <struct_specifier>
+            <struct text="struct" />
+            <type_identifier text="S" />
+        </struct_specifier>
+        <pointer_declarator>
+            <"*" text="*" />
+            <function_declarator>
+                <parenthesized_declarator>
+                    <"(" text="(" />
+                    <pointer_declarator>
+                        <"*" text="*" />
+                        <type_identifier text="fty" />
+                    </pointer_declarator>
+                    <")" text=")" />
+                </parenthesized_declarator>
+                <parameter_list>
+                    <"(" text="(" />
+                    <")" text=")" />
+                </parameter_list>
+            </function_declarator>
+        </pointer_declarator>
+        <";" text=";" />
+    </type_definition>
+    <function_definition>
+        <type_identifier text="fty" />
+        <function_declarator>
+            <identifier text="go" />
+            <parameter_list>
+                <"(" text="(" />
+                <")" text=")" />
+            </parameter_list>
+        </function_declarator>
+        <compound_statement>
+            <"{" text="{" />
+            <return_statement>
+                <return text="return" />
+                <pointer_expression>
+                    <"&" text="&" />
+                    <identifier text="anon" />
+                </pointer_expression>
+                <";" text=";" />
+            </return_statement>
+            <"}" text="}" />
+        </compound_statement>
+    </function_definition>
+    <function_definition>
+        <primitive_type text="int" />
+        <function_declarator>
+            <identifier text="main" />
+            <parameter_list>
+                <"(" text="(" />
+                <")" text=")" />
+            </parameter_list>
+        </function_declarator>
+        <compound_statement>
+            <"{" text="{" />
+            <return_statement>
+                <return text="return" />
+                <call_expression>
+                    <field_expression>
+                        <call_expression>
+                            <call_expression>
+                                <identifier text="go" />
+                                <argument_list>
+                                    <"(" text="(" />
+                                    <")" text=")" />
+                                </argument_list>
+                            </call_expression>
+                            <argument_list>
+                                <"(" text="(" />
+                                <")" text=")" />
+                            </argument_list>
+                        </call_expression>
+                        <"->" text="->" />
+                        <field_identifier text="zerofunc" />
+                    </field_expression>
+                    <argument_list>
+                        <"(" text="(" />
+                        <")" text=")" />
+                    </argument_list>
+                </call_expression>
+                <";" text=";" />
+            </return_statement>
+            <"}" text="}" />
+        </compound_statement>
+    </function_definition>
+</translation_unit>

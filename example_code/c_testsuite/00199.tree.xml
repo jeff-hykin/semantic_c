@@ -1,0 +1,333 @@
+<translation_unit>
+    <preproc_include>
+        <#include text="#include" />
+        <system_lib_string text="<stdio.h>" />
+    </preproc_include>
+    <function_definition>
+        <primitive_type text="void" />
+        <function_declarator>
+            <identifier text="fred" />
+            <parameter_list>
+                <"(" text="(" />
+                <")" text=")" />
+            </parameter_list>
+        </function_declarator>
+        <compound_statement>
+            <"{" text="{" />
+            <expression_statement>
+                <call_expression>
+                    <identifier text="printf" />
+                    <argument_list>
+                        <"(" text="(" />
+                        <string_literal>
+                            <"\"" text="\"" />
+                            <string_content text="In fred()" />
+                            <escape_sequence text="\\n" />
+                            <"\"" text="\"" />
+                        </string_literal>
+                        <")" text=")" />
+                    </argument_list>
+                </call_expression>
+                <";" text=";" />
+            </expression_statement>
+            <goto_statement>
+                <goto text="goto" />
+                <statement_identifier text="done" />
+                <";" text=";" />
+            </goto_statement>
+            <expression_statement>
+                <call_expression>
+                    <identifier text="printf" />
+                    <argument_list>
+                        <"(" text="(" />
+                        <string_literal>
+                            <"\"" text="\"" />
+                            <string_content text="In middle" />
+                            <escape_sequence text="\\n" />
+                            <"\"" text="\"" />
+                        </string_literal>
+                        <")" text=")" />
+                    </argument_list>
+                </call_expression>
+                <";" text=";" />
+            </expression_statement>
+            <labeled_statement>
+                <statement_identifier text="done" />
+                <":" text=":" />
+                <expression_statement>
+                    <call_expression>
+                        <identifier text="printf" />
+                        <argument_list>
+                            <"(" text="(" />
+                            <string_literal>
+                                <"\"" text="\"" />
+                                <string_content text="At end" />
+                                <escape_sequence text="\\n" />
+                                <"\"" text="\"" />
+                            </string_literal>
+                            <")" text=")" />
+                        </argument_list>
+                    </call_expression>
+                    <";" text=";" />
+                </expression_statement>
+            </labeled_statement>
+            <"}" text="}" />
+        </compound_statement>
+    </function_definition>
+    <function_definition>
+        <primitive_type text="void" />
+        <function_declarator>
+            <identifier text="joe" />
+            <parameter_list>
+                <"(" text="(" />
+                <")" text=")" />
+            </parameter_list>
+        </function_declarator>
+        <compound_statement>
+            <"{" text="{" />
+            <declaration>
+                <primitive_type text="int" />
+                <init_declarator>
+                    <identifier text="b" />
+                    <"=" text="=" />
+                    <number_literal text="5678" />
+                </init_declarator>
+                <";" text=";" />
+            </declaration>
+            <expression_statement>
+                <call_expression>
+                    <identifier text="printf" />
+                    <argument_list>
+                        <"(" text="(" />
+                        <string_literal>
+                            <"\"" text="\"" />
+                            <string_content text="In joe()" />
+                            <escape_sequence text="\\n" />
+                            <"\"" text="\"" />
+                        </string_literal>
+                        <")" text=")" />
+                    </argument_list>
+                </call_expression>
+                <";" text=";" />
+            </expression_statement>
+            <compound_statement>
+                <"{" text="{" />
+                <declaration>
+                    <primitive_type text="int" />
+                    <init_declarator>
+                        <identifier text="c" />
+                        <"=" text="=" />
+                        <number_literal text="1234" />
+                    </init_declarator>
+                    <";" text=";" />
+                </declaration>
+                <expression_statement>
+                    <call_expression>
+                        <identifier text="printf" />
+                        <argument_list>
+                            <"(" text="(" />
+                            <string_literal>
+                                <"\"" text="\"" />
+                                <string_content text="c = %d" />
+                                <escape_sequence text="\\n" />
+                                <"\"" text="\"" />
+                            </string_literal>
+                            <"," text="," />
+                            <identifier text="c" />
+                            <")" text=")" />
+                        </argument_list>
+                    </call_expression>
+                    <";" text=";" />
+                </expression_statement>
+                <goto_statement>
+                    <goto text="goto" />
+                    <statement_identifier text="outer" />
+                    <";" text=";" />
+                </goto_statement>
+                <expression_statement>
+                    <call_expression>
+                        <identifier text="printf" />
+                        <argument_list>
+                            <"(" text="(" />
+                            <string_literal>
+                                <"\"" text="\"" />
+                                <string_content text="uh-oh" />
+                                <escape_sequence text="\\n" />
+                                <"\"" text="\"" />
+                            </string_literal>
+                            <")" text=")" />
+                        </argument_list>
+                    </call_expression>
+                    <";" text=";" />
+                </expression_statement>
+                <"}" text="}" />
+            </compound_statement>
+            <labeled_statement>
+                <statement_identifier text="outer" />
+                <":" text=":" />
+                <expression_statement>
+                    <call_expression>
+                        <identifier text="printf" />
+                        <argument_list>
+                            <"(" text="(" />
+                            <string_literal>
+                                <"\"" text="\"" />
+                                <string_content text="done" />
+                                <escape_sequence text="\\n" />
+                                <"\"" text="\"" />
+                            </string_literal>
+                            <")" text=")" />
+                        </argument_list>
+                    </call_expression>
+                    <";" text=";" />
+                </expression_statement>
+            </labeled_statement>
+            <"}" text="}" />
+        </compound_statement>
+    </function_definition>
+    <function_definition>
+        <primitive_type text="void" />
+        <function_declarator>
+            <identifier text="henry" />
+            <parameter_list>
+                <"(" text="(" />
+                <")" text=")" />
+            </parameter_list>
+        </function_declarator>
+        <compound_statement>
+            <"{" text="{" />
+            <declaration>
+                <primitive_type text="int" />
+                <identifier text="a" />
+                <";" text=";" />
+            </declaration>
+            <expression_statement>
+                <call_expression>
+                    <identifier text="printf" />
+                    <argument_list>
+                        <"(" text="(" />
+                        <string_literal>
+                            <"\"" text="\"" />
+                            <string_content text="In henry()" />
+                            <escape_sequence text="\\n" />
+                            <"\"" text="\"" />
+                        </string_literal>
+                        <")" text=")" />
+                    </argument_list>
+                </call_expression>
+                <";" text=";" />
+            </expression_statement>
+            <goto_statement>
+                <goto text="goto" />
+                <statement_identifier text="inner" />
+                <";" text=";" />
+            </goto_statement>
+            <compound_statement>
+                <"{" text="{" />
+                <declaration>
+                    <primitive_type text="int" />
+                    <identifier text="b" />
+                    <";" text=";" />
+                </declaration>
+                <labeled_statement>
+                    <statement_identifier text="inner" />
+                    <":" text=":" />
+                    <expression_statement>
+                        <assignment_expression>
+                            <identifier text="b" />
+                            <"=" text="=" />
+                            <number_literal text="1234" />
+                        </assignment_expression>
+                        <";" text=";" />
+                    </expression_statement>
+                </labeled_statement>
+                <expression_statement>
+                    <call_expression>
+                        <identifier text="printf" />
+                        <argument_list>
+                            <"(" text="(" />
+                            <string_literal>
+                                <"\"" text="\"" />
+                                <string_content text="b = %d" />
+                                <escape_sequence text="\\n" />
+                                <"\"" text="\"" />
+                            </string_literal>
+                            <"," text="," />
+                            <identifier text="b" />
+                            <")" text=")" />
+                        </argument_list>
+                    </call_expression>
+                    <";" text=";" />
+                </expression_statement>
+                <"}" text="}" />
+            </compound_statement>
+            <expression_statement>
+                <call_expression>
+                    <identifier text="printf" />
+                    <argument_list>
+                        <"(" text="(" />
+                        <string_literal>
+                            <"\"" text="\"" />
+                            <string_content text="done" />
+                            <escape_sequence text="\\n" />
+                            <"\"" text="\"" />
+                        </string_literal>
+                        <")" text=")" />
+                    </argument_list>
+                </call_expression>
+                <";" text=";" />
+            </expression_statement>
+            <"}" text="}" />
+        </compound_statement>
+    </function_definition>
+    <function_definition>
+        <primitive_type text="int" />
+        <function_declarator>
+            <identifier text="main" />
+            <parameter_list>
+                <"(" text="(" />
+                <")" text=")" />
+            </parameter_list>
+        </function_declarator>
+        <compound_statement>
+            <"{" text="{" />
+            <expression_statement>
+                <call_expression>
+                    <identifier text="fred" />
+                    <argument_list>
+                        <"(" text="(" />
+                        <")" text=")" />
+                    </argument_list>
+                </call_expression>
+                <";" text=";" />
+            </expression_statement>
+            <expression_statement>
+                <call_expression>
+                    <identifier text="joe" />
+                    <argument_list>
+                        <"(" text="(" />
+                        <")" text=")" />
+                    </argument_list>
+                </call_expression>
+                <";" text=";" />
+            </expression_statement>
+            <expression_statement>
+                <call_expression>
+                    <identifier text="henry" />
+                    <argument_list>
+                        <"(" text="(" />
+                        <")" text=")" />
+                    </argument_list>
+                </call_expression>
+                <";" text=";" />
+            </expression_statement>
+            <return_statement>
+                <return text="return" />
+                <number_literal text="0" />
+                <";" text=";" />
+            </return_statement>
+            <"}" text="}" />
+        </compound_statement>
+    </function_definition>
+    <comment text="/* vim: set expandtab ts=4 sw=3 sts=3 tw=80 :*/" />
+</translation_unit>

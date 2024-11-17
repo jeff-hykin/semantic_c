@@ -1,0 +1,976 @@
+<translation_unit>
+    <preproc_include>
+        <#include text="#include" />
+        <system_lib_string text="<stdio.h>" />
+    </preproc_include>
+    <declaration>
+        <type_qualifier>
+            <const text="const" />
+        </type_qualifier>
+        <primitive_type text="int" />
+        <init_declarator>
+            <identifier text="a" />
+            <"=" text="=" />
+            <number_literal text="0" />
+        </init_declarator>
+        <";" text=";" />
+    </declaration>
+    <struct_specifier>
+        <struct text="struct" />
+        <type_identifier text="a" />
+        <field_declaration_list>
+            <"{" text="{" />
+            <field_declaration>
+                <primitive_type text="int" />
+                <field_identifier text="a" />
+                <";" text=";" />
+            </field_declaration>
+            <"}" text="}" />
+        </field_declaration_list>
+    </struct_specifier>
+    <";" text=";" />
+    <struct_specifier>
+        <struct text="struct" />
+        <type_identifier text="b" />
+        <field_declaration_list>
+            <"{" text="{" />
+            <field_declaration>
+                <primitive_type text="int" />
+                <field_identifier text="a" />
+                <";" text=";" />
+            </field_declaration>
+            <"}" text="}" />
+        </field_declaration_list>
+    </struct_specifier>
+    <";" text=";" />
+    <function_definition>
+        <primitive_type text="int" />
+        <function_declarator>
+            <identifier text="a_f" />
+            <parameter_list>
+                <"(" text="(" />
+                <")" text=")" />
+            </parameter_list>
+        </function_declarator>
+        <compound_statement>
+            <"{" text="{" />
+            <return_statement>
+                <return text="return" />
+                <number_literal text="20" />
+                <";" text=";" />
+            </return_statement>
+            <"}" text="}" />
+        </compound_statement>
+    </function_definition>
+    <function_definition>
+        <primitive_type text="int" />
+        <function_declarator>
+            <identifier text="b_f" />
+            <parameter_list>
+                <"(" text="(" />
+                <")" text=")" />
+            </parameter_list>
+        </function_declarator>
+        <compound_statement>
+            <"{" text="{" />
+            <return_statement>
+                <return text="return" />
+                <number_literal text="10" />
+                <";" text=";" />
+            </return_statement>
+            <"}" text="}" />
+        </compound_statement>
+    </function_definition>
+    <type_definition>
+        <typedef text="typedef" />
+        <primitive_type text="int" />
+        <function_declarator>
+            <parenthesized_declarator>
+                <"(" text="(" />
+                <pointer_declarator>
+                    <"*" text="*" />
+                    <type_identifier text="fptr" />
+                </pointer_declarator>
+                <")" text=")" />
+            </parenthesized_declarator>
+            <parameter_list>
+                <"(" text="(" />
+                <parameter_declaration>
+                    <primitive_type text="int" />
+                </parameter_declaration>
+                <")" text=")" />
+            </parameter_list>
+        </function_declarator>
+        <";" text=";" />
+    </type_definition>
+    <function_definition>
+        <primitive_type text="int" />
+        <function_declarator>
+            <identifier text="foo" />
+            <parameter_list>
+                <"(" text="(" />
+                <parameter_declaration>
+                    <primitive_type text="int" />
+                    <identifier text="i" />
+                </parameter_declaration>
+                <")" text=")" />
+            </parameter_list>
+        </function_declarator>
+        <compound_statement>
+            <"{" text="{" />
+            <return_statement>
+                <return text="return" />
+                <identifier text="i" />
+                <";" text=";" />
+            </return_statement>
+            <"}" text="}" />
+        </compound_statement>
+    </function_definition>
+    <type_definition>
+        <typedef text="typedef" />
+        <primitive_type text="int" />
+        <type_identifier text="int_type1" />
+        <";" text=";" />
+    </type_definition>
+    <preproc_function_def>
+        <#define text="#define" />
+        <identifier text="gen_sw" />
+        <preproc_params>
+            <"(" text="(" />
+            <identifier text="a" />
+            <")" text=")" />
+        </preproc_params>
+        <preproc_arg text="_Generic(a, const char *: 1, default: 8, int: 123);" />
+    </preproc_function_def>
+    <function_definition>
+        <primitive_type text="int" />
+        <function_declarator>
+            <identifier text="main" />
+            <parameter_list>
+                <"(" text="(" />
+                <")" text=")" />
+            </parameter_list>
+        </function_declarator>
+        <compound_statement>
+            <"{" text="{" />
+            <declaration>
+                <primitive_type text="int" />
+                <init_declarator>
+                    <identifier text="i" />
+                    <"=" text="=" />
+                    <number_literal text="0" />
+                </init_declarator>
+                <";" text=";" />
+            </declaration>
+            <declaration>
+                <sized_type_specifier>
+                    <signed text="signed" />
+                    <long text="long" />
+                    <primitive_type text="int" />
+                </sized_type_specifier>
+                <init_declarator>
+                    <identifier text="l" />
+                    <"=" text="=" />
+                    <number_literal text="2" />
+                </init_declarator>
+                <";" text=";" />
+            </declaration>
+            <declaration>
+                <struct_specifier>
+                    <struct text="struct" />
+                    <type_identifier text="b" />
+                </struct_specifier>
+                <identifier text="titi" />
+                <";" text=";" />
+            </declaration>
+            <declaration>
+                <type_qualifier>
+                    <const text="const" />
+                </type_qualifier>
+                <primitive_type text="int" />
+                <pointer_declarator>
+                    <"*" text="*" />
+                    <type_qualifier>
+                        <const text="const" />
+                    </type_qualifier>
+                    <identifier text="ptr" />
+                </pointer_declarator>
+                <";" text=";" />
+            </declaration>
+            <declaration>
+                <type_qualifier>
+                    <const text="const" />
+                </type_qualifier>
+                <primitive_type text="char" />
+                <pointer_declarator>
+                    <"*" text="*" />
+                    <identifier text="ti" />
+                </pointer_declarator>
+                <";" text=";" />
+            </declaration>
+            <declaration>
+                <type_identifier text="int_type1" />
+                <identifier text="i2" />
+                <";" text=";" />
+            </declaration>
+            <expression_statement>
+                <assignment_expression>
+                    <identifier text="i" />
+                    <"=" text="=" />
+                    <call_expression>
+                        <generic_expression>
+                            <_Generic text="_Generic" />
+                            <"(" text="(" />
+                            <identifier text="a" />
+                            <"," text="," />
+                            <type_descriptor>
+                                <primitive_type text="int" />
+                            </type_descriptor>
+                            <":" text=":" />
+                            <identifier text="a_f" />
+                            <"," text="," />
+                            <type_descriptor>
+                                <type_qualifier>
+                                    <const text="const" />
+                                </type_qualifier>
+                                <primitive_type text="int" />
+                            </type_descriptor>
+                            <":" text=":" />
+                            <identifier text="b_f" />
+                            <")" text=")" />
+                        </generic_expression>
+                        <argument_list>
+                            <"(" text="(" />
+                            <")" text=")" />
+                        </argument_list>
+                    </call_expression>
+                </assignment_expression>
+                <";" text=";" />
+            </expression_statement>
+            <expression_statement>
+                <call_expression>
+                    <identifier text="printf" />
+                    <argument_list>
+                        <"(" text="(" />
+                        <string_literal>
+                            <"\"" text="\"" />
+                            <string_content text="%d" />
+                            <escape_sequence text="\\n" />
+                            <"\"" text="\"" />
+                        </string_literal>
+                        <"," text="," />
+                        <identifier text="i" />
+                        <")" text=")" />
+                    </argument_list>
+                </call_expression>
+                <";" text=";" />
+            </expression_statement>
+            <expression_statement>
+                <assignment_expression>
+                    <identifier text="i" />
+                    <"=" text="=" />
+                    <generic_expression>
+                        <_Generic text="_Generic" />
+                        <"(" text="(" />
+                        <identifier text="a" />
+                        <"," text="," />
+                        <type_descriptor>
+                            <primitive_type text="int" />
+                        </type_descriptor>
+                        <":" text=":" />
+                        <binary_expression>
+                            <call_expression>
+                                <identifier text="a_f" />
+                                <argument_list>
+                                    <"(" text="(" />
+                                    <")" text=")" />
+                                </argument_list>
+                            </call_expression>
+                            <"/" text="/" />
+                            <number_literal text="2" />
+                        </binary_expression>
+                        <"," text="," />
+                        <type_descriptor>
+                            <type_qualifier>
+                                <const text="const" />
+                            </type_qualifier>
+                            <primitive_type text="int" />
+                        </type_descriptor>
+                        <":" text=":" />
+                        <binary_expression>
+                            <call_expression>
+                                <identifier text="b_f" />
+                                <argument_list>
+                                    <"(" text="(" />
+                                    <")" text=")" />
+                                </argument_list>
+                            </call_expression>
+                            <"/" text="/" />
+                            <number_literal text="2" />
+                        </binary_expression>
+                        <")" text=")" />
+                    </generic_expression>
+                </assignment_expression>
+                <";" text=";" />
+            </expression_statement>
+            <expression_statement>
+                <call_expression>
+                    <identifier text="printf" />
+                    <argument_list>
+                        <"(" text="(" />
+                        <string_literal>
+                            <"\"" text="\"" />
+                            <string_content text="%d" />
+                            <escape_sequence text="\\n" />
+                            <"\"" text="\"" />
+                        </string_literal>
+                        <"," text="," />
+                        <identifier text="i" />
+                        <")" text=")" />
+                    </argument_list>
+                </call_expression>
+                <";" text=";" />
+            </expression_statement>
+            <expression_statement>
+                <assignment_expression>
+                    <identifier text="i" />
+                    <"=" text="=" />
+                    <generic_expression>
+                        <_Generic text="_Generic" />
+                        <"(" text="(" />
+                        <identifier text="ptr" />
+                        <"," text="," />
+                        <type_descriptor>
+                            <primitive_type text="int" />
+                            <abstract_pointer_declarator>
+                                <"*" text="*" />
+                            </abstract_pointer_declarator>
+                        </type_descriptor>
+                        <":" text=":" />
+                        <number_literal text="1" />
+                        <"," text="," />
+                        <type_descriptor>
+                            <primitive_type text="int" />
+                            <abstract_pointer_declarator>
+                                <"*" text="*" />
+                                <type_qualifier>
+                                    <const text="const" />
+                                </type_qualifier>
+                            </abstract_pointer_declarator>
+                        </type_descriptor>
+                        <":" text=":" />
+                        <number_literal text="2" />
+                        <"," text="," />
+                        <type_descriptor>
+                            <type_identifier text="default" />
+                        </type_descriptor>
+                        <":" text=":" />
+                        <number_literal text="20" />
+                        <")" text=")" />
+                    </generic_expression>
+                </assignment_expression>
+                <";" text=";" />
+            </expression_statement>
+            <expression_statement>
+                <call_expression>
+                    <identifier text="printf" />
+                    <argument_list>
+                        <"(" text="(" />
+                        <string_literal>
+                            <"\"" text="\"" />
+                            <string_content text="%d" />
+                            <escape_sequence text="\\n" />
+                            <"\"" text="\"" />
+                        </string_literal>
+                        <"," text="," />
+                        <identifier text="i" />
+                        <")" text=")" />
+                    </argument_list>
+                </call_expression>
+                <";" text=";" />
+            </expression_statement>
+            <expression_statement>
+                <assignment_expression>
+                    <identifier text="i" />
+                    <"=" text="=" />
+                    <call_expression>
+                        <identifier text="gen_sw" />
+                        <argument_list>
+                            <"(" text="(" />
+                            <identifier text="a" />
+                            <")" text=")" />
+                        </argument_list>
+                    </call_expression>
+                </assignment_expression>
+                <";" text=";" />
+            </expression_statement>
+            <expression_statement>
+                <call_expression>
+                    <identifier text="printf" />
+                    <argument_list>
+                        <"(" text="(" />
+                        <string_literal>
+                            <"\"" text="\"" />
+                            <string_content text="%d" />
+                            <escape_sequence text="\\n" />
+                            <"\"" text="\"" />
+                        </string_literal>
+                        <"," text="," />
+                        <identifier text="i" />
+                        <")" text=")" />
+                    </argument_list>
+                </call_expression>
+                <";" text=";" />
+            </expression_statement>
+            <expression_statement>
+                <assignment_expression>
+                    <identifier text="i" />
+                    <"=" text="=" />
+                    <generic_expression>
+                        <_Generic text="_Generic" />
+                        <"(" text="(" />
+                        <identifier text="titi" />
+                        <"," text="," />
+                        <type_descriptor>
+                            <struct_specifier>
+                                <struct text="struct" />
+                                <type_identifier text="a" />
+                            </struct_specifier>
+                        </type_descriptor>
+                        <":" text=":" />
+                        <number_literal text="1" />
+                        <"," text="," />
+                        <type_descriptor>
+                            <struct_specifier>
+                                <struct text="struct" />
+                                <type_identifier text="b" />
+                            </struct_specifier>
+                        </type_descriptor>
+                        <":" text=":" />
+                        <number_literal text="2" />
+                        <"," text="," />
+                        <type_descriptor>
+                            <type_identifier text="default" />
+                        </type_descriptor>
+                        <":" text=":" />
+                        <number_literal text="20" />
+                        <")" text=")" />
+                    </generic_expression>
+                </assignment_expression>
+                <";" text=";" />
+            </expression_statement>
+            <expression_statement>
+                <call_expression>
+                    <identifier text="printf" />
+                    <argument_list>
+                        <"(" text="(" />
+                        <string_literal>
+                            <"\"" text="\"" />
+                            <string_content text="%d" />
+                            <escape_sequence text="\\n" />
+                            <"\"" text="\"" />
+                        </string_literal>
+                        <"," text="," />
+                        <identifier text="i" />
+                        <")" text=")" />
+                    </argument_list>
+                </call_expression>
+                <";" text=";" />
+            </expression_statement>
+            <expression_statement>
+                <assignment_expression>
+                    <identifier text="i" />
+                    <"=" text="=" />
+                    <generic_expression>
+                        <_Generic text="_Generic" />
+                        <"(" text="(" />
+                        <identifier text="i2" />
+                        <"," text="," />
+                        <type_descriptor>
+                            <primitive_type text="char" />
+                        </type_descriptor>
+                        <":" text=":" />
+                        <number_literal text="1" />
+                        <"," text="," />
+                        <type_descriptor>
+                            <primitive_type text="int" />
+                        </type_descriptor>
+                        <":" text=":" />
+                        <number_literal text="0" />
+                        <")" text=")" />
+                    </generic_expression>
+                </assignment_expression>
+                <";" text=";" />
+            </expression_statement>
+            <expression_statement>
+                <call_expression>
+                    <identifier text="printf" />
+                    <argument_list>
+                        <"(" text="(" />
+                        <string_literal>
+                            <"\"" text="\"" />
+                            <string_content text="%d" />
+                            <escape_sequence text="\\n" />
+                            <"\"" text="\"" />
+                        </string_literal>
+                        <"," text="," />
+                        <identifier text="i" />
+                        <")" text=")" />
+                    </argument_list>
+                </call_expression>
+                <";" text=";" />
+            </expression_statement>
+            <expression_statement>
+                <assignment_expression>
+                    <identifier text="i" />
+                    <"=" text="=" />
+                    <generic_expression>
+                        <_Generic text="_Generic" />
+                        <"(" text="(" />
+                        <identifier text="a" />
+                        <"," text="," />
+                        <type_descriptor>
+                            <primitive_type text="char" />
+                        </type_descriptor>
+                        <":" text=":" />
+                        <number_literal text="1" />
+                        <"," text="," />
+                        <type_descriptor>
+                            <primitive_type text="int" />
+                            <abstract_array_declarator>
+                                <"[" text="[" />
+                                <number_literal text="4" />
+                                <"]" text="]" />
+                            </abstract_array_declarator>
+                        </type_descriptor>
+                        <":" text=":" />
+                        <number_literal text="2" />
+                        <"," text="," />
+                        <type_descriptor>
+                            <type_identifier text="default" />
+                        </type_descriptor>
+                        <":" text=":" />
+                        <number_literal text="5" />
+                        <")" text=")" />
+                    </generic_expression>
+                </assignment_expression>
+                <";" text=";" />
+            </expression_statement>
+            <expression_statement>
+                <call_expression>
+                    <identifier text="printf" />
+                    <argument_list>
+                        <"(" text="(" />
+                        <string_literal>
+                            <"\"" text="\"" />
+                            <string_content text="%d" />
+                            <escape_sequence text="\\n" />
+                            <"\"" text="\"" />
+                        </string_literal>
+                        <"," text="," />
+                        <identifier text="i" />
+                        <")" text=")" />
+                    </argument_list>
+                </call_expression>
+                <";" text=";" />
+            </expression_statement>
+            <expression_statement>
+                <assignment_expression>
+                    <identifier text="i" />
+                    <"=" text="=" />
+                    <generic_expression>
+                        <_Generic text="_Generic" />
+                        <"(" text="(" />
+                        <number_literal text="17" />
+                        <"," text="," />
+                        <type_descriptor>
+                            <primitive_type text="int" />
+                        </type_descriptor>
+                        <":" text=":" />
+                        <number_literal text="1" />
+                        <"," text="," />
+                        <type_descriptor>
+                            <primitive_type text="int" />
+                            <abstract_pointer_declarator>
+                                <"*" text="*" />
+                                <abstract_pointer_declarator>
+                                    <"*" text="*" />
+                                </abstract_pointer_declarator>
+                            </abstract_pointer_declarator>
+                        </type_descriptor>
+                        <":" text=":" />
+                        <number_literal text="2" />
+                        <")" text=")" />
+                    </generic_expression>
+                </assignment_expression>
+                <";" text=";" />
+            </expression_statement>
+            <expression_statement>
+                <call_expression>
+                    <identifier text="printf" />
+                    <argument_list>
+                        <"(" text="(" />
+                        <string_literal>
+                            <"\"" text="\"" />
+                            <string_content text="%d" />
+                            <escape_sequence text="\\n" />
+                            <"\"" text="\"" />
+                        </string_literal>
+                        <"," text="," />
+                        <identifier text="i" />
+                        <")" text=")" />
+                    </argument_list>
+                </call_expression>
+                <";" text=";" />
+            </expression_statement>
+            <expression_statement>
+                <assignment_expression>
+                    <identifier text="i" />
+                    <"=" text="=" />
+                    <generic_expression>
+                        <_Generic text="_Generic" />
+                        <"(" text="(" />
+                        <number_literal text="17L" />
+                        <"," text="," />
+                        <type_descriptor>
+                            <primitive_type text="int" />
+                        </type_descriptor>
+                        <":" text=":" />
+                        <number_literal text="1" />
+                        <"," text="," />
+                        <type_descriptor>
+                            <sized_type_specifier>
+                                <long text="long" />
+                            </sized_type_specifier>
+                        </type_descriptor>
+                        <":" text=":" />
+                        <number_literal text="2" />
+                        <"," text="," />
+                        <type_descriptor>
+                            <sized_type_specifier>
+                                <long text="long" />
+                                <long text="long" />
+                            </sized_type_specifier>
+                        </type_descriptor>
+                        <":" text=":" />
+                        <number_literal text="3" />
+                        <")" text=")" />
+                    </generic_expression>
+                </assignment_expression>
+                <";" text=";" />
+            </expression_statement>
+            <expression_statement>
+                <call_expression>
+                    <identifier text="printf" />
+                    <argument_list>
+                        <"(" text="(" />
+                        <string_literal>
+                            <"\"" text="\"" />
+                            <string_content text="%d" />
+                            <escape_sequence text="\\n" />
+                            <"\"" text="\"" />
+                        </string_literal>
+                        <"," text="," />
+                        <identifier text="i" />
+                        <")" text=")" />
+                    </argument_list>
+                </call_expression>
+                <";" text=";" />
+            </expression_statement>
+            <expression_statement>
+                <assignment_expression>
+                    <identifier text="i" />
+                    <"=" text="=" />
+                    <generic_expression>
+                        <_Generic text="_Generic" />
+                        <"(" text="(" />
+                        <string_literal>
+                            <"\"" text="\"" />
+                            <string_content text="17, io" />
+                            <"\"" text="\"" />
+                        </string_literal>
+                        <"," text="," />
+                        <type_descriptor>
+                            <primitive_type text="char" />
+                            <abstract_pointer_declarator>
+                                <"*" text="*" />
+                            </abstract_pointer_declarator>
+                        </type_descriptor>
+                        <":" text=":" />
+                        <number_literal text="3" />
+                        <"," text="," />
+                        <type_descriptor>
+                            <type_qualifier>
+                                <const text="const" />
+                            </type_qualifier>
+                            <primitive_type text="char" />
+                            <abstract_pointer_declarator>
+                                <"*" text="*" />
+                            </abstract_pointer_declarator>
+                        </type_descriptor>
+                        <":" text=":" />
+                        <number_literal text="1" />
+                        <")" text=")" />
+                    </generic_expression>
+                </assignment_expression>
+                <";" text=";" />
+            </expression_statement>
+            <expression_statement>
+                <call_expression>
+                    <identifier text="printf" />
+                    <argument_list>
+                        <"(" text="(" />
+                        <string_literal>
+                            <"\"" text="\"" />
+                            <string_content text="%d" />
+                            <escape_sequence text="\\n" />
+                            <"\"" text="\"" />
+                        </string_literal>
+                        <"," text="," />
+                        <identifier text="i" />
+                        <")" text=")" />
+                    </argument_list>
+                </call_expression>
+                <";" text=";" />
+            </expression_statement>
+            <expression_statement>
+                <assignment_expression>
+                    <identifier text="i" />
+                    <"=" text="=" />
+                    <generic_expression>
+                        <_Generic text="_Generic" />
+                        <"(" text="(" />
+                        <identifier text="ti" />
+                        <"," text="," />
+                        <type_descriptor>
+                            <type_qualifier>
+                                <const text="const" />
+                            </type_qualifier>
+                            <sized_type_specifier>
+                                <unsigned text="unsigned" />
+                                <primitive_type text="char" />
+                            </sized_type_specifier>
+                            <abstract_pointer_declarator>
+                                <"*" text="*" />
+                            </abstract_pointer_declarator>
+                        </type_descriptor>
+                        <":" text=":" />
+                        <number_literal text="1" />
+                        <"," text="," />
+                        <type_descriptor>
+                            <type_qualifier>
+                                <const text="const" />
+                            </type_qualifier>
+                            <primitive_type text="char" />
+                            <abstract_pointer_declarator>
+                                <"*" text="*" />
+                            </abstract_pointer_declarator>
+                        </type_descriptor>
+                        <":" text=":" />
+                        <number_literal text="4" />
+                        <"," text="," />
+                        <type_descriptor>
+                            <primitive_type text="char" />
+                            <abstract_pointer_declarator>
+                                <"*" text="*" />
+                            </abstract_pointer_declarator>
+                        </type_descriptor>
+                        <":" text=":" />
+                        <number_literal text="3" />
+                        <"," text="," />
+                        <type_descriptor>
+                            <type_qualifier>
+                                <const text="const" />
+                            </type_qualifier>
+                            <sized_type_specifier>
+                                <signed text="signed" />
+                                <primitive_type text="char" />
+                            </sized_type_specifier>
+                            <abstract_pointer_declarator>
+                                <"*" text="*" />
+                            </abstract_pointer_declarator>
+                        </type_descriptor>
+                        <":" text=":" />
+                        <number_literal text="2" />
+                        <")" text=")" />
+                    </generic_expression>
+                </assignment_expression>
+                <";" text=";" />
+            </expression_statement>
+            <expression_statement>
+                <call_expression>
+                    <identifier text="printf" />
+                    <argument_list>
+                        <"(" text="(" />
+                        <string_literal>
+                            <"\"" text="\"" />
+                            <string_content text="%d" />
+                            <escape_sequence text="\\n" />
+                            <"\"" text="\"" />
+                        </string_literal>
+                        <"," text="," />
+                        <identifier text="i" />
+                        <")" text=")" />
+                    </argument_list>
+                </call_expression>
+                <";" text=";" />
+            </expression_statement>
+            <expression_statement>
+                <call_expression>
+                    <identifier text="printf" />
+                    <argument_list>
+                        <"(" text="(" />
+                        <string_literal>
+                            <"\"" text="\"" />
+                            <string_content text="%s" />
+                            <escape_sequence text="\\n" />
+                            <"\"" text="\"" />
+                        </string_literal>
+                        <"," text="," />
+                        <generic_expression>
+                            <_Generic text="_Generic" />
+                            <"(" text="(" />
+                            <binary_expression>
+                                <identifier text="i" />
+                                <"+" text="+" />
+                                <number_literal text="2L" />
+                            </binary_expression>
+                            <"," text="," />
+                            <type_descriptor>
+                                <sized_type_specifier>
+                                    <long text="long" />
+                                </sized_type_specifier>
+                            </type_descriptor>
+                            <":" text=":" />
+                            <string_literal>
+                                <"\"" text="\"" />
+                                <string_content text="long" />
+                                <"\"" text="\"" />
+                            </string_literal>
+                            <"," text="," />
+                            <type_descriptor>
+                                <primitive_type text="int" />
+                            </type_descriptor>
+                            <":" text=":" />
+                            <string_literal>
+                                <"\"" text="\"" />
+                                <string_content text="int" />
+                                <"\"" text="\"" />
+                            </string_literal>
+                            <"," text="," />
+                            <type_descriptor>
+                                <sized_type_specifier>
+                                    <long text="long" />
+                                    <long text="long" />
+                                </sized_type_specifier>
+                            </type_descriptor>
+                            <":" text=":" />
+                            <string_literal>
+                                <"\"" text="\"" />
+                                <string_content text="long long" />
+                                <"\"" text="\"" />
+                            </string_literal>
+                            <")" text=")" />
+                        </generic_expression>
+                        <")" text=")" />
+                    </argument_list>
+                </call_expression>
+                <";" text=";" />
+            </expression_statement>
+            <expression_statement>
+                <assignment_expression>
+                    <identifier text="i" />
+                    <"=" text="=" />
+                    <generic_expression>
+                        <_Generic text="_Generic" />
+                        <"(" text="(" />
+                        <identifier text="l" />
+                        <"," text="," />
+                        <type_descriptor>
+                            <sized_type_specifier>
+                                <long text="long" />
+                            </sized_type_specifier>
+                        </type_descriptor>
+                        <":" text=":" />
+                        <number_literal text="1" />
+                        <"," text="," />
+                        <type_descriptor>
+                            <primitive_type text="int" />
+                        </type_descriptor>
+                        <":" text=":" />
+                        <number_literal text="2" />
+                        <")" text=")" />
+                    </generic_expression>
+                </assignment_expression>
+                <";" text=";" />
+            </expression_statement>
+            <expression_statement>
+                <call_expression>
+                    <identifier text="printf" />
+                    <argument_list>
+                        <"(" text="(" />
+                        <string_literal>
+                            <"\"" text="\"" />
+                            <string_content text="%d" />
+                            <escape_sequence text="\\n" />
+                            <"\"" text="\"" />
+                        </string_literal>
+                        <"," text="," />
+                        <identifier text="i" />
+                        <")" text=")" />
+                    </argument_list>
+                </call_expression>
+                <";" text=";" />
+            </expression_statement>
+            <expression_statement>
+                <assignment_expression>
+                    <identifier text="i" />
+                    <"=" text="=" />
+                    <generic_expression>
+                        <_Generic text="_Generic" />
+                        <"(" text="(" />
+                        <identifier text="foo" />
+                        <"," text="," />
+                        <type_descriptor>
+                            <type_identifier text="fptr" />
+                        </type_descriptor>
+                        <":" text=":" />
+                        <number_literal text="3" />
+                        <"," text="," />
+                        <type_descriptor>
+                            <primitive_type text="int" />
+                        </type_descriptor>
+                        <":" text=":" />
+                        <number_literal text="4" />
+                        <")" text=")" />
+                    </generic_expression>
+                </assignment_expression>
+                <";" text=";" />
+            </expression_statement>
+            <expression_statement>
+                <call_expression>
+                    <identifier text="printf" />
+                    <argument_list>
+                        <"(" text="(" />
+                        <string_literal>
+                            <"\"" text="\"" />
+                            <string_content text="%d" />
+                            <escape_sequence text="\\n" />
+                            <"\"" text="\"" />
+                        </string_literal>
+                        <"," text="," />
+                        <identifier text="i" />
+                        <")" text=")" />
+                    </argument_list>
+                </call_expression>
+                <";" text=";" />
+            </expression_statement>
+            <return_statement>
+                <return text="return" />
+                <number_literal text="0" />
+                <";" text=";" />
+            </return_statement>
+            <"}" text="}" />
+        </compound_statement>
+    </function_definition>
+</translation_unit>

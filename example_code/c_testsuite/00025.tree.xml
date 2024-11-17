@@ -1,0 +1,69 @@
+<translation_unit>
+    <declaration>
+        <primitive_type text="int" />
+        <function_declarator>
+            <identifier text="strlen" />
+            <parameter_list>
+                <"(" text="(" />
+                <parameter_declaration>
+                    <primitive_type text="char" />
+                    <abstract_pointer_declarator>
+                        <"*" text="*" />
+                    </abstract_pointer_declarator>
+                </parameter_declaration>
+                <")" text=")" />
+            </parameter_list>
+        </function_declarator>
+        <";" text=";" />
+    </declaration>
+    <function_definition>
+        <primitive_type text="int" />
+        <function_declarator>
+            <identifier text="main" />
+            <parameter_list>
+                <"(" text="(" />
+                <")" text=")" />
+            </parameter_list>
+        </function_declarator>
+        <compound_statement>
+            <"{" text="{" />
+            <declaration>
+                <primitive_type text="char" />
+                <pointer_declarator>
+                    <"*" text="*" />
+                    <identifier text="p" />
+                </pointer_declarator>
+                <";" text=";" />
+            </declaration>
+            <expression_statement>
+                <assignment_expression>
+                    <identifier text="p" />
+                    <"=" text="=" />
+                    <string_literal>
+                        <"\"" text="\"" />
+                        <string_content text="hello" />
+                        <"\"" text="\"" />
+                    </string_literal>
+                </assignment_expression>
+                <";" text=";" />
+            </expression_statement>
+            <return_statement>
+                <return text="return" />
+                <binary_expression>
+                    <call_expression>
+                        <identifier text="strlen" />
+                        <argument_list>
+                            <"(" text="(" />
+                            <identifier text="p" />
+                            <")" text=")" />
+                        </argument_list>
+                    </call_expression>
+                    <"-" text="-" />
+                    <number_literal text="5" />
+                </binary_expression>
+                <";" text=";" />
+            </return_statement>
+            <"}" text="}" />
+        </compound_statement>
+    </function_definition>
+</translation_unit>

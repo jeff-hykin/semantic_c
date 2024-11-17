@@ -1,0 +1,945 @@
+<translation_unit>
+    <preproc_if>
+        <#if text="#if" />
+        <binary_expression>
+            <parenthesized_expression>
+                <"(" text="(" />
+                <number_literal text="-2" />
+                <")" text=")" />
+            </parenthesized_expression>
+            <"!=" text="!=" />
+            <number_literal text="-2" />
+        </binary_expression>
+        <"\n" text="\n" />
+        <preproc_call>
+            <preproc_directive text="#error" />
+            <preproc_arg text="fail" />
+        </preproc_call>
+        <#endif text="#endif" />
+    </preproc_if>
+    <preproc_if>
+        <#if text="#if" />
+        <binary_expression>
+            <parenthesized_expression>
+                <"(" text="(" />
+                <binary_expression>
+                    <number_literal text="0" />
+                    <"||" text="||" />
+                    <number_literal text="0" />
+                </binary_expression>
+                <")" text=")" />
+            </parenthesized_expression>
+            <"!=" text="!=" />
+            <number_literal text="0" />
+        </binary_expression>
+        <"\n" text="\n" />
+        <preproc_call>
+            <preproc_directive text="#error" />
+            <preproc_arg text="fail" />
+        </preproc_call>
+        <#endif text="#endif" />
+    </preproc_if>
+    <preproc_if>
+        <#if text="#if" />
+        <binary_expression>
+            <parenthesized_expression>
+                <"(" text="(" />
+                <binary_expression>
+                    <number_literal text="1" />
+                    <"||" text="||" />
+                    <number_literal text="0" />
+                </binary_expression>
+                <")" text=")" />
+            </parenthesized_expression>
+            <"!=" text="!=" />
+            <number_literal text="1" />
+        </binary_expression>
+        <"\n" text="\n" />
+        <preproc_call>
+            <preproc_directive text="#error" />
+            <preproc_arg text="fail" />
+        </preproc_call>
+        <#endif text="#endif" />
+    </preproc_if>
+    <preproc_if>
+        <#if text="#if" />
+        <binary_expression>
+            <parenthesized_expression>
+                <"(" text="(" />
+                <binary_expression>
+                    <number_literal text="1" />
+                    <"||" text="||" />
+                    <number_literal text="1" />
+                </binary_expression>
+                <")" text=")" />
+            </parenthesized_expression>
+            <"!=" text="!=" />
+            <number_literal text="1" />
+        </binary_expression>
+        <"\n" text="\n" />
+        <preproc_call>
+            <preproc_directive text="#error" />
+            <preproc_arg text="fail" />
+        </preproc_call>
+        <#endif text="#endif" />
+    </preproc_if>
+    <preproc_if>
+        <#if text="#if" />
+        <binary_expression>
+            <parenthesized_expression>
+                <"(" text="(" />
+                <binary_expression>
+                    <number_literal text="0" />
+                    <"&&" text="&&" />
+                    <number_literal text="0" />
+                </binary_expression>
+                <")" text=")" />
+            </parenthesized_expression>
+            <"!=" text="!=" />
+            <number_literal text="0" />
+        </binary_expression>
+        <"\n" text="\n" />
+        <preproc_call>
+            <preproc_directive text="#error" />
+            <preproc_arg text="fail" />
+        </preproc_call>
+        <#endif text="#endif" />
+    </preproc_if>
+    <preproc_if>
+        <#if text="#if" />
+        <binary_expression>
+            <parenthesized_expression>
+                <"(" text="(" />
+                <binary_expression>
+                    <number_literal text="1" />
+                    <"&&" text="&&" />
+                    <number_literal text="0" />
+                </binary_expression>
+                <")" text=")" />
+            </parenthesized_expression>
+            <"!=" text="!=" />
+            <number_literal text="0" />
+        </binary_expression>
+        <"\n" text="\n" />
+        <preproc_call>
+            <preproc_directive text="#error" />
+            <preproc_arg text="fail" />
+        </preproc_call>
+        <#endif text="#endif" />
+    </preproc_if>
+    <preproc_if>
+        <#if text="#if" />
+        <binary_expression>
+            <parenthesized_expression>
+                <"(" text="(" />
+                <binary_expression>
+                    <number_literal text="0" />
+                    <"&&" text="&&" />
+                    <number_literal text="1" />
+                </binary_expression>
+                <")" text=")" />
+            </parenthesized_expression>
+            <"!=" text="!=" />
+            <number_literal text="0" />
+        </binary_expression>
+        <"\n" text="\n" />
+        <preproc_call>
+            <preproc_directive text="#error" />
+            <preproc_arg text="fail" />
+        </preproc_call>
+        <#endif text="#endif" />
+    </preproc_if>
+    <preproc_if>
+        <#if text="#if" />
+        <binary_expression>
+            <parenthesized_expression>
+                <"(" text="(" />
+                <binary_expression>
+                    <number_literal text="1" />
+                    <"&&" text="&&" />
+                    <number_literal text="1" />
+                </binary_expression>
+                <")" text=")" />
+            </parenthesized_expression>
+            <"!=" text="!=" />
+            <number_literal text="1" />
+        </binary_expression>
+        <"\n" text="\n" />
+        <preproc_call>
+            <preproc_directive text="#error" />
+            <preproc_arg text="fail" />
+        </preproc_call>
+        <#endif text="#endif" />
+    </preproc_if>
+    <preproc_if>
+        <#if text="#if" />
+        <binary_expression>
+            <parenthesized_expression>
+                <"(" text="(" />
+                <binary_expression>
+                    <number_literal text="0xf0" />
+                    <"|" text="|" />
+                    <number_literal text="1" />
+                </binary_expression>
+                <")" text=")" />
+            </parenthesized_expression>
+            <"!=" text="!=" />
+            <number_literal text="0xf1" />
+        </binary_expression>
+        <"\n" text="\n" />
+        <preproc_call>
+            <preproc_directive text="#error" />
+            <preproc_arg text="fail" />
+        </preproc_call>
+        <#endif text="#endif" />
+    </preproc_if>
+    <preproc_if>
+        <#if text="#if" />
+        <binary_expression>
+            <parenthesized_expression>
+                <"(" text="(" />
+                <binary_expression>
+                    <number_literal text="0xf0" />
+                    <"&" text="&" />
+                    <number_literal text="1" />
+                </binary_expression>
+                <")" text=")" />
+            </parenthesized_expression>
+            <"!=" text="!=" />
+            <number_literal text="0" />
+        </binary_expression>
+        <"\n" text="\n" />
+        <preproc_call>
+            <preproc_directive text="#error" />
+            <preproc_arg text="fail" />
+        </preproc_call>
+        <#endif text="#endif" />
+    </preproc_if>
+    <preproc_if>
+        <#if text="#if" />
+        <binary_expression>
+            <parenthesized_expression>
+                <"(" text="(" />
+                <binary_expression>
+                    <number_literal text="0xf0" />
+                    <"&" text="&" />
+                    <number_literal text="0x1f" />
+                </binary_expression>
+                <")" text=")" />
+            </parenthesized_expression>
+            <"!=" text="!=" />
+            <number_literal text="0x10" />
+        </binary_expression>
+        <"\n" text="\n" />
+        <preproc_call>
+            <preproc_directive text="#error" />
+            <preproc_arg text="fail" />
+        </preproc_call>
+        <#endif text="#endif" />
+    </preproc_if>
+    <preproc_if>
+        <#if text="#if" />
+        <binary_expression>
+            <parenthesized_expression>
+                <"(" text="(" />
+                <binary_expression>
+                    <number_literal text="1" />
+                    <"^" text="^" />
+                    <number_literal text="1" />
+                </binary_expression>
+                <")" text=")" />
+            </parenthesized_expression>
+            <"!=" text="!=" />
+            <number_literal text="0" />
+        </binary_expression>
+        <"\n" text="\n" />
+        <preproc_call>
+            <preproc_directive text="#error" />
+            <preproc_arg text="fail" />
+        </preproc_call>
+        <#endif text="#endif" />
+    </preproc_if>
+    <preproc_if>
+        <#if text="#if" />
+        <binary_expression>
+            <parenthesized_expression>
+                <"(" text="(" />
+                <binary_expression>
+                    <number_literal text="1" />
+                    <"==" text="==" />
+                    <number_literal text="1" />
+                </binary_expression>
+                <")" text=")" />
+            </parenthesized_expression>
+            <"!=" text="!=" />
+            <number_literal text="1" />
+        </binary_expression>
+        <"\n" text="\n" />
+        <preproc_call>
+            <preproc_directive text="#error" />
+            <preproc_arg text="fail" />
+        </preproc_call>
+        <#endif text="#endif" />
+    </preproc_if>
+    <preproc_if>
+        <#if text="#if" />
+        <binary_expression>
+            <parenthesized_expression>
+                <"(" text="(" />
+                <binary_expression>
+                    <number_literal text="1" />
+                    <"==" text="==" />
+                    <number_literal text="0" />
+                </binary_expression>
+                <")" text=")" />
+            </parenthesized_expression>
+            <"!=" text="!=" />
+            <number_literal text="0" />
+        </binary_expression>
+        <"\n" text="\n" />
+        <preproc_call>
+            <preproc_directive text="#error" />
+            <preproc_arg text="fail" />
+        </preproc_call>
+        <#endif text="#endif" />
+    </preproc_if>
+    <preproc_if>
+        <#if text="#if" />
+        <binary_expression>
+            <parenthesized_expression>
+                <"(" text="(" />
+                <binary_expression>
+                    <number_literal text="1" />
+                    <"!=" text="!=" />
+                    <number_literal text="1" />
+                </binary_expression>
+                <")" text=")" />
+            </parenthesized_expression>
+            <"!=" text="!=" />
+            <number_literal text="0" />
+        </binary_expression>
+        <"\n" text="\n" />
+        <preproc_call>
+            <preproc_directive text="#error" />
+            <preproc_arg text="fail" />
+        </preproc_call>
+        <#endif text="#endif" />
+    </preproc_if>
+    <preproc_if>
+        <#if text="#if" />
+        <binary_expression>
+            <parenthesized_expression>
+                <"(" text="(" />
+                <binary_expression>
+                    <number_literal text="0" />
+                    <"!=" text="!=" />
+                    <number_literal text="1" />
+                </binary_expression>
+                <")" text=")" />
+            </parenthesized_expression>
+            <"!=" text="!=" />
+            <number_literal text="1" />
+        </binary_expression>
+        <"\n" text="\n" />
+        <preproc_call>
+            <preproc_directive text="#error" />
+            <preproc_arg text="fail" />
+        </preproc_call>
+        <#endif text="#endif" />
+    </preproc_if>
+    <preproc_if>
+        <#if text="#if" />
+        <binary_expression>
+            <parenthesized_expression>
+                <"(" text="(" />
+                <binary_expression>
+                    <number_literal text="0" />
+                    <">" text=">" />
+                    <number_literal text="1" />
+                </binary_expression>
+                <")" text=")" />
+            </parenthesized_expression>
+            <"!=" text="!=" />
+            <number_literal text="0" />
+        </binary_expression>
+        <"\n" text="\n" />
+        <preproc_call>
+            <preproc_directive text="#error" />
+            <preproc_arg text="fail" />
+        </preproc_call>
+        <#endif text="#endif" />
+    </preproc_if>
+    <preproc_if>
+        <#if text="#if" />
+        <binary_expression>
+            <parenthesized_expression>
+                <"(" text="(" />
+                <binary_expression>
+                    <number_literal text="0" />
+                    <"<" text="<" />
+                    <number_literal text="1" />
+                </binary_expression>
+                <")" text=")" />
+            </parenthesized_expression>
+            <"!=" text="!=" />
+            <number_literal text="1" />
+        </binary_expression>
+        <"\n" text="\n" />
+        <preproc_call>
+            <preproc_directive text="#error" />
+            <preproc_arg text="fail" />
+        </preproc_call>
+        <#endif text="#endif" />
+    </preproc_if>
+    <preproc_if>
+        <#if text="#if" />
+        <binary_expression>
+            <parenthesized_expression>
+                <"(" text="(" />
+                <binary_expression>
+                    <number_literal text="0" />
+                    <">" text=">" />
+                    <number_literal text="-1" />
+                </binary_expression>
+                <")" text=")" />
+            </parenthesized_expression>
+            <"!=" text="!=" />
+            <number_literal text="1" />
+        </binary_expression>
+        <"\n" text="\n" />
+        <preproc_call>
+            <preproc_directive text="#error" />
+            <preproc_arg text="fail" />
+        </preproc_call>
+        <#endif text="#endif" />
+    </preproc_if>
+    <preproc_if>
+        <#if text="#if" />
+        <binary_expression>
+            <parenthesized_expression>
+                <"(" text="(" />
+                <binary_expression>
+                    <number_literal text="0" />
+                    <"<" text="<" />
+                    <number_literal text="-1" />
+                </binary_expression>
+                <")" text=")" />
+            </parenthesized_expression>
+            <"!=" text="!=" />
+            <number_literal text="0" />
+        </binary_expression>
+        <"\n" text="\n" />
+        <preproc_call>
+            <preproc_directive text="#error" />
+            <preproc_arg text="fail" />
+        </preproc_call>
+        <#endif text="#endif" />
+    </preproc_if>
+    <preproc_if>
+        <#if text="#if" />
+        <binary_expression>
+            <parenthesized_expression>
+                <"(" text="(" />
+                <binary_expression>
+                    <number_literal text="0" />
+                    <">=" text=">=" />
+                    <number_literal text="1" />
+                </binary_expression>
+                <")" text=")" />
+            </parenthesized_expression>
+            <"!=" text="!=" />
+            <number_literal text="0" />
+        </binary_expression>
+        <"\n" text="\n" />
+        <preproc_call>
+            <preproc_directive text="#error" />
+            <preproc_arg text="fail" />
+        </preproc_call>
+        <#endif text="#endif" />
+    </preproc_if>
+    <preproc_if>
+        <#if text="#if" />
+        <binary_expression>
+            <parenthesized_expression>
+                <"(" text="(" />
+                <binary_expression>
+                    <number_literal text="0" />
+                    <"<=" text="<=" />
+                    <number_literal text="1" />
+                </binary_expression>
+                <")" text=")" />
+            </parenthesized_expression>
+            <"!=" text="!=" />
+            <number_literal text="1" />
+        </binary_expression>
+        <"\n" text="\n" />
+        <preproc_call>
+            <preproc_directive text="#error" />
+            <preproc_arg text="fail" />
+        </preproc_call>
+        <#endif text="#endif" />
+    </preproc_if>
+    <preproc_if>
+        <#if text="#if" />
+        <binary_expression>
+            <parenthesized_expression>
+                <"(" text="(" />
+                <binary_expression>
+                    <number_literal text="0" />
+                    <">=" text=">=" />
+                    <number_literal text="-1" />
+                </binary_expression>
+                <")" text=")" />
+            </parenthesized_expression>
+            <"!=" text="!=" />
+            <number_literal text="1" />
+        </binary_expression>
+        <"\n" text="\n" />
+        <preproc_call>
+            <preproc_directive text="#error" />
+            <preproc_arg text="fail" />
+        </preproc_call>
+        <#endif text="#endif" />
+    </preproc_if>
+    <preproc_if>
+        <#if text="#if" />
+        <binary_expression>
+            <parenthesized_expression>
+                <"(" text="(" />
+                <binary_expression>
+                    <number_literal text="0" />
+                    <"<=" text="<=" />
+                    <number_literal text="-1" />
+                </binary_expression>
+                <")" text=")" />
+            </parenthesized_expression>
+            <"!=" text="!=" />
+            <number_literal text="0" />
+        </binary_expression>
+        <"\n" text="\n" />
+        <preproc_call>
+            <preproc_directive text="#error" />
+            <preproc_arg text="fail" />
+        </preproc_call>
+        <#endif text="#endif" />
+    </preproc_if>
+    <preproc_if>
+        <#if text="#if" />
+        <binary_expression>
+            <parenthesized_expression>
+                <"(" text="(" />
+                <binary_expression>
+                    <number_literal text="0" />
+                    <"<" text="<" />
+                    <number_literal text="0" />
+                </binary_expression>
+                <")" text=")" />
+            </parenthesized_expression>
+            <"!=" text="!=" />
+            <number_literal text="0" />
+        </binary_expression>
+        <"\n" text="\n" />
+        <preproc_call>
+            <preproc_directive text="#error" />
+            <preproc_arg text="fail" />
+        </preproc_call>
+        <#endif text="#endif" />
+    </preproc_if>
+    <preproc_if>
+        <#if text="#if" />
+        <binary_expression>
+            <parenthesized_expression>
+                <"(" text="(" />
+                <binary_expression>
+                    <number_literal text="0" />
+                    <"<=" text="<=" />
+                    <number_literal text="0" />
+                </binary_expression>
+                <")" text=")" />
+            </parenthesized_expression>
+            <"!=" text="!=" />
+            <number_literal text="1" />
+        </binary_expression>
+        <"\n" text="\n" />
+        <preproc_call>
+            <preproc_directive text="#error" />
+            <preproc_arg text="fail" />
+        </preproc_call>
+        <#endif text="#endif" />
+    </preproc_if>
+    <preproc_if>
+        <#if text="#if" />
+        <binary_expression>
+            <parenthesized_expression>
+                <"(" text="(" />
+                <binary_expression>
+                    <number_literal text="0" />
+                    <">" text=">" />
+                    <number_literal text="0" />
+                </binary_expression>
+                <")" text=")" />
+            </parenthesized_expression>
+            <"!=" text="!=" />
+            <number_literal text="0" />
+        </binary_expression>
+        <"\n" text="\n" />
+        <preproc_call>
+            <preproc_directive text="#error" />
+            <preproc_arg text="fail" />
+        </preproc_call>
+        <#endif text="#endif" />
+    </preproc_if>
+    <preproc_if>
+        <#if text="#if" />
+        <binary_expression>
+            <parenthesized_expression>
+                <"(" text="(" />
+                <binary_expression>
+                    <number_literal text="0" />
+                    <">=" text=">=" />
+                    <number_literal text="0" />
+                </binary_expression>
+                <")" text=")" />
+            </parenthesized_expression>
+            <"!=" text="!=" />
+            <number_literal text="1" />
+        </binary_expression>
+        <"\n" text="\n" />
+        <preproc_call>
+            <preproc_directive text="#error" />
+            <preproc_arg text="fail" />
+        </preproc_call>
+        <#endif text="#endif" />
+    </preproc_if>
+    <preproc_if>
+        <#if text="#if" />
+        <binary_expression>
+            <parenthesized_expression>
+                <"(" text="(" />
+                <binary_expression>
+                    <number_literal text="1" />
+                    <"<<" text="<<" />
+                    <number_literal text="1" />
+                </binary_expression>
+                <")" text=")" />
+            </parenthesized_expression>
+            <"!=" text="!=" />
+            <number_literal text="2" />
+        </binary_expression>
+        <"\n" text="\n" />
+        <preproc_call>
+            <preproc_directive text="#error" />
+            <preproc_arg text="fail" />
+        </preproc_call>
+        <#endif text="#endif" />
+    </preproc_if>
+    <preproc_if>
+        <#if text="#if" />
+        <binary_expression>
+            <parenthesized_expression>
+                <"(" text="(" />
+                <binary_expression>
+                    <number_literal text="2" />
+                    <">>" text=">>" />
+                    <number_literal text="1" />
+                </binary_expression>
+                <")" text=")" />
+            </parenthesized_expression>
+            <"!=" text="!=" />
+            <number_literal text="1" />
+        </binary_expression>
+        <"\n" text="\n" />
+        <preproc_call>
+            <preproc_directive text="#error" />
+            <preproc_arg text="fail" />
+        </preproc_call>
+        <#endif text="#endif" />
+    </preproc_if>
+    <preproc_if>
+        <#if text="#if" />
+        <binary_expression>
+            <parenthesized_expression>
+                <"(" text="(" />
+                <binary_expression>
+                    <number_literal text="2" />
+                    <"+" text="+" />
+                    <number_literal text="1" />
+                </binary_expression>
+                <")" text=")" />
+            </parenthesized_expression>
+            <"!=" text="!=" />
+            <number_literal text="3" />
+        </binary_expression>
+        <"\n" text="\n" />
+        <preproc_call>
+            <preproc_directive text="#error" />
+            <preproc_arg text="fail" />
+        </preproc_call>
+        <#endif text="#endif" />
+    </preproc_if>
+    <preproc_if>
+        <#if text="#if" />
+        <binary_expression>
+            <parenthesized_expression>
+                <"(" text="(" />
+                <binary_expression>
+                    <number_literal text="2" />
+                    <"-" text="-" />
+                    <number_literal text="3" />
+                </binary_expression>
+                <")" text=")" />
+            </parenthesized_expression>
+            <"!=" text="!=" />
+            <number_literal text="-1" />
+        </binary_expression>
+        <"\n" text="\n" />
+        <preproc_call>
+            <preproc_directive text="#error" />
+            <preproc_arg text="fail" />
+        </preproc_call>
+        <#endif text="#endif" />
+    </preproc_if>
+    <preproc_if>
+        <#if text="#if" />
+        <binary_expression>
+            <parenthesized_expression>
+                <"(" text="(" />
+                <binary_expression>
+                    <number_literal text="2" />
+                    <"*" text="*" />
+                    <number_literal text="3" />
+                </binary_expression>
+                <")" text=")" />
+            </parenthesized_expression>
+            <"!=" text="!=" />
+            <number_literal text="6" />
+        </binary_expression>
+        <"\n" text="\n" />
+        <preproc_call>
+            <preproc_directive text="#error" />
+            <preproc_arg text="fail" />
+        </preproc_call>
+        <#endif text="#endif" />
+    </preproc_if>
+    <preproc_if>
+        <#if text="#if" />
+        <binary_expression>
+            <parenthesized_expression>
+                <"(" text="(" />
+                <binary_expression>
+                    <number_literal text="6" />
+                    <"/" text="/" />
+                    <number_literal text="3" />
+                </binary_expression>
+                <")" text=")" />
+            </parenthesized_expression>
+            <"!=" text="!=" />
+            <number_literal text="2" />
+        </binary_expression>
+        <"\n" text="\n" />
+        <preproc_call>
+            <preproc_directive text="#error" />
+            <preproc_arg text="fail" />
+        </preproc_call>
+        <#endif text="#endif" />
+    </preproc_if>
+    <preproc_if>
+        <#if text="#if" />
+        <binary_expression>
+            <parenthesized_expression>
+                <"(" text="(" />
+                <binary_expression>
+                    <number_literal text="7" />
+                    <"%" text="%" />
+                    <number_literal text="3" />
+                </binary_expression>
+                <")" text=")" />
+            </parenthesized_expression>
+            <"!=" text="!=" />
+            <number_literal text="1" />
+        </binary_expression>
+        <"\n" text="\n" />
+        <preproc_call>
+            <preproc_directive text="#error" />
+            <preproc_arg text="fail" />
+        </preproc_call>
+        <#endif text="#endif" />
+    </preproc_if>
+    <preproc_if>
+        <#if text="#if" />
+        <binary_expression>
+            <parenthesized_expression>
+                <"(" text="(" />
+                <binary_expression>
+                    <binary_expression>
+                        <number_literal text="2" />
+                        <"+" text="+" />
+                        <binary_expression>
+                            <number_literal text="2" />
+                            <"*" text="*" />
+                            <number_literal text="3" />
+                        </binary_expression>
+                    </binary_expression>
+                    <"+" text="+" />
+                    <number_literal text="2" />
+                </binary_expression>
+                <")" text=")" />
+            </parenthesized_expression>
+            <"!=" text="!=" />
+            <number_literal text="10" />
+        </binary_expression>
+        <"\n" text="\n" />
+        <preproc_call>
+            <preproc_directive text="#error" />
+            <preproc_arg text="fail" />
+        </preproc_call>
+        <#endif text="#endif" />
+    </preproc_if>
+    <preproc_if>
+        <#if text="#if" />
+        <binary_expression>
+            <parenthesized_expression>
+                <"(" text="(" />
+                <binary_expression>
+                    <parenthesized_expression>
+                        <"(" text="(" />
+                        <binary_expression>
+                            <number_literal text="2" />
+                            <"+" text="+" />
+                            <number_literal text="2" />
+                        </binary_expression>
+                        <")" text=")" />
+                    </parenthesized_expression>
+                    <"*" text="*" />
+                    <parenthesized_expression>
+                        <"(" text="(" />
+                        <binary_expression>
+                            <number_literal text="3" />
+                            <"+" text="+" />
+                            <number_literal text="2" />
+                        </binary_expression>
+                        <")" text=")" />
+                    </parenthesized_expression>
+                </binary_expression>
+                <")" text=")" />
+            </parenthesized_expression>
+            <"!=" text="!=" />
+            <number_literal text="20" />
+        </binary_expression>
+        <"\n" text="\n" />
+        <preproc_call>
+            <preproc_directive text="#error" />
+            <preproc_arg text="fail" />
+        </preproc_call>
+        <#endif text="#endif" />
+    </preproc_if>
+    <preproc_if>
+        <#if text="#if" />
+        <binary_expression>
+            <parenthesized_expression>
+                <"(" text="(" />
+                <binary_expression>
+                    <binary_expression>
+                        <binary_expression>
+                            <binary_expression>
+                                <number_literal text="2" />
+                                <"+" text="+" />
+                                <number_literal text="2" />
+                            </binary_expression>
+                            <"+" text="+" />
+                            <number_literal text="2" />
+                        </binary_expression>
+                        <"+" text="+" />
+                        <number_literal text="2" />
+                    </binary_expression>
+                    <"==" text="==" />
+                    <binary_expression>
+                        <number_literal text="2" />
+                        <"+" text="+" />
+                        <binary_expression>
+                            <number_literal text="2" />
+                            <"*" text="*" />
+                            <number_literal text="3" />
+                        </binary_expression>
+                    </binary_expression>
+                </binary_expression>
+                <")" text=")" />
+            </parenthesized_expression>
+            <"!=" text="!=" />
+            <number_literal text="1" />
+        </binary_expression>
+        <"\n" text="\n" />
+        <preproc_call>
+            <preproc_directive text="#error" />
+            <preproc_arg text="fail" />
+        </preproc_call>
+        <#endif text="#endif" />
+    </preproc_if>
+    <preproc_if>
+        <#if text="#if" />
+        <binary_expression>
+            <parenthesized_expression>
+                <"(" text="(" />
+                <number_literal text="0" />
+                <ERROR>
+                    <"?" text="?" />
+                    <number_literal text="1" />
+                    <":" text=":" />
+                    <number_literal text="3" />
+                </ERROR>
+                <")" text=")" />
+            </parenthesized_expression>
+            <"!=" text="!=" />
+            <number_literal text="3" />
+        </binary_expression>
+        <"\n" text="\n" />
+        <preproc_call>
+            <preproc_directive text="#error" />
+            <preproc_arg text="fail" />
+        </preproc_call>
+        <#endif text="#endif" />
+    </preproc_if>
+    <preproc_if>
+        <#if text="#if" />
+        <binary_expression>
+            <parenthesized_expression>
+                <"(" text="(" />
+                <number_literal text="1" />
+                <ERROR>
+                    <"?" text="?" />
+                    <number_literal text="3" />
+                    <":" text=":" />
+                    <number_literal text="1" />
+                </ERROR>
+                <")" text=")" />
+            </parenthesized_expression>
+            <"!=" text="!=" />
+            <number_literal text="3" />
+        </binary_expression>
+        <"\n" text="\n" />
+        <preproc_call>
+            <preproc_directive text="#error" />
+            <preproc_arg text="fail" />
+        </preproc_call>
+        <#endif text="#endif" />
+    </preproc_if>
+    <function_definition>
+        <primitive_type text="int" />
+        <function_declarator>
+            <identifier text="main" />
+            <parameter_list>
+                <"(" text="(" />
+                <")" text=")" />
+            </parameter_list>
+        </function_declarator>
+        <compound_statement>
+            <"{" text="{" />
+            <return_statement>
+                <return text="return" />
+                <number_literal text="0" />
+                <";" text=";" />
+            </return_statement>
+            <"}" text="}" />
+        </compound_statement>
+    </function_definition>
+</translation_unit>

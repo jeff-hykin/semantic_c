@@ -1,0 +1,370 @@
+<translation_unit>
+    <preproc_include>
+        <#include text="#include" />
+        <system_lib_string text="<stdio.h>" />
+    </preproc_include>
+    <function_definition>
+        <primitive_type text="void" />
+        <function_declarator>
+            <identifier text="charfunc" />
+            <parameter_list>
+                <"(" text="(" />
+                <parameter_declaration>
+                    <primitive_type text="char" />
+                    <identifier text="a" />
+                </parameter_declaration>
+                <")" text=")" />
+            </parameter_list>
+        </function_declarator>
+        <compound_statement>
+            <"{" text="{" />
+            <expression_statement>
+                <call_expression>
+                    <identifier text="printf" />
+                    <argument_list>
+                        <"(" text="(" />
+                        <string_literal>
+                            <"\"" text="\"" />
+                            <string_content text="char: %c" />
+                            <escape_sequence text="\\n" />
+                            <"\"" text="\"" />
+                        </string_literal>
+                        <"," text="," />
+                        <identifier text="a" />
+                        <")" text=")" />
+                    </argument_list>
+                </call_expression>
+                <";" text=";" />
+            </expression_statement>
+            <"}" text="}" />
+        </compound_statement>
+    </function_definition>
+    <function_definition>
+        <primitive_type text="void" />
+        <function_declarator>
+            <identifier text="intfunc" />
+            <parameter_list>
+                <"(" text="(" />
+                <parameter_declaration>
+                    <primitive_type text="int" />
+                    <identifier text="a" />
+                </parameter_declaration>
+                <")" text=")" />
+            </parameter_list>
+        </function_declarator>
+        <compound_statement>
+            <"{" text="{" />
+            <expression_statement>
+                <call_expression>
+                    <identifier text="printf" />
+                    <argument_list>
+                        <"(" text="(" />
+                        <string_literal>
+                            <"\"" text="\"" />
+                            <string_content text="int: %d" />
+                            <escape_sequence text="\\n" />
+                            <"\"" text="\"" />
+                        </string_literal>
+                        <"," text="," />
+                        <identifier text="a" />
+                        <")" text=")" />
+                    </argument_list>
+                </call_expression>
+                <";" text=";" />
+            </expression_statement>
+            <"}" text="}" />
+        </compound_statement>
+    </function_definition>
+    <function_definition>
+        <primitive_type text="void" />
+        <function_declarator>
+            <identifier text="floatfunc" />
+            <parameter_list>
+                <"(" text="(" />
+                <parameter_declaration>
+                    <primitive_type text="float" />
+                    <identifier text="a" />
+                </parameter_declaration>
+                <")" text=")" />
+            </parameter_list>
+        </function_declarator>
+        <compound_statement>
+            <"{" text="{" />
+            <expression_statement>
+                <call_expression>
+                    <identifier text="printf" />
+                    <argument_list>
+                        <"(" text="(" />
+                        <string_literal>
+                            <"\"" text="\"" />
+                            <string_content text="float: %f" />
+                            <escape_sequence text="\\n" />
+                            <"\"" text="\"" />
+                        </string_literal>
+                        <"," text="," />
+                        <identifier text="a" />
+                        <")" text=")" />
+                    </argument_list>
+                </call_expression>
+                <";" text=";" />
+            </expression_statement>
+            <"}" text="}" />
+        </compound_statement>
+    </function_definition>
+    <function_definition>
+        <primitive_type text="int" />
+        <function_declarator>
+            <identifier text="main" />
+            <parameter_list>
+                <"(" text="(" />
+                <")" text=")" />
+            </parameter_list>
+        </function_declarator>
+        <compound_statement>
+            <"{" text="{" />
+            <expression_statement>
+                <call_expression>
+                    <identifier text="charfunc" />
+                    <argument_list>
+                        <"(" text="(" />
+                        <char_literal>
+                            <"'" text="'" />
+                            <character text="a" />
+                            <"'" text="'" />
+                        </char_literal>
+                        <")" text=")" />
+                    </argument_list>
+                </call_expression>
+                <";" text=";" />
+            </expression_statement>
+            <expression_statement>
+                <call_expression>
+                    <identifier text="charfunc" />
+                    <argument_list>
+                        <"(" text="(" />
+                        <number_literal text="98" />
+                        <")" text=")" />
+                    </argument_list>
+                </call_expression>
+                <";" text=";" />
+            </expression_statement>
+            <expression_statement>
+                <call_expression>
+                    <identifier text="charfunc" />
+                    <argument_list>
+                        <"(" text="(" />
+                        <number_literal text="99.0" />
+                        <")" text=")" />
+                    </argument_list>
+                </call_expression>
+                <";" text=";" />
+            </expression_statement>
+            <expression_statement>
+                <call_expression>
+                    <identifier text="intfunc" />
+                    <argument_list>
+                        <"(" text="(" />
+                        <char_literal>
+                            <"'" text="'" />
+                            <character text="a" />
+                            <"'" text="'" />
+                        </char_literal>
+                        <")" text=")" />
+                    </argument_list>
+                </call_expression>
+                <";" text=";" />
+            </expression_statement>
+            <expression_statement>
+                <call_expression>
+                    <identifier text="intfunc" />
+                    <argument_list>
+                        <"(" text="(" />
+                        <number_literal text="98" />
+                        <")" text=")" />
+                    </argument_list>
+                </call_expression>
+                <";" text=";" />
+            </expression_statement>
+            <expression_statement>
+                <call_expression>
+                    <identifier text="intfunc" />
+                    <argument_list>
+                        <"(" text="(" />
+                        <number_literal text="99.0" />
+                        <")" text=")" />
+                    </argument_list>
+                </call_expression>
+                <";" text=";" />
+            </expression_statement>
+            <expression_statement>
+                <call_expression>
+                    <identifier text="floatfunc" />
+                    <argument_list>
+                        <"(" text="(" />
+                        <char_literal>
+                            <"'" text="'" />
+                            <character text="a" />
+                            <"'" text="'" />
+                        </char_literal>
+                        <")" text=")" />
+                    </argument_list>
+                </call_expression>
+                <";" text=";" />
+            </expression_statement>
+            <expression_statement>
+                <call_expression>
+                    <identifier text="floatfunc" />
+                    <argument_list>
+                        <"(" text="(" />
+                        <number_literal text="98" />
+                        <")" text=")" />
+                    </argument_list>
+                </call_expression>
+                <";" text=";" />
+            </expression_statement>
+            <expression_statement>
+                <call_expression>
+                    <identifier text="floatfunc" />
+                    <argument_list>
+                        <"(" text="(" />
+                        <number_literal text="99.0" />
+                        <")" text=")" />
+                    </argument_list>
+                </call_expression>
+                <";" text=";" />
+            </expression_statement>
+            <comment text="/* printf(\"%c %d %f\\n\", 'a', 'b', 'c'); */" />
+            <comment text="/* printf(\"%c %d %f\\n\", 97, 98, 99); */" />
+            <comment text="/* printf(\"%c %d %f\\n\", 97.0, 98.0, 99.0); */" />
+            <declaration>
+                <primitive_type text="char" />
+                <init_declarator>
+                    <identifier text="b" />
+                    <"=" text="=" />
+                    <number_literal text="97" />
+                </init_declarator>
+                <";" text=";" />
+            </declaration>
+            <declaration>
+                <primitive_type text="char" />
+                <init_declarator>
+                    <identifier text="c" />
+                    <"=" text="=" />
+                    <number_literal text="97.0" />
+                </init_declarator>
+                <";" text=";" />
+            </declaration>
+            <expression_statement>
+                <call_expression>
+                    <identifier text="printf" />
+                    <argument_list>
+                        <"(" text="(" />
+                        <string_literal>
+                            <"\"" text="\"" />
+                            <string_content text="%d %d" />
+                            <escape_sequence text="\\n" />
+                            <"\"" text="\"" />
+                        </string_literal>
+                        <"," text="," />
+                        <identifier text="b" />
+                        <"," text="," />
+                        <identifier text="c" />
+                        <")" text=")" />
+                    </argument_list>
+                </call_expression>
+                <";" text=";" />
+            </expression_statement>
+            <declaration>
+                <primitive_type text="int" />
+                <init_declarator>
+                    <identifier text="d" />
+                    <"=" text="=" />
+                    <char_literal>
+                        <"'" text="'" />
+                        <character text="a" />
+                        <"'" text="'" />
+                    </char_literal>
+                </init_declarator>
+                <";" text=";" />
+            </declaration>
+            <declaration>
+                <primitive_type text="int" />
+                <init_declarator>
+                    <identifier text="e" />
+                    <"=" text="=" />
+                    <number_literal text="97.0" />
+                </init_declarator>
+                <";" text=";" />
+            </declaration>
+            <expression_statement>
+                <call_expression>
+                    <identifier text="printf" />
+                    <argument_list>
+                        <"(" text="(" />
+                        <string_literal>
+                            <"\"" text="\"" />
+                            <string_content text="%d %d" />
+                            <escape_sequence text="\\n" />
+                            <"\"" text="\"" />
+                        </string_literal>
+                        <"," text="," />
+                        <identifier text="d" />
+                        <"," text="," />
+                        <identifier text="e" />
+                        <")" text=")" />
+                    </argument_list>
+                </call_expression>
+                <";" text=";" />
+            </expression_statement>
+            <declaration>
+                <primitive_type text="float" />
+                <init_declarator>
+                    <identifier text="f" />
+                    <"=" text="=" />
+                    <char_literal>
+                        <"'" text="'" />
+                        <character text="a" />
+                        <"'" text="'" />
+                    </char_literal>
+                </init_declarator>
+                <";" text=";" />
+            </declaration>
+            <declaration>
+                <primitive_type text="float" />
+                <init_declarator>
+                    <identifier text="g" />
+                    <"=" text="=" />
+                    <number_literal text="97" />
+                </init_declarator>
+                <";" text=";" />
+            </declaration>
+            <expression_statement>
+                <call_expression>
+                    <identifier text="printf" />
+                    <argument_list>
+                        <"(" text="(" />
+                        <string_literal>
+                            <"\"" text="\"" />
+                            <string_content text="%f %f" />
+                            <escape_sequence text="\\n" />
+                            <"\"" text="\"" />
+                        </string_literal>
+                        <"," text="," />
+                        <identifier text="f" />
+                        <"," text="," />
+                        <identifier text="g" />
+                        <")" text=")" />
+                    </argument_list>
+                </call_expression>
+                <";" text=";" />
+            </expression_statement>
+            <return_statement>
+                <return text="return" />
+                <number_literal text="0" />
+                <";" text=";" />
+            </return_statement>
+            <"}" text="}" />
+        </compound_statement>
+    </function_definition>
+    <comment text="/* vim: set expandtab ts=4 sw=3 sts=3 tw=80 :*/" />
+</translation_unit>

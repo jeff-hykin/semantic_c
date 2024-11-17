@@ -1,0 +1,884 @@
+<translation_unit>
+    <comment text="/* example from http://barnyard.syr.edu/quickies/hanoi.c */" />
+    <comment text="/* hanoi.c: solves the tower of hanoi problem. (Programming exercise.) */" />
+    <comment text="/* By Terry R. McConnell (12/2/97) */" />
+    <comment text="/* Compile: cc -o hanoi hanoi.c */" />
+    <comment text="/* This program does no error checking. But then, if it's right, \n   it's right ... right ? */" />
+    <comment text="/* The original towers of hanoi problem seems to have been originally posed\n   by one M. Claus in 1883. There is a popular legend that goes along with\n   it that has been often repeated and paraphrased. It goes something like this:\n   In the great temple at Benares there are 3 golden spikes. On one of them,\n   God placed 64 disks increasing in size from bottom to top, at the beginning\n   of time. Since then, and to this day, the priest on duty constantly transfers\n   disks, one at a time, in such a way that no larger disk is ever put on top\n   of a smaller one. When the disks have been transferred entirely to another\n   spike the Universe will come to an end in a large thunderclap.\n\n   This paraphrases the original legend due to DeParville, La Nature, Paris 1884,\n   Part I, 285-286. For this and further information see: Mathematical \n   Recreations & Essays, W.W. Rouse Ball, MacMillan, NewYork, 11th Ed. 1967,\n   303-305.\n *\n *\n */" />
+    <preproc_include>
+        <#include text="#include" />
+        <system_lib_string text="<stdio.h>" />
+    </preproc_include>
+    <preproc_include>
+        <#include text="#include" />
+        <system_lib_string text="<stdlib.h>" />
+    </preproc_include>
+    <preproc_def>
+        <#define text="#define" />
+        <identifier text="TRUE" />
+        <preproc_arg text="1" />
+    </preproc_def>
+    <preproc_def>
+        <#define text="#define" />
+        <identifier text="FALSE" />
+        <preproc_arg text="0" />
+    </preproc_def>
+    <comment text="/* This is the number of \"disks\" on tower A initially. Taken to be 64 in the\n * legend. The number of moves required, in general, is 2^N - 1. For N = 64,\n * this is 18,446,744,073,709,551,615 */" />
+    <preproc_def>
+        <#define text="#define" />
+        <identifier text="N" />
+        <preproc_arg text="4" />
+    </preproc_def>
+    <comment text="/* These are the three towers. For example if the state of A is 0,1,3,4, that\n * means that there are three discs on A of sizes 1, 3, and 4. (Think of right\n * as being the \"down\" direction.) */" />
+    <declaration>
+        <primitive_type text="int" />
+        <array_declarator>
+            <identifier text="A" />
+            <"[" text="[" />
+            <identifier text="N" />
+            <"]" text="]" />
+        </array_declarator>
+        <"," text="," />
+        <array_declarator>
+            <identifier text="B" />
+            <"[" text="[" />
+            <identifier text="N" />
+            <"]" text="]" />
+        </array_declarator>
+        <"," text="," />
+        <array_declarator>
+            <identifier text="C" />
+            <"[" text="[" />
+            <identifier text="N" />
+            <"]" text="]" />
+        </array_declarator>
+        <";" text=";" />
+    </declaration>
+    <declaration>
+        <primitive_type text="void" />
+        <function_declarator>
+            <identifier text="Hanoi" />
+            <parameter_list>
+                <"(" text="(" />
+                <parameter_declaration>
+                    <primitive_type text="int" />
+                </parameter_declaration>
+                <"," text="," />
+                <parameter_declaration>
+                    <primitive_type text="int" />
+                    <abstract_pointer_declarator>
+                        <"*" text="*" />
+                    </abstract_pointer_declarator>
+                </parameter_declaration>
+                <"," text="," />
+                <parameter_declaration>
+                    <primitive_type text="int" />
+                    <abstract_pointer_declarator>
+                        <"*" text="*" />
+                    </abstract_pointer_declarator>
+                </parameter_declaration>
+                <"," text="," />
+                <parameter_declaration>
+                    <primitive_type text="int" />
+                    <abstract_pointer_declarator>
+                        <"*" text="*" />
+                    </abstract_pointer_declarator>
+                </parameter_declaration>
+                <")" text=")" />
+            </parameter_list>
+        </function_declarator>
+        <";" text=";" />
+    </declaration>
+    <comment text="/* Print the current configuration of A, B, and C to the screen */" />
+    <function_definition>
+        <primitive_type text="void" />
+        <function_declarator>
+            <identifier text="PrintAll" />
+            <parameter_list>
+                <"(" text="(" />
+                <")" text=")" />
+            </parameter_list>
+        </function_declarator>
+        <compound_statement>
+            <"{" text="{" />
+            <declaration>
+                <primitive_type text="int" />
+                <identifier text="i" />
+                <";" text=";" />
+            </declaration>
+            <expression_statement>
+                <call_expression>
+                    <identifier text="printf" />
+                    <argument_list>
+                        <"(" text="(" />
+                        <string_literal>
+                            <"\"" text="\"" />
+                            <string_content text="A: " />
+                            <"\"" text="\"" />
+                        </string_literal>
+                        <")" text=")" />
+                    </argument_list>
+                </call_expression>
+                <";" text=";" />
+            </expression_statement>
+            <for_statement>
+                <for text="for" />
+                <"(" text="(" />
+                <assignment_expression>
+                    <identifier text="i" />
+                    <"=" text="=" />
+                    <number_literal text="0" />
+                </assignment_expression>
+                <";" text=";" />
+                <binary_expression>
+                    <identifier text="i" />
+                    <"<" text="<" />
+                    <identifier text="N" />
+                </binary_expression>
+                <";" text=";" />
+                <update_expression>
+                    <identifier text="i" />
+                    <"++" text="++" />
+                </update_expression>
+                <")" text=")" />
+                <expression_statement>
+                    <call_expression>
+                        <identifier text="printf" />
+                        <argument_list>
+                            <"(" text="(" />
+                            <string_literal>
+                                <"\"" text="\"" />
+                                <string_content text=" %d " />
+                                <"\"" text="\"" />
+                            </string_literal>
+                            <"," text="," />
+                            <subscript_expression>
+                                <identifier text="A" />
+                                <"[" text="[" />
+                                <identifier text="i" />
+                                <"]" text="]" />
+                            </subscript_expression>
+                            <")" text=")" />
+                        </argument_list>
+                    </call_expression>
+                    <";" text=";" />
+                </expression_statement>
+            </for_statement>
+            <expression_statement>
+                <call_expression>
+                    <identifier text="printf" />
+                    <argument_list>
+                        <"(" text="(" />
+                        <string_literal>
+                            <"\"" text="\"" />
+                            <escape_sequence text="\\n" />
+                            <"\"" text="\"" />
+                        </string_literal>
+                        <")" text=")" />
+                    </argument_list>
+                </call_expression>
+                <";" text=";" />
+            </expression_statement>
+            <expression_statement>
+                <call_expression>
+                    <identifier text="printf" />
+                    <argument_list>
+                        <"(" text="(" />
+                        <string_literal>
+                            <"\"" text="\"" />
+                            <string_content text="B: " />
+                            <"\"" text="\"" />
+                        </string_literal>
+                        <")" text=")" />
+                    </argument_list>
+                </call_expression>
+                <";" text=";" />
+            </expression_statement>
+            <for_statement>
+                <for text="for" />
+                <"(" text="(" />
+                <assignment_expression>
+                    <identifier text="i" />
+                    <"=" text="=" />
+                    <number_literal text="0" />
+                </assignment_expression>
+                <";" text=";" />
+                <binary_expression>
+                    <identifier text="i" />
+                    <"<" text="<" />
+                    <identifier text="N" />
+                </binary_expression>
+                <";" text=";" />
+                <update_expression>
+                    <identifier text="i" />
+                    <"++" text="++" />
+                </update_expression>
+                <")" text=")" />
+                <expression_statement>
+                    <call_expression>
+                        <identifier text="printf" />
+                        <argument_list>
+                            <"(" text="(" />
+                            <string_literal>
+                                <"\"" text="\"" />
+                                <string_content text=" %d " />
+                                <"\"" text="\"" />
+                            </string_literal>
+                            <"," text="," />
+                            <subscript_expression>
+                                <identifier text="B" />
+                                <"[" text="[" />
+                                <identifier text="i" />
+                                <"]" text="]" />
+                            </subscript_expression>
+                            <")" text=")" />
+                        </argument_list>
+                    </call_expression>
+                    <";" text=";" />
+                </expression_statement>
+            </for_statement>
+            <expression_statement>
+                <call_expression>
+                    <identifier text="printf" />
+                    <argument_list>
+                        <"(" text="(" />
+                        <string_literal>
+                            <"\"" text="\"" />
+                            <escape_sequence text="\\n" />
+                            <"\"" text="\"" />
+                        </string_literal>
+                        <")" text=")" />
+                    </argument_list>
+                </call_expression>
+                <";" text=";" />
+            </expression_statement>
+            <expression_statement>
+                <call_expression>
+                    <identifier text="printf" />
+                    <argument_list>
+                        <"(" text="(" />
+                        <string_literal>
+                            <"\"" text="\"" />
+                            <string_content text="C: " />
+                            <"\"" text="\"" />
+                        </string_literal>
+                        <")" text=")" />
+                    </argument_list>
+                </call_expression>
+                <";" text=";" />
+            </expression_statement>
+            <for_statement>
+                <for text="for" />
+                <"(" text="(" />
+                <assignment_expression>
+                    <identifier text="i" />
+                    <"=" text="=" />
+                    <number_literal text="0" />
+                </assignment_expression>
+                <";" text=";" />
+                <binary_expression>
+                    <identifier text="i" />
+                    <"<" text="<" />
+                    <identifier text="N" />
+                </binary_expression>
+                <";" text=";" />
+                <update_expression>
+                    <identifier text="i" />
+                    <"++" text="++" />
+                </update_expression>
+                <")" text=")" />
+                <expression_statement>
+                    <call_expression>
+                        <identifier text="printf" />
+                        <argument_list>
+                            <"(" text="(" />
+                            <string_literal>
+                                <"\"" text="\"" />
+                                <string_content text=" %d " />
+                                <"\"" text="\"" />
+                            </string_literal>
+                            <"," text="," />
+                            <subscript_expression>
+                                <identifier text="C" />
+                                <"[" text="[" />
+                                <identifier text="i" />
+                                <"]" text="]" />
+                            </subscript_expression>
+                            <")" text=")" />
+                        </argument_list>
+                    </call_expression>
+                    <";" text=";" />
+                </expression_statement>
+            </for_statement>
+            <expression_statement>
+                <call_expression>
+                    <identifier text="printf" />
+                    <argument_list>
+                        <"(" text="(" />
+                        <string_literal>
+                            <"\"" text="\"" />
+                            <escape_sequence text="\\n" />
+                            <"\"" text="\"" />
+                        </string_literal>
+                        <")" text=")" />
+                    </argument_list>
+                </call_expression>
+                <";" text=";" />
+            </expression_statement>
+            <expression_statement>
+                <call_expression>
+                    <identifier text="printf" />
+                    <argument_list>
+                        <"(" text="(" />
+                        <string_literal>
+                            <"\"" text="\"" />
+                            <string_content text="------------------------------------------" />
+                            <escape_sequence text="\\n" />
+                            <"\"" text="\"" />
+                        </string_literal>
+                        <")" text=")" />
+                    </argument_list>
+                </call_expression>
+                <";" text=";" />
+            </expression_statement>
+            <return_statement>
+                <return text="return" />
+                <";" text=";" />
+            </return_statement>
+            <"}" text="}" />
+        </compound_statement>
+    </function_definition>
+    <comment text="/* Move the leftmost nonzero element of source to dest, leave behind 0. */" />
+    <comment text="/* Returns the value moved (not used.) */" />
+    <function_definition>
+        <primitive_type text="int" />
+        <function_declarator>
+            <identifier text="Move" />
+            <parameter_list>
+                <"(" text="(" />
+                <parameter_declaration>
+                    <primitive_type text="int" />
+                    <pointer_declarator>
+                        <"*" text="*" />
+                        <identifier text="source" />
+                    </pointer_declarator>
+                </parameter_declaration>
+                <"," text="," />
+                <parameter_declaration>
+                    <primitive_type text="int" />
+                    <pointer_declarator>
+                        <"*" text="*" />
+                        <identifier text="dest" />
+                    </pointer_declarator>
+                </parameter_declaration>
+                <")" text=")" />
+            </parameter_list>
+        </function_declarator>
+        <compound_statement>
+            <"{" text="{" />
+            <declaration>
+                <primitive_type text="int" />
+                <init_declarator>
+                    <identifier text="i" />
+                    <"=" text="=" />
+                    <number_literal text="0" />
+                </init_declarator>
+                <"," text="," />
+                <init_declarator>
+                    <identifier text="j" />
+                    <"=" text="=" />
+                    <number_literal text="0" />
+                </init_declarator>
+                <";" text=";" />
+            </declaration>
+            <while_statement>
+                <while text="while" />
+                <parenthesized_expression>
+                    <"(" text="(" />
+                    <binary_expression>
+                        <binary_expression>
+                            <identifier text="i" />
+                            <"<" text="<" />
+                            <identifier text="N" />
+                        </binary_expression>
+                        <"&&" text="&&" />
+                        <binary_expression>
+                            <parenthesized_expression>
+                                <"(" text="(" />
+                                <subscript_expression>
+                                    <identifier text="source" />
+                                    <"[" text="[" />
+                                    <identifier text="i" />
+                                    <"]" text="]" />
+                                </subscript_expression>
+                                <")" text=")" />
+                            </parenthesized_expression>
+                            <"==" text="==" />
+                            <number_literal text="0" />
+                        </binary_expression>
+                    </binary_expression>
+                    <")" text=")" />
+                </parenthesized_expression>
+                <expression_statement>
+                    <update_expression>
+                        <identifier text="i" />
+                        <"++" text="++" />
+                    </update_expression>
+                    <";" text=";" />
+                </expression_statement>
+            </while_statement>
+            <while_statement>
+                <while text="while" />
+                <parenthesized_expression>
+                    <"(" text="(" />
+                    <binary_expression>
+                        <binary_expression>
+                            <identifier text="j" />
+                            <"<" text="<" />
+                            <identifier text="N" />
+                        </binary_expression>
+                        <"&&" text="&&" />
+                        <binary_expression>
+                            <parenthesized_expression>
+                                <"(" text="(" />
+                                <subscript_expression>
+                                    <identifier text="dest" />
+                                    <"[" text="[" />
+                                    <identifier text="j" />
+                                    <"]" text="]" />
+                                </subscript_expression>
+                                <")" text=")" />
+                            </parenthesized_expression>
+                            <"==" text="==" />
+                            <number_literal text="0" />
+                        </binary_expression>
+                    </binary_expression>
+                    <")" text=")" />
+                </parenthesized_expression>
+                <expression_statement>
+                    <update_expression>
+                        <identifier text="j" />
+                        <"++" text="++" />
+                    </update_expression>
+                    <";" text=";" />
+                </expression_statement>
+            </while_statement>
+            <expression_statement>
+                <assignment_expression>
+                    <subscript_expression>
+                        <identifier text="dest" />
+                        <"[" text="[" />
+                        <binary_expression>
+                            <identifier text="j" />
+                            <"-" text="-" />
+                            <number_literal text="1" />
+                        </binary_expression>
+                        <"]" text="]" />
+                    </subscript_expression>
+                    <"=" text="=" />
+                    <subscript_expression>
+                        <identifier text="source" />
+                        <"[" text="[" />
+                        <identifier text="i" />
+                        <"]" text="]" />
+                    </subscript_expression>
+                </assignment_expression>
+                <";" text=";" />
+            </expression_statement>
+            <expression_statement>
+                <assignment_expression>
+                    <subscript_expression>
+                        <identifier text="source" />
+                        <"[" text="[" />
+                        <identifier text="i" />
+                        <"]" text="]" />
+                    </subscript_expression>
+                    <"=" text="=" />
+                    <number_literal text="0" />
+                </assignment_expression>
+                <";" text=";" />
+            </expression_statement>
+            <expression_statement>
+                <call_expression>
+                    <identifier text="PrintAll" />
+                    <argument_list>
+                        <"(" text="(" />
+                        <")" text=")" />
+                    </argument_list>
+                </call_expression>
+                <";" text=";" />
+            </expression_statement>
+            <comment text="/* Print configuration after each move. */" />
+            <return_statement>
+                <return text="return" />
+                <subscript_expression>
+                    <identifier text="dest" />
+                    <"[" text="[" />
+                    <binary_expression>
+                        <identifier text="j" />
+                        <"-" text="-" />
+                        <number_literal text="1" />
+                    </binary_expression>
+                    <"]" text="]" />
+                </subscript_expression>
+                <";" text=";" />
+            </return_statement>
+            <"}" text="}" />
+        </compound_statement>
+    </function_definition>
+    <comment text="/* Moves first n nonzero numbers from source to dest using the rules of Hanoi.\n   Calls itself recursively.\n   */" />
+    <function_definition>
+        <primitive_type text="void" />
+        <function_declarator>
+            <identifier text="Hanoi" />
+            <parameter_list>
+                <"(" text="(" />
+                <parameter_declaration>
+                    <primitive_type text="int" />
+                    <identifier text="n" />
+                </parameter_declaration>
+                <"," text="," />
+                <parameter_declaration>
+                    <primitive_type text="int" />
+                    <pointer_declarator>
+                        <"*" text="*" />
+                        <identifier text="source" />
+                    </pointer_declarator>
+                </parameter_declaration>
+                <"," text="," />
+                <parameter_declaration>
+                    <primitive_type text="int" />
+                    <pointer_declarator>
+                        <"*" text="*" />
+                        <identifier text="dest" />
+                    </pointer_declarator>
+                </parameter_declaration>
+                <"," text="," />
+                <parameter_declaration>
+                    <primitive_type text="int" />
+                    <pointer_declarator>
+                        <"*" text="*" />
+                        <identifier text="spare" />
+                    </pointer_declarator>
+                </parameter_declaration>
+                <")" text=")" />
+            </parameter_list>
+        </function_declarator>
+        <compound_statement>
+            <"{" text="{" />
+            <declaration>
+                <primitive_type text="int" />
+                <identifier text="i" />
+                <";" text=";" />
+            </declaration>
+            <if_statement>
+                <if text="if" />
+                <parenthesized_expression>
+                    <"(" text="(" />
+                    <binary_expression>
+                        <identifier text="n" />
+                        <"==" text="==" />
+                        <number_literal text="1" />
+                    </binary_expression>
+                    <")" text=")" />
+                </parenthesized_expression>
+                <compound_statement>
+                    <"{" text="{" />
+                    <expression_statement>
+                        <call_expression>
+                            <identifier text="Move" />
+                            <argument_list>
+                                <"(" text="(" />
+                                <identifier text="source" />
+                                <"," text="," />
+                                <identifier text="dest" />
+                                <")" text=")" />
+                            </argument_list>
+                        </call_expression>
+                        <";" text=";" />
+                    </expression_statement>
+                    <return_statement>
+                        <return text="return" />
+                        <";" text=";" />
+                    </return_statement>
+                    <"}" text="}" />
+                </compound_statement>
+            </if_statement>
+            <expression_statement>
+                <call_expression>
+                    <identifier text="Hanoi" />
+                    <argument_list>
+                        <"(" text="(" />
+                        <binary_expression>
+                            <identifier text="n" />
+                            <"-" text="-" />
+                            <number_literal text="1" />
+                        </binary_expression>
+                        <"," text="," />
+                        <identifier text="source" />
+                        <"," text="," />
+                        <identifier text="spare" />
+                        <"," text="," />
+                        <identifier text="dest" />
+                        <")" text=")" />
+                    </argument_list>
+                </call_expression>
+                <";" text=";" />
+            </expression_statement>
+            <expression_statement>
+                <call_expression>
+                    <identifier text="Move" />
+                    <argument_list>
+                        <"(" text="(" />
+                        <identifier text="source" />
+                        <"," text="," />
+                        <identifier text="dest" />
+                        <")" text=")" />
+                    </argument_list>
+                </call_expression>
+                <";" text=";" />
+            </expression_statement>
+            <expression_statement>
+                <call_expression>
+                    <identifier text="Hanoi" />
+                    <argument_list>
+                        <"(" text="(" />
+                        <binary_expression>
+                            <identifier text="n" />
+                            <"-" text="-" />
+                            <number_literal text="1" />
+                        </binary_expression>
+                        <"," text="," />
+                        <identifier text="spare" />
+                        <"," text="," />
+                        <identifier text="dest" />
+                        <"," text="," />
+                        <identifier text="source" />
+                        <")" text=")" />
+                    </argument_list>
+                </call_expression>
+                <";" text=";" />
+            </expression_statement>
+            <return_statement>
+                <return text="return" />
+                <";" text=";" />
+            </return_statement>
+            <"}" text="}" />
+        </compound_statement>
+    </function_definition>
+    <function_definition>
+        <primitive_type text="int" />
+        <function_declarator>
+            <identifier text="main" />
+            <parameter_list>
+                <"(" text="(" />
+                <")" text=")" />
+            </parameter_list>
+        </function_declarator>
+        <compound_statement>
+            <"{" text="{" />
+            <declaration>
+                <primitive_type text="int" />
+                <identifier text="i" />
+                <";" text=";" />
+            </declaration>
+            <comment text="/* initialize the towers */" />
+            <for_statement>
+                <for text="for" />
+                <"(" text="(" />
+                <assignment_expression>
+                    <identifier text="i" />
+                    <"=" text="=" />
+                    <number_literal text="0" />
+                </assignment_expression>
+                <";" text=";" />
+                <binary_expression>
+                    <identifier text="i" />
+                    <"<" text="<" />
+                    <identifier text="N" />
+                </binary_expression>
+                <";" text=";" />
+                <update_expression>
+                    <identifier text="i" />
+                    <"++" text="++" />
+                </update_expression>
+                <")" text=")" />
+                <expression_statement>
+                    <assignment_expression>
+                        <subscript_expression>
+                            <identifier text="A" />
+                            <"[" text="[" />
+                            <identifier text="i" />
+                            <"]" text="]" />
+                        </subscript_expression>
+                        <"=" text="=" />
+                        <binary_expression>
+                            <identifier text="i" />
+                            <"+" text="+" />
+                            <number_literal text="1" />
+                        </binary_expression>
+                    </assignment_expression>
+                    <";" text=";" />
+                </expression_statement>
+            </for_statement>
+            <for_statement>
+                <for text="for" />
+                <"(" text="(" />
+                <assignment_expression>
+                    <identifier text="i" />
+                    <"=" text="=" />
+                    <number_literal text="0" />
+                </assignment_expression>
+                <";" text=";" />
+                <binary_expression>
+                    <identifier text="i" />
+                    <"<" text="<" />
+                    <identifier text="N" />
+                </binary_expression>
+                <";" text=";" />
+                <update_expression>
+                    <identifier text="i" />
+                    <"++" text="++" />
+                </update_expression>
+                <")" text=")" />
+                <expression_statement>
+                    <assignment_expression>
+                        <subscript_expression>
+                            <identifier text="B" />
+                            <"[" text="[" />
+                            <identifier text="i" />
+                            <"]" text="]" />
+                        </subscript_expression>
+                        <"=" text="=" />
+                        <number_literal text="0" />
+                    </assignment_expression>
+                    <";" text=";" />
+                </expression_statement>
+            </for_statement>
+            <for_statement>
+                <for text="for" />
+                <"(" text="(" />
+                <assignment_expression>
+                    <identifier text="i" />
+                    <"=" text="=" />
+                    <number_literal text="0" />
+                </assignment_expression>
+                <";" text=";" />
+                <binary_expression>
+                    <identifier text="i" />
+                    <"<" text="<" />
+                    <identifier text="N" />
+                </binary_expression>
+                <";" text=";" />
+                <update_expression>
+                    <identifier text="i" />
+                    <"++" text="++" />
+                </update_expression>
+                <")" text=")" />
+                <expression_statement>
+                    <assignment_expression>
+                        <subscript_expression>
+                            <identifier text="C" />
+                            <"[" text="[" />
+                            <identifier text="i" />
+                            <"]" text="]" />
+                        </subscript_expression>
+                        <"=" text="=" />
+                        <number_literal text="0" />
+                    </assignment_expression>
+                    <";" text=";" />
+                </expression_statement>
+            </for_statement>
+            <expression_statement>
+                <call_expression>
+                    <identifier text="printf" />
+                    <argument_list>
+                        <"(" text="(" />
+                        <string_literal>
+                            <"\"" text="\"" />
+                            <string_content text="Solution of Tower of Hanoi Problem with %d Disks" />
+                            <escape_sequence text="\\n" />
+                            <escape_sequence text="\\n" />
+                            <"\"" text="\"" />
+                        </string_literal>
+                        <"," text="," />
+                        <identifier text="N" />
+                        <")" text=")" />
+                    </argument_list>
+                </call_expression>
+                <";" text=";" />
+            </expression_statement>
+            <comment text="/* Print the starting state */" />
+            <expression_statement>
+                <call_expression>
+                    <identifier text="printf" />
+                    <argument_list>
+                        <"(" text="(" />
+                        <string_literal>
+                            <"\"" text="\"" />
+                            <string_content text="Starting state:" />
+                            <escape_sequence text="\\n" />
+                            <"\"" text="\"" />
+                        </string_literal>
+                        <")" text=")" />
+                    </argument_list>
+                </call_expression>
+                <";" text=";" />
+            </expression_statement>
+            <expression_statement>
+                <call_expression>
+                    <identifier text="PrintAll" />
+                    <argument_list>
+                        <"(" text="(" />
+                        <")" text=")" />
+                    </argument_list>
+                </call_expression>
+                <";" text=";" />
+            </expression_statement>
+            <expression_statement>
+                <call_expression>
+                    <identifier text="printf" />
+                    <argument_list>
+                        <"(" text="(" />
+                        <string_literal>
+                            <"\"" text="\"" />
+                            <escape_sequence text="\\n" />
+                            <escape_sequence text="\\n" />
+                            <string_content text="Subsequent states:" />
+                            <escape_sequence text="\\n" />
+                            <escape_sequence text="\\n" />
+                            <"\"" text="\"" />
+                        </string_literal>
+                        <")" text=")" />
+                    </argument_list>
+                </call_expression>
+                <";" text=";" />
+            </expression_statement>
+            <comment text="/* Do it! Use A = Source, B = Destination, C = Spare */" />
+            <expression_statement>
+                <call_expression>
+                    <identifier text="Hanoi" />
+                    <argument_list>
+                        <"(" text="(" />
+                        <identifier text="N" />
+                        <"," text="," />
+                        <identifier text="A" />
+                        <"," text="," />
+                        <identifier text="B" />
+                        <"," text="," />
+                        <identifier text="C" />
+                        <")" text=")" />
+                    </argument_list>
+                </call_expression>
+                <";" text=";" />
+            </expression_statement>
+            <return_statement>
+                <return text="return" />
+                <number_literal text="0" />
+                <";" text=";" />
+            </return_statement>
+            <"}" text="}" />
+        </compound_statement>
+    </function_definition>
+    <comment text="/* vim: set expandtab ts=4 sw=3 sts=3 tw=80 :*/" />
+</translation_unit>

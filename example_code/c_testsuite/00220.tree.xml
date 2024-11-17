@@ -1,0 +1,116 @@
+<translation_unit>
+    <comment text="// this file contains BMP chars encoded in UTF-8" />
+    <preproc_include>
+        <#include text="#include" />
+        <system_lib_string text="<stdio.h>" />
+    </preproc_include>
+    <comment text="// #include <wchar.h>" />
+    <function_definition>
+        <primitive_type text="int" />
+        <function_declarator>
+            <identifier text="main" />
+            <parameter_list>
+                <"(" text="(" />
+                <")" text=")" />
+            </parameter_list>
+        </function_declarator>
+        <compound_statement>
+            <"{" text="{" />
+            <declaration>
+                <type_identifier text="wchar_t" />
+                <init_declarator>
+                    <array_declarator>
+                        <identifier text="s" />
+                        <"[" text="[" />
+                        <"]" text="]" />
+                    </array_declarator>
+                    <"=" text="=" />
+                    <string_literal>
+                        <L" text="L\"" />
+                        <string_content text="hello$$你好¢¢世界€€world" />
+                        <"\"" text="\"" />
+                    </string_literal>
+                </init_declarator>
+                <";" text=";" />
+            </declaration>
+            <declaration>
+                <type_identifier text="wchar_t" />
+                <pointer_declarator>
+                    <"*" text="*" />
+                    <identifier text="p" />
+                </pointer_declarator>
+                <";" text=";" />
+            </declaration>
+            <for_statement>
+                <for text="for" />
+                <"(" text="(" />
+                <assignment_expression>
+                    <identifier text="p" />
+                    <"=" text="=" />
+                    <identifier text="s" />
+                </assignment_expression>
+                <";" text=";" />
+                <pointer_expression>
+                    <"*" text="*" />
+                    <identifier text="p" />
+                </pointer_expression>
+                <";" text=";" />
+                <update_expression>
+                    <identifier text="p" />
+                    <"++" text="++" />
+                </update_expression>
+                <")" text=")" />
+                <expression_statement>
+                    <call_expression>
+                        <identifier text="printf" />
+                        <argument_list>
+                            <"(" text="(" />
+                            <string_literal>
+                                <"\"" text="\"" />
+                                <string_content text="%04X " />
+                                <"\"" text="\"" />
+                            </string_literal>
+                            <"," text="," />
+                            <cast_expression>
+                                <"(" text="(" />
+                                <type_descriptor>
+                                    <sized_type_specifier>
+                                        <unsigned text="unsigned" />
+                                    </sized_type_specifier>
+                                </type_descriptor>
+                                <")" text=")" />
+                                <pointer_expression>
+                                    <"*" text="*" />
+                                    <identifier text="p" />
+                                </pointer_expression>
+                            </cast_expression>
+                            <")" text=")" />
+                        </argument_list>
+                    </call_expression>
+                    <";" text=";" />
+                </expression_statement>
+            </for_statement>
+            <expression_statement>
+                <call_expression>
+                    <identifier text="printf" />
+                    <argument_list>
+                        <"(" text="(" />
+                        <string_literal>
+                            <"\"" text="\"" />
+                            <escape_sequence text="\\n" />
+                            <"\"" text="\"" />
+                        </string_literal>
+                        <")" text=")" />
+                    </argument_list>
+                </call_expression>
+                <";" text=";" />
+            </expression_statement>
+            <return_statement>
+                <return text="return" />
+                <number_literal text="0" />
+                <";" text=";" />
+            </return_statement>
+            <"}" text="}" />
+        </compound_statement>
+    </function_definition>
+</translation_unit>

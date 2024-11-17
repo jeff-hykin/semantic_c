@@ -1,0 +1,502 @@
+<translation_unit>
+    <preproc_include>
+        <#include text="#include" />
+        <system_lib_string text="<stdio.h>" />
+    </preproc_include>
+    <function_definition>
+        <primitive_type text="int" />
+        <function_declarator>
+            <identifier text="main" />
+            <parameter_list>
+                <"(" text="(" />
+                <")" text=")" />
+            </parameter_list>
+        </function_declarator>
+        <compound_statement>
+            <"{" text="{" />
+            <preproc_if>
+                <#if text="#if" />
+                <preproc_defined>
+                    <defined text="defined" />
+                    <"(" text="(" />
+                    <identifier text="__LLP64__" />
+                    <")" text=")" />
+                </preproc_defined>
+                <"\n" text="\n" />
+                <if_statement>
+                    <if text="if" />
+                    <parenthesized_expression>
+                        <"(" text="(" />
+                        <binary_expression>
+                            <binary_expression>
+                                <binary_expression>
+                                    <binary_expression>
+                                        <binary_expression>
+                                            <sizeof_expression>
+                                                <sizeof text="sizeof" />
+                                                <"(" text="(" />
+                                                <type_descriptor>
+                                                    <sized_type_specifier>
+                                                        <short text="short" />
+                                                    </sized_type_specifier>
+                                                </type_descriptor>
+                                                <")" text=")" />
+                                            </sizeof_expression>
+                                            <"==" text="==" />
+                                            <number_literal text="2" />
+                                        </binary_expression>
+                                        <"&&" text="&&" />
+                                        <binary_expression>
+                                            <sizeof_expression>
+                                                <sizeof text="sizeof" />
+                                                <"(" text="(" />
+                                                <type_descriptor>
+                                                    <primitive_type text="int" />
+                                                </type_descriptor>
+                                                <")" text=")" />
+                                            </sizeof_expression>
+                                            <"==" text="==" />
+                                            <number_literal text="4" />
+                                        </binary_expression>
+                                    </binary_expression>
+                                    <"&&" text="&&" />
+                                    <binary_expression>
+                                        <sizeof_expression>
+                                            <sizeof text="sizeof" />
+                                            <"(" text="(" />
+                                            <type_descriptor>
+                                                <sized_type_specifier>
+                                                    <long text="long" />
+                                                    <primitive_type text="int" />
+                                                </sized_type_specifier>
+                                            </type_descriptor>
+                                            <")" text=")" />
+                                        </sizeof_expression>
+                                        <"==" text="==" />
+                                        <number_literal text="4" />
+                                    </binary_expression>
+                                </binary_expression>
+                                <"&&" text="&&" />
+                                <binary_expression>
+                                    <sizeof_expression>
+                                        <sizeof text="sizeof" />
+                                        <"(" text="(" />
+                                        <type_descriptor>
+                                            <sized_type_specifier>
+                                                <long text="long" />
+                                                <long text="long" />
+                                                <primitive_type text="int" />
+                                            </sized_type_specifier>
+                                        </type_descriptor>
+                                        <")" text=")" />
+                                    </sizeof_expression>
+                                    <"==" text="==" />
+                                    <number_literal text="8" />
+                                </binary_expression>
+                            </binary_expression>
+                            <"&&" text="&&" />
+                            <binary_expression>
+                                <sizeof_expression>
+                                    <sizeof text="sizeof" />
+                                    <"(" text="(" />
+                                    <type_descriptor>
+                                        <primitive_type text="void" />
+                                        <abstract_pointer_declarator>
+                                            <"*" text="*" />
+                                        </abstract_pointer_declarator>
+                                    </type_descriptor>
+                                    <")" text=")" />
+                                </sizeof_expression>
+                                <"==" text="==" />
+                                <number_literal text="8" />
+                            </binary_expression>
+                        </binary_expression>
+                        <")" text=")" />
+                    </parenthesized_expression>
+                    <compound_statement>
+                        <"{" text="{" />
+                        <expression_statement>
+                            <cast_expression>
+                                <"(" text="(" />
+                                <type_descriptor>
+                                    <primitive_type text="void" />
+                                </type_descriptor>
+                                <")" text=")" />
+                                <call_expression>
+                                    <identifier text="printf" />
+                                    <argument_list>
+                                        <"(" text="(" />
+                                        <string_literal>
+                                            <"\"" text="\"" />
+                                            <string_content text="Ok" />
+                                            <escape_sequence text="\\n" />
+                                            <"\"" text="\"" />
+                                        </string_literal>
+                                        <")" text=")" />
+                                    </argument_list>
+                                </call_expression>
+                            </cast_expression>
+                            <";" text=";" />
+                        </expression_statement>
+                        <"}" text="}" />
+                    </compound_statement>
+                    <else_clause>
+                        <else text="else" />
+                        <compound_statement>
+                            <"{" text="{" />
+                            <expression_statement>
+                                <cast_expression>
+                                    <"(" text="(" />
+                                    <type_descriptor>
+                                        <primitive_type text="void" />
+                                    </type_descriptor>
+                                    <")" text=")" />
+                                    <call_expression>
+                                        <identifier text="printf" />
+                                        <argument_list>
+                                            <"(" text="(" />
+                                            <string_literal>
+                                                <"\"" text="\"" />
+                                                <string_content text="KO __LLP64__" />
+                                                <escape_sequence text="\\n" />
+                                                <"\"" text="\"" />
+                                            </string_literal>
+                                            <")" text=")" />
+                                        </argument_list>
+                                    </call_expression>
+                                </cast_expression>
+                                <";" text=";" />
+                            </expression_statement>
+                            <"}" text="}" />
+                        </compound_statement>
+                    </else_clause>
+                </if_statement>
+                <preproc_elif>
+                    <#elif text="#elif" />
+                    <preproc_defined>
+                        <defined text="defined" />
+                        <"(" text="(" />
+                        <identifier text="__LP64__" />
+                        <")" text=")" />
+                    </preproc_defined>
+                    <"\n" text="\n" />
+                    <if_statement>
+                        <if text="if" />
+                        <parenthesized_expression>
+                            <"(" text="(" />
+                            <binary_expression>
+                                <binary_expression>
+                                    <binary_expression>
+                                        <binary_expression>
+                                            <binary_expression>
+                                                <sizeof_expression>
+                                                    <sizeof text="sizeof" />
+                                                    <"(" text="(" />
+                                                    <type_descriptor>
+                                                        <sized_type_specifier>
+                                                            <short text="short" />
+                                                        </sized_type_specifier>
+                                                    </type_descriptor>
+                                                    <")" text=")" />
+                                                </sizeof_expression>
+                                                <"==" text="==" />
+                                                <number_literal text="2" />
+                                            </binary_expression>
+                                            <"&&" text="&&" />
+                                            <binary_expression>
+                                                <sizeof_expression>
+                                                    <sizeof text="sizeof" />
+                                                    <"(" text="(" />
+                                                    <type_descriptor>
+                                                        <primitive_type text="int" />
+                                                    </type_descriptor>
+                                                    <")" text=")" />
+                                                </sizeof_expression>
+                                                <"==" text="==" />
+                                                <number_literal text="4" />
+                                            </binary_expression>
+                                        </binary_expression>
+                                        <"&&" text="&&" />
+                                        <binary_expression>
+                                            <sizeof_expression>
+                                                <sizeof text="sizeof" />
+                                                <"(" text="(" />
+                                                <type_descriptor>
+                                                    <sized_type_specifier>
+                                                        <long text="long" />
+                                                        <primitive_type text="int" />
+                                                    </sized_type_specifier>
+                                                </type_descriptor>
+                                                <")" text=")" />
+                                            </sizeof_expression>
+                                            <"==" text="==" />
+                                            <number_literal text="8" />
+                                        </binary_expression>
+                                    </binary_expression>
+                                    <"&&" text="&&" />
+                                    <binary_expression>
+                                        <sizeof_expression>
+                                            <sizeof text="sizeof" />
+                                            <"(" text="(" />
+                                            <type_descriptor>
+                                                <sized_type_specifier>
+                                                    <long text="long" />
+                                                    <long text="long" />
+                                                    <primitive_type text="int" />
+                                                </sized_type_specifier>
+                                            </type_descriptor>
+                                            <")" text=")" />
+                                        </sizeof_expression>
+                                        <"==" text="==" />
+                                        <number_literal text="8" />
+                                    </binary_expression>
+                                </binary_expression>
+                                <"&&" text="&&" />
+                                <binary_expression>
+                                    <sizeof_expression>
+                                        <sizeof text="sizeof" />
+                                        <"(" text="(" />
+                                        <type_descriptor>
+                                            <primitive_type text="void" />
+                                            <abstract_pointer_declarator>
+                                                <"*" text="*" />
+                                            </abstract_pointer_declarator>
+                                        </type_descriptor>
+                                        <")" text=")" />
+                                    </sizeof_expression>
+                                    <"==" text="==" />
+                                    <number_literal text="8" />
+                                </binary_expression>
+                            </binary_expression>
+                            <")" text=")" />
+                        </parenthesized_expression>
+                        <compound_statement>
+                            <"{" text="{" />
+                            <expression_statement>
+                                <cast_expression>
+                                    <"(" text="(" />
+                                    <type_descriptor>
+                                        <primitive_type text="void" />
+                                    </type_descriptor>
+                                    <")" text=")" />
+                                    <call_expression>
+                                        <identifier text="printf" />
+                                        <argument_list>
+                                            <"(" text="(" />
+                                            <string_literal>
+                                                <"\"" text="\"" />
+                                                <string_content text="Ok" />
+                                                <escape_sequence text="\\n" />
+                                                <"\"" text="\"" />
+                                            </string_literal>
+                                            <")" text=")" />
+                                        </argument_list>
+                                    </call_expression>
+                                </cast_expression>
+                                <";" text=";" />
+                            </expression_statement>
+                            <"}" text="}" />
+                        </compound_statement>
+                        <else_clause>
+                            <else text="else" />
+                            <compound_statement>
+                                <"{" text="{" />
+                                <expression_statement>
+                                    <cast_expression>
+                                        <"(" text="(" />
+                                        <type_descriptor>
+                                            <primitive_type text="void" />
+                                        </type_descriptor>
+                                        <")" text=")" />
+                                        <call_expression>
+                                            <identifier text="printf" />
+                                            <argument_list>
+                                                <"(" text="(" />
+                                                <string_literal>
+                                                    <"\"" text="\"" />
+                                                    <string_content text="KO __LP64__" />
+                                                    <escape_sequence text="\\n" />
+                                                    <"\"" text="\"" />
+                                                </string_literal>
+                                                <")" text=")" />
+                                            </argument_list>
+                                        </call_expression>
+                                    </cast_expression>
+                                    <";" text=";" />
+                                </expression_statement>
+                                <"}" text="}" />
+                            </compound_statement>
+                        </else_clause>
+                    </if_statement>
+                    <preproc_elif>
+                        <#elif text="#elif" />
+                        <preproc_defined>
+                            <defined text="defined" />
+                            <"(" text="(" />
+                            <identifier text="__ILP32__" />
+                            <")" text=")" />
+                        </preproc_defined>
+                        <"\n" text="\n" />
+                        <if_statement>
+                            <if text="if" />
+                            <parenthesized_expression>
+                                <"(" text="(" />
+                                <binary_expression>
+                                    <binary_expression>
+                                        <binary_expression>
+                                            <binary_expression>
+                                                <sizeof_expression>
+                                                    <sizeof text="sizeof" />
+                                                    <"(" text="(" />
+                                                    <type_descriptor>
+                                                        <sized_type_specifier>
+                                                            <short text="short" />
+                                                        </sized_type_specifier>
+                                                    </type_descriptor>
+                                                    <")" text=")" />
+                                                </sizeof_expression>
+                                                <"==" text="==" />
+                                                <number_literal text="2" />
+                                            </binary_expression>
+                                            <"&&" text="&&" />
+                                            <binary_expression>
+                                                <sizeof_expression>
+                                                    <sizeof text="sizeof" />
+                                                    <"(" text="(" />
+                                                    <type_descriptor>
+                                                        <primitive_type text="int" />
+                                                    </type_descriptor>
+                                                    <")" text=")" />
+                                                </sizeof_expression>
+                                                <"==" text="==" />
+                                                <number_literal text="4" />
+                                            </binary_expression>
+                                        </binary_expression>
+                                        <"&&" text="&&" />
+                                        <binary_expression>
+                                            <sizeof_expression>
+                                                <sizeof text="sizeof" />
+                                                <"(" text="(" />
+                                                <type_descriptor>
+                                                    <sized_type_specifier>
+                                                        <long text="long" />
+                                                        <primitive_type text="int" />
+                                                    </sized_type_specifier>
+                                                </type_descriptor>
+                                                <")" text=")" />
+                                            </sizeof_expression>
+                                            <"==" text="==" />
+                                            <number_literal text="4" />
+                                        </binary_expression>
+                                    </binary_expression>
+                                    <"&&" text="&&" />
+                                    <binary_expression>
+                                        <sizeof_expression>
+                                            <sizeof text="sizeof" />
+                                            <"(" text="(" />
+                                            <type_descriptor>
+                                                <primitive_type text="void" />
+                                                <abstract_pointer_declarator>
+                                                    <"*" text="*" />
+                                                </abstract_pointer_declarator>
+                                            </type_descriptor>
+                                            <")" text=")" />
+                                        </sizeof_expression>
+                                        <"==" text="==" />
+                                        <number_literal text="4" />
+                                    </binary_expression>
+                                </binary_expression>
+                                <")" text=")" />
+                            </parenthesized_expression>
+                            <compound_statement>
+                                <"{" text="{" />
+                                <expression_statement>
+                                    <cast_expression>
+                                        <"(" text="(" />
+                                        <type_descriptor>
+                                            <primitive_type text="void" />
+                                        </type_descriptor>
+                                        <")" text=")" />
+                                        <call_expression>
+                                            <identifier text="printf" />
+                                            <argument_list>
+                                                <"(" text="(" />
+                                                <string_literal>
+                                                    <"\"" text="\"" />
+                                                    <string_content text="Ok" />
+                                                    <escape_sequence text="\\n" />
+                                                    <"\"" text="\"" />
+                                                </string_literal>
+                                                <")" text=")" />
+                                            </argument_list>
+                                        </call_expression>
+                                    </cast_expression>
+                                    <";" text=";" />
+                                </expression_statement>
+                                <"}" text="}" />
+                            </compound_statement>
+                            <else_clause>
+                                <else text="else" />
+                                <compound_statement>
+                                    <"{" text="{" />
+                                    <expression_statement>
+                                        <cast_expression>
+                                            <"(" text="(" />
+                                            <type_descriptor>
+                                                <primitive_type text="void" />
+                                            </type_descriptor>
+                                            <")" text=")" />
+                                            <call_expression>
+                                                <identifier text="printf" />
+                                                <argument_list>
+                                                    <"(" text="(" />
+                                                    <string_literal>
+                                                        <"\"" text="\"" />
+                                                        <string_content text="KO __ILP32__" />
+                                                        <escape_sequence text="\\n" />
+                                                        <"\"" text="\"" />
+                                                    </string_literal>
+                                                    <")" text=")" />
+                                                </argument_list>
+                                            </call_expression>
+                                        </cast_expression>
+                                        <";" text=";" />
+                                    </expression_statement>
+                                    <"}" text="}" />
+                                </compound_statement>
+                            </else_clause>
+                        </if_statement>
+                        <preproc_else>
+                            <#else text="#else" />
+                            <expression_statement>
+                                <cast_expression>
+                                    <"(" text="(" />
+                                    <type_descriptor>
+                                        <primitive_type text="void" />
+                                    </type_descriptor>
+                                    <")" text=")" />
+                                    <call_expression>
+                                        <identifier text="printf" />
+                                        <argument_list>
+                                            <"(" text="(" />
+                                            <string_literal>
+                                                <"\"" text="\"" />
+                                                <string_content text="KO no __*LP*__ defined." />
+                                                <escape_sequence text="\\n" />
+                                                <"\"" text="\"" />
+                                            </string_literal>
+                                            <")" text=")" />
+                                        </argument_list>
+                                    </call_expression>
+                                </cast_expression>
+                                <";" text=";" />
+                            </expression_statement>
+                        </preproc_else>
+                    </preproc_elif>
+                </preproc_elif>
+                <#endif text="#endif" />
+            </preproc_if>
+            <"}" text="}" />
+        </compound_statement>
+    </function_definition>
+</translation_unit>

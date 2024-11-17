@@ -1,0 +1,2539 @@
+<translation_unit>
+    <comment text="// " />
+    <comment text="// top level declarations" />
+    <comment text="// " />
+    <declaration>
+        <primitive_type text="int" />
+        <identifier text="aaa" />
+        <";" text=";" />
+    </declaration>
+    <declaration>
+        <primitive_type text="int" />
+        <identifier text="global" />
+        <";" text=";" />
+    </declaration>
+    <comment text="// " />
+    <comment text="// function definitions" />
+    <comment text="// " />
+    <function_definition>
+        <primitive_type text="int" />
+        <function_declarator>
+            <identifier text="inc_global" />
+            <parameter_list>
+                <"(" text="(" />
+                <parameter_declaration>
+                    <primitive_type text="void" />
+                </parameter_declaration>
+                <")" text=")" />
+            </parameter_list>
+        </function_declarator>
+        <compound_statement>
+            <"{" text="{" />
+            <expression_statement>
+                <update_expression>
+                    <identifier text="global" />
+                    <"++" text="++" />
+                </update_expression>
+                <";" text=";" />
+            </expression_statement>
+            <declaration>
+                <primitive_type text="int" />
+                <init_declarator>
+                    <identifier text="aaa" />
+                    <"=" text="=" />
+                    <number_literal text="0" />
+                </init_declarator>
+                <";" text=";" />
+            </declaration>
+            <return_statement>
+                <return text="return" />
+                <identifier text="aaa" />
+                <";" text=";" />
+            </return_statement>
+            <"}" text="}" />
+        </compound_statement>
+    </function_definition>
+    <function_definition>
+        <sized_type_specifier>
+            <long text="long" />
+            <primitive_type text="int" />
+        </sized_type_specifier>
+        <function_declarator>
+            <identifier text="inc_global_2" />
+            <parameter_list>
+                <"(" text="(" />
+                <parameter_declaration>
+                    <primitive_type text="void" />
+                </parameter_declaration>
+                <")" text=")" />
+            </parameter_list>
+        </function_declarator>
+        <compound_statement>
+            <"{" text="{" />
+            <declaration>
+                <primitive_type text="int" />
+                <init_declarator>
+                    <identifier text="aaa" />
+                    <"=" text="=" />
+                    <number_literal text="0" />
+                </init_declarator>
+                <";" text=";" />
+            </declaration>
+            <expression_statement>
+                <update_expression>
+                    <identifier text="global" />
+                    <"++" text="++" />
+                </update_expression>
+                <";" text=";" />
+            </expression_statement>
+            <return_statement>
+                <return text="return" />
+                <identifier text="aaa" />
+                <";" text=";" />
+            </return_statement>
+            <"}" text="}" />
+        </compound_statement>
+    </function_definition>
+    <comment text="// " />
+    <comment text="// top level assignment" />
+    <comment text="// " />
+    <declaration>
+        <type_qualifier>
+            <const text="const" />
+        </type_qualifier>
+        <primitive_type text="int" />
+        <init_declarator>
+            <identifier text="a" />
+            <"=" text="=" />
+            <number_literal text="0" />
+        </init_declarator>
+        <";" text=";" />
+    </declaration>
+    <comment text="// " />
+    <comment text="// typedefs" />
+    <comment text="// " />
+    <type_definition>
+        <typedef text="typedef" />
+        <sized_type_specifier>
+            <unsigned text="unsigned" />
+            <primitive_type text="char" />
+        </sized_type_specifier>
+        <type_identifier text="u8" />
+        <";" text=";" />
+    </type_definition>
+    <type_definition>
+        <typedef text="typedef" />
+        <primitive_type text="int" />
+        <function_declarator>
+            <parenthesized_declarator>
+                <"(" text="(" />
+                <pointer_declarator>
+                    <"*" text="*" />
+                    <type_identifier text="fptr" />
+                </pointer_declarator>
+                <")" text=")" />
+            </parenthesized_declarator>
+            <parameter_list>
+                <"(" text="(" />
+                <parameter_declaration>
+                    <primitive_type text="int" />
+                </parameter_declaration>
+                <")" text=")" />
+            </parameter_list>
+        </function_declarator>
+        <";" text=";" />
+    </type_definition>
+    <type_definition>
+        <typedef text="typedef" />
+        <struct_specifier>
+            <struct text="struct" />
+            <field_declaration_list>
+                <"{" text="{" />
+                <"}" text="}" />
+            </field_declaration_list>
+        </struct_specifier>
+        <type_identifier text="empty_s" />
+        <";" text=";" />
+    </type_definition>
+    <comment text="// " />
+    <comment text="// structs" />
+    <comment text="// " />
+    <struct_specifier>
+        <struct text="struct" />
+        <type_identifier text="contains_empty" />
+        <field_declaration_list>
+            <"{" text="{" />
+            <field_declaration>
+                <type_identifier text="u8" />
+                <field_identifier text="a" />
+                <";" text=";" />
+            </field_declaration>
+            <field_declaration>
+                <type_identifier text="empty_s" />
+                <field_identifier text="empty" />
+                <";" text=";" />
+            </field_declaration>
+            <field_declaration>
+                <type_identifier text="u8" />
+                <field_identifier text="b" />
+                <";" text=";" />
+            </field_declaration>
+            <"}" text="}" />
+        </field_declaration_list>
+    </struct_specifier>
+    <";" text=";" />
+    <declaration>
+        <struct_specifier>
+            <struct text="struct" />
+            <type_identifier text="contains_empty" />
+        </struct_specifier>
+        <init_declarator>
+            <identifier text="ce" />
+            <"=" text="=" />
+            <initializer_list>
+                <"{" text="{" />
+                <initializer_list>
+                    <"{" text="{" />
+                    <parenthesized_expression>
+                        <"(" text="(" />
+                        <number_literal text="1" />
+                        <")" text=")" />
+                    </parenthesized_expression>
+                    <"}" text="}" />
+                </initializer_list>
+                <"," text="," />
+                <compound_literal_expression>
+                    <"(" text="(" />
+                    <type_descriptor>
+                        <type_identifier text="empty_s" />
+                    </type_descriptor>
+                    <")" text=")" />
+                    <initializer_list>
+                        <"{" text="{" />
+                        <"}" text="}" />
+                    </initializer_list>
+                </compound_literal_expression>
+                <"," text="," />
+                <number_literal text="022" />
+                <"," text="," />
+                <"}" text="}" />
+            </initializer_list>
+        </init_declarator>
+        <";" text=";" />
+    </declaration>
+    <comment text="// " />
+    <comment text="// struct assignment" />
+    <comment text="// " />
+    <declaration>
+        <struct_specifier>
+            <struct text="struct" />
+            <type_identifier text="S" />
+        </struct_specifier>
+        <init_declarator>
+            <identifier text="gs" />
+            <"=" text="=" />
+            <parenthesized_expression>
+                <"(" text="(" />
+                <compound_literal_expression>
+                    <"(" text="(" />
+                    <type_descriptor>
+                        <struct_specifier>
+                            <struct text="struct" />
+                            <type_identifier text="S" />
+                        </struct_specifier>
+                    </type_descriptor>
+                    <")" text=")" />
+                    <initializer_list>
+                        <"{" text="{" />
+                        <number_literal text="1" />
+                        <"," text="," />
+                        <number_literal text="2" />
+                        <"," text="," />
+                        <number_literal text="3" />
+                        <"," text="," />
+                        <number_literal text="4" />
+                        <"}" text="}" />
+                    </initializer_list>
+                </compound_literal_expression>
+                <")" text=")" />
+            </parenthesized_expression>
+        </init_declarator>
+        <";" text=";" />
+    </declaration>
+    <declaration>
+        <struct_specifier>
+            <struct text="struct" />
+            <type_identifier text="S" />
+        </struct_specifier>
+        <init_declarator>
+            <identifier text="gs2" />
+            <"=" text="=" />
+            <initializer_list>
+                <"{" text="{" />
+                <number_literal text="1" />
+                <"," text="," />
+                <number_literal text="2" />
+                <"," text="," />
+                <initializer_list>
+                    <"{" text="{" />
+                    <number_literal text="3" />
+                    <"," text="," />
+                    <number_literal text="4" />
+                    <"}" text="}" />
+                </initializer_list>
+                <"}" text="}" />
+            </initializer_list>
+        </init_declarator>
+        <";" text=";" />
+    </declaration>
+    <declaration>
+        <struct_specifier>
+            <struct text="struct" />
+            <type_identifier text="T" />
+        </struct_specifier>
+        <init_declarator>
+            <identifier text="gt" />
+            <"=" text="=" />
+            <initializer_list>
+                <"{" text="{" />
+                <string_literal>
+                    <"\"" text="\"" />
+                    <string_content text="hello" />
+                    <"\"" text="\"" />
+                </string_literal>
+                <"," text="," />
+                <number_literal text="42" />
+                <"}" text="}" />
+            </initializer_list>
+        </init_declarator>
+        <";" text=";" />
+    </declaration>
+    <declaration>
+        <struct_specifier>
+            <struct text="struct" />
+            <type_identifier text="U" />
+        </struct_specifier>
+        <init_declarator>
+            <identifier text="gu" />
+            <"=" text="=" />
+            <initializer_list>
+                <"{" text="{" />
+                <number_literal text="3" />
+                <"," text="," />
+                <number_literal text="5" />
+                <"," text="," />
+                <number_literal text="6" />
+                <"," text="," />
+                <number_literal text="7" />
+                <"," text="," />
+                <number_literal text="8" />
+                <"," text="," />
+                <number_literal text="4" />
+                <"," text="," />
+                <string_literal>
+                    <"\"" text="\"" />
+                    <string_content text="huhu" />
+                    <"\"" text="\"" />
+                </string_literal>
+                <"," text="," />
+                <number_literal text="43" />
+                <"}" text="}" />
+            </initializer_list>
+        </init_declarator>
+        <";" text=";" />
+    </declaration>
+    <declaration>
+        <struct_specifier>
+            <struct text="struct" />
+            <type_identifier text="U" />
+        </struct_specifier>
+        <init_declarator>
+            <identifier text="gu2" />
+            <"=" text="=" />
+            <initializer_list>
+                <"{" text="{" />
+                <number_literal text="3" />
+                <"," text="," />
+                <initializer_list>
+                    <"{" text="{" />
+                    <number_literal text="5" />
+                    <"," text="," />
+                    <number_literal text="6" />
+                    <"," text="," />
+                    <number_literal text="7" />
+                    <"," text="," />
+                    <number_literal text="8" />
+                    <"}" text="}" />
+                </initializer_list>
+                <"," text="," />
+                <number_literal text="4" />
+                <"," text="," />
+                <initializer_list>
+                    <"{" text="{" />
+                    <string_literal>
+                        <"\"" text="\"" />
+                        <string_content text="huhu" />
+                        <"\"" text="\"" />
+                    </string_literal>
+                    <"," text="," />
+                    <number_literal text="43" />
+                    <"}" text="}" />
+                </initializer_list>
+                <"}" text="}" />
+            </initializer_list>
+        </init_declarator>
+        <";" text=";" />
+    </declaration>
+    <comment text="/* Optional braces around scalar initializers.  Accepted, but with\n    a warning.  */" />
+    <declaration>
+        <struct_specifier>
+            <struct text="struct" />
+            <type_identifier text="U" />
+        </struct_specifier>
+        <init_declarator>
+            <identifier text="gu3" />
+            <"=" text="=" />
+            <initializer_list>
+                <"{" text="{" />
+                <initializer_list>
+                    <"{" text="{" />
+                    <number_literal text="3" />
+                    <"}" text="}" />
+                </initializer_list>
+                <"," text="," />
+                <initializer_list>
+                    <"{" text="{" />
+                    <number_literal text="5" />
+                    <"," text="," />
+                    <number_literal text="6" />
+                    <"," text="," />
+                    <number_literal text="7" />
+                    <"," text="," />
+                    <number_literal text="8" />
+                    <"," text="," />
+                    <"}" text="}" />
+                </initializer_list>
+                <"," text="," />
+                <number_literal text="4" />
+                <"," text="," />
+                <initializer_list>
+                    <"{" text="{" />
+                    <string_literal>
+                        <"\"" text="\"" />
+                        <string_content text="huhu" />
+                        <"\"" text="\"" />
+                    </string_literal>
+                    <"," text="," />
+                    <number_literal text="43" />
+                    <"}" text="}" />
+                </initializer_list>
+                <"}" text="}" />
+            </initializer_list>
+        </init_declarator>
+        <";" text=";" />
+    </declaration>
+    <comment text="/* Many superfluous braces and leaving out one initializer for U.s.c[1] */" />
+    <declaration>
+        <struct_specifier>
+            <struct text="struct" />
+            <type_identifier text="U" />
+        </struct_specifier>
+        <init_declarator>
+            <identifier text="gu4" />
+            <"=" text="=" />
+            <initializer_list>
+                <"{" text="{" />
+                <number_literal text="3" />
+                <"," text="," />
+                <initializer_list>
+                    <"{" text="{" />
+                    <number_literal text="5" />
+                    <"," text="," />
+                    <number_literal text="6" />
+                    <"," text="," />
+                    <number_literal text="7" />
+                    <"," text="," />
+                    <"}" text="}" />
+                </initializer_list>
+                <"," text="," />
+                <number_literal text="5" />
+                <"," text="," />
+                <initializer_list>
+                    <"{" text="{" />
+                    <string_literal>
+                        <"\"" text="\"" />
+                        <string_content text="bla" />
+                        <"\"" text="\"" />
+                    </string_literal>
+                    <"," text="," />
+                    <initializer_list>
+                        <"{" text="{" />
+                        <number_literal text="44" />
+                        <"}" text="}" />
+                    </initializer_list>
+                    <"}" text="}" />
+                </initializer_list>
+                <"}" text="}" />
+            </initializer_list>
+        </init_declarator>
+        <";" text=";" />
+    </declaration>
+    <comment text="/* Superfluous braces and useless parens around values */" />
+    <declaration>
+        <struct_specifier>
+            <struct text="struct" />
+            <type_identifier text="S" />
+        </struct_specifier>
+        <init_declarator>
+            <identifier text="gs3" />
+            <"=" text="=" />
+            <initializer_list>
+                <"{" text="{" />
+                <parenthesized_expression>
+                    <"(" text="(" />
+                    <number_literal text="1" />
+                    <")" text=")" />
+                </parenthesized_expression>
+                <"," text="," />
+                <initializer_list>
+                    <"{" text="{" />
+                    <parenthesized_expression>
+                        <"(" text="(" />
+                        <number_literal text="2" />
+                        <")" text=")" />
+                    </parenthesized_expression>
+                    <"}" text="}" />
+                </initializer_list>
+                <"," text="," />
+                <initializer_list>
+                    <"{" text="{" />
+                    <parenthesized_expression>
+                        <"(" text="(" />
+                        <parenthesized_expression>
+                            <"(" text="(" />
+                            <parenthesized_expression>
+                                <"(" text="(" />
+                                <number_literal text="3" />
+                                <")" text=")" />
+                            </parenthesized_expression>
+                            <")" text=")" />
+                        </parenthesized_expression>
+                        <")" text=")" />
+                    </parenthesized_expression>
+                    <"," text="," />
+                    <initializer_list>
+                        <"{" text="{" />
+                        <number_literal text="4" />
+                        <"}" text="}" />
+                    </initializer_list>
+                    <"}" text="}" />
+                </initializer_list>
+                <"}" text="}" />
+            </initializer_list>
+        </init_declarator>
+        <";" text=";" />
+    </declaration>
+    <comment text="/* Superfluous braces, and leaving out braces for V.t, plus cast */" />
+    <declaration>
+        <struct_specifier>
+            <struct text="struct" />
+            <type_identifier text="V" />
+        </struct_specifier>
+        <init_declarator>
+            <identifier text="gv" />
+            <"=" text="=" />
+            <initializer_list>
+                <"{" text="{" />
+                <initializer_list>
+                    <"{" text="{" />
+                    <initializer_list>
+                        <"{" text="{" />
+                        <number_literal text="3" />
+                        <"}" text="}" />
+                    </initializer_list>
+                    <"," text="," />
+                    <number_literal text="4" />
+                    <"," text="," />
+                    <initializer_list>
+                        <"{" text="{" />
+                        <number_literal text="5" />
+                        <"," text="," />
+                        <number_literal text="6" />
+                        <"}" text="}" />
+                    </initializer_list>
+                    <"}" text="}" />
+                </initializer_list>
+                <"," text="," />
+                <string_literal>
+                    <"\"" text="\"" />
+                    <string_content text="haha" />
+                    <"\"" text="\"" />
+                </string_literal>
+                <"," text="," />
+                <cast_expression>
+                    <"(" text="(" />
+                    <type_descriptor>
+                        <type_identifier text="u8" />
+                    </type_descriptor>
+                    <")" text=")" />
+                    <number_literal text="45" />
+                </cast_expression>
+                <"," text="," />
+                <number_literal text="46" />
+                <"}" text="}" />
+            </initializer_list>
+        </init_declarator>
+        <";" text=";" />
+    </declaration>
+    <comment text="/* Compound literal */" />
+    <declaration>
+        <struct_specifier>
+            <struct text="struct" />
+            <type_identifier text="V" />
+        </struct_specifier>
+        <init_declarator>
+            <identifier text="gv2" />
+            <"=" text="=" />
+            <initializer_list>
+                <"{" text="{" />
+                <compound_literal_expression>
+                    <"(" text="(" />
+                    <type_descriptor>
+                        <struct_specifier>
+                            <struct text="struct" />
+                            <type_identifier text="S" />
+                        </struct_specifier>
+                    </type_descriptor>
+                    <")" text=")" />
+                    <initializer_list>
+                        <"{" text="{" />
+                        <number_literal text="7" />
+                        <"," text="," />
+                        <number_literal text="8" />
+                        <"," text="," />
+                        <initializer_list>
+                            <"{" text="{" />
+                            <number_literal text="9" />
+                            <"," text="," />
+                            <number_literal text="10" />
+                            <"}" text="}" />
+                        </initializer_list>
+                        <"}" text="}" />
+                    </initializer_list>
+                </compound_literal_expression>
+                <"," text="," />
+                <initializer_list>
+                    <"{" text="{" />
+                    <string_literal>
+                        <"\"" text="\"" />
+                        <string_content text="hihi" />
+                        <"\"" text="\"" />
+                    </string_literal>
+                    <"," text="," />
+                    <number_literal text="47" />
+                    <"}" text="}" />
+                </initializer_list>
+                <"," text="," />
+                <number_literal text="48" />
+                <"}" text="}" />
+            </initializer_list>
+        </init_declarator>
+        <";" text=";" />
+    </declaration>
+    <comment text="/* Parens around compound literal */" />
+    <declaration>
+        <struct_specifier>
+            <struct text="struct" />
+            <type_identifier text="V" />
+        </struct_specifier>
+        <init_declarator>
+            <identifier text="gv3" />
+            <"=" text="=" />
+            <initializer_list>
+                <"{" text="{" />
+                <parenthesized_expression>
+                    <"(" text="(" />
+                    <compound_literal_expression>
+                        <"(" text="(" />
+                        <type_descriptor>
+                            <struct_specifier>
+                                <struct text="struct" />
+                                <type_identifier text="S" />
+                            </struct_specifier>
+                        </type_descriptor>
+                        <")" text=")" />
+                        <initializer_list>
+                            <"{" text="{" />
+                            <number_literal text="7" />
+                            <"," text="," />
+                            <number_literal text="8" />
+                            <"," text="," />
+                            <initializer_list>
+                                <"{" text="{" />
+                                <number_literal text="9" />
+                                <"," text="," />
+                                <number_literal text="10" />
+                                <"}" text="}" />
+                            </initializer_list>
+                            <"}" text="}" />
+                        </initializer_list>
+                    </compound_literal_expression>
+                    <")" text=")" />
+                </parenthesized_expression>
+                <"," text="," />
+                <initializer_list>
+                    <"{" text="{" />
+                    <string_literal>
+                        <"\"" text="\"" />
+                        <string_content text="hoho" />
+                        <"\"" text="\"" />
+                    </string_literal>
+                    <"," text="," />
+                    <number_literal text="49" />
+                    <"}" text="}" />
+                </initializer_list>
+                <"," text="," />
+                <number_literal text="50" />
+                <"}" text="}" />
+            </initializer_list>
+        </init_declarator>
+        <";" text=";" />
+    </declaration>
+    <comment text="/* Initialization of a flex array member (warns in GCC) */" />
+    <declaration>
+        <struct_specifier>
+            <struct text="struct" />
+            <type_identifier text="W" />
+        </struct_specifier>
+        <init_declarator>
+            <identifier text="gw" />
+            <"=" text="=" />
+            <initializer_list>
+                <"{" text="{" />
+                <initializer_list>
+                    <"{" text="{" />
+                    <number_literal text="1" />
+                    <"," text="," />
+                    <number_literal text="2" />
+                    <"," text="," />
+                    <number_literal text="3" />
+                    <"," text="," />
+                    <number_literal text="4" />
+                    <"}" text="}" />
+                </initializer_list>
+                <"," text="," />
+                <initializer_list>
+                    <"{" text="{" />
+                    <number_literal text="1" />
+                    <"," text="," />
+                    <number_literal text="2" />
+                    <"," text="," />
+                    <number_literal text="3" />
+                    <"," text="," />
+                    <number_literal text="4" />
+                    <"," text="," />
+                    <number_literal text="5" />
+                    <"}" text="}" />
+                </initializer_list>
+                <"}" text="}" />
+            </initializer_list>
+        </init_declarator>
+        <";" text=";" />
+    </declaration>
+    <comment text="// " />
+    <comment text="// unions" />
+    <comment text="// " />
+    <union_specifier>
+        <union text="union" />
+        <type_identifier text="UU" />
+        <field_declaration_list>
+            <"{" text="{" />
+            <field_declaration>
+                <type_identifier text="u8" />
+                <field_identifier text="a" />
+                <";" text=";" />
+            </field_declaration>
+            <field_declaration>
+                <type_identifier text="u8" />
+                <field_identifier text="b" />
+                <";" text=";" />
+            </field_declaration>
+            <"}" text="}" />
+        </field_declaration_list>
+    </union_specifier>
+    <";" text=";" />
+    <struct_specifier>
+        <struct text="struct" />
+        <type_identifier text="SU" />
+        <field_declaration_list>
+            <"{" text="{" />
+            <field_declaration>
+                <union_specifier>
+                    <union text="union" />
+                    <type_identifier text="UU" />
+                </union_specifier>
+                <field_identifier text="u" />
+                <";" text=";" />
+            </field_declaration>
+            <field_declaration>
+                <type_identifier text="u8" />
+                <field_identifier text="c" />
+                <";" text=";" />
+            </field_declaration>
+            <"}" text="}" />
+        </field_declaration_list>
+    </struct_specifier>
+    <";" text=";" />
+    <declaration>
+        <struct_specifier>
+            <struct text="struct" />
+            <type_identifier text="SU" />
+        </struct_specifier>
+        <init_declarator>
+            <identifier text="gsu" />
+            <"=" text="=" />
+            <initializer_list>
+                <"{" text="{" />
+                <number_literal text="5" />
+                <"," text="," />
+                <number_literal text="6" />
+                <"}" text="}" />
+            </initializer_list>
+        </init_declarator>
+        <";" text=";" />
+    </declaration>
+    <comment text="/* Unnamed struct/union members aren't ISO C, but it's a widely accepted\n    extension.  See below for further extensions to that under -fms-extension.*/" />
+    <union_specifier>
+        <union text="union" />
+        <type_identifier text="UV" />
+        <field_declaration_list>
+            <"{" text="{" />
+            <field_declaration>
+                <struct_specifier>
+                    <struct text="struct" />
+                    <field_declaration_list>
+                        <"{" text="{" />
+                        <field_declaration>
+                            <type_identifier text="u8" />
+                            <field_identifier text="a" />
+                            <"," text="," />
+                            <field_identifier text="b" />
+                            <";" text=";" />
+                        </field_declaration>
+                        <"}" text="}" />
+                    </field_declaration_list>
+                </struct_specifier>
+                <";" text=";" />
+            </field_declaration>
+            <field_declaration>
+                <struct_specifier>
+                    <struct text="struct" />
+                    <type_identifier text="S" />
+                </struct_specifier>
+                <field_identifier text="s" />
+                <";" text=";" />
+            </field_declaration>
+            <"}" text="}" />
+        </field_declaration_list>
+    </union_specifier>
+    <";" text=";" />
+    <declaration>
+        <union_specifier>
+            <union text="union" />
+            <type_identifier text="UV" />
+        </union_specifier>
+        <init_declarator>
+            <identifier text="guv" />
+            <"=" text="=" />
+            <initializer_list>
+                <"{" text="{" />
+                <initializer_list>
+                    <"{" text="{" />
+                    <number_literal text="6" />
+                    <"," text="," />
+                    <number_literal text="5" />
+                    <"}" text="}" />
+                </initializer_list>
+                <"}" text="}" />
+            </initializer_list>
+        </init_declarator>
+        <";" text=";" />
+    </declaration>
+    <declaration>
+        <union_specifier>
+            <union text="union" />
+            <type_identifier text="UV" />
+        </union_specifier>
+        <init_declarator>
+            <identifier text="guv2" />
+            <"=" text="=" />
+            <initializer_list>
+                <"{" text="{" />
+                <initializer_list>
+                    <"{" text="{" />
+                    <initializer_pair>
+                        <field_designator>
+                            <"." text="." />
+                            <field_identifier text="b" />
+                        </field_designator>
+                        <"=" text="=" />
+                        <number_literal text="7" />
+                    </initializer_pair>
+                    <"," text="," />
+                    <initializer_pair>
+                        <field_designator>
+                            <"." text="." />
+                            <field_identifier text="a" />
+                        </field_designator>
+                        <"=" text="=" />
+                        <number_literal text="8" />
+                    </initializer_pair>
+                    <"}" text="}" />
+                </initializer_list>
+                <"}" text="}" />
+            </initializer_list>
+        </init_declarator>
+        <";" text=";" />
+    </declaration>
+    <declaration>
+        <union_specifier>
+            <union text="union" />
+            <type_identifier text="UV" />
+        </union_specifier>
+        <init_declarator>
+            <identifier text="guv3" />
+            <"=" text="=" />
+            <initializer_list>
+                <"{" text="{" />
+                <initializer_pair>
+                    <field_designator>
+                        <"." text="." />
+                        <field_identifier text="b" />
+                    </field_designator>
+                    <"=" text="=" />
+                    <number_literal text="8" />
+                </initializer_pair>
+                <"," text="," />
+                <initializer_pair>
+                    <field_designator>
+                        <"." text="." />
+                        <field_identifier text="a" />
+                    </field_designator>
+                    <"=" text="=" />
+                    <number_literal text="7" />
+                </initializer_pair>
+                <"}" text="}" />
+            </initializer_list>
+        </init_declarator>
+        <";" text=";" />
+    </declaration>
+    <comment text="/* Under -fms-extensions also the following is valid:\n    union UV2 {\n        struct Anon {u8 a,b;};    // unnamed member, but tagged struct, ...\n        struct S s;\n    };\n    struct Anon gan = { 10, 11 }; // ... which makes it available here.\n    union UV2 guv4 = {{4,3}};     // and the other inits from above as well\n    */" />
+    <comment text="// " />
+    <comment text="// inline union" />
+    <comment text="// " />
+    <struct_specifier>
+        <struct text="struct" />
+        <type_identifier text="in6_addr" />
+        <field_declaration_list>
+            <"{" text="{" />
+            <field_declaration>
+                <union_specifier>
+                    <union text="union" />
+                    <field_declaration_list>
+                        <"{" text="{" />
+                        <field_declaration>
+                            <type_identifier text="u8" />
+                            <array_declarator>
+                                <field_identifier text="u6_addr8" />
+                                <"[" text="[" />
+                                <number_literal text="16" />
+                                <"]" text="]" />
+                            </array_declarator>
+                            <";" text=";" />
+                        </field_declaration>
+                        <field_declaration>
+                            <sized_type_specifier>
+                                <unsigned text="unsigned" />
+                                <short text="short" />
+                            </sized_type_specifier>
+                            <array_declarator>
+                                <field_identifier text="u6_addr16" />
+                                <"[" text="[" />
+                                <number_literal text="8" />
+                                <"]" text="]" />
+                            </array_declarator>
+                            <";" text=";" />
+                        </field_declaration>
+                        <"}" text="}" />
+                    </field_declaration_list>
+                </union_specifier>
+                <field_identifier text="u" />
+                <";" text=";" />
+            </field_declaration>
+            <"}" text="}" />
+        </field_declaration_list>
+    </struct_specifier>
+    <";" text=";" />
+    <comment text="// " />
+    <comment text="// inline nested struct" />
+    <comment text="// " />
+    <struct_specifier>
+        <struct text="struct" />
+        <type_identifier text="flowi6" />
+        <field_declaration_list>
+            <"{" text="{" />
+            <field_declaration>
+                <struct_specifier>
+                    <struct text="struct" />
+                    <type_identifier text="in6_addr" />
+                </struct_specifier>
+                <field_identifier text="saddr" />
+                <"," text="," />
+                <field_identifier text="daddr" />
+                <";" text=";" />
+            </field_declaration>
+            <"}" text="}" />
+        </field_declaration_list>
+    </struct_specifier>
+    <";" text=";" />
+    <struct_specifier>
+        <struct text="struct" />
+        <type_identifier text="pkthdr" />
+        <field_declaration_list>
+            <"{" text="{" />
+            <field_declaration>
+                <struct_specifier>
+                    <struct text="struct" />
+                    <type_identifier text="in6_addr" />
+                </struct_specifier>
+                <field_identifier text="daddr" />
+                <"," text="," />
+                <field_identifier text="saddr" />
+                <";" text=";" />
+            </field_declaration>
+            <"}" text="}" />
+        </field_declaration_list>
+    </struct_specifier>
+    <";" text=";" />
+    <declaration>
+        <struct_specifier>
+            <struct text="struct" />
+            <type_identifier text="pkthdr" />
+        </struct_specifier>
+        <init_declarator>
+            <identifier text="phdr" />
+            <"=" text="=" />
+            <initializer_list>
+                <"{" text="{" />
+                <initializer_list>
+                    <"{" text="{" />
+                    <initializer_list>
+                        <"{" text="{" />
+                        <number_literal text="6" />
+                        <"," text="," />
+                        <number_literal text="5" />
+                        <"," text="," />
+                        <number_literal text="4" />
+                        <"," text="," />
+                        <number_literal text="3" />
+                        <"}" text="}" />
+                    </initializer_list>
+                    <"}" text="}" />
+                </initializer_list>
+                <"," text="," />
+                <initializer_list>
+                    <"{" text="{" />
+                    <initializer_list>
+                        <"{" text="{" />
+                        <number_literal text="9" />
+                        <"," text="," />
+                        <number_literal text="8" />
+                        <"," text="," />
+                        <number_literal text="7" />
+                        <"," text="," />
+                        <number_literal text="6" />
+                        <"}" text="}" />
+                    </initializer_list>
+                    <"}" text="}" />
+                </initializer_list>
+                <"}" text="}" />
+            </initializer_list>
+        </init_declarator>
+        <";" text=";" />
+    </declaration>
+    <comment text="// TODO: whatever this is: " />
+    <comment text="// struct Wrap {" />
+    <comment text="//     void *func;" />
+    <comment text="// };" />
+    <comment text="// struct Wrap global_wrap[] = {" />
+    <comment text="//     ((struct Wrap) {inc_global})," />
+    <comment text="//     inc_global," />
+    <comment text="// };" />
+    <comment text="// " />
+    <comment text="// some kinda function table" />
+    <comment text="// " />
+    <comment text="// void sys_ni(void) { printf(\"ni\\n\"); }" />
+    <comment text="// void sys_one(void) { printf(\"one\\n\"); }" />
+    <comment text="// void sys_two(void) { printf(\"two\\n\"); }" />
+    <comment text="// void sys_three(void) { printf(\"three\\n\"); }" />
+    <comment text="// typedef void (*fptr)(void);" />
+    <comment text="// const fptr table[3] = {" />
+    <comment text="//     [0 ... 2] = &sys_ni," />
+    <comment text="//     [0] = sys_one," />
+    <comment text="//     [1] = sys_two," />
+    <comment text="//     [2] = sys_three," />
+    <comment text="// };" />
+    <function_definition>
+        <primitive_type text="void" />
+        <function_declarator>
+            <identifier text="foo" />
+            <parameter_list>
+                <"(" text="(" />
+                <parameter_declaration>
+                    <struct_specifier>
+                        <struct text="struct" />
+                        <type_identifier text="W" />
+                    </struct_specifier>
+                    <pointer_declarator>
+                        <"*" text="*" />
+                        <identifier text="w" />
+                    </pointer_declarator>
+                </parameter_declaration>
+                <"," text="," />
+                <parameter_declaration>
+                    <struct_specifier>
+                        <struct text="struct" />
+                        <type_identifier text="pkthdr" />
+                    </struct_specifier>
+                    <pointer_declarator>
+                        <"*" text="*" />
+                        <identifier text="phdr_" />
+                    </pointer_declarator>
+                </parameter_declaration>
+                <")" text=")" />
+            </parameter_list>
+        </function_declarator>
+        <compound_statement>
+            <"{" text="{" />
+            <declaration>
+                <struct_specifier>
+                    <struct text="struct" />
+                    <type_identifier text="S" />
+                </struct_specifier>
+                <init_declarator>
+                    <identifier text="ls" />
+                    <"=" text="=" />
+                    <initializer_list>
+                        <"{" text="{" />
+                        <number_literal text="1" />
+                        <"," text="," />
+                        <number_literal text="2" />
+                        <"," text="," />
+                        <number_literal text="3" />
+                        <"," text="," />
+                        <number_literal text="4" />
+                        <"}" text="}" />
+                    </initializer_list>
+                </init_declarator>
+                <";" text=";" />
+            </declaration>
+            <declaration>
+                <struct_specifier>
+                    <struct text="struct" />
+                    <type_identifier text="S" />
+                </struct_specifier>
+                <init_declarator>
+                    <identifier text="ls2" />
+                    <"=" text="=" />
+                    <initializer_list>
+                        <"{" text="{" />
+                        <number_literal text="1" />
+                        <"," text="," />
+                        <number_literal text="2" />
+                        <"," text="," />
+                        <initializer_list>
+                            <"{" text="{" />
+                            <number_literal text="3" />
+                            <"," text="," />
+                            <number_literal text="4" />
+                            <"}" text="}" />
+                        </initializer_list>
+                        <"}" text="}" />
+                    </initializer_list>
+                </init_declarator>
+                <";" text=";" />
+            </declaration>
+            <declaration>
+                <struct_specifier>
+                    <struct text="struct" />
+                    <type_identifier text="T" />
+                </struct_specifier>
+                <init_declarator>
+                    <identifier text="lt" />
+                    <"=" text="=" />
+                    <initializer_list>
+                        <"{" text="{" />
+                        <string_literal>
+                            <"\"" text="\"" />
+                            <string_content text="hello" />
+                            <"\"" text="\"" />
+                        </string_literal>
+                        <"," text="," />
+                        <number_literal text="42" />
+                        <"}" text="}" />
+                    </initializer_list>
+                </init_declarator>
+                <";" text=";" />
+            </declaration>
+            <declaration>
+                <struct_specifier>
+                    <struct text="struct" />
+                    <type_identifier text="U" />
+                </struct_specifier>
+                <init_declarator>
+                    <identifier text="lu" />
+                    <"=" text="=" />
+                    <initializer_list>
+                        <"{" text="{" />
+                        <number_literal text="3" />
+                        <"," text="," />
+                        <number_literal text="5" />
+                        <"," text="," />
+                        <number_literal text="6" />
+                        <"," text="," />
+                        <number_literal text="7" />
+                        <"," text="," />
+                        <number_literal text="8" />
+                        <"," text="," />
+                        <number_literal text="4" />
+                        <"," text="," />
+                        <string_literal>
+                            <"\"" text="\"" />
+                            <string_content text="huhu" />
+                            <"\"" text="\"" />
+                        </string_literal>
+                        <"," text="," />
+                        <number_literal text="43" />
+                        <"}" text="}" />
+                    </initializer_list>
+                </init_declarator>
+                <";" text=";" />
+            </declaration>
+            <declaration>
+                <struct_specifier>
+                    <struct text="struct" />
+                    <type_identifier text="U" />
+                </struct_specifier>
+                <init_declarator>
+                    <identifier text="lu1" />
+                    <"=" text="=" />
+                    <initializer_list>
+                        <"{" text="{" />
+                        <number_literal text="3" />
+                        <"," text="," />
+                        <identifier text="ls" />
+                        <"," text="," />
+                        <number_literal text="4" />
+                        <"," text="," />
+                        <initializer_list>
+                            <"{" text="{" />
+                            <string_literal>
+                                <"\"" text="\"" />
+                                <string_content text="huhu" />
+                                <"\"" text="\"" />
+                            </string_literal>
+                            <"," text="," />
+                            <number_literal text="43" />
+                            <"}" text="}" />
+                        </initializer_list>
+                        <"}" text="}" />
+                    </initializer_list>
+                </init_declarator>
+                <";" text=";" />
+            </declaration>
+            <declaration>
+                <struct_specifier>
+                    <struct text="struct" />
+                    <type_identifier text="U" />
+                </struct_specifier>
+                <init_declarator>
+                    <identifier text="lu2" />
+                    <"=" text="=" />
+                    <initializer_list>
+                        <"{" text="{" />
+                        <number_literal text="3" />
+                        <"," text="," />
+                        <parenthesized_expression>
+                            <"(" text="(" />
+                            <identifier text="ls" />
+                            <")" text=")" />
+                        </parenthesized_expression>
+                        <"," text="," />
+                        <number_literal text="4" />
+                        <"," text="," />
+                        <initializer_list>
+                            <"{" text="{" />
+                            <string_literal>
+                                <"\"" text="\"" />
+                                <string_content text="huhu" />
+                                <"\"" text="\"" />
+                            </string_literal>
+                            <"," text="," />
+                            <number_literal text="43" />
+                            <"}" text="}" />
+                        </initializer_list>
+                        <"}" text="}" />
+                    </initializer_list>
+                </init_declarator>
+                <";" text=";" />
+            </declaration>
+            <declaration>
+                <type_qualifier>
+                    <const text="const" />
+                </type_qualifier>
+                <struct_specifier>
+                    <struct text="struct" />
+                    <type_identifier text="S" />
+                </struct_specifier>
+                <init_declarator>
+                    <pointer_declarator>
+                        <"*" text="*" />
+                        <identifier text="pls" />
+                    </pointer_declarator>
+                    <"=" text="=" />
+                    <pointer_expression>
+                        <"&" text="&" />
+                        <identifier text="ls" />
+                    </pointer_expression>
+                </init_declarator>
+                <";" text=";" />
+            </declaration>
+            <declaration>
+                <struct_specifier>
+                    <struct text="struct" />
+                    <type_identifier text="S" />
+                </struct_specifier>
+                <init_declarator>
+                    <identifier text="ls21" />
+                    <"=" text="=" />
+                    <pointer_expression>
+                        <"*" text="*" />
+                        <identifier text="pls" />
+                    </pointer_expression>
+                </init_declarator>
+                <";" text=";" />
+            </declaration>
+            <declaration>
+                <struct_specifier>
+                    <struct text="struct" />
+                    <type_identifier text="U" />
+                </struct_specifier>
+                <init_declarator>
+                    <identifier text="lu22" />
+                    <"=" text="=" />
+                    <initializer_list>
+                        <"{" text="{" />
+                        <number_literal text="3" />
+                        <"," text="," />
+                        <pointer_expression>
+                            <"*" text="*" />
+                            <identifier text="pls" />
+                        </pointer_expression>
+                        <"," text="," />
+                        <number_literal text="4" />
+                        <"," text="," />
+                        <initializer_list>
+                            <"{" text="{" />
+                            <string_literal>
+                                <"\"" text="\"" />
+                                <string_content text="huhu" />
+                                <"\"" text="\"" />
+                            </string_literal>
+                            <"," text="," />
+                            <number_literal text="43" />
+                            <"}" text="}" />
+                        </initializer_list>
+                        <"}" text="}" />
+                    </initializer_list>
+                </init_declarator>
+                <";" text=";" />
+            </declaration>
+            <comment text="/* Incomplete bracing.  */" />
+            <declaration>
+                <struct_specifier>
+                    <struct text="struct" />
+                    <type_identifier text="U" />
+                </struct_specifier>
+                <init_declarator>
+                    <identifier text="lu21" />
+                    <"=" text="=" />
+                    <initializer_list>
+                        <"{" text="{" />
+                        <number_literal text="3" />
+                        <"," text="," />
+                        <identifier text="ls" />
+                        <"," text="," />
+                        <number_literal text="4" />
+                        <"," text="," />
+                        <string_literal>
+                            <"\"" text="\"" />
+                            <string_content text="huhu" />
+                            <"\"" text="\"" />
+                        </string_literal>
+                        <"," text="," />
+                        <number_literal text="43" />
+                        <"}" text="}" />
+                    </initializer_list>
+                </init_declarator>
+                <";" text=";" />
+            </declaration>
+            <comment text="/* Optional braces around scalar initializers.  Accepted, but with a warning.  */" />
+            <declaration>
+                <struct_specifier>
+                    <struct text="struct" />
+                    <type_identifier text="U" />
+                </struct_specifier>
+                <init_declarator>
+                    <identifier text="lu3" />
+                    <"=" text="=" />
+                    <initializer_list>
+                        <"{" text="{" />
+                        <number_literal text="3" />
+                        <"," text="," />
+                        <initializer_list>
+                            <"{" text="{" />
+                            <number_literal text="5" />
+                            <"," text="," />
+                            <number_literal text="6" />
+                            <"," text="," />
+                            <number_literal text="7" />
+                            <"," text="," />
+                            <number_literal text="8" />
+                            <"," text="," />
+                            <"}" text="}" />
+                        </initializer_list>
+                        <"," text="," />
+                        <number_literal text="4" />
+                        <"," text="," />
+                        <initializer_list>
+                            <"{" text="{" />
+                            <string_literal>
+                                <"\"" text="\"" />
+                                <string_content text="huhu" />
+                                <"\"" text="\"" />
+                            </string_literal>
+                            <"," text="," />
+                            <number_literal text="43" />
+                            <"}" text="}" />
+                        </initializer_list>
+                        <"}" text="}" />
+                    </initializer_list>
+                </init_declarator>
+                <";" text=";" />
+            </declaration>
+            <comment text="/* Many superfluous braces and leaving out one initializer for U.s.c[1] */" />
+            <declaration>
+                <struct_specifier>
+                    <struct text="struct" />
+                    <type_identifier text="U" />
+                </struct_specifier>
+                <init_declarator>
+                    <identifier text="lu4" />
+                    <"=" text="=" />
+                    <initializer_list>
+                        <"{" text="{" />
+                        <number_literal text="3" />
+                        <"," text="," />
+                        <initializer_list>
+                            <"{" text="{" />
+                            <number_literal text="5" />
+                            <"," text="," />
+                            <number_literal text="6" />
+                            <"," text="," />
+                            <number_literal text="7" />
+                            <"," text="," />
+                            <"}" text="}" />
+                        </initializer_list>
+                        <"," text="," />
+                        <number_literal text="5" />
+                        <"," text="," />
+                        <initializer_list>
+                            <"{" text="{" />
+                            <string_literal>
+                                <"\"" text="\"" />
+                                <string_content text="bla" />
+                                <"\"" text="\"" />
+                            </string_literal>
+                            <"," text="," />
+                            <number_literal text="44" />
+                            <"}" text="}" />
+                        </initializer_list>
+                        <"}" text="}" />
+                    </initializer_list>
+                </init_declarator>
+                <";" text=";" />
+            </declaration>
+            <comment text="/* Superfluous braces and useless parens around values */" />
+            <declaration>
+                <struct_specifier>
+                    <struct text="struct" />
+                    <type_identifier text="S" />
+                </struct_specifier>
+                <init_declarator>
+                    <identifier text="ls3" />
+                    <"=" text="=" />
+                    <initializer_list>
+                        <"{" text="{" />
+                        <parenthesized_expression>
+                            <"(" text="(" />
+                            <number_literal text="1" />
+                            <")" text=")" />
+                        </parenthesized_expression>
+                        <"," text="," />
+                        <parenthesized_expression>
+                            <"(" text="(" />
+                            <number_literal text="2" />
+                            <")" text=")" />
+                        </parenthesized_expression>
+                        <"," text="," />
+                        <initializer_list>
+                            <"{" text="{" />
+                            <parenthesized_expression>
+                                <"(" text="(" />
+                                <parenthesized_expression>
+                                    <"(" text="(" />
+                                    <parenthesized_expression>
+                                        <"(" text="(" />
+                                        <number_literal text="3" />
+                                        <")" text=")" />
+                                    </parenthesized_expression>
+                                    <")" text=")" />
+                                </parenthesized_expression>
+                                <")" text=")" />
+                            </parenthesized_expression>
+                            <"," text="," />
+                            <number_literal text="4" />
+                            <"}" text="}" />
+                        </initializer_list>
+                        <"}" text="}" />
+                    </initializer_list>
+                </init_declarator>
+                <";" text=";" />
+            </declaration>
+            <comment text="/* Superfluous braces, and leaving out braces for V.t, plus cast */" />
+            <declaration>
+                <struct_specifier>
+                    <struct text="struct" />
+                    <type_identifier text="V" />
+                </struct_specifier>
+                <init_declarator>
+                    <identifier text="lv" />
+                    <"=" text="=" />
+                    <initializer_list>
+                        <"{" text="{" />
+                        <initializer_list>
+                            <"{" text="{" />
+                            <number_literal text="3" />
+                            <"," text="," />
+                            <number_literal text="4" />
+                            <"," text="," />
+                            <initializer_list>
+                                <"{" text="{" />
+                                <number_literal text="5" />
+                                <"," text="," />
+                                <number_literal text="6" />
+                                <"}" text="}" />
+                            </initializer_list>
+                            <"}" text="}" />
+                        </initializer_list>
+                        <"," text="," />
+                        <string_literal>
+                            <"\"" text="\"" />
+                            <string_content text="haha" />
+                            <"\"" text="\"" />
+                        </string_literal>
+                        <"," text="," />
+                        <cast_expression>
+                            <"(" text="(" />
+                            <type_descriptor>
+                                <type_identifier text="u8" />
+                            </type_descriptor>
+                            <")" text=")" />
+                            <number_literal text="45" />
+                        </cast_expression>
+                        <"," text="," />
+                        <number_literal text="46" />
+                        <"}" text="}" />
+                    </initializer_list>
+                </init_declarator>
+                <";" text=";" />
+            </declaration>
+            <comment text="/* Compound literal */" />
+            <declaration>
+                <struct_specifier>
+                    <struct text="struct" />
+                    <type_identifier text="V" />
+                </struct_specifier>
+                <init_declarator>
+                    <identifier text="lv2" />
+                    <"=" text="=" />
+                    <initializer_list>
+                        <"{" text="{" />
+                        <cast_expression>
+                            <"(" text="(" />
+                            <type_descriptor>
+                                <struct_specifier>
+                                    <struct text="struct" />
+                                    <type_identifier text="S" />
+                                </struct_specifier>
+                            </type_descriptor>
+                            <")" text=")" />
+                            <field_expression>
+                                <field_expression>
+                                    <identifier text="w" />
+                                    <"->" text="->" />
+                                    <field_identifier text="t" />
+                                </field_expression>
+                                <"." text="." />
+                                <field_identifier text="s" />
+                            </field_expression>
+                        </cast_expression>
+                        <"," text="," />
+                        <initializer_list>
+                            <"{" text="{" />
+                            <string_literal>
+                                <"\"" text="\"" />
+                                <string_content text="hihi" />
+                                <"\"" text="\"" />
+                            </string_literal>
+                            <"," text="," />
+                            <number_literal text="47" />
+                            <"}" text="}" />
+                        </initializer_list>
+                        <"," text="," />
+                        <number_literal text="48" />
+                        <"}" text="}" />
+                    </initializer_list>
+                </init_declarator>
+                <";" text=";" />
+            </declaration>
+            <comment text="/* Parens around compound literal */" />
+            <declaration>
+                <struct_specifier>
+                    <struct text="struct" />
+                    <type_identifier text="V" />
+                </struct_specifier>
+                <init_declarator>
+                    <identifier text="lv3" />
+                    <"=" text="=" />
+                    <initializer_list>
+                        <"{" text="{" />
+                        <parenthesized_expression>
+                            <"(" text="(" />
+                            <compound_literal_expression>
+                                <"(" text="(" />
+                                <type_descriptor>
+                                    <struct_specifier>
+                                        <struct text="struct" />
+                                        <type_identifier text="S" />
+                                    </struct_specifier>
+                                </type_descriptor>
+                                <")" text=")" />
+                                <initializer_list>
+                                    <"{" text="{" />
+                                    <number_literal text="7" />
+                                    <"," text="," />
+                                    <number_literal text="8" />
+                                    <"," text="," />
+                                    <initializer_list>
+                                        <"{" text="{" />
+                                        <number_literal text="9" />
+                                        <"," text="," />
+                                        <number_literal text="10" />
+                                        <"}" text="}" />
+                                    </initializer_list>
+                                    <"}" text="}" />
+                                </initializer_list>
+                            </compound_literal_expression>
+                            <")" text=")" />
+                        </parenthesized_expression>
+                        <"," text="," />
+                        <field_expression>
+                            <field_expression>
+                                <parenthesized_expression>
+                                    <"(" text="(" />
+                                    <cast_expression>
+                                        <"(" text="(" />
+                                        <type_descriptor>
+                                            <type_qualifier>
+                                                <const text="const" />
+                                            </type_qualifier>
+                                            <struct_specifier>
+                                                <struct text="struct" />
+                                                <type_identifier text="W" />
+                                            </struct_specifier>
+                                            <abstract_pointer_declarator>
+                                                <"*" text="*" />
+                                            </abstract_pointer_declarator>
+                                        </type_descriptor>
+                                        <")" text=")" />
+                                        <identifier text="w" />
+                                    </cast_expression>
+                                    <")" text=")" />
+                                </parenthesized_expression>
+                                <"->" text="->" />
+                                <field_identifier text="t" />
+                            </field_expression>
+                            <"." text="." />
+                            <field_identifier text="t" />
+                        </field_expression>
+                        <"," text="," />
+                        <number_literal text="50" />
+                        <"}" text="}" />
+                    </initializer_list>
+                </init_declarator>
+                <";" text=";" />
+            </declaration>
+            <declaration>
+                <type_qualifier>
+                    <const text="const" />
+                </type_qualifier>
+                <struct_specifier>
+                    <struct text="struct" />
+                    <type_identifier text="pkthdr" />
+                </struct_specifier>
+                <init_declarator>
+                    <pointer_declarator>
+                        <"*" text="*" />
+                        <identifier text="phdr" />
+                    </pointer_declarator>
+                    <"=" text="=" />
+                    <identifier text="phdr_" />
+                </init_declarator>
+                <";" text=";" />
+            </declaration>
+            <declaration>
+                <struct_specifier>
+                    <struct text="struct" />
+                    <type_identifier text="flowi6" />
+                </struct_specifier>
+                <init_declarator>
+                    <identifier text="flow" />
+                    <"=" text="=" />
+                    <initializer_list>
+                        <"{" text="{" />
+                        <initializer_pair>
+                            <field_designator>
+                                <"." text="." />
+                                <field_identifier text="daddr" />
+                            </field_designator>
+                            <"=" text="=" />
+                            <field_expression>
+                                <identifier text="phdr" />
+                                <"->" text="->" />
+                                <field_identifier text="daddr" />
+                            </field_expression>
+                        </initializer_pair>
+                        <"," text="," />
+                        <initializer_pair>
+                            <field_designator>
+                                <"." text="." />
+                                <field_identifier text="saddr" />
+                            </field_designator>
+                            <"=" text="=" />
+                            <field_expression>
+                                <identifier text="phdr" />
+                                <"->" text="->" />
+                                <field_identifier text="saddr" />
+                            </field_expression>
+                        </initializer_pair>
+                        <"}" text="}" />
+                    </initializer_list>
+                </init_declarator>
+                <";" text=";" />
+            </declaration>
+            <declaration>
+                <primitive_type text="int" />
+                <init_declarator>
+                    <identifier text="elt" />
+                    <"=" text="=" />
+                    <number_literal text="0x42" />
+                </init_declarator>
+                <";" text=";" />
+            </declaration>
+            <comment text="/* Range init, overlapping */" />
+            <declaration>
+                <struct_specifier>
+                    <struct text="struct" />
+                    <type_identifier text="T" />
+                </struct_specifier>
+                <init_declarator>
+                    <identifier text="lt2" />
+                    <"=" text="=" />
+                    <initializer_list>
+                        <"{" text="{" />
+                        <initializer_list>
+                            <"{" text="{" />
+                            <initializer_pair>
+                                <subscript_range_designator>
+                                    <"[" text="[" />
+                                    <number_literal text="1" />
+                                    <"..." text="..." />
+                                    <number_literal text="5" />
+                                    <"]" text="]" />
+                                </subscript_range_designator>
+                                <"=" text="=" />
+                                <number_literal text="9" />
+                            </initializer_pair>
+                            <"," text="," />
+                            <initializer_pair>
+                                <subscript_range_designator>
+                                    <"[" text="[" />
+                                    <number_literal text="6" />
+                                    <"..." text="..." />
+                                    <number_literal text="10" />
+                                    <"]" text="]" />
+                                </subscript_range_designator>
+                                <"=" text="=" />
+                                <identifier text="elt" />
+                            </initializer_pair>
+                            <"," text="," />
+                            <initializer_pair>
+                                <subscript_range_designator>
+                                    <"[" text="[" />
+                                    <number_literal text="4" />
+                                    <"..." text="..." />
+                                    <number_literal text="7" />
+                                    <"]" text="]" />
+                                </subscript_range_designator>
+                                <"=" text="=" />
+                                <binary_expression>
+                                    <identifier text="elt" />
+                                    <"+" text="+" />
+                                    <number_literal text="1" />
+                                </binary_expression>
+                            </initializer_pair>
+                            <"}" text="}" />
+                        </initializer_list>
+                        <"," text="," />
+                        <number_literal text="1" />
+                        <"}" text="}" />
+                    </initializer_list>
+                </init_declarator>
+                <";" text=";" />
+            </declaration>
+            <"}" text="}" />
+        </compound_statement>
+    </function_definition>
+    <function_definition>
+        <primitive_type text="void" />
+        <function_declarator>
+            <identifier text="test_compound_with_relocs" />
+            <parameter_list>
+                <"(" text="(" />
+                <parameter_declaration>
+                    <primitive_type text="void" />
+                </parameter_declaration>
+                <")" text=")" />
+            </parameter_list>
+        </function_declarator>
+        <compound_statement>
+            <"{" text="{" />
+            <declaration>
+                <struct_specifier>
+                    <struct text="struct" />
+                    <type_identifier text="Wrap" />
+                </struct_specifier>
+                <init_declarator>
+                    <array_declarator>
+                        <identifier text="local_wrap" />
+                        <"[" text="[" />
+                        <"]" text="]" />
+                    </array_declarator>
+                    <"=" text="=" />
+                    <initializer_list>
+                        <"{" text="{" />
+                        <parenthesized_expression>
+                            <"(" text="(" />
+                            <compound_literal_expression>
+                                <"(" text="(" />
+                                <type_descriptor>
+                                    <struct_specifier>
+                                        <struct text="struct" />
+                                        <type_identifier text="Wrap" />
+                                    </struct_specifier>
+                                </type_descriptor>
+                                <")" text=")" />
+                                <initializer_list>
+                                    <"{" text="{" />
+                                    <identifier text="inc_global" />
+                                    <"}" text="}" />
+                                </initializer_list>
+                            </compound_literal_expression>
+                            <")" text=")" />
+                        </parenthesized_expression>
+                        <"," text="," />
+                        <identifier text="inc_global" />
+                        <"," text="," />
+                        <"}" text="}" />
+                    </initializer_list>
+                </init_declarator>
+                <";" text=";" />
+            </declaration>
+            <declaration>
+                <primitive_type text="void" />
+                <function_declarator>
+                    <parenthesized_declarator>
+                        <"(" text="(" />
+                        <pointer_declarator>
+                            <"*" text="*" />
+                            <identifier text="p" />
+                        </pointer_declarator>
+                        <")" text=")" />
+                    </parenthesized_declarator>
+                    <parameter_list>
+                        <"(" text="(" />
+                        <parameter_declaration>
+                            <primitive_type text="void" />
+                        </parameter_declaration>
+                        <")" text=")" />
+                    </parameter_list>
+                </function_declarator>
+                <";" text=";" />
+            </declaration>
+            <expression_statement>
+                <assignment_expression>
+                    <identifier text="p" />
+                    <"=" text="=" />
+                    <field_expression>
+                        <subscript_expression>
+                            <identifier text="global_wrap" />
+                            <"[" text="[" />
+                            <number_literal text="0" />
+                            <"]" text="]" />
+                        </subscript_expression>
+                        <"." text="." />
+                        <field_identifier text="func" />
+                    </field_expression>
+                </assignment_expression>
+                <";" text=";" />
+            </expression_statement>
+            <expression_statement>
+                <call_expression>
+                    <identifier text="p" />
+                    <argument_list>
+                        <"(" text="(" />
+                        <")" text=")" />
+                    </argument_list>
+                </call_expression>
+                <";" text=";" />
+            </expression_statement>
+            <expression_statement>
+                <assignment_expression>
+                    <identifier text="p" />
+                    <"=" text="=" />
+                    <field_expression>
+                        <subscript_expression>
+                            <identifier text="global_wrap" />
+                            <"[" text="[" />
+                            <number_literal text="1" />
+                            <"]" text="]" />
+                        </subscript_expression>
+                        <"." text="." />
+                        <field_identifier text="func" />
+                    </field_expression>
+                </assignment_expression>
+                <";" text=";" />
+            </expression_statement>
+            <expression_statement>
+                <call_expression>
+                    <identifier text="p" />
+                    <argument_list>
+                        <"(" text="(" />
+                        <")" text=")" />
+                    </argument_list>
+                </call_expression>
+                <";" text=";" />
+            </expression_statement>
+            <expression_statement>
+                <assignment_expression>
+                    <identifier text="p" />
+                    <"=" text="=" />
+                    <field_expression>
+                        <subscript_expression>
+                            <identifier text="local_wrap" />
+                            <"[" text="[" />
+                            <number_literal text="0" />
+                            <"]" text="]" />
+                        </subscript_expression>
+                        <"." text="." />
+                        <field_identifier text="func" />
+                    </field_expression>
+                </assignment_expression>
+                <";" text=";" />
+            </expression_statement>
+            <expression_statement>
+                <call_expression>
+                    <identifier text="p" />
+                    <argument_list>
+                        <"(" text="(" />
+                        <")" text=")" />
+                    </argument_list>
+                </call_expression>
+                <";" text=";" />
+            </expression_statement>
+            <expression_statement>
+                <assignment_expression>
+                    <identifier text="p" />
+                    <"=" text="=" />
+                    <field_expression>
+                        <subscript_expression>
+                            <identifier text="local_wrap" />
+                            <"[" text="[" />
+                            <number_literal text="1" />
+                            <"]" text="]" />
+                        </subscript_expression>
+                        <"." text="." />
+                        <field_identifier text="func" />
+                    </field_expression>
+                </assignment_expression>
+                <";" text=";" />
+            </expression_statement>
+            <expression_statement>
+                <call_expression>
+                    <identifier text="p" />
+                    <argument_list>
+                        <"(" text="(" />
+                        <")" text=")" />
+                    </argument_list>
+                </call_expression>
+                <";" text=";" />
+            </expression_statement>
+            <"}" text="}" />
+        </compound_statement>
+    </function_definition>
+    <function_definition>
+        <primitive_type text="void" />
+        <function_declarator>
+            <identifier text="test_multi_relocs" />
+            <parameter_list>
+                <"(" text="(" />
+                <parameter_declaration>
+                    <primitive_type text="void" />
+                </parameter_declaration>
+                <")" text=")" />
+            </parameter_list>
+        </function_declarator>
+        <compound_statement>
+            <"{" text="{" />
+            <declaration>
+                <primitive_type text="int" />
+                <identifier text="i" />
+                <";" text=";" />
+            </declaration>
+            <for_statement>
+                <for text="for" />
+                <"(" text="(" />
+                <assignment_expression>
+                    <identifier text="i" />
+                    <"=" text="=" />
+                    <number_literal text="0" />
+                </assignment_expression>
+                <";" text=";" />
+                <binary_expression>
+                    <identifier text="i" />
+                    <"<" text="<" />
+                    <binary_expression>
+                        <sizeof_expression>
+                            <sizeof text="sizeof" />
+                            <parenthesized_expression>
+                                <"(" text="(" />
+                                <identifier text="table" />
+                                <")" text=")" />
+                            </parenthesized_expression>
+                        </sizeof_expression>
+                        <"/" text="/" />
+                        <sizeof_expression>
+                            <sizeof text="sizeof" />
+                            <parenthesized_expression>
+                                <"(" text="(" />
+                                <subscript_expression>
+                                    <identifier text="table" />
+                                    <"[" text="[" />
+                                    <number_literal text="0" />
+                                    <"]" text="]" />
+                                </subscript_expression>
+                                <")" text=")" />
+                            </parenthesized_expression>
+                        </sizeof_expression>
+                    </binary_expression>
+                </binary_expression>
+                <";" text=";" />
+                <update_expression>
+                    <identifier text="i" />
+                    <"++" text="++" />
+                </update_expression>
+                <")" text=")" />
+                <expression_statement>
+                    <call_expression>
+                        <subscript_expression>
+                            <identifier text="table" />
+                            <"[" text="[" />
+                            <identifier text="i" />
+                            <"]" text="]" />
+                        </subscript_expression>
+                        <argument_list>
+                            <"(" text="(" />
+                            <")" text=")" />
+                        </argument_list>
+                    </call_expression>
+                    <";" text=";" />
+                </expression_statement>
+            </for_statement>
+            <"}" text="}" />
+        </compound_statement>
+    </function_definition>
+    <comment text="/* Following is from GCC gcc.c-torture/execute/20050613-1.c.  */" />
+    <struct_specifier>
+        <struct text="struct" />
+        <type_identifier text="SEA" />
+        <field_declaration_list>
+            <"{" text="{" />
+            <field_declaration>
+                <primitive_type text="int" />
+                <field_identifier text="i" />
+                <";" text=";" />
+            </field_declaration>
+            <field_declaration>
+                <primitive_type text="int" />
+                <field_identifier text="j" />
+                <";" text=";" />
+            </field_declaration>
+            <field_declaration>
+                <primitive_type text="int" />
+                <field_identifier text="k" />
+                <";" text=";" />
+            </field_declaration>
+            <field_declaration>
+                <primitive_type text="int" />
+                <field_identifier text="l" />
+                <";" text=";" />
+            </field_declaration>
+            <"}" text="}" />
+        </field_declaration_list>
+    </struct_specifier>
+    <";" text=";" />
+    <struct_specifier>
+        <struct text="struct" />
+        <type_identifier text="SEB" />
+        <field_declaration_list>
+            <"{" text="{" />
+            <field_declaration>
+                <struct_specifier>
+                    <struct text="struct" />
+                    <type_identifier text="SEA" />
+                </struct_specifier>
+                <field_identifier text="a" />
+                <";" text=";" />
+            </field_declaration>
+            <field_declaration>
+                <primitive_type text="int" />
+                <array_declarator>
+                    <field_identifier text="r" />
+                    <"[" text="[" />
+                    <number_literal text="1" />
+                    <"]" text="]" />
+                </array_declarator>
+                <";" text=";" />
+            </field_declaration>
+            <"}" text="}" />
+        </field_declaration_list>
+    </struct_specifier>
+    <";" text=";" />
+    <struct_specifier>
+        <struct text="struct" />
+        <type_identifier text="SEC" />
+        <field_declaration_list>
+            <"{" text="{" />
+            <field_declaration>
+                <struct_specifier>
+                    <struct text="struct" />
+                    <type_identifier text="SEA" />
+                </struct_specifier>
+                <field_identifier text="a" />
+                <";" text=";" />
+            </field_declaration>
+            <field_declaration>
+                <primitive_type text="int" />
+                <array_declarator>
+                    <field_identifier text="r" />
+                    <"[" text="[" />
+                    <number_literal text="0" />
+                    <"]" text="]" />
+                </array_declarator>
+                <";" text=";" />
+            </field_declaration>
+            <"}" text="}" />
+        </field_declaration_list>
+    </struct_specifier>
+    <";" text=";" />
+    <struct_specifier>
+        <struct text="struct" />
+        <type_identifier text="SED" />
+        <field_declaration_list>
+            <"{" text="{" />
+            <field_declaration>
+                <struct_specifier>
+                    <struct text="struct" />
+                    <type_identifier text="SEA" />
+                </struct_specifier>
+                <field_identifier text="a" />
+                <";" text=";" />
+            </field_declaration>
+            <field_declaration>
+                <primitive_type text="int" />
+                <array_declarator>
+                    <field_identifier text="r" />
+                    <"[" text="[" />
+                    <"]" text="]" />
+                </array_declarator>
+                <";" text=";" />
+            </field_declaration>
+            <"}" text="}" />
+        </field_declaration_list>
+    </struct_specifier>
+    <";" text=";" />
+    <function_definition>
+        <storage_class_specifier>
+            <static text="static" />
+        </storage_class_specifier>
+        <primitive_type text="void" />
+        <function_declarator>
+            <identifier text="test_correct_filling" />
+            <parameter_list>
+                <"(" text="(" />
+                <parameter_declaration>
+                    <struct_specifier>
+                        <struct text="struct" />
+                        <type_identifier text="SEA" />
+                    </struct_specifier>
+                    <pointer_declarator>
+                        <"*" text="*" />
+                        <identifier text="x" />
+                    </pointer_declarator>
+                </parameter_declaration>
+                <")" text=")" />
+            </parameter_list>
+        </function_declarator>
+        <compound_statement>
+            <"{" text="{" />
+            <declaration>
+                <storage_class_specifier>
+                    <static text="static" />
+                </storage_class_specifier>
+                <primitive_type text="int" />
+                <identifier text="i" />
+                <";" text=";" />
+            </declaration>
+            <if_statement>
+                <if text="if" />
+                <parenthesized_expression>
+                    <"(" text="(" />
+                    <binary_expression>
+                        <binary_expression>
+                            <binary_expression>
+                                <binary_expression>
+                                    <field_expression>
+                                        <identifier text="x" />
+                                        <"->" text="->" />
+                                        <field_identifier text="i" />
+                                    </field_expression>
+                                    <"!=" text="!=" />
+                                    <number_literal text="0" />
+                                </binary_expression>
+                                <"||" text="||" />
+                                <binary_expression>
+                                    <field_expression>
+                                        <identifier text="x" />
+                                        <"->" text="->" />
+                                        <field_identifier text="j" />
+                                    </field_expression>
+                                    <"!=" text="!=" />
+                                    <number_literal text="5" />
+                                </binary_expression>
+                            </binary_expression>
+                            <"||" text="||" />
+                            <binary_expression>
+                                <field_expression>
+                                    <identifier text="x" />
+                                    <"->" text="->" />
+                                    <field_identifier text="k" />
+                                </field_expression>
+                                <"!=" text="!=" />
+                                <number_literal text="0" />
+                            </binary_expression>
+                        </binary_expression>
+                        <"||" text="||" />
+                        <binary_expression>
+                            <field_expression>
+                                <identifier text="x" />
+                                <"->" text="->" />
+                                <field_identifier text="l" />
+                            </field_expression>
+                            <"!=" text="!=" />
+                            <number_literal text="0" />
+                        </binary_expression>
+                    </binary_expression>
+                    <")" text=")" />
+                </parenthesized_expression>
+                <comment text="// printf(\"sea_fill%d: wrong\\n\", i);" />
+                <expression_statement>
+                    <identifier text="aaa" />
+                    <";" text=";" />
+                </expression_statement>
+                <else_clause>
+                    <else text="else" />
+                    <expression_statement>
+                        <identifier text="aaa" />
+                        <";" text=";" />
+                    </expression_statement>
+                </else_clause>
+            </if_statement>
+            <expression_statement>
+                <update_expression>
+                    <identifier text="i" />
+                    <"++" text="++" />
+                </update_expression>
+                <";" text=";" />
+            </expression_statement>
+            <"}" text="}" />
+        </compound_statement>
+    </function_definition>
+    <function_definition>
+        <primitive_type text="int" />
+        <function_declarator>
+            <identifier text="test_zero_init" />
+            <parameter_list>
+                <"(" text="(" />
+                <parameter_declaration>
+                    <primitive_type text="void" />
+                </parameter_declaration>
+                <")" text=")" />
+            </parameter_list>
+        </function_declarator>
+        <compound_statement>
+            <"{" text="{" />
+            <comment text="/* The peculiarity here is that only a.j is initialized.  That\n        means that all other members must be zero initialized.  TCC\n        once didn't do that for sub-level designators.  */" />
+            <declaration>
+                <struct_specifier>
+                    <struct text="struct" />
+                    <type_identifier text="SEB" />
+                </struct_specifier>
+                <init_declarator>
+                    <identifier text="b" />
+                    <"=" text="=" />
+                    <initializer_list>
+                        <"{" text="{" />
+                        <initializer_pair>
+                            <field_designator>
+                                <"." text="." />
+                                <field_identifier text="a" />
+                            </field_designator>
+                            <field_designator>
+                                <"." text="." />
+                                <field_identifier text="j" />
+                            </field_designator>
+                            <"=" text="=" />
+                            <number_literal text="5" />
+                        </initializer_pair>
+                        <"}" text="}" />
+                    </initializer_list>
+                </init_declarator>
+                <";" text=";" />
+            </declaration>
+            <declaration>
+                <struct_specifier>
+                    <struct text="struct" />
+                    <type_identifier text="SEC" />
+                </struct_specifier>
+                <init_declarator>
+                    <identifier text="c" />
+                    <"=" text="=" />
+                    <initializer_list>
+                        <"{" text="{" />
+                        <initializer_pair>
+                            <field_designator>
+                                <"." text="." />
+                                <field_identifier text="a" />
+                            </field_designator>
+                            <field_designator>
+                                <"." text="." />
+                                <field_identifier text="j" />
+                            </field_designator>
+                            <"=" text="=" />
+                            <number_literal text="5" />
+                        </initializer_pair>
+                        <"}" text="}" />
+                    </initializer_list>
+                </init_declarator>
+                <";" text=";" />
+            </declaration>
+            <declaration>
+                <struct_specifier>
+                    <struct text="struct" />
+                    <type_identifier text="SED" />
+                </struct_specifier>
+                <init_declarator>
+                    <identifier text="d" />
+                    <"=" text="=" />
+                    <initializer_list>
+                        <"{" text="{" />
+                        <initializer_pair>
+                            <field_designator>
+                                <"." text="." />
+                                <field_identifier text="a" />
+                            </field_designator>
+                            <field_designator>
+                                <"." text="." />
+                                <field_identifier text="j" />
+                            </field_designator>
+                            <"=" text="=" />
+                            <number_literal text="5" />
+                        </initializer_pair>
+                        <"}" text="}" />
+                    </initializer_list>
+                </init_declarator>
+                <";" text=";" />
+            </declaration>
+            <expression_statement>
+                <call_expression>
+                    <identifier text="test_correct_filling" />
+                    <argument_list>
+                        <"(" text="(" />
+                        <pointer_expression>
+                            <"&" text="&" />
+                            <field_expression>
+                                <identifier text="b" />
+                                <"." text="." />
+                                <field_identifier text="a" />
+                            </field_expression>
+                        </pointer_expression>
+                        <")" text=")" />
+                    </argument_list>
+                </call_expression>
+                <";" text=";" />
+            </expression_statement>
+            <expression_statement>
+                <call_expression>
+                    <identifier text="test_correct_filling" />
+                    <argument_list>
+                        <"(" text="(" />
+                        <pointer_expression>
+                            <"&" text="&" />
+                            <field_expression>
+                                <identifier text="c" />
+                                <"." text="." />
+                                <field_identifier text="a" />
+                            </field_expression>
+                        </pointer_expression>
+                        <")" text=")" />
+                    </argument_list>
+                </call_expression>
+                <";" text=";" />
+            </expression_statement>
+            <expression_statement>
+                <call_expression>
+                    <identifier text="test_correct_filling" />
+                    <argument_list>
+                        <"(" text="(" />
+                        <pointer_expression>
+                            <"&" text="&" />
+                            <field_expression>
+                                <identifier text="d" />
+                                <"." text="." />
+                                <field_identifier text="a" />
+                            </field_expression>
+                        </pointer_expression>
+                        <")" text=")" />
+                    </argument_list>
+                </call_expression>
+                <";" text=";" />
+            </expression_statement>
+            <return_statement>
+                <return text="return" />
+                <number_literal text="0" />
+                <";" text=";" />
+            </return_statement>
+            <"}" text="}" />
+        </compound_statement>
+    </function_definition>
+    <function_definition>
+        <primitive_type text="int" />
+        <function_declarator>
+            <identifier text="main" />
+            <parameter_list>
+                <"(" text="(" />
+                <")" text=")" />
+            </parameter_list>
+        </function_declarator>
+        <compound_statement>
+            <"{" text="{" />
+            <expression_statement>
+                <call_expression>
+                    <identifier text="foo" />
+                    <argument_list>
+                        <"(" text="(" />
+                        <pointer_expression>
+                            <"&" text="&" />
+                            <identifier text="gw" />
+                        </pointer_expression>
+                        <"," text="," />
+                        <pointer_expression>
+                            <"&" text="&" />
+                            <identifier text="phdr" />
+                        </pointer_expression>
+                        <")" text=")" />
+                    </argument_list>
+                </call_expression>
+                <";" text=";" />
+            </expression_statement>
+            <comment text="//printf(\"q: %s\\n\", q);" />
+            <expression_statement>
+                <call_expression>
+                    <identifier text="test_compound_with_relocs" />
+                    <argument_list>
+                        <"(" text="(" />
+                        <")" text=")" />
+                    </argument_list>
+                </call_expression>
+                <";" text=";" />
+            </expression_statement>
+            <expression_statement>
+                <call_expression>
+                    <identifier text="test_multi_relocs" />
+                    <argument_list>
+                        <"(" text="(" />
+                        <")" text=")" />
+                    </argument_list>
+                </call_expression>
+                <";" text=";" />
+            </expression_statement>
+            <expression_statement>
+                <call_expression>
+                    <identifier text="test_zero_init" />
+                    <argument_list>
+                        <"(" text="(" />
+                        <")" text=")" />
+                    </argument_list>
+                </call_expression>
+                <";" text=";" />
+            </expression_statement>
+            <return_statement>
+                <return text="return" />
+                <number_literal text="0" />
+                <";" text=";" />
+            </return_statement>
+            <"}" text="}" />
+        </compound_statement>
+    </function_definition>
+</translation_unit>

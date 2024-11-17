@@ -1,0 +1,34 @@
+<translation_unit>
+    <declaration>
+        <storage_class_specifier>
+            <extern text="extern" />
+        </storage_class_specifier>
+        <primitive_type text="int" />
+        <identifier text="x" />
+        <";" text=";" />
+    </declaration>
+    <declaration>
+        <primitive_type text="int" />
+        <identifier text="x" />
+        <";" text=";" />
+    </declaration>
+    <function_definition>
+        <primitive_type text="int" />
+        <function_declarator>
+            <identifier text="main" />
+            <parameter_list>
+                <"(" text="(" />
+                <")" text=")" />
+            </parameter_list>
+        </function_declarator>
+        <compound_statement>
+            <"{" text="{" />
+            <return_statement>
+                <return text="return" />
+                <identifier text="x" />
+                <";" text=";" />
+            </return_statement>
+            <"}" text="}" />
+        </compound_statement>
+    </function_definition>
+</translation_unit>

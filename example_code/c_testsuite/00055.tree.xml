@@ -1,0 +1,111 @@
+<translation_unit>
+    <enum_specifier>
+        <enum text="enum" />
+        <type_identifier text="E" />
+        <enumerator_list>
+            <"{" text="{" />
+            <enumerator>
+                <identifier text="x" />
+            </enumerator>
+            <"," text="," />
+            <enumerator>
+                <identifier text="y" />
+                <"=" text="=" />
+                <number_literal text="2" />
+            </enumerator>
+            <"," text="," />
+            <enumerator>
+                <identifier text="z" />
+            </enumerator>
+            <"," text="," />
+            <"}" text="}" />
+        </enumerator_list>
+    </enum_specifier>
+    <";" text=";" />
+    <function_definition>
+        <primitive_type text="int" />
+        <function_declarator>
+            <identifier text="main" />
+            <parameter_list>
+                <"(" text="(" />
+                <")" text=")" />
+            </parameter_list>
+        </function_declarator>
+        <compound_statement>
+            <"{" text="{" />
+            <declaration>
+                <enum_specifier>
+                    <enum text="enum" />
+                    <type_identifier text="E" />
+                </enum_specifier>
+                <identifier text="e" />
+                <";" text=";" />
+            </declaration>
+            <if_statement>
+                <if text="if" />
+                <parenthesized_expression>
+                    <"(" text="(" />
+                    <binary_expression>
+                        <identifier text="x" />
+                        <"!=" text="!=" />
+                        <number_literal text="0" />
+                    </binary_expression>
+                    <")" text=")" />
+                </parenthesized_expression>
+                <return_statement>
+                    <return text="return" />
+                    <number_literal text="1" />
+                    <";" text=";" />
+                </return_statement>
+            </if_statement>
+            <if_statement>
+                <if text="if" />
+                <parenthesized_expression>
+                    <"(" text="(" />
+                    <binary_expression>
+                        <identifier text="y" />
+                        <"!=" text="!=" />
+                        <number_literal text="2" />
+                    </binary_expression>
+                    <")" text=")" />
+                </parenthesized_expression>
+                <return_statement>
+                    <return text="return" />
+                    <number_literal text="2" />
+                    <";" text=";" />
+                </return_statement>
+            </if_statement>
+            <if_statement>
+                <if text="if" />
+                <parenthesized_expression>
+                    <"(" text="(" />
+                    <binary_expression>
+                        <identifier text="z" />
+                        <"!=" text="!=" />
+                        <number_literal text="3" />
+                    </binary_expression>
+                    <")" text=")" />
+                </parenthesized_expression>
+                <return_statement>
+                    <return text="return" />
+                    <number_literal text="3" />
+                    <";" text=";" />
+                </return_statement>
+            </if_statement>
+            <expression_statement>
+                <assignment_expression>
+                    <identifier text="e" />
+                    <"=" text="=" />
+                    <identifier text="x" />
+                </assignment_expression>
+                <";" text=";" />
+            </expression_statement>
+            <return_statement>
+                <return text="return" />
+                <identifier text="e" />
+                <";" text=";" />
+            </return_statement>
+            <"}" text="}" />
+        </compound_statement>
+    </function_definition>
+</translation_unit>

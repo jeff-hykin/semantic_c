@@ -1,0 +1,39 @@
+<translation_unit>
+    <function_definition>
+        <primitive_type text="int" />
+        <function_declarator>
+            <identifier text="main" />
+            <parameter_list>
+                <"(" text="(" />
+                <")" text=")" />
+            </parameter_list>
+        </function_declarator>
+        <compound_statement>
+            <"{" text="{" />
+            <return_statement>
+                <return text="return" />
+                <binary_expression>
+                    <string_literal>
+                        <"\"" text="\"" />
+                        <string_content text="abc" />
+                        <"\"" text="\"" />
+                    </string_literal>
+                    <"==" text="==" />
+                    <cast_expression>
+                        <"(" text="(" />
+                        <type_descriptor>
+                            <primitive_type text="void" />
+                            <abstract_pointer_declarator>
+                                <"*" text="*" />
+                            </abstract_pointer_declarator>
+                        </type_descriptor>
+                        <")" text=")" />
+                        <number_literal text="0" />
+                    </cast_expression>
+                </binary_expression>
+                <";" text=";" />
+            </return_statement>
+            <"}" text="}" />
+        </compound_statement>
+    </function_definition>
+</translation_unit>

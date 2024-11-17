@@ -1,0 +1,132 @@
+<translation_unit>
+    <declaration>
+        <primitive_type text="int" />
+        <init_declarator>
+            <identifier text="x" />
+            <"=" text="=" />
+            <number_literal text="10" />
+        </init_declarator>
+        <";" text=";" />
+    </declaration>
+    <struct_specifier>
+        <struct text="struct" />
+        <type_identifier text="S" />
+        <field_declaration_list>
+            <"{" text="{" />
+            <field_declaration>
+                <primitive_type text="int" />
+                <field_identifier text="a" />
+                <";" text=";" />
+            </field_declaration>
+            <field_declaration>
+                <primitive_type text="int" />
+                <pointer_declarator>
+                    <"*" text="*" />
+                    <field_identifier text="p" />
+                </pointer_declarator>
+                <";" text=";" />
+            </field_declaration>
+            <"}" text="}" />
+        </field_declaration_list>
+    </struct_specifier>
+    <";" text=";" />
+    <declaration>
+        <struct_specifier>
+            <struct text="struct" />
+            <type_identifier text="S" />
+        </struct_specifier>
+        <init_declarator>
+            <identifier text="s" />
+            <"=" text="=" />
+            <initializer_list>
+                <"{" text="{" />
+                <initializer_pair>
+                    <field_designator>
+                        <"." text="." />
+                        <field_identifier text="p" />
+                    </field_designator>
+                    <"=" text="=" />
+                    <pointer_expression>
+                        <"&" text="&" />
+                        <identifier text="x" />
+                    </pointer_expression>
+                </initializer_pair>
+                <"," text="," />
+                <initializer_pair>
+                    <field_designator>
+                        <"." text="." />
+                        <field_identifier text="a" />
+                    </field_designator>
+                    <"=" text="=" />
+                    <number_literal text="1" />
+                </initializer_pair>
+                <"}" text="}" />
+            </initializer_list>
+        </init_declarator>
+        <";" text=";" />
+    </declaration>
+    <function_definition>
+        <primitive_type text="int" />
+        <function_declarator>
+            <identifier text="main" />
+            <parameter_list>
+                <"(" text="(" />
+                <")" text=")" />
+            </parameter_list>
+        </function_declarator>
+        <compound_statement>
+            <"{" text="{" />
+            <if_statement>
+                <if text="if" />
+                <parenthesized_expression>
+                    <"(" text="(" />
+                    <binary_expression>
+                        <field_expression>
+                            <identifier text="s" />
+                            <"." text="." />
+                            <field_identifier text="a" />
+                        </field_expression>
+                        <"!=" text="!=" />
+                        <number_literal text="1" />
+                    </binary_expression>
+                    <")" text=")" />
+                </parenthesized_expression>
+                <return_statement>
+                    <return text="return" />
+                    <number_literal text="1" />
+                    <";" text=";" />
+                </return_statement>
+            </if_statement>
+            <if_statement>
+                <if text="if" />
+                <parenthesized_expression>
+                    <"(" text="(" />
+                    <binary_expression>
+                        <pointer_expression>
+                            <"*" text="*" />
+                            <field_expression>
+                                <identifier text="s" />
+                                <"." text="." />
+                                <field_identifier text="p" />
+                            </field_expression>
+                        </pointer_expression>
+                        <"!=" text="!=" />
+                        <number_literal text="10" />
+                    </binary_expression>
+                    <")" text=")" />
+                </parenthesized_expression>
+                <return_statement>
+                    <return text="return" />
+                    <number_literal text="2" />
+                    <";" text=";" />
+                </return_statement>
+            </if_statement>
+            <return_statement>
+                <return text="return" />
+                <number_literal text="0" />
+                <";" text=";" />
+            </return_statement>
+            <"}" text="}" />
+        </compound_statement>
+    </function_definition>
+</translation_unit>

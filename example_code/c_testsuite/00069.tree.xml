@@ -1,0 +1,52 @@
+<translation_unit>
+    <preproc_if>
+        <#if text="#if" />
+        <number_literal text="0" />
+        <"\n" text="\n" />
+        <ERROR>
+            <identifier text="X" />
+        </ERROR>
+        <preproc_elif>
+            <#elif text="#elif" />
+            <number_literal text="0" />
+            <"\n" text="\n" />
+            <ERROR>
+                <identifier text="X" />
+            </ERROR>
+            <preproc_elif>
+                <#elif text="#elif" />
+                <number_literal text="1" />
+                <"\n" text="\n" />
+                <declaration>
+                    <primitive_type text="int" />
+                    <init_declarator>
+                        <identifier text="x" />
+                        <"=" text="=" />
+                        <number_literal text="0" />
+                    </init_declarator>
+                    <";" text=";" />
+                </declaration>
+            </preproc_elif>
+        </preproc_elif>
+        <#endif text="#endif" />
+    </preproc_if>
+    <function_definition>
+        <primitive_type text="int" />
+        <function_declarator>
+            <identifier text="main" />
+            <parameter_list>
+                <"(" text="(" />
+                <")" text=")" />
+            </parameter_list>
+        </function_declarator>
+        <compound_statement>
+            <"{" text="{" />
+            <return_statement>
+                <return text="return" />
+                <identifier text="x" />
+                <";" text=";" />
+            </return_statement>
+            <"}" text="}" />
+        </compound_statement>
+    </function_definition>
+</translation_unit>

@@ -13,6 +13,13 @@
         int aaa = 0;
         return aaa;
     }
+    
+    long int inc_global_2 (void)
+    {
+        int aaa = 0;
+        global++;
+        return aaa;
+    }
 
 // 
 // top level assignment

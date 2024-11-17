@@ -1,0 +1,195 @@
+<translation_unit>
+    <function_definition>
+        <primitive_type text="int" />
+        <function_declarator>
+            <identifier text="main" />
+            <parameter_list>
+                <"(" text="(" />
+                <")" text=")" />
+            </parameter_list>
+        </function_declarator>
+        <compound_statement>
+            <"{" text="{" />
+            <declaration>
+                <primitive_type text="int" />
+                <identifier text="x" />
+                <";" text=";" />
+            </declaration>
+            <expression_statement>
+                <assignment_expression>
+                    <identifier text="x" />
+                    <"=" text="=" />
+                    <number_literal text="0" />
+                </assignment_expression>
+                <";" text=";" />
+            </expression_statement>
+            <while_statement>
+                <while text="while" />
+                <parenthesized_expression>
+                    <"(" text="(" />
+                    <number_literal text="1" />
+                    <")" text=")" />
+                </parenthesized_expression>
+                <break_statement>
+                    <break text="break" />
+                    <";" text=";" />
+                </break_statement>
+            </while_statement>
+            <while_statement>
+                <while text="while" />
+                <parenthesized_expression>
+                    <"(" text="(" />
+                    <number_literal text="1" />
+                    <")" text=")" />
+                </parenthesized_expression>
+                <compound_statement>
+                    <"{" text="{" />
+                    <if_statement>
+                        <if text="if" />
+                        <parenthesized_expression>
+                            <"(" text="(" />
+                            <binary_expression>
+                                <identifier text="x" />
+                                <"==" text="==" />
+                                <number_literal text="5" />
+                            </binary_expression>
+                            <")" text=")" />
+                        </parenthesized_expression>
+                        <compound_statement>
+                            <"{" text="{" />
+                            <break_statement>
+                                <break text="break" />
+                                <";" text=";" />
+                            </break_statement>
+                            <"}" text="}" />
+                        </compound_statement>
+                    </if_statement>
+                    <expression_statement>
+                        <assignment_expression>
+                            <identifier text="x" />
+                            <"=" text="=" />
+                            <binary_expression>
+                                <identifier text="x" />
+                                <"+" text="+" />
+                                <number_literal text="1" />
+                            </binary_expression>
+                        </assignment_expression>
+                        <";" text=";" />
+                    </expression_statement>
+                    <continue_statement>
+                        <continue text="continue" />
+                        <";" text=";" />
+                    </continue_statement>
+                    <"}" text="}" />
+                </compound_statement>
+            </while_statement>
+            <for_statement>
+                <for text="for" />
+                <"(" text="(" />
+                <";" text=";" />
+                <";" text=";" />
+                <")" text=")" />
+                <compound_statement>
+                    <"{" text="{" />
+                    <if_statement>
+                        <if text="if" />
+                        <parenthesized_expression>
+                            <"(" text="(" />
+                            <binary_expression>
+                                <identifier text="x" />
+                                <"==" text="==" />
+                                <number_literal text="10" />
+                            </binary_expression>
+                            <")" text=")" />
+                        </parenthesized_expression>
+                        <compound_statement>
+                            <"{" text="{" />
+                            <break_statement>
+                                <break text="break" />
+                                <";" text=";" />
+                            </break_statement>
+                            <"}" text="}" />
+                        </compound_statement>
+                    </if_statement>
+                    <expression_statement>
+                        <assignment_expression>
+                            <identifier text="x" />
+                            <"=" text="=" />
+                            <binary_expression>
+                                <identifier text="x" />
+                                <"+" text="+" />
+                                <number_literal text="1" />
+                            </binary_expression>
+                        </assignment_expression>
+                        <";" text=";" />
+                    </expression_statement>
+                    <continue_statement>
+                        <continue text="continue" />
+                        <";" text=";" />
+                    </continue_statement>
+                    <"}" text="}" />
+                </compound_statement>
+            </for_statement>
+            <do_statement>
+                <do text="do" />
+                <compound_statement>
+                    <"{" text="{" />
+                    <if_statement>
+                        <if text="if" />
+                        <parenthesized_expression>
+                            <"(" text="(" />
+                            <binary_expression>
+                                <identifier text="x" />
+                                <"==" text="==" />
+                                <number_literal text="15" />
+                            </binary_expression>
+                            <")" text=")" />
+                        </parenthesized_expression>
+                        <compound_statement>
+                            <"{" text="{" />
+                            <break_statement>
+                                <break text="break" />
+                                <";" text=";" />
+                            </break_statement>
+                            <"}" text="}" />
+                        </compound_statement>
+                    </if_statement>
+                    <expression_statement>
+                        <assignment_expression>
+                            <identifier text="x" />
+                            <"=" text="=" />
+                            <binary_expression>
+                                <identifier text="x" />
+                                <"+" text="+" />
+                                <number_literal text="1" />
+                            </binary_expression>
+                        </assignment_expression>
+                        <";" text=";" />
+                    </expression_statement>
+                    <continue_statement>
+                        <continue text="continue" />
+                        <";" text=";" />
+                    </continue_statement>
+                    <"}" text="}" />
+                </compound_statement>
+                <while text="while" />
+                <parenthesized_expression>
+                    <"(" text="(" />
+                    <number_literal text="1" />
+                    <")" text=")" />
+                </parenthesized_expression>
+                <";" text=";" />
+            </do_statement>
+            <return_statement>
+                <return text="return" />
+                <binary_expression>
+                    <identifier text="x" />
+                    <"-" text="-" />
+                    <number_literal text="15" />
+                </binary_expression>
+                <";" text=";" />
+            </return_statement>
+            <"}" text="}" />
+        </compound_statement>
+    </function_definition>
+</translation_unit>

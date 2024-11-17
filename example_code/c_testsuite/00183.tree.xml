@@ -1,0 +1,104 @@
+<translation_unit>
+    <preproc_include>
+        <#include text="#include" />
+        <system_lib_string text="<stdio.h>" />
+    </preproc_include>
+    <function_definition>
+        <primitive_type text="int" />
+        <function_declarator>
+            <identifier text="main" />
+            <parameter_list>
+                <"(" text="(" />
+                <")" text=")" />
+            </parameter_list>
+        </function_declarator>
+        <compound_statement>
+            <"{" text="{" />
+            <declaration>
+                <primitive_type text="int" />
+                <identifier text="Count" />
+                <";" text=";" />
+            </declaration>
+            <for_statement>
+                <for text="for" />
+                <"(" text="(" />
+                <assignment_expression>
+                    <identifier text="Count" />
+                    <"=" text="=" />
+                    <number_literal text="0" />
+                </assignment_expression>
+                <";" text=";" />
+                <binary_expression>
+                    <identifier text="Count" />
+                    <"<" text="<" />
+                    <number_literal text="10" />
+                </binary_expression>
+                <";" text=";" />
+                <update_expression>
+                    <identifier text="Count" />
+                    <"++" text="++" />
+                </update_expression>
+                <")" text=")" />
+                <compound_statement>
+                    <"{" text="{" />
+                    <expression_statement>
+                        <call_expression>
+                            <identifier text="printf" />
+                            <argument_list>
+                                <"(" text="(" />
+                                <string_literal>
+                                    <"\"" text="\"" />
+                                    <string_content text="%d" />
+                                    <escape_sequence text="\\n" />
+                                    <"\"" text="\"" />
+                                </string_literal>
+                                <"," text="," />
+                                <conditional_expression>
+                                    <parenthesized_expression>
+                                        <"(" text="(" />
+                                        <binary_expression>
+                                            <identifier text="Count" />
+                                            <"<" text="<" />
+                                            <number_literal text="5" />
+                                        </binary_expression>
+                                        <")" text=")" />
+                                    </parenthesized_expression>
+                                    <"?" text="?" />
+                                    <parenthesized_expression>
+                                        <"(" text="(" />
+                                        <binary_expression>
+                                            <identifier text="Count" />
+                                            <"*" text="*" />
+                                            <identifier text="Count" />
+                                        </binary_expression>
+                                        <")" text=")" />
+                                    </parenthesized_expression>
+                                    <":" text=":" />
+                                    <parenthesized_expression>
+                                        <"(" text="(" />
+                                        <binary_expression>
+                                            <identifier text="Count" />
+                                            <"*" text="*" />
+                                            <number_literal text="3" />
+                                        </binary_expression>
+                                        <")" text=")" />
+                                    </parenthesized_expression>
+                                </conditional_expression>
+                                <")" text=")" />
+                            </argument_list>
+                        </call_expression>
+                        <";" text=";" />
+                    </expression_statement>
+                    <"}" text="}" />
+                </compound_statement>
+            </for_statement>
+            <return_statement>
+                <return text="return" />
+                <number_literal text="0" />
+                <";" text=";" />
+            </return_statement>
+            <"}" text="}" />
+        </compound_statement>
+    </function_definition>
+    <comment text="/* vim: set expandtab ts=4 sw=3 sts=3 tw=80 :*/" />
+</translation_unit>

@@ -1,0 +1,66 @@
+<translation_unit>
+    <function_definition>
+        <primitive_type text="int" />
+        <function_declarator>
+            <identifier text="foo" />
+            <parameter_list>
+                <"(" text="(" />
+                <parameter_declaration>
+                    <primitive_type text="int" />
+                    <identifier text="a" />
+                </parameter_declaration>
+                <"," text="," />
+                <parameter_declaration>
+                    <primitive_type text="int" />
+                    <identifier text="b" />
+                </parameter_declaration>
+                <")" text=")" />
+            </parameter_list>
+        </function_declarator>
+        <compound_statement>
+            <"{" text="{" />
+            <return_statement>
+                <return text="return" />
+                <binary_expression>
+                    <binary_expression>
+                        <number_literal text="2" />
+                        <"+" text="+" />
+                        <identifier text="a" />
+                    </binary_expression>
+                    <"-" text="-" />
+                    <identifier text="b" />
+                </binary_expression>
+                <";" text=";" />
+            </return_statement>
+            <"}" text="}" />
+        </compound_statement>
+    </function_definition>
+    <function_definition>
+        <primitive_type text="int" />
+        <function_declarator>
+            <identifier text="main" />
+            <parameter_list>
+                <"(" text="(" />
+                <")" text=")" />
+            </parameter_list>
+        </function_declarator>
+        <compound_statement>
+            <"{" text="{" />
+            <return_statement>
+                <return text="return" />
+                <call_expression>
+                    <identifier text="foo" />
+                    <argument_list>
+                        <"(" text="(" />
+                        <number_literal text="1" />
+                        <"," text="," />
+                        <number_literal text="3" />
+                        <")" text=")" />
+                    </argument_list>
+                </call_expression>
+                <";" text=";" />
+            </return_statement>
+            <"}" text="}" />
+        </compound_statement>
+    </function_definition>
+</translation_unit>

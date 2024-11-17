@@ -1,0 +1,269 @@
+<translation_unit>
+    <comment text="/* $Id: lshift-type.c 53089 2012-07-06 11:18:26Z vinc17/ypig $\n\nTests on left-shift type, written by Vincent Lefevre <vincent@vinc17.net>.\n\nISO C99 TC3 says: [6.5.7#3] \"The integer promotions are performed on\neach of the operands. The type of the result is that of the promoted\nleft operand.\"\n*/" />
+    <preproc_include>
+        <#include text="#include" />
+        <system_lib_string text="<stdio.h>" />
+    </preproc_include>
+    <preproc_function_def>
+        <#define text="#define" />
+        <identifier text="PTYPE" />
+        <preproc_params>
+            <"(" text="(" />
+            <identifier text="M" />
+            <")" text=")" />
+        </preproc_params>
+        <preproc_arg text="((M) < 0 || -(M) < 0 ? -1 : 1) * (int) sizeof((M)+0)" />
+    </preproc_function_def>
+    <preproc_function_def>
+        <#define text="#define" />
+        <identifier text="CHECK" />
+        <preproc_params>
+            <"(" text="(" />
+            <identifier text="X" />
+            <"," text="," />
+            <identifier text="T" />
+            <")" text=")" />
+        </preproc_params>
+        <preproc_arg text="check(#X, PTYPE(X), PTYPE((X) << (T) 1))" />
+    </preproc_function_def>
+    <preproc_function_def>
+        <#define text="#define" />
+        <identifier text="TEST1" />
+        <preproc_params>
+            <"(" text="(" />
+            <identifier text="X" />
+            <"," text="," />
+            <identifier text="T" />
+            <")" text=")" />
+        </preproc_params>
+        <preproc_arg text="do { CHECK(X,T); CHECK(X,unsigned T); } while (0)" />
+    </preproc_function_def>
+    <preproc_function_def>
+        <#define text="#define" />
+        <identifier text="TEST2" />
+        <preproc_params>
+            <"(" text="(" />
+            <identifier text="X" />
+            <")" text=")" />
+        </preproc_params>
+        <preproc_arg text="do                             \\\n    {                            \\\n      TEST1((X),short);          \\\n      TEST1((X),int);            \\\n      TEST1((X),long);           \\\n      TEST1((X),long long);      \\\n    }                            \\\n  while (0)" />
+    </preproc_function_def>
+    <preproc_function_def>
+        <#define text="#define" />
+        <identifier text="TEST3" />
+        <preproc_params>
+            <"(" text="(" />
+            <identifier text="X" />
+            <"," text="," />
+            <identifier text="T" />
+            <")" text=")" />
+        </preproc_params>
+        <preproc_arg text="do { TEST2((T)(X)); TEST2((unsigned T)(X)); } while (0)" />
+    </preproc_function_def>
+    <preproc_function_def>
+        <#define text="#define" />
+        <identifier text="TEST4" />
+        <preproc_params>
+            <"(" text="(" />
+            <identifier text="X" />
+            <")" text=")" />
+        </preproc_params>
+        <preproc_arg text="do                             \\\n    {                            \\\n      TEST3((X),short);          \\\n      TEST3((X),int);            \\\n      TEST3((X),long);           \\\n      TEST3((X),long long);      \\\n    }                            \\\n while (0)" />
+    </preproc_function_def>
+    <declaration>
+        <storage_class_specifier>
+            <static text="static" />
+        </storage_class_specifier>
+        <primitive_type text="int" />
+        <identifier text="debug" />
+        <"," text="," />
+        <init_declarator>
+            <identifier text="nfailed" />
+            <"=" text="=" />
+            <number_literal text="0" />
+        </init_declarator>
+        <";" text=";" />
+    </declaration>
+    <function_definition>
+        <storage_class_specifier>
+            <static text="static" />
+        </storage_class_specifier>
+        <primitive_type text="void" />
+        <function_declarator>
+            <identifier text="check" />
+            <parameter_list>
+                <"(" text="(" />
+                <parameter_declaration>
+                    <type_qualifier>
+                        <const text="const" />
+                    </type_qualifier>
+                    <primitive_type text="char" />
+                    <pointer_declarator>
+                        <"*" text="*" />
+                        <identifier text="s" />
+                    </pointer_declarator>
+                </parameter_declaration>
+                <"," text="," />
+                <parameter_declaration>
+                    <primitive_type text="int" />
+                    <identifier text="arg1" />
+                </parameter_declaration>
+                <"," text="," />
+                <parameter_declaration>
+                    <primitive_type text="int" />
+                    <identifier text="shift" />
+                </parameter_declaration>
+                <")" text=")" />
+            </parameter_list>
+        </function_declarator>
+        <compound_statement>
+            <"{" text="{" />
+            <declaration>
+                <primitive_type text="int" />
+                <init_declarator>
+                    <identifier text="failed" />
+                    <"=" text="=" />
+                    <binary_expression>
+                        <identifier text="arg1" />
+                        <"!=" text="!=" />
+                        <identifier text="shift" />
+                    </binary_expression>
+                </init_declarator>
+                <";" text=";" />
+            </declaration>
+            <if_statement>
+                <if text="if" />
+                <parenthesized_expression>
+                    <"(" text="(" />
+                    <binary_expression>
+                        <identifier text="debug" />
+                        <"||" text="||" />
+                        <identifier text="failed" />
+                    </binary_expression>
+                    <")" text=")" />
+                </parenthesized_expression>
+                <expression_statement>
+                    <call_expression>
+                        <identifier text="printf" />
+                        <argument_list>
+                            <"(" text="(" />
+                            <string_literal>
+                                <"\"" text="\"" />
+                                <string_content text="%s %d %d" />
+                                <escape_sequence text="\\n" />
+                                <"\"" text="\"" />
+                            </string_literal>
+                            <"," text="," />
+                            <identifier text="s" />
+                            <"," text="," />
+                            <identifier text="arg1" />
+                            <"," text="," />
+                            <identifier text="shift" />
+                            <")" text=")" />
+                        </argument_list>
+                    </call_expression>
+                    <";" text=";" />
+                </expression_statement>
+            </if_statement>
+            <expression_statement>
+                <assignment_expression>
+                    <identifier text="nfailed" />
+                    <"+=" text="+=" />
+                    <identifier text="failed" />
+                </assignment_expression>
+                <";" text=";" />
+            </expression_statement>
+            <"}" text="}" />
+        </compound_statement>
+    </function_definition>
+    <function_definition>
+        <primitive_type text="int" />
+        <function_declarator>
+            <identifier text="main" />
+            <parameter_list>
+                <"(" text="(" />
+                <parameter_declaration>
+                    <primitive_type text="int" />
+                    <identifier text="argc" />
+                </parameter_declaration>
+                <"," text="," />
+                <parameter_declaration>
+                    <primitive_type text="char" />
+                    <pointer_declarator>
+                        <"*" text="*" />
+                        <pointer_declarator>
+                            <"*" text="*" />
+                            <identifier text="argv" />
+                        </pointer_declarator>
+                    </pointer_declarator>
+                </parameter_declaration>
+                <")" text=")" />
+            </parameter_list>
+        </function_declarator>
+        <compound_statement>
+            <"{" text="{" />
+            <expression_statement>
+                <assignment_expression>
+                    <identifier text="debug" />
+                    <"=" text="=" />
+                    <binary_expression>
+                        <identifier text="argc" />
+                        <">" text=">" />
+                        <number_literal text="1" />
+                    </binary_expression>
+                </assignment_expression>
+                <";" text=";" />
+            </expression_statement>
+            <expression_statement>
+                <call_expression>
+                    <identifier text="TEST4" />
+                    <argument_list>
+                        <"(" text="(" />
+                        <number_literal text="1" />
+                        <")" text=")" />
+                    </argument_list>
+                </call_expression>
+                <";" text=";" />
+            </expression_statement>
+            <expression_statement>
+                <call_expression>
+                    <identifier text="TEST4" />
+                    <argument_list>
+                        <"(" text="(" />
+                        <number_literal text="-1" />
+                        <")" text=")" />
+                    </argument_list>
+                </call_expression>
+                <";" text=";" />
+            </expression_statement>
+            <expression_statement>
+                <call_expression>
+                    <identifier text="printf" />
+                    <argument_list>
+                        <"(" text="(" />
+                        <string_literal>
+                            <"\"" text="\"" />
+                            <string_content text="%d test(s) failed" />
+                            <escape_sequence text="\\n" />
+                            <"\"" text="\"" />
+                        </string_literal>
+                        <"," text="," />
+                        <identifier text="nfailed" />
+                        <")" text=")" />
+                    </argument_list>
+                </call_expression>
+                <";" text=";" />
+            </expression_statement>
+            <return_statement>
+                <return text="return" />
+                <binary_expression>
+                    <identifier text="nfailed" />
+                    <"!=" text="!=" />
+                    <number_literal text="0" />
+                </binary_expression>
+                <";" text=";" />
+            </return_statement>
+            <"}" text="}" />
+        </compound_statement>
+    </function_definition>
+</translation_unit>

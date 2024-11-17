@@ -1,0 +1,552 @@
+<translation_unit>
+    <preproc_include>
+        <#include text="#include" />
+        <system_lib_string text="<stdio.h>" />
+    </preproc_include>
+    <function_definition>
+        <primitive_type text="int" />
+        <function_declarator>
+            <identifier text="main" />
+            <parameter_list>
+                <"(" text="(" />
+                <")" text=")" />
+            </parameter_list>
+        </function_declarator>
+        <compound_statement>
+            <"{" text="{" />
+            <declaration>
+                <type_identifier text="FILE" />
+                <init_declarator>
+                    <pointer_declarator>
+                        <"*" text="*" />
+                        <identifier text="f" />
+                    </pointer_declarator>
+                    <"=" text="=" />
+                    <call_expression>
+                        <identifier text="fopen" />
+                        <argument_list>
+                            <"(" text="(" />
+                            <string_literal>
+                                <"\"" text="\"" />
+                                <string_content text="fred.txt" />
+                                <"\"" text="\"" />
+                            </string_literal>
+                            <"," text="," />
+                            <string_literal>
+                                <"\"" text="\"" />
+                                <string_content text="w" />
+                                <"\"" text="\"" />
+                            </string_literal>
+                            <")" text=")" />
+                        </argument_list>
+                    </call_expression>
+                </init_declarator>
+                <";" text=";" />
+            </declaration>
+            <expression_statement>
+                <call_expression>
+                    <identifier text="fwrite" />
+                    <argument_list>
+                        <"(" text="(" />
+                        <string_literal>
+                            <"\"" text="\"" />
+                            <string_content text="hello" />
+                            <escape_sequence text="\\n" />
+                            <string_content text="hello" />
+                            <escape_sequence text="\\n" />
+                            <"\"" text="\"" />
+                        </string_literal>
+                        <"," text="," />
+                        <number_literal text="1" />
+                        <"," text="," />
+                        <number_literal text="12" />
+                        <"," text="," />
+                        <identifier text="f" />
+                        <")" text=")" />
+                    </argument_list>
+                </call_expression>
+                <";" text=";" />
+            </expression_statement>
+            <expression_statement>
+                <call_expression>
+                    <identifier text="fclose" />
+                    <argument_list>
+                        <"(" text="(" />
+                        <identifier text="f" />
+                        <")" text=")" />
+                    </argument_list>
+                </call_expression>
+                <";" text=";" />
+            </expression_statement>
+            <declaration>
+                <primitive_type text="char" />
+                <array_declarator>
+                    <identifier text="freddy" />
+                    <"[" text="[" />
+                    <number_literal text="7" />
+                    <"]" text="]" />
+                </array_declarator>
+                <";" text=";" />
+            </declaration>
+            <expression_statement>
+                <assignment_expression>
+                    <identifier text="f" />
+                    <"=" text="=" />
+                    <call_expression>
+                        <identifier text="fopen" />
+                        <argument_list>
+                            <"(" text="(" />
+                            <string_literal>
+                                <"\"" text="\"" />
+                                <string_content text="fred.txt" />
+                                <"\"" text="\"" />
+                            </string_literal>
+                            <"," text="," />
+                            <string_literal>
+                                <"\"" text="\"" />
+                                <string_content text="r" />
+                                <"\"" text="\"" />
+                            </string_literal>
+                            <")" text=")" />
+                        </argument_list>
+                    </call_expression>
+                </assignment_expression>
+                <";" text=";" />
+            </expression_statement>
+            <if_statement>
+                <if text="if" />
+                <parenthesized_expression>
+                    <"(" text="(" />
+                    <binary_expression>
+                        <call_expression>
+                            <identifier text="fread" />
+                            <argument_list>
+                                <"(" text="(" />
+                                <identifier text="freddy" />
+                                <"," text="," />
+                                <number_literal text="1" />
+                                <"," text="," />
+                                <number_literal text="6" />
+                                <"," text="," />
+                                <identifier text="f" />
+                                <")" text=")" />
+                            </argument_list>
+                        </call_expression>
+                        <"!=" text="!=" />
+                        <number_literal text="6" />
+                    </binary_expression>
+                    <")" text=")" />
+                </parenthesized_expression>
+                <expression_statement>
+                    <call_expression>
+                        <identifier text="printf" />
+                        <argument_list>
+                            <"(" text="(" />
+                            <string_literal>
+                                <"\"" text="\"" />
+                                <string_content text="couldn't read fred.txt" />
+                                <escape_sequence text="\\n" />
+                                <"\"" text="\"" />
+                            </string_literal>
+                            <")" text=")" />
+                        </argument_list>
+                    </call_expression>
+                    <";" text=";" />
+                </expression_statement>
+            </if_statement>
+            <expression_statement>
+                <assignment_expression>
+                    <subscript_expression>
+                        <identifier text="freddy" />
+                        <"[" text="[" />
+                        <number_literal text="6" />
+                        <"]" text="]" />
+                    </subscript_expression>
+                    <"=" text="=" />
+                    <char_literal>
+                        <"'" text="'" />
+                        <escape_sequence text="\\0" />
+                        <"'" text="'" />
+                    </char_literal>
+                </assignment_expression>
+                <";" text=";" />
+            </expression_statement>
+            <expression_statement>
+                <call_expression>
+                    <identifier text="fclose" />
+                    <argument_list>
+                        <"(" text="(" />
+                        <identifier text="f" />
+                        <")" text=")" />
+                    </argument_list>
+                </call_expression>
+                <";" text=";" />
+            </expression_statement>
+            <expression_statement>
+                <call_expression>
+                    <identifier text="printf" />
+                    <argument_list>
+                        <"(" text="(" />
+                        <string_literal>
+                            <"\"" text="\"" />
+                            <string_content text="%s" />
+                            <"\"" text="\"" />
+                        </string_literal>
+                        <"," text="," />
+                        <identifier text="freddy" />
+                        <")" text=")" />
+                    </argument_list>
+                </call_expression>
+                <";" text=";" />
+            </expression_statement>
+            <declaration>
+                <primitive_type text="int" />
+                <identifier text="InChar" />
+                <";" text=";" />
+            </declaration>
+            <declaration>
+                <primitive_type text="char" />
+                <identifier text="ShowChar" />
+                <";" text=";" />
+            </declaration>
+            <expression_statement>
+                <assignment_expression>
+                    <identifier text="f" />
+                    <"=" text="=" />
+                    <call_expression>
+                        <identifier text="fopen" />
+                        <argument_list>
+                            <"(" text="(" />
+                            <string_literal>
+                                <"\"" text="\"" />
+                                <string_content text="fred.txt" />
+                                <"\"" text="\"" />
+                            </string_literal>
+                            <"," text="," />
+                            <string_literal>
+                                <"\"" text="\"" />
+                                <string_content text="r" />
+                                <"\"" text="\"" />
+                            </string_literal>
+                            <")" text=")" />
+                        </argument_list>
+                    </call_expression>
+                </assignment_expression>
+                <";" text=";" />
+            </expression_statement>
+            <while_statement>
+                <while text="while" />
+                <parenthesized_expression>
+                    <"(" text="(" />
+                    <binary_expression>
+                        <parenthesized_expression>
+                            <"(" text="(" />
+                            <assignment_expression>
+                                <identifier text="InChar" />
+                                <"=" text="=" />
+                                <call_expression>
+                                    <identifier text="fgetc" />
+                                    <argument_list>
+                                        <"(" text="(" />
+                                        <identifier text="f" />
+                                        <")" text=")" />
+                                    </argument_list>
+                                </call_expression>
+                            </assignment_expression>
+                            <")" text=")" />
+                        </parenthesized_expression>
+                        <"!=" text="!=" />
+                        <identifier text="EOF" />
+                    </binary_expression>
+                    <")" text=")" />
+                </parenthesized_expression>
+                <compound_statement>
+                    <"{" text="{" />
+                    <expression_statement>
+                        <assignment_expression>
+                            <identifier text="ShowChar" />
+                            <"=" text="=" />
+                            <identifier text="InChar" />
+                        </assignment_expression>
+                        <";" text=";" />
+                    </expression_statement>
+                    <if_statement>
+                        <if text="if" />
+                        <parenthesized_expression>
+                            <"(" text="(" />
+                            <binary_expression>
+                                <identifier text="ShowChar" />
+                                <"<" text="<" />
+                                <char_literal>
+                                    <"'" text="'" />
+                                    <character text=" " />
+                                    <"'" text="'" />
+                                </char_literal>
+                            </binary_expression>
+                            <")" text=")" />
+                        </parenthesized_expression>
+                        <expression_statement>
+                            <assignment_expression>
+                                <identifier text="ShowChar" />
+                                <"=" text="=" />
+                                <char_literal>
+                                    <"'" text="'" />
+                                    <character text="." />
+                                    <"'" text="'" />
+                                </char_literal>
+                            </assignment_expression>
+                            <";" text=";" />
+                        </expression_statement>
+                    </if_statement>
+                    <expression_statement>
+                        <call_expression>
+                            <identifier text="printf" />
+                            <argument_list>
+                                <"(" text="(" />
+                                <string_literal>
+                                    <"\"" text="\"" />
+                                    <string_content text="ch: %d '%c'" />
+                                    <escape_sequence text="\\n" />
+                                    <"\"" text="\"" />
+                                </string_literal>
+                                <"," text="," />
+                                <identifier text="InChar" />
+                                <"," text="," />
+                                <identifier text="ShowChar" />
+                                <")" text=")" />
+                            </argument_list>
+                        </call_expression>
+                        <";" text=";" />
+                    </expression_statement>
+                    <"}" text="}" />
+                </compound_statement>
+            </while_statement>
+            <expression_statement>
+                <call_expression>
+                    <identifier text="fclose" />
+                    <argument_list>
+                        <"(" text="(" />
+                        <identifier text="f" />
+                        <")" text=")" />
+                    </argument_list>
+                </call_expression>
+                <";" text=";" />
+            </expression_statement>
+            <expression_statement>
+                <assignment_expression>
+                    <identifier text="f" />
+                    <"=" text="=" />
+                    <call_expression>
+                        <identifier text="fopen" />
+                        <argument_list>
+                            <"(" text="(" />
+                            <string_literal>
+                                <"\"" text="\"" />
+                                <string_content text="fred.txt" />
+                                <"\"" text="\"" />
+                            </string_literal>
+                            <"," text="," />
+                            <string_literal>
+                                <"\"" text="\"" />
+                                <string_content text="r" />
+                                <"\"" text="\"" />
+                            </string_literal>
+                            <")" text=")" />
+                        </argument_list>
+                    </call_expression>
+                </assignment_expression>
+                <";" text=";" />
+            </expression_statement>
+            <while_statement>
+                <while text="while" />
+                <parenthesized_expression>
+                    <"(" text="(" />
+                    <binary_expression>
+                        <parenthesized_expression>
+                            <"(" text="(" />
+                            <assignment_expression>
+                                <identifier text="InChar" />
+                                <"=" text="=" />
+                                <call_expression>
+                                    <identifier text="getc" />
+                                    <argument_list>
+                                        <"(" text="(" />
+                                        <identifier text="f" />
+                                        <")" text=")" />
+                                    </argument_list>
+                                </call_expression>
+                            </assignment_expression>
+                            <")" text=")" />
+                        </parenthesized_expression>
+                        <"!=" text="!=" />
+                        <identifier text="EOF" />
+                    </binary_expression>
+                    <")" text=")" />
+                </parenthesized_expression>
+                <compound_statement>
+                    <"{" text="{" />
+                    <expression_statement>
+                        <assignment_expression>
+                            <identifier text="ShowChar" />
+                            <"=" text="=" />
+                            <identifier text="InChar" />
+                        </assignment_expression>
+                        <";" text=";" />
+                    </expression_statement>
+                    <if_statement>
+                        <if text="if" />
+                        <parenthesized_expression>
+                            <"(" text="(" />
+                            <binary_expression>
+                                <identifier text="ShowChar" />
+                                <"<" text="<" />
+                                <char_literal>
+                                    <"'" text="'" />
+                                    <character text=" " />
+                                    <"'" text="'" />
+                                </char_literal>
+                            </binary_expression>
+                            <")" text=")" />
+                        </parenthesized_expression>
+                        <expression_statement>
+                            <assignment_expression>
+                                <identifier text="ShowChar" />
+                                <"=" text="=" />
+                                <char_literal>
+                                    <"'" text="'" />
+                                    <character text="." />
+                                    <"'" text="'" />
+                                </char_literal>
+                            </assignment_expression>
+                            <";" text=";" />
+                        </expression_statement>
+                    </if_statement>
+                    <expression_statement>
+                        <call_expression>
+                            <identifier text="printf" />
+                            <argument_list>
+                                <"(" text="(" />
+                                <string_literal>
+                                    <"\"" text="\"" />
+                                    <string_content text="ch: %d '%c'" />
+                                    <escape_sequence text="\\n" />
+                                    <"\"" text="\"" />
+                                </string_literal>
+                                <"," text="," />
+                                <identifier text="InChar" />
+                                <"," text="," />
+                                <identifier text="ShowChar" />
+                                <")" text=")" />
+                            </argument_list>
+                        </call_expression>
+                        <";" text=";" />
+                    </expression_statement>
+                    <"}" text="}" />
+                </compound_statement>
+            </while_statement>
+            <expression_statement>
+                <call_expression>
+                    <identifier text="fclose" />
+                    <argument_list>
+                        <"(" text="(" />
+                        <identifier text="f" />
+                        <")" text=")" />
+                    </argument_list>
+                </call_expression>
+                <";" text=";" />
+            </expression_statement>
+            <expression_statement>
+                <assignment_expression>
+                    <identifier text="f" />
+                    <"=" text="=" />
+                    <call_expression>
+                        <identifier text="fopen" />
+                        <argument_list>
+                            <"(" text="(" />
+                            <string_literal>
+                                <"\"" text="\"" />
+                                <string_content text="fred.txt" />
+                                <"\"" text="\"" />
+                            </string_literal>
+                            <"," text="," />
+                            <string_literal>
+                                <"\"" text="\"" />
+                                <string_content text="r" />
+                                <"\"" text="\"" />
+                            </string_literal>
+                            <")" text=")" />
+                        </argument_list>
+                    </call_expression>
+                </assignment_expression>
+                <";" text=";" />
+            </expression_statement>
+            <while_statement>
+                <while text="while" />
+                <parenthesized_expression>
+                    <"(" text="(" />
+                    <binary_expression>
+                        <call_expression>
+                            <identifier text="fgets" />
+                            <argument_list>
+                                <"(" text="(" />
+                                <identifier text="freddy" />
+                                <"," text="," />
+                                <sizeof_expression>
+                                    <sizeof text="sizeof" />
+                                    <parenthesized_expression>
+                                        <"(" text="(" />
+                                        <identifier text="freddy" />
+                                        <")" text=")" />
+                                    </parenthesized_expression>
+                                </sizeof_expression>
+                                <"," text="," />
+                                <identifier text="f" />
+                                <")" text=")" />
+                            </argument_list>
+                        </call_expression>
+                        <"!=" text="!=" />
+                        <null>
+                            <NULL text="NULL" />
+                        </null>
+                    </binary_expression>
+                    <")" text=")" />
+                </parenthesized_expression>
+                <expression_statement>
+                    <call_expression>
+                        <identifier text="printf" />
+                        <argument_list>
+                            <"(" text="(" />
+                            <string_literal>
+                                <"\"" text="\"" />
+                                <string_content text="x: %s" />
+                                <"\"" text="\"" />
+                            </string_literal>
+                            <"," text="," />
+                            <identifier text="freddy" />
+                            <")" text=")" />
+                        </argument_list>
+                    </call_expression>
+                    <";" text=";" />
+                </expression_statement>
+            </while_statement>
+            <expression_statement>
+                <call_expression>
+                    <identifier text="fclose" />
+                    <argument_list>
+                        <"(" text="(" />
+                        <identifier text="f" />
+                        <")" text=")" />
+                    </argument_list>
+                </call_expression>
+                <";" text=";" />
+            </expression_statement>
+            <return_statement>
+                <return text="return" />
+                <number_literal text="0" />
+                <";" text=";" />
+            </return_statement>
+            <"}" text="}" />
+        </compound_statement>
+    </function_definition>
+    <comment text="/* vim: set expandtab ts=4 sw=3 sts=3 tw=80 :*/" />
+</translation_unit>

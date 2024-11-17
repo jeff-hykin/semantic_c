@@ -1,0 +1,117 @@
+<translation_unit>
+    <function_definition>
+        <primitive_type text="int" />
+        <function_declarator>
+            <identifier text="f1" />
+            <parameter_list>
+                <"(" text="(" />
+                <parameter_declaration>
+                    <primitive_type text="char" />
+                    <pointer_declarator>
+                        <"*" text="*" />
+                        <identifier text="p" />
+                    </pointer_declarator>
+                </parameter_declaration>
+                <")" text=")" />
+            </parameter_list>
+        </function_declarator>
+        <compound_statement>
+            <"{" text="{" />
+            <return_statement>
+                <return text="return" />
+                <binary_expression>
+                    <pointer_expression>
+                        <"*" text="*" />
+                        <identifier text="p" />
+                    </pointer_expression>
+                    <"+" text="+" />
+                    <number_literal text="1" />
+                </binary_expression>
+                <";" text=";" />
+            </return_statement>
+            <"}" text="}" />
+        </compound_statement>
+    </function_definition>
+    <function_definition>
+        <primitive_type text="int" />
+        <function_declarator>
+            <identifier text="main" />
+            <parameter_list>
+                <"(" text="(" />
+                <")" text=")" />
+            </parameter_list>
+        </function_declarator>
+        <compound_statement>
+            <"{" text="{" />
+            <declaration>
+                <primitive_type text="char" />
+                <init_declarator>
+                    <identifier text="s" />
+                    <"=" text="=" />
+                    <number_literal text="1" />
+                </init_declarator>
+                <";" text=";" />
+            </declaration>
+            <declaration>
+                <primitive_type text="int" />
+                <array_declarator>
+                    <identifier text="v" />
+                    <"[" text="[" />
+                    <number_literal text="1000" />
+                    <"]" text="]" />
+                </array_declarator>
+                <";" text=";" />
+            </declaration>
+            <declaration>
+                <primitive_type text="int" />
+                <function_declarator>
+                    <identifier text="f1" />
+                    <parameter_list>
+                        <"(" text="(" />
+                        <parameter_declaration>
+                            <primitive_type text="char" />
+                            <abstract_pointer_declarator>
+                                <"*" text="*" />
+                            </abstract_pointer_declarator>
+                        </parameter_declaration>
+                        <")" text=")" />
+                    </parameter_list>
+                </function_declarator>
+                <";" text=";" />
+            </declaration>
+            <if_statement>
+                <if text="if" />
+                <parenthesized_expression>
+                    <"(" text="(" />
+                    <binary_expression>
+                        <call_expression>
+                            <identifier text="f1" />
+                            <argument_list>
+                                <"(" text="(" />
+                                <pointer_expression>
+                                    <"&" text="&" />
+                                    <identifier text="s" />
+                                </pointer_expression>
+                                <")" text=")" />
+                            </argument_list>
+                        </call_expression>
+                        <"!=" text="!=" />
+                        <number_literal text="2" />
+                    </binary_expression>
+                    <")" text=")" />
+                </parenthesized_expression>
+                <return_statement>
+                    <return text="return" />
+                    <number_literal text="1" />
+                    <";" text=";" />
+                </return_statement>
+            </if_statement>
+            <return_statement>
+                <return text="return" />
+                <number_literal text="0" />
+                <";" text=";" />
+            </return_statement>
+            <"}" text="}" />
+        </compound_statement>
+    </function_definition>
+</translation_unit>

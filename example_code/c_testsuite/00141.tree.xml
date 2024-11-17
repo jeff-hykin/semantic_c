@@ -1,0 +1,109 @@
+<translation_unit>
+    <preproc_function_def>
+        <#define text="#define" />
+        <identifier text="CAT" />
+        <preproc_params>
+            <"(" text="(" />
+            <identifier text="x" />
+            <"," text="," />
+            <identifier text="y" />
+            <")" text=")" />
+        </preproc_params>
+        <preproc_arg text="x ## y" />
+    </preproc_function_def>
+    <preproc_function_def>
+        <#define text="#define" />
+        <identifier text="XCAT" />
+        <preproc_params>
+            <"(" text="(" />
+            <identifier text="x" />
+            <"," text="," />
+            <identifier text="y" />
+            <")" text=")" />
+        </preproc_params>
+        <preproc_arg text="CAT(x,y)" />
+    </preproc_function_def>
+    <preproc_def>
+        <#define text="#define" />
+        <identifier text="FOO" />
+        <preproc_arg text="foo" />
+    </preproc_def>
+    <preproc_def>
+        <#define text="#define" />
+        <identifier text="BAR" />
+        <preproc_arg text="bar" />
+    </preproc_def>
+    <function_definition>
+        <primitive_type text="int" />
+        <function_declarator>
+            <identifier text="main" />
+            <parameter_list>
+                <"(" text="(" />
+                <parameter_declaration>
+                    <primitive_type text="void" />
+                </parameter_declaration>
+                <")" text=")" />
+            </parameter_list>
+        </function_declarator>
+        <compound_statement>
+            <"{" text="{" />
+            <declaration>
+                <primitive_type text="int" />
+                <identifier text="foo" />
+                <"," text="," />
+                <identifier text="bar" />
+                <"," text="," />
+                <identifier text="foobar" />
+                <";" text=";" />
+            </declaration>
+            <expression_statement>
+                <assignment_expression>
+                    <call_expression>
+                        <identifier text="CAT" />
+                        <argument_list>
+                            <"(" text="(" />
+                            <identifier text="foo" />
+                            <"," text="," />
+                            <identifier text="bar" />
+                            <")" text=")" />
+                        </argument_list>
+                    </call_expression>
+                    <"=" text="=" />
+                    <binary_expression>
+                        <identifier text="foo" />
+                        <"+" text="+" />
+                        <identifier text="bar" />
+                    </binary_expression>
+                </assignment_expression>
+                <";" text=";" />
+            </expression_statement>
+            <expression_statement>
+                <assignment_expression>
+                    <call_expression>
+                        <identifier text="XCAT" />
+                        <argument_list>
+                            <"(" text="(" />
+                            <identifier text="FOO" />
+                            <"," text="," />
+                            <identifier text="BAR" />
+                            <")" text=")" />
+                        </argument_list>
+                    </call_expression>
+                    <"=" text="=" />
+                    <binary_expression>
+                        <identifier text="foo" />
+                        <"+" text="+" />
+                        <identifier text="bar" />
+                    </binary_expression>
+                </assignment_expression>
+                <";" text=";" />
+            </expression_statement>
+            <return_statement>
+                <return text="return" />
+                <number_literal text="0" />
+                <";" text=";" />
+            </return_statement>
+            <"}" text="}" />
+        </compound_statement>
+    </function_definition>
+</translation_unit>

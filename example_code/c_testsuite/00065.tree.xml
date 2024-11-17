@@ -1,0 +1,46 @@
+<translation_unit>
+    <preproc_function_def>
+        <#define text="#define" />
+        <identifier text="ADD" />
+        <preproc_params>
+            <"(" text="(" />
+            <identifier text="X" />
+            <"," text="," />
+            <identifier text="Y" />
+            <")" text=")" />
+        </preproc_params>
+        <preproc_arg text="(X + Y)" />
+    </preproc_function_def>
+    <function_definition>
+        <primitive_type text="int" />
+        <function_declarator>
+            <identifier text="main" />
+            <parameter_list>
+                <"(" text="(" />
+                <")" text=")" />
+            </parameter_list>
+        </function_declarator>
+        <compound_statement>
+            <"{" text="{" />
+            <return_statement>
+                <return text="return" />
+                <binary_expression>
+                    <call_expression>
+                        <identifier text="ADD" />
+                        <argument_list>
+                            <"(" text="(" />
+                            <number_literal text="1" />
+                            <"," text="," />
+                            <number_literal text="2" />
+                            <")" text=")" />
+                        </argument_list>
+                    </call_expression>
+                    <"-" text="-" />
+                    <number_literal text="3" />
+                </binary_expression>
+                <";" text=";" />
+            </return_statement>
+            <"}" text="}" />
+        </compound_statement>
+    </function_definition>
+</translation_unit>

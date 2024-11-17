@@ -1,0 +1,505 @@
+<translation_unit>
+    <preproc_include>
+        <#include text="#include" />
+        <system_lib_string text="<stdio.h>" />
+    </preproc_include>
+    <function_definition>
+        <primitive_type text="int" />
+        <function_declarator>
+            <identifier text="main" />
+            <parameter_list>
+                <"(" text="(" />
+                <")" text=")" />
+            </parameter_list>
+        </function_declarator>
+        <compound_statement>
+            <"{" text="{" />
+            <expression_statement>
+                <call_expression>
+                    <identifier text="printf" />
+                    <argument_list>
+                        <"(" text="(" />
+                        <string_literal>
+                            <"\"" text="\"" />
+                            <string_content text="#include test" />
+                            <escape_sequence text="\\n" />
+                            <"\"" text="\"" />
+                        </string_literal>
+                        <")" text=")" />
+                    </argument_list>
+                </call_expression>
+                <";" text=";" />
+            </expression_statement>
+            <preproc_if>
+                <#if text="#if" />
+                <number_literal text="1" />
+                <"\n" text="\n" />
+                <preproc_if>
+                    <#if text="#if" />
+                    <number_literal text="0" />
+                    <"\n" text="\n" />
+                    <expression_statement>
+                        <call_expression>
+                            <identifier text="printf" />
+                            <argument_list>
+                                <"(" text="(" />
+                                <string_literal>
+                                    <"\"" text="\"" />
+                                    <string_content text="a" />
+                                    <escape_sequence text="\\n" />
+                                    <"\"" text="\"" />
+                                </string_literal>
+                                <")" text=")" />
+                            </argument_list>
+                        </call_expression>
+                        <";" text=";" />
+                    </expression_statement>
+                    <preproc_else>
+                        <#else text="#else" />
+                        <expression_statement>
+                            <call_expression>
+                                <identifier text="printf" />
+                                <argument_list>
+                                    <"(" text="(" />
+                                    <string_literal>
+                                        <"\"" text="\"" />
+                                        <string_content text="b" />
+                                        <escape_sequence text="\\n" />
+                                        <"\"" text="\"" />
+                                    </string_literal>
+                                    <")" text=")" />
+                                </argument_list>
+                            </call_expression>
+                            <";" text=";" />
+                        </expression_statement>
+                    </preproc_else>
+                    <#endif text="#endif" />
+                </preproc_if>
+                <preproc_else>
+                    <#else text="#else" />
+                    <preproc_if>
+                        <#if text="#if" />
+                        <number_literal text="0" />
+                        <"\n" text="\n" />
+                        <expression_statement>
+                            <call_expression>
+                                <identifier text="printf" />
+                                <argument_list>
+                                    <"(" text="(" />
+                                    <string_literal>
+                                        <"\"" text="\"" />
+                                        <string_content text="c" />
+                                        <escape_sequence text="\\n" />
+                                        <"\"" text="\"" />
+                                    </string_literal>
+                                    <")" text=")" />
+                                </argument_list>
+                            </call_expression>
+                            <";" text=";" />
+                        </expression_statement>
+                        <preproc_else>
+                            <#else text="#else" />
+                            <expression_statement>
+                                <call_expression>
+                                    <identifier text="printf" />
+                                    <argument_list>
+                                        <"(" text="(" />
+                                        <string_literal>
+                                            <"\"" text="\"" />
+                                            <string_content text="d" />
+                                            <escape_sequence text="\\n" />
+                                            <"\"" text="\"" />
+                                        </string_literal>
+                                        <")" text=")" />
+                                    </argument_list>
+                                </call_expression>
+                                <";" text=";" />
+                            </expression_statement>
+                        </preproc_else>
+                        <#endif text="#endif" />
+                    </preproc_if>
+                </preproc_else>
+                <#endif text="#endif" />
+            </preproc_if>
+            <preproc_if>
+                <#if text="#if" />
+                <number_literal text="0" />
+                <"\n" text="\n" />
+                <preproc_if>
+                    <#if text="#if" />
+                    <number_literal text="1" />
+                    <"\n" text="\n" />
+                    <expression_statement>
+                        <call_expression>
+                            <identifier text="printf" />
+                            <argument_list>
+                                <"(" text="(" />
+                                <string_literal>
+                                    <"\"" text="\"" />
+                                    <string_content text="e" />
+                                    <escape_sequence text="\\n" />
+                                    <"\"" text="\"" />
+                                </string_literal>
+                                <")" text=")" />
+                            </argument_list>
+                        </call_expression>
+                        <";" text=";" />
+                    </expression_statement>
+                    <preproc_else>
+                        <#else text="#else" />
+                        <expression_statement>
+                            <call_expression>
+                                <identifier text="printf" />
+                                <argument_list>
+                                    <"(" text="(" />
+                                    <string_literal>
+                                        <"\"" text="\"" />
+                                        <string_content text="f" />
+                                        <escape_sequence text="\\n" />
+                                        <"\"" text="\"" />
+                                    </string_literal>
+                                    <")" text=")" />
+                                </argument_list>
+                            </call_expression>
+                            <";" text=";" />
+                        </expression_statement>
+                    </preproc_else>
+                    <#endif text="#endif" />
+                </preproc_if>
+                <preproc_else>
+                    <#else text="#else" />
+                    <preproc_if>
+                        <#if text="#if" />
+                        <number_literal text="1" />
+                        <"\n" text="\n" />
+                        <expression_statement>
+                            <call_expression>
+                                <identifier text="printf" />
+                                <argument_list>
+                                    <"(" text="(" />
+                                    <string_literal>
+                                        <"\"" text="\"" />
+                                        <string_content text="g" />
+                                        <escape_sequence text="\\n" />
+                                        <"\"" text="\"" />
+                                    </string_literal>
+                                    <")" text=")" />
+                                </argument_list>
+                            </call_expression>
+                            <";" text=";" />
+                        </expression_statement>
+                        <preproc_else>
+                            <#else text="#else" />
+                            <expression_statement>
+                                <call_expression>
+                                    <identifier text="printf" />
+                                    <argument_list>
+                                        <"(" text="(" />
+                                        <string_literal>
+                                            <"\"" text="\"" />
+                                            <string_content text="h" />
+                                            <escape_sequence text="\\n" />
+                                            <"\"" text="\"" />
+                                        </string_literal>
+                                        <")" text=")" />
+                                    </argument_list>
+                                </call_expression>
+                                <";" text=";" />
+                            </expression_statement>
+                        </preproc_else>
+                        <#endif text="#endif" />
+                    </preproc_if>
+                </preproc_else>
+                <#endif text="#endif" />
+            </preproc_if>
+            <preproc_def>
+                <#define text="#define" />
+                <identifier text="DEF" />
+            </preproc_def>
+            <preproc_ifdef>
+                <#ifdef text="#ifdef" />
+                <identifier text="DEF" />
+                <preproc_ifdef>
+                    <#ifdef text="#ifdef" />
+                    <identifier text="DEF" />
+                    <expression_statement>
+                        <call_expression>
+                            <identifier text="printf" />
+                            <argument_list>
+                                <"(" text="(" />
+                                <string_literal>
+                                    <"\"" text="\"" />
+                                    <string_content text="i" />
+                                    <escape_sequence text="\\n" />
+                                    <"\"" text="\"" />
+                                </string_literal>
+                                <")" text=")" />
+                            </argument_list>
+                        </call_expression>
+                        <";" text=";" />
+                    </expression_statement>
+                    <preproc_else>
+                        <#else text="#else" />
+                        <expression_statement>
+                            <call_expression>
+                                <identifier text="printf" />
+                                <argument_list>
+                                    <"(" text="(" />
+                                    <string_literal>
+                                        <"\"" text="\"" />
+                                        <string_content text="j" />
+                                        <escape_sequence text="\\n" />
+                                        <"\"" text="\"" />
+                                    </string_literal>
+                                    <")" text=")" />
+                                </argument_list>
+                            </call_expression>
+                            <";" text=";" />
+                        </expression_statement>
+                    </preproc_else>
+                    <#endif text="#endif" />
+                </preproc_ifdef>
+                <preproc_else>
+                    <#else text="#else" />
+                    <preproc_ifdef>
+                        <#ifdef text="#ifdef" />
+                        <identifier text="DEF" />
+                        <expression_statement>
+                            <call_expression>
+                                <identifier text="printf" />
+                                <argument_list>
+                                    <"(" text="(" />
+                                    <string_literal>
+                                        <"\"" text="\"" />
+                                        <string_content text="k" />
+                                        <escape_sequence text="\\n" />
+                                        <"\"" text="\"" />
+                                    </string_literal>
+                                    <")" text=")" />
+                                </argument_list>
+                            </call_expression>
+                            <";" text=";" />
+                        </expression_statement>
+                        <preproc_else>
+                            <#else text="#else" />
+                            <expression_statement>
+                                <call_expression>
+                                    <identifier text="printf" />
+                                    <argument_list>
+                                        <"(" text="(" />
+                                        <string_literal>
+                                            <"\"" text="\"" />
+                                            <string_content text="l" />
+                                            <escape_sequence text="\\n" />
+                                            <"\"" text="\"" />
+                                        </string_literal>
+                                        <")" text=")" />
+                                    </argument_list>
+                                </call_expression>
+                                <";" text=";" />
+                            </expression_statement>
+                        </preproc_else>
+                        <#endif text="#endif" />
+                    </preproc_ifdef>
+                </preproc_else>
+                <#endif text="#endif" />
+            </preproc_ifdef>
+            <preproc_ifdef>
+                <#ifndef text="#ifndef" />
+                <identifier text="DEF" />
+                <preproc_ifdef>
+                    <#ifndef text="#ifndef" />
+                    <identifier text="DEF" />
+                    <expression_statement>
+                        <call_expression>
+                            <identifier text="printf" />
+                            <argument_list>
+                                <"(" text="(" />
+                                <string_literal>
+                                    <"\"" text="\"" />
+                                    <string_content text="m" />
+                                    <escape_sequence text="\\n" />
+                                    <"\"" text="\"" />
+                                </string_literal>
+                                <")" text=")" />
+                            </argument_list>
+                        </call_expression>
+                        <";" text=";" />
+                    </expression_statement>
+                    <preproc_else>
+                        <#else text="#else" />
+                        <expression_statement>
+                            <call_expression>
+                                <identifier text="printf" />
+                                <argument_list>
+                                    <"(" text="(" />
+                                    <string_literal>
+                                        <"\"" text="\"" />
+                                        <string_content text="n" />
+                                        <escape_sequence text="\\n" />
+                                        <"\"" text="\"" />
+                                    </string_literal>
+                                    <")" text=")" />
+                                </argument_list>
+                            </call_expression>
+                            <";" text=";" />
+                        </expression_statement>
+                    </preproc_else>
+                    <#endif text="#endif" />
+                </preproc_ifdef>
+                <preproc_else>
+                    <#else text="#else" />
+                    <preproc_ifdef>
+                        <#ifndef text="#ifndef" />
+                        <identifier text="DEF" />
+                        <expression_statement>
+                            <call_expression>
+                                <identifier text="printf" />
+                                <argument_list>
+                                    <"(" text="(" />
+                                    <string_literal>
+                                        <"\"" text="\"" />
+                                        <string_content text="o" />
+                                        <escape_sequence text="\\n" />
+                                        <"\"" text="\"" />
+                                    </string_literal>
+                                    <")" text=")" />
+                                </argument_list>
+                            </call_expression>
+                            <";" text=";" />
+                        </expression_statement>
+                        <preproc_else>
+                            <#else text="#else" />
+                            <expression_statement>
+                                <call_expression>
+                                    <identifier text="printf" />
+                                    <argument_list>
+                                        <"(" text="(" />
+                                        <string_literal>
+                                            <"\"" text="\"" />
+                                            <string_content text="p" />
+                                            <escape_sequence text="\\n" />
+                                            <"\"" text="\"" />
+                                        </string_literal>
+                                        <")" text=")" />
+                                    </argument_list>
+                                </call_expression>
+                                <";" text=";" />
+                            </expression_statement>
+                        </preproc_else>
+                        <#endif text="#endif" />
+                    </preproc_ifdef>
+                </preproc_else>
+                <#endif text="#endif" />
+            </preproc_ifdef>
+            <preproc_def>
+                <#define text="#define" />
+                <identifier text="ONE" />
+                <preproc_arg text="1" />
+            </preproc_def>
+            <preproc_def>
+                <#define text="#define" />
+                <identifier text="ZERO" />
+                <preproc_arg text="0" />
+            </preproc_def>
+            <preproc_if>
+                <#if text="#if" />
+                <identifier text="ONE" />
+                <"\n" text="\n" />
+                <preproc_if>
+                    <#if text="#if" />
+                    <identifier text="ZERO" />
+                    <"\n" text="\n" />
+                    <expression_statement>
+                        <call_expression>
+                            <identifier text="printf" />
+                            <argument_list>
+                                <"(" text="(" />
+                                <string_literal>
+                                    <"\"" text="\"" />
+                                    <string_content text="q" />
+                                    <escape_sequence text="\\n" />
+                                    <"\"" text="\"" />
+                                </string_literal>
+                                <")" text=")" />
+                            </argument_list>
+                        </call_expression>
+                        <";" text=";" />
+                    </expression_statement>
+                    <preproc_else>
+                        <#else text="#else" />
+                        <expression_statement>
+                            <call_expression>
+                                <identifier text="printf" />
+                                <argument_list>
+                                    <"(" text="(" />
+                                    <string_literal>
+                                        <"\"" text="\"" />
+                                        <string_content text="r" />
+                                        <escape_sequence text="\\n" />
+                                        <"\"" text="\"" />
+                                    </string_literal>
+                                    <")" text=")" />
+                                </argument_list>
+                            </call_expression>
+                            <";" text=";" />
+                        </expression_statement>
+                    </preproc_else>
+                    <#endif text="#endif" />
+                </preproc_if>
+                <preproc_else>
+                    <#else text="#else" />
+                    <preproc_if>
+                        <#if text="#if" />
+                        <identifier text="ZERO" />
+                        <"\n" text="\n" />
+                        <expression_statement>
+                            <call_expression>
+                                <identifier text="printf" />
+                                <argument_list>
+                                    <"(" text="(" />
+                                    <string_literal>
+                                        <"\"" text="\"" />
+                                        <string_content text="s" />
+                                        <escape_sequence text="\\n" />
+                                        <"\"" text="\"" />
+                                    </string_literal>
+                                    <")" text=")" />
+                                </argument_list>
+                            </call_expression>
+                            <";" text=";" />
+                        </expression_statement>
+                        <preproc_else>
+                            <#else text="#else" />
+                            <expression_statement>
+                                <call_expression>
+                                    <identifier text="printf" />
+                                    <argument_list>
+                                        <"(" text="(" />
+                                        <string_literal>
+                                            <"\"" text="\"" />
+                                            <string_content text="t" />
+                                            <escape_sequence text="\\n" />
+                                            <"\"" text="\"" />
+                                        </string_literal>
+                                        <")" text=")" />
+                                    </argument_list>
+                                </call_expression>
+                                <";" text=";" />
+                            </expression_statement>
+                        </preproc_else>
+                        <#endif text="#endif" />
+                    </preproc_if>
+                </preproc_else>
+                <#endif text="#endif" />
+            </preproc_if>
+            <return_statement>
+                <return text="return" />
+                <number_literal text="0" />
+                <";" text=";" />
+            </return_statement>
+            <"}" text="}" />
+        </compound_statement>
+    </function_definition>
+    <comment text="/* vim: set expandtab ts=4 sw=3 sts=3 tw=80 :*/" />
+</translation_unit>

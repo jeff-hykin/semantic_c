@@ -1,0 +1,94 @@
+<translation_unit>
+    <preproc_function_def>
+        <#define text="#define" />
+        <identifier text="M" />
+        <preproc_params>
+            <"(" text="(" />
+            <identifier text="x" />
+            <")" text=")" />
+        </preproc_params>
+        <preproc_arg text="x" />
+    </preproc_function_def>
+    <preproc_function_def>
+        <#define text="#define" />
+        <identifier text="A" />
+        <preproc_params>
+            <"(" text="(" />
+            <identifier text="a" />
+            <"," text="," />
+            <identifier text="b" />
+            <")" text=")" />
+        </preproc_params>
+        <preproc_arg text="a(b)" />
+    </preproc_function_def>
+    <function_definition>
+        <primitive_type text="int" />
+        <function_declarator>
+            <identifier text="main" />
+            <parameter_list>
+                <"(" text="(" />
+                <parameter_declaration>
+                    <primitive_type text="void" />
+                </parameter_declaration>
+                <")" text=")" />
+            </parameter_list>
+        </function_declarator>
+        <compound_statement>
+            <"{" text="{" />
+            <declaration>
+                <primitive_type text="char" />
+                <init_declarator>
+                    <pointer_declarator>
+                        <"*" text="*" />
+                        <identifier text="a" />
+                    </pointer_declarator>
+                    <"=" text="=" />
+                    <call_expression>
+                        <identifier text="A" />
+                        <argument_list>
+                            <"(" text="(" />
+                            <identifier text="M" />
+                            <"," text="," />
+                            <string_literal>
+                                <"\"" text="\"" />
+                                <string_content text="hi" />
+                                <"\"" text="\"" />
+                            </string_literal>
+                            <")" text=")" />
+                        </argument_list>
+                    </call_expression>
+                </init_declarator>
+                <";" text=";" />
+            </declaration>
+            <return_statement>
+                <return text="return" />
+                <conditional_expression>
+                    <parenthesized_expression>
+                        <"(" text="(" />
+                        <binary_expression>
+                            <subscript_expression>
+                                <identifier text="a" />
+                                <"[" text="[" />
+                                <number_literal text="1" />
+                                <"]" text="]" />
+                            </subscript_expression>
+                            <"==" text="==" />
+                            <char_literal>
+                                <"'" text="'" />
+                                <character text="i" />
+                                <"'" text="'" />
+                            </char_literal>
+                        </binary_expression>
+                        <")" text=")" />
+                    </parenthesized_expression>
+                    <"?" text="?" />
+                    <number_literal text="0" />
+                    <":" text=":" />
+                    <number_literal text="1" />
+                </conditional_expression>
+                <";" text=";" />
+            </return_statement>
+            <"}" text="}" />
+        </compound_statement>
+    </function_definition>
+</translation_unit>

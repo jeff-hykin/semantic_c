@@ -1,0 +1,46 @@
+<translation_unit>
+    <preproc_function_def>
+        <#define text="#define" />
+        <identifier text="F" />
+        <preproc_params>
+            <"(" text="(" />
+            <identifier text="a" />
+            <"," text="," />
+            <identifier text="b" />
+            <")" text=")" />
+        </preproc_params>
+        <preproc_arg text="a" />
+    </preproc_function_def>
+    <function_definition>
+        <primitive_type text="int" />
+        <function_declarator>
+            <identifier text="main" />
+            <parameter_list>
+                <"(" text="(" />
+                <")" text=")" />
+            </parameter_list>
+        </function_declarator>
+        <compound_statement>
+            <"{" text="{" />
+            <return_statement>
+                <return text="return" />
+                <call_expression>
+                    <identifier text="F" />
+                    <argument_list>
+                        <"(" text="(" />
+                        <ERROR>
+                            <"," text="," />
+                        </ERROR>
+                        <number_literal text="1" />
+                        <")" text=")" />
+                    </argument_list>
+                </call_expression>
+                <ERROR>
+                    <number_literal text="0" />
+                </ERROR>
+                <";" text=";" />
+            </return_statement>
+            <"}" text="}" />
+        </compound_statement>
+    </function_definition>
+</translation_unit>

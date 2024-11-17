@@ -1,0 +1,77 @@
+<translation_unit>
+    <function_definition>
+        <primitive_type text="int" />
+        <function_declarator>
+            <identifier text="main" />
+            <parameter_list>
+                <"(" text="(" />
+                <")" text=")" />
+            </parameter_list>
+        </function_declarator>
+        <compound_statement>
+            <"{" text="{" />
+            <declaration>
+                <primitive_type text="int" />
+                <init_declarator>
+                    <identifier text="x" />
+                    <"=" text="=" />
+                    <number_literal text="0" />
+                </init_declarator>
+                <";" text=";" />
+            </declaration>
+            <declaration>
+                <primitive_type text="int" />
+                <init_declarator>
+                    <identifier text="y" />
+                    <"=" text="=" />
+                    <number_literal text="1" />
+                </init_declarator>
+                <";" text=";" />
+            </declaration>
+            <if_statement>
+                <if text="if" />
+                <parenthesized_expression>
+                    <"(" text="(" />
+                    <conditional_expression>
+                        <identifier text="x" />
+                        <"?" text="?" />
+                        <number_literal text="1" />
+                        <":" text=":" />
+                        <number_literal text="0" />
+                    </conditional_expression>
+                    <")" text=")" />
+                </parenthesized_expression>
+                <return_statement>
+                    <return text="return" />
+                    <number_literal text="1" />
+                    <";" text=";" />
+                </return_statement>
+            </if_statement>
+            <if_statement>
+                <if text="if" />
+                <parenthesized_expression>
+                    <"(" text="(" />
+                    <conditional_expression>
+                        <identifier text="y" />
+                        <"?" text="?" />
+                        <number_literal text="0" />
+                        <":" text=":" />
+                        <number_literal text="1" />
+                    </conditional_expression>
+                    <")" text=")" />
+                </parenthesized_expression>
+                <return_statement>
+                    <return text="return" />
+                    <number_literal text="2" />
+                    <";" text=";" />
+                </return_statement>
+            </if_statement>
+            <return_statement>
+                <return text="return" />
+                <number_literal text="0" />
+                <";" text=";" />
+            </return_statement>
+            <"}" text="}" />
+        </compound_statement>
+    </function_definition>
+</translation_unit>

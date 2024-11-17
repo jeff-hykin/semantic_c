@@ -1,0 +1,88 @@
+<translation_unit>
+    <type_definition>
+        <typedef text="typedef" />
+        <struct_specifier>
+            <struct text="struct" />
+            <field_declaration_list>
+                <"{" text="{" />
+                <field_declaration>
+                    <primitive_type text="int" />
+                    <field_identifier text="x" />
+                    <";" text=";" />
+                </field_declaration>
+                <field_declaration>
+                    <primitive_type text="int" />
+                    <field_identifier text="y" />
+                    <";" text=";" />
+                </field_declaration>
+                <"}" text="}" />
+            </field_declaration_list>
+        </struct_specifier>
+        <type_identifier text="s" />
+        <";" text=";" />
+    </type_definition>
+    <declaration>
+        <type_identifier text="s" />
+        <identifier text="v" />
+        <";" text=";" />
+    </declaration>
+    <function_definition>
+        <primitive_type text="int" />
+        <function_declarator>
+            <identifier text="main" />
+            <parameter_list>
+                <"(" text="(" />
+                <")" text=")" />
+            </parameter_list>
+        </function_declarator>
+        <compound_statement>
+            <"{" text="{" />
+            <expression_statement>
+                <assignment_expression>
+                    <field_expression>
+                        <identifier text="v" />
+                        <"." text="." />
+                        <field_identifier text="x" />
+                    </field_expression>
+                    <"=" text="=" />
+                    <number_literal text="1" />
+                </assignment_expression>
+                <";" text=";" />
+            </expression_statement>
+            <expression_statement>
+                <assignment_expression>
+                    <field_expression>
+                        <identifier text="v" />
+                        <"." text="." />
+                        <field_identifier text="y" />
+                    </field_expression>
+                    <"=" text="=" />
+                    <number_literal text="2" />
+                </assignment_expression>
+                <";" text=";" />
+            </expression_statement>
+            <return_statement>
+                <return text="return" />
+                <binary_expression>
+                    <binary_expression>
+                        <number_literal text="3" />
+                        <"-" text="-" />
+                        <field_expression>
+                            <identifier text="v" />
+                            <"." text="." />
+                            <field_identifier text="x" />
+                        </field_expression>
+                    </binary_expression>
+                    <"-" text="-" />
+                    <field_expression>
+                        <identifier text="v" />
+                        <"." text="." />
+                        <field_identifier text="y" />
+                    </field_expression>
+                </binary_expression>
+                <";" text=";" />
+            </return_statement>
+            <"}" text="}" />
+        </compound_statement>
+    </function_definition>
+</translation_unit>

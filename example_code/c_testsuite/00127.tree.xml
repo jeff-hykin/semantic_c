@@ -1,0 +1,110 @@
+<translation_unit>
+    <declaration>
+        <primitive_type text="int" />
+        <identifier text="c" />
+        <";" text=";" />
+    </declaration>
+    <function_definition>
+        <primitive_type text="int" />
+        <function_declarator>
+            <identifier text="main" />
+            <parameter_list>
+                <"(" text="(" />
+                <")" text=")" />
+            </parameter_list>
+        </function_declarator>
+        <compound_statement>
+            <"{" text="{" />
+            <if_statement>
+                <if text="if" />
+                <parenthesized_expression>
+                    <"(" text="(" />
+                    <number_literal text="0" />
+                    <")" text=")" />
+                </parenthesized_expression>
+                <compound_statement>
+                    <"{" text="{" />
+                    <return_statement>
+                        <return text="return" />
+                        <number_literal text="1" />
+                        <";" text=";" />
+                    </return_statement>
+                    <"}" text="}" />
+                </compound_statement>
+                <else_clause>
+                    <else text="else" />
+                    <if_statement>
+                        <if text="if" />
+                        <parenthesized_expression>
+                            <"(" text="(" />
+                            <number_literal text="0" />
+                            <")" text=")" />
+                        </parenthesized_expression>
+                        <compound_statement>
+                            <"{" text="{" />
+                            <"}" text="}" />
+                        </compound_statement>
+                        <else_clause>
+                            <else text="else" />
+                            <compound_statement>
+                                <"{" text="{" />
+                                <if_statement>
+                                    <if text="if" />
+                                    <parenthesized_expression>
+                                        <"(" text="(" />
+                                        <number_literal text="1" />
+                                        <")" text=")" />
+                                    </parenthesized_expression>
+                                    <compound_statement>
+                                        <"{" text="{" />
+                                        <if_statement>
+                                            <if text="if" />
+                                            <parenthesized_expression>
+                                                <"(" text="(" />
+                                                <identifier text="c" />
+                                                <")" text=")" />
+                                            </parenthesized_expression>
+                                            <return_statement>
+                                                <return text="return" />
+                                                <number_literal text="1" />
+                                                <";" text=";" />
+                                            </return_statement>
+                                            <else_clause>
+                                                <else text="else" />
+                                                <return_statement>
+                                                    <return text="return" />
+                                                    <number_literal text="0" />
+                                                    <";" text=";" />
+                                                </return_statement>
+                                            </else_clause>
+                                        </if_statement>
+                                        <"}" text="}" />
+                                    </compound_statement>
+                                    <else_clause>
+                                        <else text="else" />
+                                        <compound_statement>
+                                            <"{" text="{" />
+                                            <return_statement>
+                                                <return text="return" />
+                                                <number_literal text="1" />
+                                                <";" text=";" />
+                                            </return_statement>
+                                            <"}" text="}" />
+                                        </compound_statement>
+                                    </else_clause>
+                                </if_statement>
+                                <"}" text="}" />
+                            </compound_statement>
+                        </else_clause>
+                    </if_statement>
+                </else_clause>
+            </if_statement>
+            <return_statement>
+                <return text="return" />
+                <number_literal text="1" />
+                <";" text=";" />
+            </return_statement>
+            <"}" text="}" />
+        </compound_statement>
+    </function_definition>
+</translation_unit>

@@ -1,0 +1,984 @@
+<translation_unit>
+    <declaration>
+        <primitive_type text="int" />
+        <identifier text="a" />
+        <";" text=";" />
+    </declaration>
+    <declaration>
+        <sized_type_specifier>
+            <unsigned text="unsigned" />
+        </sized_type_specifier>
+        <identifier text="b" />
+        <";" text=";" />
+    </declaration>
+    <declaration>
+        <primitive_type text="char" />
+        <identifier text="c" />
+        <";" text=";" />
+    </declaration>
+    <declaration>
+        <sized_type_specifier>
+            <signed text="signed" />
+            <primitive_type text="char" />
+        </sized_type_specifier>
+        <identifier text="d" />
+        <";" text=";" />
+    </declaration>
+    <declaration>
+        <sized_type_specifier>
+            <unsigned text="unsigned" />
+            <primitive_type text="char" />
+        </sized_type_specifier>
+        <identifier text="e" />
+        <";" text=";" />
+    </declaration>
+    <declaration>
+        <sized_type_specifier>
+            <long text="long" />
+        </sized_type_specifier>
+        <identifier text="f" />
+        <";" text=";" />
+    </declaration>
+    <declaration>
+        <sized_type_specifier>
+            <unsigned text="unsigned" />
+            <long text="long" />
+        </sized_type_specifier>
+        <identifier text="g" />
+        <";" text=";" />
+    </declaration>
+    <declaration>
+        <sized_type_specifier>
+            <long text="long" />
+            <long text="long" />
+        </sized_type_specifier>
+        <identifier text="h" />
+        <";" text=";" />
+    </declaration>
+    <declaration>
+        <sized_type_specifier>
+            <unsigned text="unsigned" />
+            <long text="long" />
+            <long text="long" />
+        </sized_type_specifier>
+        <identifier text="i" />
+        <";" text=";" />
+    </declaration>
+    <declaration>
+        <sized_type_specifier>
+            <short text="short" />
+        </sized_type_specifier>
+        <identifier text="j" />
+        <";" text=";" />
+    </declaration>
+    <declaration>
+        <sized_type_specifier>
+            <unsigned text="unsigned" />
+            <short text="short" />
+        </sized_type_specifier>
+        <identifier text="k" />
+        <";" text=";" />
+    </declaration>
+    <function_definition>
+        <primitive_type text="int" />
+        <function_declarator>
+            <identifier text="main" />
+            <parameter_list>
+                <"(" text="(" />
+                <parameter_declaration>
+                    <primitive_type text="void" />
+                </parameter_declaration>
+                <")" text=")" />
+            </parameter_list>
+        </function_declarator>
+        <compound_statement>
+            <"{" text="{" />
+            <expression_statement>
+                <assignment_expression>
+                    <identifier text="a" />
+                    <"=" text="=" />
+                    <identifier text="b" />
+                </assignment_expression>
+                <";" text=";" />
+            </expression_statement>
+            <expression_statement>
+                <assignment_expression>
+                    <identifier text="a" />
+                    <"=" text="=" />
+                    <identifier text="c" />
+                </assignment_expression>
+                <";" text=";" />
+            </expression_statement>
+            <expression_statement>
+                <assignment_expression>
+                    <identifier text="a" />
+                    <"=" text="=" />
+                    <identifier text="d" />
+                </assignment_expression>
+                <";" text=";" />
+            </expression_statement>
+            <expression_statement>
+                <assignment_expression>
+                    <identifier text="a" />
+                    <"=" text="=" />
+                    <identifier text="e" />
+                </assignment_expression>
+                <";" text=";" />
+            </expression_statement>
+            <expression_statement>
+                <assignment_expression>
+                    <identifier text="a" />
+                    <"=" text="=" />
+                    <identifier text="f" />
+                </assignment_expression>
+                <";" text=";" />
+            </expression_statement>
+            <expression_statement>
+                <assignment_expression>
+                    <identifier text="a" />
+                    <"=" text="=" />
+                    <identifier text="g" />
+                </assignment_expression>
+                <";" text=";" />
+            </expression_statement>
+            <expression_statement>
+                <assignment_expression>
+                    <identifier text="a" />
+                    <"=" text="=" />
+                    <identifier text="h" />
+                </assignment_expression>
+                <";" text=";" />
+            </expression_statement>
+            <expression_statement>
+                <assignment_expression>
+                    <identifier text="a" />
+                    <"=" text="=" />
+                    <identifier text="i" />
+                </assignment_expression>
+                <";" text=";" />
+            </expression_statement>
+            <expression_statement>
+                <assignment_expression>
+                    <identifier text="a" />
+                    <"=" text="=" />
+                    <identifier text="j" />
+                </assignment_expression>
+                <";" text=";" />
+            </expression_statement>
+            <expression_statement>
+                <assignment_expression>
+                    <identifier text="a" />
+                    <"=" text="=" />
+                    <identifier text="k" />
+                </assignment_expression>
+                <";" text=";" />
+            </expression_statement>
+            <expression_statement>
+                <assignment_expression>
+                    <identifier text="b" />
+                    <"=" text="=" />
+                    <identifier text="a" />
+                </assignment_expression>
+                <";" text=";" />
+            </expression_statement>
+            <expression_statement>
+                <assignment_expression>
+                    <identifier text="b" />
+                    <"=" text="=" />
+                    <identifier text="c" />
+                </assignment_expression>
+                <";" text=";" />
+            </expression_statement>
+            <expression_statement>
+                <assignment_expression>
+                    <identifier text="b" />
+                    <"=" text="=" />
+                    <identifier text="d" />
+                </assignment_expression>
+                <";" text=";" />
+            </expression_statement>
+            <expression_statement>
+                <assignment_expression>
+                    <identifier text="b" />
+                    <"=" text="=" />
+                    <identifier text="e" />
+                </assignment_expression>
+                <";" text=";" />
+            </expression_statement>
+            <expression_statement>
+                <assignment_expression>
+                    <identifier text="b" />
+                    <"=" text="=" />
+                    <identifier text="f" />
+                </assignment_expression>
+                <";" text=";" />
+            </expression_statement>
+            <expression_statement>
+                <assignment_expression>
+                    <identifier text="b" />
+                    <"=" text="=" />
+                    <identifier text="g" />
+                </assignment_expression>
+                <";" text=";" />
+            </expression_statement>
+            <expression_statement>
+                <assignment_expression>
+                    <identifier text="b" />
+                    <"=" text="=" />
+                    <identifier text="h" />
+                </assignment_expression>
+                <";" text=";" />
+            </expression_statement>
+            <expression_statement>
+                <assignment_expression>
+                    <identifier text="b" />
+                    <"=" text="=" />
+                    <identifier text="i" />
+                </assignment_expression>
+                <";" text=";" />
+            </expression_statement>
+            <expression_statement>
+                <assignment_expression>
+                    <identifier text="b" />
+                    <"=" text="=" />
+                    <identifier text="j" />
+                </assignment_expression>
+                <";" text=";" />
+            </expression_statement>
+            <expression_statement>
+                <assignment_expression>
+                    <identifier text="b" />
+                    <"=" text="=" />
+                    <identifier text="k" />
+                </assignment_expression>
+                <";" text=";" />
+            </expression_statement>
+            <expression_statement>
+                <assignment_expression>
+                    <identifier text="c" />
+                    <"=" text="=" />
+                    <identifier text="a" />
+                </assignment_expression>
+                <";" text=";" />
+            </expression_statement>
+            <expression_statement>
+                <assignment_expression>
+                    <identifier text="c" />
+                    <"=" text="=" />
+                    <identifier text="b" />
+                </assignment_expression>
+                <";" text=";" />
+            </expression_statement>
+            <expression_statement>
+                <assignment_expression>
+                    <identifier text="c" />
+                    <"=" text="=" />
+                    <identifier text="d" />
+                </assignment_expression>
+                <";" text=";" />
+            </expression_statement>
+            <expression_statement>
+                <assignment_expression>
+                    <identifier text="c" />
+                    <"=" text="=" />
+                    <identifier text="e" />
+                </assignment_expression>
+                <";" text=";" />
+            </expression_statement>
+            <expression_statement>
+                <assignment_expression>
+                    <identifier text="c" />
+                    <"=" text="=" />
+                    <identifier text="f" />
+                </assignment_expression>
+                <";" text=";" />
+            </expression_statement>
+            <expression_statement>
+                <assignment_expression>
+                    <identifier text="c" />
+                    <"=" text="=" />
+                    <identifier text="g" />
+                </assignment_expression>
+                <";" text=";" />
+            </expression_statement>
+            <expression_statement>
+                <assignment_expression>
+                    <identifier text="c" />
+                    <"=" text="=" />
+                    <identifier text="h" />
+                </assignment_expression>
+                <";" text=";" />
+            </expression_statement>
+            <expression_statement>
+                <assignment_expression>
+                    <identifier text="c" />
+                    <"=" text="=" />
+                    <identifier text="i" />
+                </assignment_expression>
+                <";" text=";" />
+            </expression_statement>
+            <expression_statement>
+                <assignment_expression>
+                    <identifier text="c" />
+                    <"=" text="=" />
+                    <identifier text="j" />
+                </assignment_expression>
+                <";" text=";" />
+            </expression_statement>
+            <expression_statement>
+                <assignment_expression>
+                    <identifier text="c" />
+                    <"=" text="=" />
+                    <identifier text="k" />
+                </assignment_expression>
+                <";" text=";" />
+            </expression_statement>
+            <expression_statement>
+                <assignment_expression>
+                    <identifier text="d" />
+                    <"=" text="=" />
+                    <identifier text="a" />
+                </assignment_expression>
+                <";" text=";" />
+            </expression_statement>
+            <expression_statement>
+                <assignment_expression>
+                    <identifier text="d" />
+                    <"=" text="=" />
+                    <identifier text="b" />
+                </assignment_expression>
+                <";" text=";" />
+            </expression_statement>
+            <expression_statement>
+                <assignment_expression>
+                    <identifier text="d" />
+                    <"=" text="=" />
+                    <identifier text="c" />
+                </assignment_expression>
+                <";" text=";" />
+            </expression_statement>
+            <expression_statement>
+                <assignment_expression>
+                    <identifier text="d" />
+                    <"=" text="=" />
+                    <identifier text="e" />
+                </assignment_expression>
+                <";" text=";" />
+            </expression_statement>
+            <expression_statement>
+                <assignment_expression>
+                    <identifier text="d" />
+                    <"=" text="=" />
+                    <identifier text="f" />
+                </assignment_expression>
+                <";" text=";" />
+            </expression_statement>
+            <expression_statement>
+                <assignment_expression>
+                    <identifier text="d" />
+                    <"=" text="=" />
+                    <identifier text="g" />
+                </assignment_expression>
+                <";" text=";" />
+            </expression_statement>
+            <expression_statement>
+                <assignment_expression>
+                    <identifier text="d" />
+                    <"=" text="=" />
+                    <identifier text="h" />
+                </assignment_expression>
+                <";" text=";" />
+            </expression_statement>
+            <expression_statement>
+                <assignment_expression>
+                    <identifier text="d" />
+                    <"=" text="=" />
+                    <identifier text="i" />
+                </assignment_expression>
+                <";" text=";" />
+            </expression_statement>
+            <expression_statement>
+                <assignment_expression>
+                    <identifier text="d" />
+                    <"=" text="=" />
+                    <identifier text="j" />
+                </assignment_expression>
+                <";" text=";" />
+            </expression_statement>
+            <expression_statement>
+                <assignment_expression>
+                    <identifier text="d" />
+                    <"=" text="=" />
+                    <identifier text="k" />
+                </assignment_expression>
+                <";" text=";" />
+            </expression_statement>
+            <expression_statement>
+                <assignment_expression>
+                    <identifier text="e" />
+                    <"=" text="=" />
+                    <identifier text="a" />
+                </assignment_expression>
+                <";" text=";" />
+            </expression_statement>
+            <expression_statement>
+                <assignment_expression>
+                    <identifier text="e" />
+                    <"=" text="=" />
+                    <identifier text="b" />
+                </assignment_expression>
+                <";" text=";" />
+            </expression_statement>
+            <expression_statement>
+                <assignment_expression>
+                    <identifier text="e" />
+                    <"=" text="=" />
+                    <identifier text="c" />
+                </assignment_expression>
+                <";" text=";" />
+            </expression_statement>
+            <expression_statement>
+                <assignment_expression>
+                    <identifier text="e" />
+                    <"=" text="=" />
+                    <identifier text="d" />
+                </assignment_expression>
+                <";" text=";" />
+            </expression_statement>
+            <expression_statement>
+                <assignment_expression>
+                    <identifier text="e" />
+                    <"=" text="=" />
+                    <identifier text="f" />
+                </assignment_expression>
+                <";" text=";" />
+            </expression_statement>
+            <expression_statement>
+                <assignment_expression>
+                    <identifier text="e" />
+                    <"=" text="=" />
+                    <identifier text="g" />
+                </assignment_expression>
+                <";" text=";" />
+            </expression_statement>
+            <expression_statement>
+                <assignment_expression>
+                    <identifier text="e" />
+                    <"=" text="=" />
+                    <identifier text="h" />
+                </assignment_expression>
+                <";" text=";" />
+            </expression_statement>
+            <expression_statement>
+                <assignment_expression>
+                    <identifier text="e" />
+                    <"=" text="=" />
+                    <identifier text="i" />
+                </assignment_expression>
+                <";" text=";" />
+            </expression_statement>
+            <expression_statement>
+                <assignment_expression>
+                    <identifier text="e" />
+                    <"=" text="=" />
+                    <identifier text="j" />
+                </assignment_expression>
+                <";" text=";" />
+            </expression_statement>
+            <expression_statement>
+                <assignment_expression>
+                    <identifier text="e" />
+                    <"=" text="=" />
+                    <identifier text="k" />
+                </assignment_expression>
+                <";" text=";" />
+            </expression_statement>
+            <expression_statement>
+                <assignment_expression>
+                    <identifier text="f" />
+                    <"=" text="=" />
+                    <identifier text="a" />
+                </assignment_expression>
+                <";" text=";" />
+            </expression_statement>
+            <expression_statement>
+                <assignment_expression>
+                    <identifier text="f" />
+                    <"=" text="=" />
+                    <identifier text="b" />
+                </assignment_expression>
+                <";" text=";" />
+            </expression_statement>
+            <expression_statement>
+                <assignment_expression>
+                    <identifier text="f" />
+                    <"=" text="=" />
+                    <identifier text="c" />
+                </assignment_expression>
+                <";" text=";" />
+            </expression_statement>
+            <expression_statement>
+                <assignment_expression>
+                    <identifier text="f" />
+                    <"=" text="=" />
+                    <identifier text="d" />
+                </assignment_expression>
+                <";" text=";" />
+            </expression_statement>
+            <expression_statement>
+                <assignment_expression>
+                    <identifier text="f" />
+                    <"=" text="=" />
+                    <identifier text="e" />
+                </assignment_expression>
+                <";" text=";" />
+            </expression_statement>
+            <expression_statement>
+                <assignment_expression>
+                    <identifier text="f" />
+                    <"=" text="=" />
+                    <identifier text="g" />
+                </assignment_expression>
+                <";" text=";" />
+            </expression_statement>
+            <expression_statement>
+                <assignment_expression>
+                    <identifier text="f" />
+                    <"=" text="=" />
+                    <identifier text="h" />
+                </assignment_expression>
+                <";" text=";" />
+            </expression_statement>
+            <expression_statement>
+                <assignment_expression>
+                    <identifier text="f" />
+                    <"=" text="=" />
+                    <identifier text="i" />
+                </assignment_expression>
+                <";" text=";" />
+            </expression_statement>
+            <expression_statement>
+                <assignment_expression>
+                    <identifier text="f" />
+                    <"=" text="=" />
+                    <identifier text="j" />
+                </assignment_expression>
+                <";" text=";" />
+            </expression_statement>
+            <expression_statement>
+                <assignment_expression>
+                    <identifier text="f" />
+                    <"=" text="=" />
+                    <identifier text="k" />
+                </assignment_expression>
+                <";" text=";" />
+            </expression_statement>
+            <expression_statement>
+                <assignment_expression>
+                    <identifier text="g" />
+                    <"=" text="=" />
+                    <identifier text="a" />
+                </assignment_expression>
+                <";" text=";" />
+            </expression_statement>
+            <expression_statement>
+                <assignment_expression>
+                    <identifier text="g" />
+                    <"=" text="=" />
+                    <identifier text="b" />
+                </assignment_expression>
+                <";" text=";" />
+            </expression_statement>
+            <expression_statement>
+                <assignment_expression>
+                    <identifier text="g" />
+                    <"=" text="=" />
+                    <identifier text="c" />
+                </assignment_expression>
+                <";" text=";" />
+            </expression_statement>
+            <expression_statement>
+                <assignment_expression>
+                    <identifier text="g" />
+                    <"=" text="=" />
+                    <identifier text="d" />
+                </assignment_expression>
+                <";" text=";" />
+            </expression_statement>
+            <expression_statement>
+                <assignment_expression>
+                    <identifier text="g" />
+                    <"=" text="=" />
+                    <identifier text="e" />
+                </assignment_expression>
+                <";" text=";" />
+            </expression_statement>
+            <expression_statement>
+                <assignment_expression>
+                    <identifier text="g" />
+                    <"=" text="=" />
+                    <identifier text="f" />
+                </assignment_expression>
+                <";" text=";" />
+            </expression_statement>
+            <expression_statement>
+                <assignment_expression>
+                    <identifier text="g" />
+                    <"=" text="=" />
+                    <identifier text="h" />
+                </assignment_expression>
+                <";" text=";" />
+            </expression_statement>
+            <expression_statement>
+                <assignment_expression>
+                    <identifier text="g" />
+                    <"=" text="=" />
+                    <identifier text="i" />
+                </assignment_expression>
+                <";" text=";" />
+            </expression_statement>
+            <expression_statement>
+                <assignment_expression>
+                    <identifier text="g" />
+                    <"=" text="=" />
+                    <identifier text="j" />
+                </assignment_expression>
+                <";" text=";" />
+            </expression_statement>
+            <expression_statement>
+                <assignment_expression>
+                    <identifier text="g" />
+                    <"=" text="=" />
+                    <identifier text="k" />
+                </assignment_expression>
+                <";" text=";" />
+            </expression_statement>
+            <expression_statement>
+                <assignment_expression>
+                    <identifier text="h" />
+                    <"=" text="=" />
+                    <identifier text="a" />
+                </assignment_expression>
+                <";" text=";" />
+            </expression_statement>
+            <expression_statement>
+                <assignment_expression>
+                    <identifier text="h" />
+                    <"=" text="=" />
+                    <identifier text="b" />
+                </assignment_expression>
+                <";" text=";" />
+            </expression_statement>
+            <expression_statement>
+                <assignment_expression>
+                    <identifier text="h" />
+                    <"=" text="=" />
+                    <identifier text="c" />
+                </assignment_expression>
+                <";" text=";" />
+            </expression_statement>
+            <expression_statement>
+                <assignment_expression>
+                    <identifier text="h" />
+                    <"=" text="=" />
+                    <identifier text="d" />
+                </assignment_expression>
+                <";" text=";" />
+            </expression_statement>
+            <expression_statement>
+                <assignment_expression>
+                    <identifier text="h" />
+                    <"=" text="=" />
+                    <identifier text="e" />
+                </assignment_expression>
+                <";" text=";" />
+            </expression_statement>
+            <expression_statement>
+                <assignment_expression>
+                    <identifier text="h" />
+                    <"=" text="=" />
+                    <identifier text="f" />
+                </assignment_expression>
+                <";" text=";" />
+            </expression_statement>
+            <expression_statement>
+                <assignment_expression>
+                    <identifier text="h" />
+                    <"=" text="=" />
+                    <identifier text="g" />
+                </assignment_expression>
+                <";" text=";" />
+            </expression_statement>
+            <expression_statement>
+                <assignment_expression>
+                    <identifier text="h" />
+                    <"=" text="=" />
+                    <identifier text="i" />
+                </assignment_expression>
+                <";" text=";" />
+            </expression_statement>
+            <expression_statement>
+                <assignment_expression>
+                    <identifier text="h" />
+                    <"=" text="=" />
+                    <identifier text="j" />
+                </assignment_expression>
+                <";" text=";" />
+            </expression_statement>
+            <expression_statement>
+                <assignment_expression>
+                    <identifier text="h" />
+                    <"=" text="=" />
+                    <identifier text="k" />
+                </assignment_expression>
+                <";" text=";" />
+            </expression_statement>
+            <expression_statement>
+                <assignment_expression>
+                    <identifier text="i" />
+                    <"=" text="=" />
+                    <identifier text="a" />
+                </assignment_expression>
+                <";" text=";" />
+            </expression_statement>
+            <expression_statement>
+                <assignment_expression>
+                    <identifier text="i" />
+                    <"=" text="=" />
+                    <identifier text="b" />
+                </assignment_expression>
+                <";" text=";" />
+            </expression_statement>
+            <expression_statement>
+                <assignment_expression>
+                    <identifier text="i" />
+                    <"=" text="=" />
+                    <identifier text="c" />
+                </assignment_expression>
+                <";" text=";" />
+            </expression_statement>
+            <expression_statement>
+                <assignment_expression>
+                    <identifier text="i" />
+                    <"=" text="=" />
+                    <identifier text="d" />
+                </assignment_expression>
+                <";" text=";" />
+            </expression_statement>
+            <expression_statement>
+                <assignment_expression>
+                    <identifier text="i" />
+                    <"=" text="=" />
+                    <identifier text="e" />
+                </assignment_expression>
+                <";" text=";" />
+            </expression_statement>
+            <expression_statement>
+                <assignment_expression>
+                    <identifier text="i" />
+                    <"=" text="=" />
+                    <identifier text="f" />
+                </assignment_expression>
+                <";" text=";" />
+            </expression_statement>
+            <expression_statement>
+                <assignment_expression>
+                    <identifier text="i" />
+                    <"=" text="=" />
+                    <identifier text="g" />
+                </assignment_expression>
+                <";" text=";" />
+            </expression_statement>
+            <expression_statement>
+                <assignment_expression>
+                    <identifier text="i" />
+                    <"=" text="=" />
+                    <identifier text="h" />
+                </assignment_expression>
+                <";" text=";" />
+            </expression_statement>
+            <expression_statement>
+                <assignment_expression>
+                    <identifier text="i" />
+                    <"=" text="=" />
+                    <identifier text="j" />
+                </assignment_expression>
+                <";" text=";" />
+            </expression_statement>
+            <expression_statement>
+                <assignment_expression>
+                    <identifier text="i" />
+                    <"=" text="=" />
+                    <identifier text="k" />
+                </assignment_expression>
+                <";" text=";" />
+            </expression_statement>
+            <expression_statement>
+                <assignment_expression>
+                    <identifier text="j" />
+                    <"=" text="=" />
+                    <identifier text="a" />
+                </assignment_expression>
+                <";" text=";" />
+            </expression_statement>
+            <expression_statement>
+                <assignment_expression>
+                    <identifier text="j" />
+                    <"=" text="=" />
+                    <identifier text="b" />
+                </assignment_expression>
+                <";" text=";" />
+            </expression_statement>
+            <expression_statement>
+                <assignment_expression>
+                    <identifier text="j" />
+                    <"=" text="=" />
+                    <identifier text="c" />
+                </assignment_expression>
+                <";" text=";" />
+            </expression_statement>
+            <expression_statement>
+                <assignment_expression>
+                    <identifier text="j" />
+                    <"=" text="=" />
+                    <identifier text="d" />
+                </assignment_expression>
+                <";" text=";" />
+            </expression_statement>
+            <expression_statement>
+                <assignment_expression>
+                    <identifier text="j" />
+                    <"=" text="=" />
+                    <identifier text="e" />
+                </assignment_expression>
+                <";" text=";" />
+            </expression_statement>
+            <expression_statement>
+                <assignment_expression>
+                    <identifier text="j" />
+                    <"=" text="=" />
+                    <identifier text="f" />
+                </assignment_expression>
+                <";" text=";" />
+            </expression_statement>
+            <expression_statement>
+                <assignment_expression>
+                    <identifier text="j" />
+                    <"=" text="=" />
+                    <identifier text="g" />
+                </assignment_expression>
+                <";" text=";" />
+            </expression_statement>
+            <expression_statement>
+                <assignment_expression>
+                    <identifier text="j" />
+                    <"=" text="=" />
+                    <identifier text="h" />
+                </assignment_expression>
+                <";" text=";" />
+            </expression_statement>
+            <expression_statement>
+                <assignment_expression>
+                    <identifier text="j" />
+                    <"=" text="=" />
+                    <identifier text="i" />
+                </assignment_expression>
+                <";" text=";" />
+            </expression_statement>
+            <expression_statement>
+                <assignment_expression>
+                    <identifier text="j" />
+                    <"=" text="=" />
+                    <identifier text="k" />
+                </assignment_expression>
+                <";" text=";" />
+            </expression_statement>
+            <expression_statement>
+                <assignment_expression>
+                    <identifier text="k" />
+                    <"=" text="=" />
+                    <identifier text="a" />
+                </assignment_expression>
+                <";" text=";" />
+            </expression_statement>
+            <expression_statement>
+                <assignment_expression>
+                    <identifier text="k" />
+                    <"=" text="=" />
+                    <identifier text="b" />
+                </assignment_expression>
+                <";" text=";" />
+            </expression_statement>
+            <expression_statement>
+                <assignment_expression>
+                    <identifier text="k" />
+                    <"=" text="=" />
+                    <identifier text="c" />
+                </assignment_expression>
+                <";" text=";" />
+            </expression_statement>
+            <expression_statement>
+                <assignment_expression>
+                    <identifier text="k" />
+                    <"=" text="=" />
+                    <identifier text="d" />
+                </assignment_expression>
+                <";" text=";" />
+            </expression_statement>
+            <expression_statement>
+                <assignment_expression>
+                    <identifier text="k" />
+                    <"=" text="=" />
+                    <identifier text="e" />
+                </assignment_expression>
+                <";" text=";" />
+            </expression_statement>
+            <expression_statement>
+                <assignment_expression>
+                    <identifier text="k" />
+                    <"=" text="=" />
+                    <identifier text="f" />
+                </assignment_expression>
+                <";" text=";" />
+            </expression_statement>
+            <expression_statement>
+                <assignment_expression>
+                    <identifier text="k" />
+                    <"=" text="=" />
+                    <identifier text="g" />
+                </assignment_expression>
+                <";" text=";" />
+            </expression_statement>
+            <expression_statement>
+                <assignment_expression>
+                    <identifier text="k" />
+                    <"=" text="=" />
+                    <identifier text="h" />
+                </assignment_expression>
+                <";" text=";" />
+            </expression_statement>
+            <expression_statement>
+                <assignment_expression>
+                    <identifier text="k" />
+                    <"=" text="=" />
+                    <identifier text="j" />
+                </assignment_expression>
+                <";" text=";" />
+            </expression_statement>
+            <expression_statement>
+                <assignment_expression>
+                    <identifier text="k" />
+                    <"=" text="=" />
+                    <identifier text="i" />
+                </assignment_expression>
+                <";" text=";" />
+            </expression_statement>
+            <return_statement>
+                <return text="return" />
+                <number_literal text="0" />
+                <";" text=";" />
+            </return_statement>
+            <"}" text="}" />
+        </compound_statement>
+    </function_definition>
+</translation_unit>

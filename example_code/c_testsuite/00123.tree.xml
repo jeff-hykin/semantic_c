@@ -1,0 +1,34 @@
+<translation_unit>
+    <declaration>
+        <primitive_type text="double" />
+        <init_declarator>
+            <identifier text="x" />
+            <"=" text="=" />
+            <number_literal text="100.0" />
+        </init_declarator>
+        <";" text=";" />
+    </declaration>
+    <function_definition>
+        <primitive_type text="int" />
+        <function_declarator>
+            <identifier text="main" />
+            <parameter_list>
+                <"(" text="(" />
+                <")" text=")" />
+            </parameter_list>
+        </function_declarator>
+        <compound_statement>
+            <"{" text="{" />
+            <return_statement>
+                <return text="return" />
+                <binary_expression>
+                    <identifier text="x" />
+                    <"<" text="<" />
+                    <number_literal text="1" />
+                </binary_expression>
+                <";" text=";" />
+            </return_statement>
+            <"}" text="}" />
+        </compound_statement>
+    </function_definition>
+</translation_unit>

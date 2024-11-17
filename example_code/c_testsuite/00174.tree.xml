@@ -1,0 +1,534 @@
+<translation_unit>
+    <preproc_include>
+        <#include text="#include" />
+        <system_lib_string text="<stdio.h>" />
+    </preproc_include>
+    <preproc_include>
+        <#include text="#include" />
+        <system_lib_string text="<math.h>" />
+    </preproc_include>
+    <function_definition>
+        <primitive_type text="int" />
+        <function_declarator>
+            <identifier text="main" />
+            <parameter_list>
+                <"(" text="(" />
+                <")" text=")" />
+            </parameter_list>
+        </function_declarator>
+        <compound_statement>
+            <"{" text="{" />
+            <comment text="// variables" />
+            <declaration>
+                <primitive_type text="float" />
+                <init_declarator>
+                    <identifier text="a" />
+                    <"=" text="=" />
+                    <binary_expression>
+                        <number_literal text="12.34" />
+                        <"+" text="+" />
+                        <number_literal text="56.78" />
+                    </binary_expression>
+                </init_declarator>
+                <";" text=";" />
+            </declaration>
+            <expression_statement>
+                <call_expression>
+                    <identifier text="printf" />
+                    <argument_list>
+                        <"(" text="(" />
+                        <string_literal>
+                            <"\"" text="\"" />
+                            <string_content text="%f" />
+                            <escape_sequence text="\\n" />
+                            <"\"" text="\"" />
+                        </string_literal>
+                        <"," text="," />
+                        <identifier text="a" />
+                        <")" text=")" />
+                    </argument_list>
+                </call_expression>
+                <";" text=";" />
+            </expression_statement>
+            <comment text="// infix operators" />
+            <expression_statement>
+                <call_expression>
+                    <identifier text="printf" />
+                    <argument_list>
+                        <"(" text="(" />
+                        <string_literal>
+                            <"\"" text="\"" />
+                            <string_content text="%f" />
+                            <escape_sequence text="\\n" />
+                            <"\"" text="\"" />
+                        </string_literal>
+                        <"," text="," />
+                        <binary_expression>
+                            <number_literal text="12.34" />
+                            <"+" text="+" />
+                            <number_literal text="56.78" />
+                        </binary_expression>
+                        <")" text=")" />
+                    </argument_list>
+                </call_expression>
+                <";" text=";" />
+            </expression_statement>
+            <expression_statement>
+                <call_expression>
+                    <identifier text="printf" />
+                    <argument_list>
+                        <"(" text="(" />
+                        <string_literal>
+                            <"\"" text="\"" />
+                            <string_content text="%f" />
+                            <escape_sequence text="\\n" />
+                            <"\"" text="\"" />
+                        </string_literal>
+                        <"," text="," />
+                        <binary_expression>
+                            <number_literal text="12.34" />
+                            <"-" text="-" />
+                            <number_literal text="56.78" />
+                        </binary_expression>
+                        <")" text=")" />
+                    </argument_list>
+                </call_expression>
+                <";" text=";" />
+            </expression_statement>
+            <expression_statement>
+                <call_expression>
+                    <identifier text="printf" />
+                    <argument_list>
+                        <"(" text="(" />
+                        <string_literal>
+                            <"\"" text="\"" />
+                            <string_content text="%f" />
+                            <escape_sequence text="\\n" />
+                            <"\"" text="\"" />
+                        </string_literal>
+                        <"," text="," />
+                        <binary_expression>
+                            <number_literal text="12.34" />
+                            <"*" text="*" />
+                            <number_literal text="56.78" />
+                        </binary_expression>
+                        <")" text=")" />
+                    </argument_list>
+                </call_expression>
+                <";" text=";" />
+            </expression_statement>
+            <expression_statement>
+                <call_expression>
+                    <identifier text="printf" />
+                    <argument_list>
+                        <"(" text="(" />
+                        <string_literal>
+                            <"\"" text="\"" />
+                            <string_content text="%f" />
+                            <escape_sequence text="\\n" />
+                            <"\"" text="\"" />
+                        </string_literal>
+                        <"," text="," />
+                        <binary_expression>
+                            <number_literal text="12.34" />
+                            <"/" text="/" />
+                            <number_literal text="56.78" />
+                        </binary_expression>
+                        <")" text=")" />
+                    </argument_list>
+                </call_expression>
+                <";" text=";" />
+            </expression_statement>
+            <comment text="// comparison operators" />
+            <expression_statement>
+                <call_expression>
+                    <identifier text="printf" />
+                    <argument_list>
+                        <"(" text="(" />
+                        <string_literal>
+                            <"\"" text="\"" />
+                            <string_content text="%d %d %d %d %d %d" />
+                            <escape_sequence text="\\n" />
+                            <"\"" text="\"" />
+                        </string_literal>
+                        <"," text="," />
+                        <binary_expression>
+                            <number_literal text="12.34" />
+                            <"<" text="<" />
+                            <number_literal text="56.78" />
+                        </binary_expression>
+                        <"," text="," />
+                        <binary_expression>
+                            <number_literal text="12.34" />
+                            <"<=" text="<=" />
+                            <number_literal text="56.78" />
+                        </binary_expression>
+                        <"," text="," />
+                        <binary_expression>
+                            <number_literal text="12.34" />
+                            <"==" text="==" />
+                            <number_literal text="56.78" />
+                        </binary_expression>
+                        <"," text="," />
+                        <binary_expression>
+                            <number_literal text="12.34" />
+                            <">=" text=">=" />
+                            <number_literal text="56.78" />
+                        </binary_expression>
+                        <"," text="," />
+                        <binary_expression>
+                            <number_literal text="12.34" />
+                            <">" text=">" />
+                            <number_literal text="56.78" />
+                        </binary_expression>
+                        <"," text="," />
+                        <binary_expression>
+                            <number_literal text="12.34" />
+                            <"!=" text="!=" />
+                            <number_literal text="56.78" />
+                        </binary_expression>
+                        <")" text=")" />
+                    </argument_list>
+                </call_expression>
+                <";" text=";" />
+            </expression_statement>
+            <expression_statement>
+                <call_expression>
+                    <identifier text="printf" />
+                    <argument_list>
+                        <"(" text="(" />
+                        <string_literal>
+                            <"\"" text="\"" />
+                            <string_content text="%d %d %d %d %d %d" />
+                            <escape_sequence text="\\n" />
+                            <"\"" text="\"" />
+                        </string_literal>
+                        <"," text="," />
+                        <binary_expression>
+                            <number_literal text="12.34" />
+                            <"<" text="<" />
+                            <number_literal text="12.34" />
+                        </binary_expression>
+                        <"," text="," />
+                        <binary_expression>
+                            <number_literal text="12.34" />
+                            <"<=" text="<=" />
+                            <number_literal text="12.34" />
+                        </binary_expression>
+                        <"," text="," />
+                        <binary_expression>
+                            <number_literal text="12.34" />
+                            <"==" text="==" />
+                            <number_literal text="12.34" />
+                        </binary_expression>
+                        <"," text="," />
+                        <binary_expression>
+                            <number_literal text="12.34" />
+                            <">=" text=">=" />
+                            <number_literal text="12.34" />
+                        </binary_expression>
+                        <"," text="," />
+                        <binary_expression>
+                            <number_literal text="12.34" />
+                            <">" text=">" />
+                            <number_literal text="12.34" />
+                        </binary_expression>
+                        <"," text="," />
+                        <binary_expression>
+                            <number_literal text="12.34" />
+                            <"!=" text="!=" />
+                            <number_literal text="12.34" />
+                        </binary_expression>
+                        <")" text=")" />
+                    </argument_list>
+                </call_expression>
+                <";" text=";" />
+            </expression_statement>
+            <expression_statement>
+                <call_expression>
+                    <identifier text="printf" />
+                    <argument_list>
+                        <"(" text="(" />
+                        <string_literal>
+                            <"\"" text="\"" />
+                            <string_content text="%d %d %d %d %d %d" />
+                            <escape_sequence text="\\n" />
+                            <"\"" text="\"" />
+                        </string_literal>
+                        <"," text="," />
+                        <binary_expression>
+                            <number_literal text="56.78" />
+                            <"<" text="<" />
+                            <number_literal text="12.34" />
+                        </binary_expression>
+                        <"," text="," />
+                        <binary_expression>
+                            <number_literal text="56.78" />
+                            <"<=" text="<=" />
+                            <number_literal text="12.34" />
+                        </binary_expression>
+                        <"," text="," />
+                        <binary_expression>
+                            <number_literal text="56.78" />
+                            <"==" text="==" />
+                            <number_literal text="12.34" />
+                        </binary_expression>
+                        <"," text="," />
+                        <binary_expression>
+                            <number_literal text="56.78" />
+                            <">=" text=">=" />
+                            <number_literal text="12.34" />
+                        </binary_expression>
+                        <"," text="," />
+                        <binary_expression>
+                            <number_literal text="56.78" />
+                            <">" text=">" />
+                            <number_literal text="12.34" />
+                        </binary_expression>
+                        <"," text="," />
+                        <binary_expression>
+                            <number_literal text="56.78" />
+                            <"!=" text="!=" />
+                            <number_literal text="12.34" />
+                        </binary_expression>
+                        <")" text=")" />
+                    </argument_list>
+                </call_expression>
+                <";" text=";" />
+            </expression_statement>
+            <comment text="// assignment operators" />
+            <expression_statement>
+                <assignment_expression>
+                    <identifier text="a" />
+                    <"=" text="=" />
+                    <number_literal text="12.34" />
+                </assignment_expression>
+                <";" text=";" />
+            </expression_statement>
+            <expression_statement>
+                <assignment_expression>
+                    <identifier text="a" />
+                    <"+=" text="+=" />
+                    <number_literal text="56.78" />
+                </assignment_expression>
+                <";" text=";" />
+            </expression_statement>
+            <expression_statement>
+                <call_expression>
+                    <identifier text="printf" />
+                    <argument_list>
+                        <"(" text="(" />
+                        <string_literal>
+                            <"\"" text="\"" />
+                            <string_content text="%f" />
+                            <escape_sequence text="\\n" />
+                            <"\"" text="\"" />
+                        </string_literal>
+                        <"," text="," />
+                        <identifier text="a" />
+                        <")" text=")" />
+                    </argument_list>
+                </call_expression>
+                <";" text=";" />
+            </expression_statement>
+            <expression_statement>
+                <assignment_expression>
+                    <identifier text="a" />
+                    <"=" text="=" />
+                    <number_literal text="12.34" />
+                </assignment_expression>
+                <";" text=";" />
+            </expression_statement>
+            <expression_statement>
+                <assignment_expression>
+                    <identifier text="a" />
+                    <"-=" text="-=" />
+                    <number_literal text="56.78" />
+                </assignment_expression>
+                <";" text=";" />
+            </expression_statement>
+            <expression_statement>
+                <call_expression>
+                    <identifier text="printf" />
+                    <argument_list>
+                        <"(" text="(" />
+                        <string_literal>
+                            <"\"" text="\"" />
+                            <string_content text="%f" />
+                            <escape_sequence text="\\n" />
+                            <"\"" text="\"" />
+                        </string_literal>
+                        <"," text="," />
+                        <identifier text="a" />
+                        <")" text=")" />
+                    </argument_list>
+                </call_expression>
+                <";" text=";" />
+            </expression_statement>
+            <expression_statement>
+                <assignment_expression>
+                    <identifier text="a" />
+                    <"=" text="=" />
+                    <number_literal text="12.34" />
+                </assignment_expression>
+                <";" text=";" />
+            </expression_statement>
+            <expression_statement>
+                <assignment_expression>
+                    <identifier text="a" />
+                    <"*=" text="*=" />
+                    <number_literal text="56.78" />
+                </assignment_expression>
+                <";" text=";" />
+            </expression_statement>
+            <expression_statement>
+                <call_expression>
+                    <identifier text="printf" />
+                    <argument_list>
+                        <"(" text="(" />
+                        <string_literal>
+                            <"\"" text="\"" />
+                            <string_content text="%f" />
+                            <escape_sequence text="\\n" />
+                            <"\"" text="\"" />
+                        </string_literal>
+                        <"," text="," />
+                        <identifier text="a" />
+                        <")" text=")" />
+                    </argument_list>
+                </call_expression>
+                <";" text=";" />
+            </expression_statement>
+            <expression_statement>
+                <assignment_expression>
+                    <identifier text="a" />
+                    <"=" text="=" />
+                    <number_literal text="12.34" />
+                </assignment_expression>
+                <";" text=";" />
+            </expression_statement>
+            <expression_statement>
+                <assignment_expression>
+                    <identifier text="a" />
+                    <"/=" text="/=" />
+                    <number_literal text="56.78" />
+                </assignment_expression>
+                <";" text=";" />
+            </expression_statement>
+            <expression_statement>
+                <call_expression>
+                    <identifier text="printf" />
+                    <argument_list>
+                        <"(" text="(" />
+                        <string_literal>
+                            <"\"" text="\"" />
+                            <string_content text="%f" />
+                            <escape_sequence text="\\n" />
+                            <"\"" text="\"" />
+                        </string_literal>
+                        <"," text="," />
+                        <identifier text="a" />
+                        <")" text=")" />
+                    </argument_list>
+                </call_expression>
+                <";" text=";" />
+            </expression_statement>
+            <comment text="// prefix operators" />
+            <expression_statement>
+                <call_expression>
+                    <identifier text="printf" />
+                    <argument_list>
+                        <"(" text="(" />
+                        <string_literal>
+                            <"\"" text="\"" />
+                            <string_content text="%f" />
+                            <escape_sequence text="\\n" />
+                            <"\"" text="\"" />
+                        </string_literal>
+                        <"," text="," />
+                        <number_literal text="+12.34" />
+                        <")" text=")" />
+                    </argument_list>
+                </call_expression>
+                <";" text=";" />
+            </expression_statement>
+            <expression_statement>
+                <call_expression>
+                    <identifier text="printf" />
+                    <argument_list>
+                        <"(" text="(" />
+                        <string_literal>
+                            <"\"" text="\"" />
+                            <string_content text="%f" />
+                            <escape_sequence text="\\n" />
+                            <"\"" text="\"" />
+                        </string_literal>
+                        <"," text="," />
+                        <number_literal text="-12.34" />
+                        <")" text=")" />
+                    </argument_list>
+                </call_expression>
+                <";" text=";" />
+            </expression_statement>
+            <comment text="// type coercion" />
+            <expression_statement>
+                <assignment_expression>
+                    <identifier text="a" />
+                    <"=" text="=" />
+                    <number_literal text="2" />
+                </assignment_expression>
+                <";" text=";" />
+            </expression_statement>
+            <expression_statement>
+                <call_expression>
+                    <identifier text="printf" />
+                    <argument_list>
+                        <"(" text="(" />
+                        <string_literal>
+                            <"\"" text="\"" />
+                            <string_content text="%f" />
+                            <escape_sequence text="\\n" />
+                            <"\"" text="\"" />
+                        </string_literal>
+                        <"," text="," />
+                        <identifier text="a" />
+                        <")" text=")" />
+                    </argument_list>
+                </call_expression>
+                <";" text=";" />
+            </expression_statement>
+            <expression_statement>
+                <call_expression>
+                    <identifier text="printf" />
+                    <argument_list>
+                        <"(" text="(" />
+                        <string_literal>
+                            <"\"" text="\"" />
+                            <string_content text="%f" />
+                            <escape_sequence text="\\n" />
+                            <"\"" text="\"" />
+                        </string_literal>
+                        <"," text="," />
+                        <call_expression>
+                            <identifier text="sin" />
+                            <argument_list>
+                                <"(" text="(" />
+                                <number_literal text="2" />
+                                <")" text=")" />
+                            </argument_list>
+                        </call_expression>
+                        <")" text=")" />
+                    </argument_list>
+                </call_expression>
+                <";" text=";" />
+            </expression_statement>
+            <return_statement>
+                <return text="return" />
+                <number_literal text="0" />
+                <";" text=";" />
+            </return_statement>
+            <"}" text="}" />
+        </compound_statement>
+    </function_definition>
+    <comment text="/* vim: set expandtab ts=4 sw=3 sts=3 tw=80 :*/" />
+</translation_unit>

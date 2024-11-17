@@ -1,0 +1,658 @@
+<translation_unit>
+    <comment text="/* Check some way in where code suppression caused various\n   miscompilations.  */" />
+    <declaration>
+        <storage_class_specifier>
+            <extern text="extern" />
+        </storage_class_specifier>
+        <primitive_type text="int" />
+        <function_declarator>
+            <identifier text="printf" />
+            <parameter_list>
+                <"(" text="(" />
+                <parameter_declaration>
+                    <type_qualifier>
+                        <const text="const" />
+                    </type_qualifier>
+                    <primitive_type text="char" />
+                    <abstract_pointer_declarator>
+                        <"*" text="*" />
+                    </abstract_pointer_declarator>
+                </parameter_declaration>
+                <"," text="," />
+                <variadic_parameter>
+                    <"..." text="..." />
+                </variadic_parameter>
+                <")" text=")" />
+            </parameter_list>
+        </function_declarator>
+        <";" text=";" />
+    </declaration>
+    <type_definition>
+        <typedef text="typedef" />
+        <sized_type_specifier>
+            <unsigned text="unsigned" />
+            <long text="long" />
+        </sized_type_specifier>
+        <primitive_type text="size_t" />
+        <";" text=";" />
+    </type_definition>
+    <declaration>
+        <primitive_type text="size_t" />
+        <identifier text="_brk_start" />
+        <"," text="," />
+        <identifier text="_brk_end" />
+        <";" text=";" />
+    </declaration>
+    <function_definition>
+        <primitive_type text="void" />
+        <pointer_declarator>
+            <"*" text="*" />
+            <function_declarator>
+                <identifier text="extend_brk" />
+                <parameter_list>
+                    <"(" text="(" />
+                    <parameter_declaration>
+                        <primitive_type text="size_t" />
+                        <identifier text="size" />
+                    </parameter_declaration>
+                    <"," text="," />
+                    <parameter_declaration>
+                        <primitive_type text="size_t" />
+                        <identifier text="align" />
+                    </parameter_declaration>
+                    <")" text=")" />
+                </parameter_list>
+            </function_declarator>
+        </pointer_declarator>
+        <compound_statement>
+            <"{" text="{" />
+            <declaration>
+                <primitive_type text="size_t" />
+                <init_declarator>
+                    <identifier text="mask" />
+                    <"=" text="=" />
+                    <binary_expression>
+                        <identifier text="align" />
+                        <"-" text="-" />
+                        <number_literal text="1" />
+                    </binary_expression>
+                </init_declarator>
+                <";" text=";" />
+            </declaration>
+            <declaration>
+                <primitive_type text="void" />
+                <init_declarator>
+                    <pointer_declarator>
+                        <"*" text="*" />
+                        <identifier text="ret" />
+                    </pointer_declarator>
+                    <"=" text="=" />
+                    <number_literal text="0" />
+                </init_declarator>
+                <";" text=";" />
+            </declaration>
+            <do_statement>
+                <do text="do" />
+                <compound_statement>
+                    <"{" text="{" />
+                    <if_statement>
+                        <if text="if" />
+                        <parenthesized_expression>
+                            <"(" text="(" />
+                            <call_expression>
+                                <identifier text="__builtin_expect" />
+                                <argument_list>
+                                    <"(" text="(" />
+                                    <unary_expression>
+                                        <"!" text="!" />
+                                        <unary_expression>
+                                            <"!" text="!" />
+                                            <parenthesized_expression>
+                                                <"(" text="(" />
+                                                <binary_expression>
+                                                    <identifier text="_brk_start" />
+                                                    <"==" text="==" />
+                                                    <number_literal text="0" />
+                                                </binary_expression>
+                                                <")" text=")" />
+                                            </parenthesized_expression>
+                                        </unary_expression>
+                                    </unary_expression>
+                                    <"," text="," />
+                                    <number_literal text="0" />
+                                    <")" text=")" />
+                                </argument_list>
+                            </call_expression>
+                            <")" text=")" />
+                        </parenthesized_expression>
+                        <do_statement>
+                            <do text="do" />
+                            <compound_statement>
+                                <"{" text="{" />
+                                <expression_statement>
+                                    <call_expression>
+                                        <identifier text="printf" />
+                                        <argument_list>
+                                            <"(" text="(" />
+                                            <string_literal>
+                                                <"\"" text="\"" />
+                                                <string_content text="wrong1" />
+                                                <escape_sequence text="\\n" />
+                                                <"\"" text="\"" />
+                                            </string_literal>
+                                            <")" text=")" />
+                                        </argument_list>
+                                    </call_expression>
+                                    <";" text=";" />
+                                </expression_statement>
+                                <"}" text="}" />
+                            </compound_statement>
+                            <while text="while" />
+                            <parenthesized_expression>
+                                <"(" text="(" />
+                                <number_literal text="0" />
+                                <")" text=")" />
+                            </parenthesized_expression>
+                            <";" text=";" />
+                        </do_statement>
+                    </if_statement>
+                    <"}" text="}" />
+                </compound_statement>
+                <while text="while" />
+                <parenthesized_expression>
+                    <"(" text="(" />
+                    <number_literal text="0" />
+                    <")" text=")" />
+                </parenthesized_expression>
+                <";" text=";" />
+            </do_statement>
+            <expression_statement>
+                <assignment_expression>
+                    <identifier text="_brk_end" />
+                    <"=" text="=" />
+                    <binary_expression>
+                        <parenthesized_expression>
+                            <"(" text="(" />
+                            <binary_expression>
+                                <identifier text="_brk_end" />
+                                <"+" text="+" />
+                                <identifier text="mask" />
+                            </binary_expression>
+                            <")" text=")" />
+                        </parenthesized_expression>
+                        <"&" text="&" />
+                        <unary_expression>
+                            <"~" text="~" />
+                            <identifier text="mask" />
+                        </unary_expression>
+                    </binary_expression>
+                </assignment_expression>
+                <";" text=";" />
+            </expression_statement>
+            <expression_statement>
+                <assignment_expression>
+                    <identifier text="ret" />
+                    <"=" text="=" />
+                    <cast_expression>
+                        <"(" text="(" />
+                        <type_descriptor>
+                            <primitive_type text="void" />
+                            <abstract_pointer_declarator>
+                                <"*" text="*" />
+                            </abstract_pointer_declarator>
+                        </type_descriptor>
+                        <")" text=")" />
+                        <identifier text="_brk_end" />
+                    </cast_expression>
+                </assignment_expression>
+                <";" text=";" />
+            </expression_statement>
+            <expression_statement>
+                <assignment_expression>
+                    <identifier text="_brk_end" />
+                    <"+=" text="+=" />
+                    <identifier text="size" />
+                </assignment_expression>
+                <";" text=";" />
+            </expression_statement>
+            <return_statement>
+                <return text="return" />
+                <identifier text="ret" />
+                <";" text=";" />
+            </return_statement>
+            <"}" text="}" />
+        </compound_statement>
+    </function_definition>
+    <function_definition>
+        <storage_class_specifier>
+            <static text="static" />
+        </storage_class_specifier>
+        <primitive_type text="void" />
+        <function_declarator>
+            <identifier text="get_args" />
+            <parameter_list>
+                <"(" text="(" />
+                <parameter_declaration>
+                    <primitive_type text="int" />
+                    <identifier text="a" />
+                </parameter_declaration>
+                <"," text="," />
+                <parameter_declaration>
+                    <primitive_type text="int" />
+                    <identifier text="b" />
+                </parameter_declaration>
+                <")" text=")" />
+            </parameter_list>
+        </function_declarator>
+        <compound_statement>
+            <"{" text="{" />
+            <if_statement>
+                <if text="if" />
+                <parenthesized_expression>
+                    <"(" text="(" />
+                    <binary_expression>
+                        <identifier text="a" />
+                        <"!=" text="!=" />
+                        <number_literal text="1" />
+                    </binary_expression>
+                    <")" text=")" />
+                </parenthesized_expression>
+                <expression_statement>
+                    <call_expression>
+                        <identifier text="printf" />
+                        <argument_list>
+                            <"(" text="(" />
+                            <string_literal>
+                                <"\"" text="\"" />
+                                <string_content text="wrong2" />
+                                <escape_sequence text="\\n" />
+                                <"\"" text="\"" />
+                            </string_literal>
+                            <")" text=")" />
+                        </argument_list>
+                    </call_expression>
+                    <";" text=";" />
+                </expression_statement>
+                <else_clause>
+                    <else text="else" />
+                    <expression_statement>
+                        <call_expression>
+                            <identifier text="printf" />
+                            <argument_list>
+                                <"(" text="(" />
+                                <string_literal>
+                                    <"\"" text="\"" />
+                                    <string_content text="okay" />
+                                    <escape_sequence text="\\n" />
+                                    <"\"" text="\"" />
+                                </string_literal>
+                                <")" text=")" />
+                            </argument_list>
+                        </call_expression>
+                        <";" text=";" />
+                    </expression_statement>
+                </else_clause>
+            </if_statement>
+            <"}" text="}" />
+        </compound_statement>
+    </function_definition>
+    <function_definition>
+        <primitive_type text="void" />
+        <function_declarator>
+            <identifier text="bla" />
+            <parameter_list>
+                <"(" text="(" />
+                <parameter_declaration>
+                    <primitive_type text="void" />
+                </parameter_declaration>
+                <")" text=")" />
+            </parameter_list>
+        </function_declarator>
+        <compound_statement>
+            <"{" text="{" />
+            <declaration>
+                <primitive_type text="int" />
+                <init_declarator>
+                    <identifier text="__ret" />
+                    <"=" text="=" />
+                    <number_literal text="42" />
+                </init_declarator>
+                <";" text=";" />
+            </declaration>
+            <ERROR>
+                <"(" text="(" />
+            </ERROR>
+            <compound_statement>
+                <"{" text="{" />
+                <if_statement>
+                    <if text="if" />
+                    <parenthesized_expression>
+                        <"(" text="(" />
+                        <call_expression>
+                            <identifier text="__builtin_expect" />
+                            <argument_list>
+                                <"(" text="(" />
+                                <unary_expression>
+                                    <"!" text="!" />
+                                    <unary_expression>
+                                        <"!" text="!" />
+                                        <parenthesized_expression>
+                                            <"(" text="(" />
+                                            <number_literal text="0" />
+                                            <")" text=")" />
+                                        </parenthesized_expression>
+                                    </unary_expression>
+                                </unary_expression>
+                                <"," text="," />
+                                <number_literal text="0" />
+                                <")" text=")" />
+                            </argument_list>
+                        </call_expression>
+                        <")" text=")" />
+                    </parenthesized_expression>
+                    <compound_statement>
+                        <"{" text="{" />
+                        <if_statement>
+                            <if text="if" />
+                            <parenthesized_expression>
+                                <"(" text="(" />
+                                <call_expression>
+                                    <identifier text="__builtin_expect" />
+                                    <argument_list>
+                                        <"(" text="(" />
+                                        <unary_expression>
+                                            <"!" text="!" />
+                                            <unary_expression>
+                                                <"!" text="!" />
+                                                <identifier text="__ret" />
+                                            </unary_expression>
+                                        </unary_expression>
+                                        <"," text="," />
+                                        <number_literal text="0" />
+                                        <")" text=")" />
+                                    </argument_list>
+                                </call_expression>
+                                <")" text=")" />
+                            </parenthesized_expression>
+                            <expression_statement>
+                                <call_expression>
+                                    <identifier text="printf" />
+                                    <argument_list>
+                                        <"(" text="(" />
+                                        <string_literal>
+                                            <"\"" text="\"" />
+                                            <string_content text="wrong3" />
+                                            <escape_sequence text="\\n" />
+                                            <"\"" text="\"" />
+                                        </string_literal>
+                                        <")" text=")" />
+                                    </argument_list>
+                                </call_expression>
+                                <";" text=";" />
+                            </expression_statement>
+                        </if_statement>
+                        <declaration>
+                            <primitive_type text="int" />
+                            <init_declarator>
+                                <identifier text="x" />
+                                <"=" text="=" />
+                                <unary_expression>
+                                    <"!" text="!" />
+                                    <unary_expression>
+                                        <"!" text="!" />
+                                        <parenthesized_expression>
+                                            <"(" text="(" />
+                                            <identifier text="__ret" />
+                                            <")" text=")" />
+                                        </parenthesized_expression>
+                                    </unary_expression>
+                                </unary_expression>
+                            </init_declarator>
+                            <";" text=";" />
+                        </declaration>
+                        <"}" text="}" />
+                    </compound_statement>
+                </if_statement>
+                <expression_statement>
+                    <identifier text="__ret" />
+                    <";" text=";" />
+                </expression_statement>
+                <"}" text="}" />
+            </compound_statement>
+            <ERROR>
+                <")" text=")" />
+            </ERROR>
+            <expression_statement>
+                <";" text=";" />
+            </expression_statement>
+            <expression_statement>
+                <call_expression>
+                    <identifier text="get_args" />
+                    <argument_list>
+                        <"(" text="(" />
+                        <unary_expression>
+                            <"!" text="!" />
+                            <unary_expression>
+                                <"!" text="!" />
+                                <identifier text="__ret" />
+                            </unary_expression>
+                        </unary_expression>
+                        <"," text="," />
+                        <sizeof_expression>
+                            <sizeof text="sizeof" />
+                            <parenthesized_expression>
+                                <"(" text="(" />
+                                <identifier text="__ret" />
+                                <")" text=")" />
+                            </parenthesized_expression>
+                        </sizeof_expression>
+                        <")" text=")" />
+                    </argument_list>
+                </call_expression>
+                <";" text=";" />
+            </expression_statement>
+            <"}" text="}" />
+        </compound_statement>
+    </function_definition>
+    <function_definition>
+        <type_identifier text="_Bool" />
+        <function_declarator>
+            <identifier text="chk" />
+            <parameter_list>
+                <"(" text="(" />
+                <parameter_declaration>
+                    <sized_type_specifier>
+                        <unsigned text="unsigned" />
+                        <long text="long" />
+                    </sized_type_specifier>
+                    <identifier text="addr" />
+                </parameter_declaration>
+                <"," text="," />
+                <parameter_declaration>
+                    <sized_type_specifier>
+                        <unsigned text="unsigned" />
+                        <long text="long" />
+                    </sized_type_specifier>
+                    <identifier text="limit" />
+                </parameter_declaration>
+                <"," text="," />
+                <parameter_declaration>
+                    <sized_type_specifier>
+                        <unsigned text="unsigned" />
+                        <long text="long" />
+                    </sized_type_specifier>
+                    <identifier text="size" />
+                </parameter_declaration>
+                <")" text=")" />
+            </parameter_list>
+        </function_declarator>
+        <compound_statement>
+            <"{" text="{" />
+            <declaration>
+                <type_identifier text="_Bool" />
+                <identifier text="ret" />
+                <";" text=";" />
+            </declaration>
+            <comment text="/* This just needs to compile, no runtime test.  (And it doesn't compile\n     only with certain internal checking added that's not committed).  */" />
+            <if_statement>
+                <if text="if" />
+                <parenthesized_expression>
+                    <"(" text="(" />
+                    <number_literal text="0" />
+                    <")" text=")" />
+                </parenthesized_expression>
+                <expression_statement>
+                    <assignment_expression>
+                        <identifier text="ret" />
+                        <"=" text="=" />
+                        <binary_expression>
+                            <number_literal text="0" />
+                            <"!=" text="!=" />
+                            <parenthesized_expression>
+                                <"(" text="(" />
+                                <unary_expression>
+                                    <"!" text="!" />
+                                    <unary_expression>
+                                        <"!" text="!" />
+                                        <parenthesized_expression>
+                                            <"(" text="(" />
+                                            <binary_expression>
+                                                <identifier text="addr" />
+                                                <">" text=">" />
+                                                <binary_expression>
+                                                    <identifier text="limit" />
+                                                    <"-" text="-" />
+                                                    <identifier text="size" />
+                                                </binary_expression>
+                                            </binary_expression>
+                                            <")" text=")" />
+                                        </parenthesized_expression>
+                                    </unary_expression>
+                                </unary_expression>
+                                <")" text=")" />
+                            </parenthesized_expression>
+                        </binary_expression>
+                    </assignment_expression>
+                    <";" text=";" />
+                </expression_statement>
+            </if_statement>
+            <"}" text="}" />
+        </compound_statement>
+    </function_definition>
+    <function_definition>
+        <primitive_type text="int" />
+        <function_declarator>
+            <identifier text="main" />
+            <parameter_list>
+                <"(" text="(" />
+                <")" text=")" />
+            </parameter_list>
+        </function_declarator>
+        <compound_statement>
+            <"{" text="{" />
+            <declaration>
+                <primitive_type text="void" />
+                <pointer_declarator>
+                    <"*" text="*" />
+                    <identifier text="r" />
+                </pointer_declarator>
+                <";" text=";" />
+            </declaration>
+            <expression_statement>
+                <assignment_expression>
+                    <identifier text="_brk_start" />
+                    <"=" text="=" />
+                    <number_literal text="1024" />
+                </assignment_expression>
+                <";" text=";" />
+            </expression_statement>
+            <expression_statement>
+                <assignment_expression>
+                    <identifier text="_brk_end" />
+                    <"=" text="=" />
+                    <number_literal text="1024" />
+                </assignment_expression>
+                <";" text=";" />
+            </expression_statement>
+            <expression_statement>
+                <assignment_expression>
+                    <identifier text="r" />
+                    <"=" text="=" />
+                    <call_expression>
+                        <identifier text="extend_brk" />
+                        <argument_list>
+                            <"(" text="(" />
+                            <number_literal text="4096" />
+                            <"," text="," />
+                            <number_literal text="16" />
+                            <")" text=")" />
+                        </argument_list>
+                    </call_expression>
+                </assignment_expression>
+                <";" text=";" />
+            </expression_statement>
+            <if_statement>
+                <if text="if" />
+                <parenthesized_expression>
+                    <"(" text="(" />
+                    <unary_expression>
+                        <"!" text="!" />
+                        <identifier text="r" />
+                    </unary_expression>
+                    <")" text=")" />
+                </parenthesized_expression>
+                <expression_statement>
+                    <call_expression>
+                        <identifier text="printf" />
+                        <argument_list>
+                            <"(" text="(" />
+                            <string_literal>
+                                <"\"" text="\"" />
+                                <string_content text="wrong4" />
+                                <escape_sequence text="\\n" />
+                                <"\"" text="\"" />
+                            </string_literal>
+                            <")" text=")" />
+                        </argument_list>
+                    </call_expression>
+                    <";" text=";" />
+                </expression_statement>
+                <else_clause>
+                    <else text="else" />
+                    <expression_statement>
+                        <call_expression>
+                            <identifier text="printf" />
+                            <argument_list>
+                                <"(" text="(" />
+                                <string_literal>
+                                    <"\"" text="\"" />
+                                    <string_content text="okay" />
+                                    <escape_sequence text="\\n" />
+                                    <"\"" text="\"" />
+                                </string_literal>
+                                <")" text=")" />
+                            </argument_list>
+                        </call_expression>
+                        <";" text=";" />
+                    </expression_statement>
+                </else_clause>
+            </if_statement>
+            <expression_statement>
+                <call_expression>
+                    <identifier text="bla" />
+                    <argument_list>
+                        <"(" text="(" />
+                        <")" text=")" />
+                    </argument_list>
+                </call_expression>
+                <";" text=";" />
+            </expression_statement>
+            <return_statement>
+                <return text="return" />
+                <number_literal text="0" />
+                <";" text=";" />
+            </return_statement>
+            <"}" text="}" />
+        </compound_statement>
+    </function_definition>
+</translation_unit>

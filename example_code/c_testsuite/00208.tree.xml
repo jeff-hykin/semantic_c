@@ -1,0 +1,318 @@
+<translation_unit>
+    <preproc_include>
+        <#include text="#include" />
+        <system_lib_string text="<stdio.h>" />
+    </preproc_include>
+    <struct_specifier>
+        <struct text="struct" />
+        <type_identifier text="wchar" />
+        <field_declaration_list>
+            <"{" text="{" />
+            <field_declaration>
+                <primitive_type text="char" />
+                <pointer_declarator>
+                    <"*" text="*" />
+                    <field_identifier text="data" />
+                </pointer_declarator>
+                <";" text=";" />
+            </field_declaration>
+            <field_declaration>
+                <primitive_type text="char" />
+                <array_declarator>
+                    <field_identifier text="mem" />
+                    <"[" text="[" />
+                    <number_literal text="1" />
+                    <"]" text="]" />
+                </array_declarator>
+                <";" text=";" />
+            </field_declaration>
+            <"}" text="}" />
+        </field_declaration_list>
+    </struct_specifier>
+    <";" text=";" />
+    <struct_specifier>
+        <struct text="struct" />
+        <type_identifier text="wint" />
+        <field_declaration_list>
+            <"{" text="{" />
+            <field_declaration>
+                <primitive_type text="char" />
+                <pointer_declarator>
+                    <"*" text="*" />
+                    <field_identifier text="data" />
+                </pointer_declarator>
+                <";" text=";" />
+            </field_declaration>
+            <field_declaration>
+                <primitive_type text="int" />
+                <array_declarator>
+                    <field_identifier text="mem" />
+                    <"[" text="[" />
+                    <number_literal text="1" />
+                    <"]" text="]" />
+                </array_declarator>
+                <";" text=";" />
+            </field_declaration>
+            <"}" text="}" />
+        </field_declaration_list>
+    </struct_specifier>
+    <";" text=";" />
+    <function_definition>
+        <primitive_type text="int" />
+        <function_declarator>
+            <identifier text="f1char" />
+            <parameter_list>
+                <"(" text="(" />
+                <parameter_declaration>
+                    <primitive_type text="void" />
+                </parameter_declaration>
+                <")" text=")" />
+            </parameter_list>
+        </function_declarator>
+        <compound_statement>
+            <"{" text="{" />
+            <declaration>
+                <primitive_type text="char" />
+                <init_declarator>
+                    <array_declarator>
+                        <identifier text="s" />
+                        <"[" text="[" />
+                        <number_literal text="9" />
+                        <"]" text="]" />
+                    </array_declarator>
+                    <"=" text="=" />
+                    <string_literal>
+                        <"\"" text="\"" />
+                        <string_content text="nonono" />
+                        <"\"" text="\"" />
+                    </string_literal>
+                </init_declarator>
+                <";" text=";" />
+            </declaration>
+            <declaration>
+                <struct_specifier>
+                    <struct text="struct" />
+                    <type_identifier text="wchar" />
+                </struct_specifier>
+                <init_declarator>
+                    <identifier text="q" />
+                    <"=" text="=" />
+                    <initializer_list>
+                        <"{" text="{" />
+                        <string_literal>
+                            <"\"" text="\"" />
+                            <string_content text="bugs" />
+                            <"\"" text="\"" />
+                        </string_literal>
+                        <"}" text="}" />
+                    </initializer_list>
+                </init_declarator>
+                <";" text=";" />
+            </declaration>
+            <return_statement>
+                <return text="return" />
+                <unary_expression>
+                    <"!" text="!" />
+                    <subscript_expression>
+                        <identifier text="s" />
+                        <"[" text="[" />
+                        <number_literal text="0" />
+                        <"]" text="]" />
+                    </subscript_expression>
+                </unary_expression>
+                <";" text=";" />
+            </return_statement>
+            <"}" text="}" />
+        </compound_statement>
+    </function_definition>
+    <function_definition>
+        <primitive_type text="int" />
+        <function_declarator>
+            <identifier text="f1int" />
+            <parameter_list>
+                <"(" text="(" />
+                <parameter_declaration>
+                    <primitive_type text="void" />
+                </parameter_declaration>
+                <")" text=")" />
+            </parameter_list>
+        </function_declarator>
+        <compound_statement>
+            <"{" text="{" />
+            <declaration>
+                <primitive_type text="char" />
+                <init_declarator>
+                    <array_declarator>
+                        <identifier text="s" />
+                        <"[" text="[" />
+                        <number_literal text="9" />
+                        <"]" text="]" />
+                    </array_declarator>
+                    <"=" text="=" />
+                    <string_literal>
+                        <"\"" text="\"" />
+                        <string_content text="nonono" />
+                        <"\"" text="\"" />
+                    </string_literal>
+                </init_declarator>
+                <";" text=";" />
+            </declaration>
+            <declaration>
+                <struct_specifier>
+                    <struct text="struct" />
+                    <type_identifier text="wint" />
+                </struct_specifier>
+                <init_declarator>
+                    <identifier text="q" />
+                    <"=" text="=" />
+                    <initializer_list>
+                        <"{" text="{" />
+                        <string_literal>
+                            <"\"" text="\"" />
+                            <string_content text="bugs" />
+                            <"\"" text="\"" />
+                        </string_literal>
+                        <"}" text="}" />
+                    </initializer_list>
+                </init_declarator>
+                <";" text=";" />
+            </declaration>
+            <return_statement>
+                <return text="return" />
+                <unary_expression>
+                    <"!" text="!" />
+                    <subscript_expression>
+                        <identifier text="s" />
+                        <"[" text="[" />
+                        <number_literal text="0" />
+                        <"]" text="]" />
+                    </subscript_expression>
+                </unary_expression>
+                <";" text=";" />
+            </return_statement>
+            <"}" text="}" />
+        </compound_statement>
+    </function_definition>
+    <function_definition>
+        <primitive_type text="int" />
+        <function_declarator>
+            <identifier text="main" />
+            <parameter_list>
+                <"(" text="(" />
+                <parameter_declaration>
+                    <primitive_type text="void" />
+                </parameter_declaration>
+                <")" text=")" />
+            </parameter_list>
+        </function_declarator>
+        <compound_statement>
+            <"{" text="{" />
+            <declaration>
+                <primitive_type text="char" />
+                <init_declarator>
+                    <array_declarator>
+                        <identifier text="s" />
+                        <"[" text="[" />
+                        <number_literal text="9" />
+                        <"]" text="]" />
+                    </array_declarator>
+                    <"=" text="=" />
+                    <string_literal>
+                        <"\"" text="\"" />
+                        <string_content text="nonono" />
+                        <"\"" text="\"" />
+                    </string_literal>
+                </init_declarator>
+                <";" text=";" />
+            </declaration>
+            <declaration>
+                <storage_class_specifier>
+                    <static text="static" />
+                </storage_class_specifier>
+                <struct_specifier>
+                    <struct text="struct" />
+                    <type_identifier text="wchar" />
+                </struct_specifier>
+                <init_declarator>
+                    <identifier text="q" />
+                    <"=" text="=" />
+                    <initializer_list>
+                        <"{" text="{" />
+                        <string_literal>
+                            <"\"" text="\"" />
+                            <string_content text="bugs" />
+                            <"\"" text="\"" />
+                        </string_literal>
+                        <"," text="," />
+                        <initializer_list>
+                            <"{" text="{" />
+                            <char_literal>
+                                <"'" text="'" />
+                                <character text="c" />
+                                <"'" text="'" />
+                            </char_literal>
+                            <"}" text="}" />
+                        </initializer_list>
+                        <"}" text="}" />
+                    </initializer_list>
+                </init_declarator>
+                <";" text=";" />
+            </declaration>
+            <comment text="//printf (\"tcc has %s %s\\n\", s, q.data);" />
+            <if_statement>
+                <if text="if" />
+                <parenthesized_expression>
+                    <"(" text="(" />
+                    <binary_expression>
+                        <call_expression>
+                            <identifier text="f1char" />
+                            <argument_list>
+                                <"(" text="(" />
+                                <")" text=")" />
+                            </argument_list>
+                        </call_expression>
+                        <"||" text="||" />
+                        <call_expression>
+                            <identifier text="f1int" />
+                            <argument_list>
+                                <"(" text="(" />
+                                <")" text=")" />
+                            </argument_list>
+                        </call_expression>
+                    </binary_expression>
+                    <")" text=")" />
+                </parenthesized_expression>
+                <expression_statement>
+                    <call_expression>
+                        <identifier text="printf" />
+                        <argument_list>
+                            <"(" text="(" />
+                            <string_literal>
+                                <"\"" text="\"" />
+                                <string_content text="bla" />
+                                <escape_sequence text="\\n" />
+                                <"\"" text="\"" />
+                            </string_literal>
+                            <")" text=")" />
+                        </argument_list>
+                    </call_expression>
+                    <";" text=";" />
+                </expression_statement>
+            </if_statement>
+            <return_statement>
+                <return text="return" />
+                <unary_expression>
+                    <"!" text="!" />
+                    <subscript_expression>
+                        <identifier text="s" />
+                        <"[" text="[" />
+                        <number_literal text="0" />
+                        <"]" text="]" />
+                    </subscript_expression>
+                </unary_expression>
+                <";" text=";" />
+            </return_statement>
+            <"}" text="}" />
+        </compound_statement>
+    </function_definition>
+</translation_unit>

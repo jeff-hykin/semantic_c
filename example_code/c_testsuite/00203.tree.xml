@@ -1,0 +1,134 @@
+<translation_unit>
+    <preproc_include>
+        <#include text="#include" />
+        <system_lib_string text="<stdio.h>" />
+    </preproc_include>
+    <function_definition>
+        <primitive_type text="int" />
+        <function_declarator>
+            <identifier text="main" />
+            <parameter_list>
+                <"(" text="(" />
+                <")" text=")" />
+            </parameter_list>
+        </function_declarator>
+        <compound_statement>
+            <"{" text="{" />
+            <declaration>
+                <sized_type_specifier>
+                    <long text="long" />
+                    <long text="long" />
+                    <primitive_type text="int" />
+                </sized_type_specifier>
+                <init_declarator>
+                    <identifier text="res" />
+                    <"=" text="=" />
+                    <number_literal text="0" />
+                </init_declarator>
+                <";" text=";" />
+            </declaration>
+            <if_statement>
+                <if text="if" />
+                <parenthesized_expression>
+                    <"(" text="(" />
+                    <binary_expression>
+                        <identifier text="res" />
+                        <"<" text="<" />
+                        <number_literal text="-2147483648LL" />
+                    </binary_expression>
+                    <")" text=")" />
+                </parenthesized_expression>
+                <compound_statement>
+                    <"{" text="{" />
+                    <expression_statement>
+                        <call_expression>
+                            <identifier text="printf" />
+                            <argument_list>
+                                <"(" text="(" />
+                                <string_literal>
+                                    <"\"" text="\"" />
+                                    <string_content text="Error: 0 < -2147483648" />
+                                    <escape_sequence text="\\n" />
+                                    <"\"" text="\"" />
+                                </string_literal>
+                                <")" text=")" />
+                            </argument_list>
+                        </call_expression>
+                        <";" text=";" />
+                    </expression_statement>
+                    <return_statement>
+                        <return text="return" />
+                        <number_literal text="1" />
+                        <";" text=";" />
+                    </return_statement>
+                    <"}" text="}" />
+                </compound_statement>
+                <else_clause>
+                    <else text="else" />
+                    <if_statement>
+                        <if text="if" />
+                        <parenthesized_expression>
+                            <"(" text="(" />
+                            <binary_expression>
+                                <number_literal text="2147483647LL" />
+                                <"<" text="<" />
+                                <identifier text="res" />
+                            </binary_expression>
+                            <")" text=")" />
+                        </parenthesized_expression>
+                        <compound_statement>
+                            <"{" text="{" />
+                            <expression_statement>
+                                <call_expression>
+                                    <identifier text="printf" />
+                                    <argument_list>
+                                        <"(" text="(" />
+                                        <string_literal>
+                                            <"\"" text="\"" />
+                                            <string_content text="Error: 2147483647 < 0" />
+                                            <escape_sequence text="\\n" />
+                                            <"\"" text="\"" />
+                                        </string_literal>
+                                        <")" text=")" />
+                                    </argument_list>
+                                </call_expression>
+                                <";" text=";" />
+                            </expression_statement>
+                            <return_statement>
+                                <return text="return" />
+                                <number_literal text="2" />
+                                <";" text=";" />
+                            </return_statement>
+                            <"}" text="}" />
+                        </compound_statement>
+                        <else_clause>
+                            <else text="else" />
+                            <expression_statement>
+                                <call_expression>
+                                    <identifier text="printf" />
+                                    <argument_list>
+                                        <"(" text="(" />
+                                        <string_literal>
+                                            <"\"" text="\"" />
+                                            <string_content text="long long constant test ok." />
+                                            <escape_sequence text="\\n" />
+                                            <"\"" text="\"" />
+                                        </string_literal>
+                                        <")" text=")" />
+                                    </argument_list>
+                                </call_expression>
+                                <";" text=";" />
+                            </expression_statement>
+                        </else_clause>
+                    </if_statement>
+                </else_clause>
+            </if_statement>
+            <return_statement>
+                <return text="return" />
+                <number_literal text="0" />
+                <";" text=";" />
+            </return_statement>
+            <"}" text="}" />
+        </compound_statement>
+    </function_definition>
+</translation_unit>

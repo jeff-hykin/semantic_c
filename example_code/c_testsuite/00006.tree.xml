@@ -1,0 +1,54 @@
+<translation_unit>
+    <function_definition>
+        <primitive_type text="int" />
+        <function_declarator>
+            <identifier text="main" />
+            <parameter_list>
+                <"(" text="(" />
+                <")" text=")" />
+            </parameter_list>
+        </function_declarator>
+        <compound_statement>
+            <"{" text="{" />
+            <declaration>
+                <primitive_type text="int" />
+                <identifier text="x" />
+                <";" text=";" />
+            </declaration>
+            <expression_statement>
+                <assignment_expression>
+                    <identifier text="x" />
+                    <"=" text="=" />
+                    <number_literal text="50" />
+                </assignment_expression>
+                <";" text=";" />
+            </expression_statement>
+            <while_statement>
+                <while text="while" />
+                <parenthesized_expression>
+                    <"(" text="(" />
+                    <identifier text="x" />
+                    <")" text=")" />
+                </parenthesized_expression>
+                <expression_statement>
+                    <assignment_expression>
+                        <identifier text="x" />
+                        <"=" text="=" />
+                        <binary_expression>
+                            <identifier text="x" />
+                            <"-" text="-" />
+                            <number_literal text="1" />
+                        </binary_expression>
+                    </assignment_expression>
+                    <";" text=";" />
+                </expression_statement>
+            </while_statement>
+            <return_statement>
+                <return text="return" />
+                <identifier text="x" />
+                <";" text=";" />
+            </return_statement>
+            <"}" text="}" />
+        </compound_statement>
+    </function_definition>
+</translation_unit>

@@ -1,0 +1,106 @@
+<translation_unit>
+    <preproc_include>
+        <#include text="#include" />
+        <system_lib_string text="<stdio.h>" />
+        <comment text="// printf()" />
+    </preproc_include>
+    <preproc_function_def>
+        <#define text="#define" />
+        <identifier text="CAT2" />
+        <preproc_params>
+            <"(" text="(" />
+            <identifier text="a" />
+            <"," text="," />
+            <identifier text="b" />
+            <")" text=")" />
+        </preproc_params>
+        <preproc_arg text="a##b" />
+    </preproc_function_def>
+    <preproc_function_def>
+        <#define text="#define" />
+        <identifier text="CAT" />
+        <preproc_params>
+            <"(" text="(" />
+            <identifier text="a" />
+            <"," text="," />
+            <identifier text="b" />
+            <")" text=")" />
+        </preproc_params>
+        <preproc_arg text="CAT2(a,b)" />
+    </preproc_function_def>
+    <preproc_function_def>
+        <#define text="#define" />
+        <identifier text="AB" />
+        <preproc_params>
+            <"(" text="(" />
+            <identifier text="x" />
+            <")" text=")" />
+        </preproc_params>
+        <preproc_arg text="CAT(x,y)" />
+    </preproc_function_def>
+    <function_definition>
+        <primitive_type text="int" />
+        <function_declarator>
+            <identifier text="main" />
+            <parameter_list>
+                <"(" text="(" />
+                <parameter_declaration>
+                    <primitive_type text="void" />
+                </parameter_declaration>
+                <")" text=")" />
+            </parameter_list>
+        </function_declarator>
+        <compound_statement>
+            <"{" text="{" />
+            <declaration>
+                <primitive_type text="int" />
+                <init_declarator>
+                    <identifier text="xy" />
+                    <"=" text="=" />
+                    <number_literal text="42" />
+                </init_declarator>
+                <";" text=";" />
+            </declaration>
+            <expression_statement>
+                <call_expression>
+                    <identifier text="printf" />
+                    <argument_list>
+                        <"(" text="(" />
+                        <string_literal>
+                            <"\"" text="\"" />
+                            <string_content text="%d" />
+                            <escape_sequence text="\\n" />
+                            <"\"" text="\"" />
+                        </string_literal>
+                        <"," text="," />
+                        <call_expression>
+                            <call_expression>
+                                <identifier text="CAT" />
+                                <argument_list>
+                                    <"(" text="(" />
+                                    <identifier text="A" />
+                                    <"," text="," />
+                                    <identifier text="B" />
+                                    <")" text=")" />
+                                </argument_list>
+                            </call_expression>
+                            <argument_list>
+                                <"(" text="(" />
+                                <identifier text="x" />
+                                <")" text=")" />
+                            </argument_list>
+                        </call_expression>
+                        <")" text=")" />
+                    </argument_list>
+                </call_expression>
+                <";" text=";" />
+            </expression_statement>
+            <return_statement>
+                <return text="return" />
+                <number_literal text="0" />
+                <";" text=";" />
+            </return_statement>
+            <"}" text="}" />
+        </compound_statement>
+    </function_definition>
+</translation_unit>

@@ -1,0 +1,84 @@
+<translation_unit>
+    <preproc_def>
+        <#define text="#define" />
+        <identifier text="A" />
+        <preproc_arg text="3" />
+    </preproc_def>
+    <preproc_function_def>
+        <#define text="#define" />
+        <identifier text="FOO" />
+        <preproc_params>
+            <"(" text="(" />
+            <identifier text="X" />
+            <"," text="," />
+            <identifier text="Y" />
+            <"," text="," />
+            <identifier text="Z" />
+            <")" text=")" />
+        </preproc_params>
+        <preproc_arg text="X + Y + Z" />
+    </preproc_function_def>
+    <preproc_def>
+        <#define text="#define" />
+        <identifier text="SEMI" />
+        <preproc_arg text=";" />
+    </preproc_def>
+    <function_definition>
+        <primitive_type text="int" />
+        <function_declarator>
+            <identifier text="main" />
+            <parameter_list>
+                <"(" text="(" />
+                <")" text=")" />
+            </parameter_list>
+        </function_declarator>
+        <compound_statement>
+            <"{" text="{" />
+            <if_statement>
+                <if text="if" />
+                <parenthesized_expression>
+                    <"(" text="(" />
+                    <binary_expression>
+                        <call_expression>
+                            <identifier text="FOO" />
+                            <argument_list>
+                                <"(" text="(" />
+                                <number_literal text="1" />
+                                <"," text="," />
+                                <number_literal text="2" />
+                                <"," text="," />
+                                <identifier text="A" />
+                                <")" text=")" />
+                            </argument_list>
+                        </call_expression>
+                        <"!=" text="!=" />
+                        <number_literal text="6" />
+                    </binary_expression>
+                    <")" text=")" />
+                </parenthesized_expression>
+                <ERROR>
+                    <return text="return" />
+                    <number_literal text="1" />
+                    <identifier text="SEMI" />
+                </ERROR>
+                <return_statement>
+                    <return text="return" />
+                    <call_expression>
+                        <identifier text="FOO" />
+                        <argument_list>
+                            <"(" text="(" />
+                            <number_literal text="0" />
+                            <"," text="," />
+                            <number_literal text="0" />
+                            <"," text="," />
+                            <number_literal text="0" />
+                            <")" text=")" />
+                        </argument_list>
+                    </call_expression>
+                    <";" text=";" />
+                </return_statement>
+            </if_statement>
+            <"}" text="}" />
+        </compound_statement>
+    </function_definition>
+</translation_unit>

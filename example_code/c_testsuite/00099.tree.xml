@@ -1,0 +1,71 @@
+<translation_unit>
+    <type_definition>
+        <typedef text="typedef" />
+        <struct_specifier>
+            <struct text="struct" />
+            <field_declaration_list>
+                <"{" text="{" />
+                <field_declaration>
+                    <primitive_type text="int" />
+                    <field_identifier text="n" />
+                    <";" text=";" />
+                </field_declaration>
+                <"}" text="}" />
+            </field_declaration_list>
+        </struct_specifier>
+        <type_identifier text="Vec" />
+        <";" text=";" />
+    </type_definition>
+    <function_definition>
+        <storage_class_specifier>
+            <static text="static" />
+        </storage_class_specifier>
+        <primitive_type text="void" />
+        <function_declarator>
+            <identifier text="vecresize" />
+            <parameter_list>
+                <"(" text="(" />
+                <parameter_declaration>
+                    <type_identifier text="Vec" />
+                    <pointer_declarator>
+                        <"*" text="*" />
+                        <identifier text="v" />
+                    </pointer_declarator>
+                </parameter_declaration>
+                <"," text="," />
+                <parameter_declaration>
+                    <primitive_type text="int" />
+                    <identifier text="cap" />
+                </parameter_declaration>
+                <")" text=")" />
+            </parameter_list>
+        </function_declarator>
+        <compound_statement>
+            <"{" text="{" />
+            <return_statement>
+                <return text="return" />
+                <";" text=";" />
+            </return_statement>
+            <"}" text="}" />
+        </compound_statement>
+    </function_definition>
+    <function_definition>
+        <primitive_type text="int" />
+        <function_declarator>
+            <identifier text="main" />
+            <parameter_list>
+                <"(" text="(" />
+                <")" text=")" />
+            </parameter_list>
+        </function_declarator>
+        <compound_statement>
+            <"{" text="{" />
+            <return_statement>
+                <return text="return" />
+                <number_literal text="0" />
+                <";" text=";" />
+            </return_statement>
+            <"}" text="}" />
+        </compound_statement>
+    </function_definition>
+</translation_unit>

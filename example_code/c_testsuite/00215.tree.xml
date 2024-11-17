@@ -1,0 +1,888 @@
+<translation_unit>
+    <declaration>
+        <storage_class_specifier>
+            <extern text="extern" />
+        </storage_class_specifier>
+        <primitive_type text="int" />
+        <function_declarator>
+            <identifier text="printf" />
+            <parameter_list>
+                <"(" text="(" />
+                <parameter_declaration>
+                    <type_qualifier>
+                        <const text="const" />
+                    </type_qualifier>
+                    <primitive_type text="char" />
+                    <pointer_declarator>
+                        <"*" text="*" />
+                        <identifier text="format" />
+                    </pointer_declarator>
+                </parameter_declaration>
+                <"," text="," />
+                <variadic_parameter>
+                    <"..." text="..." />
+                </variadic_parameter>
+                <")" text=")" />
+            </parameter_list>
+        </function_declarator>
+        <";" text=";" />
+    </declaration>
+    <function_definition>
+        <storage_class_specifier>
+            <static text="static" />
+        </storage_class_specifier>
+        <primitive_type text="void" />
+        <function_declarator>
+            <identifier text="kb_wait_1" />
+            <parameter_list>
+                <"(" text="(" />
+                <parameter_declaration>
+                    <primitive_type text="void" />
+                </parameter_declaration>
+                <")" text=")" />
+            </parameter_list>
+        </function_declarator>
+        <compound_statement>
+            <"{" text="{" />
+            <declaration>
+                <sized_type_specifier>
+                    <unsigned text="unsigned" />
+                    <long text="long" />
+                </sized_type_specifier>
+                <init_declarator>
+                    <identifier text="timeout" />
+                    <"=" text="=" />
+                    <number_literal text="2" />
+                </init_declarator>
+                <";" text=";" />
+            </declaration>
+            <do_statement>
+                <do text="do" />
+                <compound_statement>
+                    <"{" text="{" />
+                    <if_statement>
+                        <if text="if" />
+                        <parenthesized_expression>
+                            <"(" text="(" />
+                            <number_literal text="1" />
+                            <")" text=")" />
+                        </parenthesized_expression>
+                        <expression_statement>
+                            <call_expression>
+                                <identifier text="printf" />
+                                <argument_list>
+                                    <"(" text="(" />
+                                    <string_literal>
+                                        <"\"" text="\"" />
+                                        <string_content text="timeout=%ld" />
+                                        <escape_sequence text="\\n" />
+                                        <"\"" text="\"" />
+                                    </string_literal>
+                                    <"," text="," />
+                                    <identifier text="timeout" />
+                                    <")" text=")" />
+                                </argument_list>
+                            </call_expression>
+                            <";" text=";" />
+                        </expression_statement>
+                        <else_clause>
+                            <else text="else" />
+                            <compound_statement>
+                                <"{" text="{" />
+                                <while_statement>
+                                    <while text="while" />
+                                    <parenthesized_expression>
+                                        <"(" text="(" />
+                                        <number_literal text="1" />
+                                        <")" text=")" />
+                                    </parenthesized_expression>
+                                    <expression_statement>
+                                        <call_expression>
+                                            <identifier text="printf" />
+                                            <argument_list>
+                                                <"(" text="(" />
+                                                <string_literal>
+                                                    <"\"" text="\"" />
+                                                    <string_content text="error" />
+                                                    <escape_sequence text="\\n" />
+                                                    <"\"" text="\"" />
+                                                </string_literal>
+                                                <")" text=")" />
+                                            </argument_list>
+                                        </call_expression>
+                                        <";" text=";" />
+                                    </expression_statement>
+                                </while_statement>
+                                <"}" text="}" />
+                            </compound_statement>
+                        </else_clause>
+                    </if_statement>
+                    <expression_statement>
+                        <update_expression>
+                            <identifier text="timeout" />
+                            <"--" text="--" />
+                        </update_expression>
+                        <";" text=";" />
+                    </expression_statement>
+                    <"}" text="}" />
+                </compound_statement>
+                <while text="while" />
+                <parenthesized_expression>
+                    <"(" text="(" />
+                    <identifier text="timeout" />
+                    <")" text=")" />
+                </parenthesized_expression>
+                <";" text=";" />
+            </do_statement>
+            <"}" text="}" />
+        </compound_statement>
+    </function_definition>
+    <function_definition>
+        <storage_class_specifier>
+            <static text="static" />
+        </storage_class_specifier>
+        <primitive_type text="void" />
+        <function_declarator>
+            <identifier text="kb_wait_2" />
+            <parameter_list>
+                <"(" text="(" />
+                <parameter_declaration>
+                    <primitive_type text="void" />
+                </parameter_declaration>
+                <")" text=")" />
+            </parameter_list>
+        </function_declarator>
+        <compound_statement>
+            <"{" text="{" />
+            <declaration>
+                <sized_type_specifier>
+                    <unsigned text="unsigned" />
+                    <long text="long" />
+                </sized_type_specifier>
+                <init_declarator>
+                    <identifier text="timeout" />
+                    <"=" text="=" />
+                    <number_literal text="2" />
+                </init_declarator>
+                <";" text=";" />
+            </declaration>
+            <do_statement>
+                <do text="do" />
+                <compound_statement>
+                    <"{" text="{" />
+                    <if_statement>
+                        <if text="if" />
+                        <parenthesized_expression>
+                            <"(" text="(" />
+                            <number_literal text="1" />
+                            <")" text=")" />
+                        </parenthesized_expression>
+                        <expression_statement>
+                            <call_expression>
+                                <identifier text="printf" />
+                                <argument_list>
+                                    <"(" text="(" />
+                                    <string_literal>
+                                        <"\"" text="\"" />
+                                        <string_content text="timeout=%ld" />
+                                        <escape_sequence text="\\n" />
+                                        <"\"" text="\"" />
+                                    </string_literal>
+                                    <"," text="," />
+                                    <identifier text="timeout" />
+                                    <")" text=")" />
+                                </argument_list>
+                            </call_expression>
+                            <";" text=";" />
+                        </expression_statement>
+                        <else_clause>
+                            <else text="else" />
+                            <compound_statement>
+                                <"{" text="{" />
+                                <for_statement>
+                                    <for text="for" />
+                                    <"(" text="(" />
+                                    <";" text=";" />
+                                    <";" text=";" />
+                                    <")" text=")" />
+                                    <expression_statement>
+                                        <call_expression>
+                                            <identifier text="printf" />
+                                            <argument_list>
+                                                <"(" text="(" />
+                                                <string_literal>
+                                                    <"\"" text="\"" />
+                                                    <string_content text="error" />
+                                                    <escape_sequence text="\\n" />
+                                                    <"\"" text="\"" />
+                                                </string_literal>
+                                                <")" text=")" />
+                                            </argument_list>
+                                        </call_expression>
+                                        <";" text=";" />
+                                    </expression_statement>
+                                </for_statement>
+                                <"}" text="}" />
+                            </compound_statement>
+                        </else_clause>
+                    </if_statement>
+                    <expression_statement>
+                        <update_expression>
+                            <identifier text="timeout" />
+                            <"--" text="--" />
+                        </update_expression>
+                        <";" text=";" />
+                    </expression_statement>
+                    <"}" text="}" />
+                </compound_statement>
+                <while text="while" />
+                <parenthesized_expression>
+                    <"(" text="(" />
+                    <identifier text="timeout" />
+                    <")" text=")" />
+                </parenthesized_expression>
+                <";" text=";" />
+            </do_statement>
+            <"}" text="}" />
+        </compound_statement>
+    </function_definition>
+    <function_definition>
+        <storage_class_specifier>
+            <static text="static" />
+        </storage_class_specifier>
+        <primitive_type text="void" />
+        <function_declarator>
+            <identifier text="kb_wait_2_1" />
+            <parameter_list>
+                <"(" text="(" />
+                <parameter_declaration>
+                    <primitive_type text="void" />
+                </parameter_declaration>
+                <")" text=")" />
+            </parameter_list>
+        </function_declarator>
+        <compound_statement>
+            <"{" text="{" />
+            <declaration>
+                <sized_type_specifier>
+                    <unsigned text="unsigned" />
+                    <long text="long" />
+                </sized_type_specifier>
+                <init_declarator>
+                    <identifier text="timeout" />
+                    <"=" text="=" />
+                    <number_literal text="2" />
+                </init_declarator>
+                <";" text=";" />
+            </declaration>
+            <do_statement>
+                <do text="do" />
+                <compound_statement>
+                    <"{" text="{" />
+                    <if_statement>
+                        <if text="if" />
+                        <parenthesized_expression>
+                            <"(" text="(" />
+                            <number_literal text="1" />
+                            <")" text=")" />
+                        </parenthesized_expression>
+                        <expression_statement>
+                            <call_expression>
+                                <identifier text="printf" />
+                                <argument_list>
+                                    <"(" text="(" />
+                                    <string_literal>
+                                        <"\"" text="\"" />
+                                        <string_content text="timeout=%ld" />
+                                        <escape_sequence text="\\n" />
+                                        <"\"" text="\"" />
+                                    </string_literal>
+                                    <"," text="," />
+                                    <identifier text="timeout" />
+                                    <")" text=")" />
+                                </argument_list>
+                            </call_expression>
+                            <";" text=";" />
+                        </expression_statement>
+                        <else_clause>
+                            <else text="else" />
+                            <compound_statement>
+                                <"{" text="{" />
+                                <do_statement>
+                                    <do text="do" />
+                                    <compound_statement>
+                                        <"{" text="{" />
+                                        <expression_statement>
+                                            <call_expression>
+                                                <identifier text="printf" />
+                                                <argument_list>
+                                                    <"(" text="(" />
+                                                    <string_literal>
+                                                        <"\"" text="\"" />
+                                                        <string_content text="error" />
+                                                        <escape_sequence text="\\n" />
+                                                        <"\"" text="\"" />
+                                                    </string_literal>
+                                                    <")" text=")" />
+                                                </argument_list>
+                                            </call_expression>
+                                            <";" text=";" />
+                                        </expression_statement>
+                                        <"}" text="}" />
+                                    </compound_statement>
+                                    <while text="while" />
+                                    <parenthesized_expression>
+                                        <"(" text="(" />
+                                        <number_literal text="1" />
+                                        <")" text=")" />
+                                    </parenthesized_expression>
+                                    <";" text=";" />
+                                </do_statement>
+                                <"}" text="}" />
+                            </compound_statement>
+                        </else_clause>
+                    </if_statement>
+                    <expression_statement>
+                        <update_expression>
+                            <identifier text="timeout" />
+                            <"--" text="--" />
+                        </update_expression>
+                        <";" text=";" />
+                    </expression_statement>
+                    <"}" text="}" />
+                </compound_statement>
+                <while text="while" />
+                <parenthesized_expression>
+                    <"(" text="(" />
+                    <identifier text="timeout" />
+                    <")" text=")" />
+                </parenthesized_expression>
+                <";" text=";" />
+            </do_statement>
+            <"}" text="}" />
+        </compound_statement>
+    </function_definition>
+    <function_definition>
+        <storage_class_specifier>
+            <static text="static" />
+        </storage_class_specifier>
+        <primitive_type text="void" />
+        <function_declarator>
+            <identifier text="kb_wait_2_2" />
+            <parameter_list>
+                <"(" text="(" />
+                <parameter_declaration>
+                    <primitive_type text="void" />
+                </parameter_declaration>
+                <")" text=")" />
+            </parameter_list>
+        </function_declarator>
+        <compound_statement>
+            <"{" text="{" />
+            <declaration>
+                <sized_type_specifier>
+                    <unsigned text="unsigned" />
+                    <long text="long" />
+                </sized_type_specifier>
+                <init_declarator>
+                    <identifier text="timeout" />
+                    <"=" text="=" />
+                    <number_literal text="2" />
+                </init_declarator>
+                <";" text=";" />
+            </declaration>
+            <do_statement>
+                <do text="do" />
+                <compound_statement>
+                    <"{" text="{" />
+                    <if_statement>
+                        <if text="if" />
+                        <parenthesized_expression>
+                            <"(" text="(" />
+                            <number_literal text="1" />
+                            <")" text=")" />
+                        </parenthesized_expression>
+                        <expression_statement>
+                            <call_expression>
+                                <identifier text="printf" />
+                                <argument_list>
+                                    <"(" text="(" />
+                                    <string_literal>
+                                        <"\"" text="\"" />
+                                        <string_content text="timeout=%ld" />
+                                        <escape_sequence text="\\n" />
+                                        <"\"" text="\"" />
+                                    </string_literal>
+                                    <"," text="," />
+                                    <identifier text="timeout" />
+                                    <")" text=")" />
+                                </argument_list>
+                            </call_expression>
+                            <";" text=";" />
+                        </expression_statement>
+                        <else_clause>
+                            <else text="else" />
+                            <compound_statement>
+                                <"{" text="{" />
+                                <labeled_statement>
+                                    <statement_identifier text="label" />
+                                    <":" text=":" />
+                                    <expression_statement>
+                                        <call_expression>
+                                            <identifier text="printf" />
+                                            <argument_list>
+                                                <"(" text="(" />
+                                                <string_literal>
+                                                    <"\"" text="\"" />
+                                                    <string_content text="error" />
+                                                    <escape_sequence text="\\n" />
+                                                    <"\"" text="\"" />
+                                                </string_literal>
+                                                <")" text=")" />
+                                            </argument_list>
+                                        </call_expression>
+                                        <";" text=";" />
+                                    </expression_statement>
+                                </labeled_statement>
+                                <goto_statement>
+                                    <goto text="goto" />
+                                    <statement_identifier text="label" />
+                                    <";" text=";" />
+                                </goto_statement>
+                                <"}" text="}" />
+                            </compound_statement>
+                        </else_clause>
+                    </if_statement>
+                    <expression_statement>
+                        <update_expression>
+                            <identifier text="timeout" />
+                            <"--" text="--" />
+                        </update_expression>
+                        <";" text=";" />
+                    </expression_statement>
+                    <"}" text="}" />
+                </compound_statement>
+                <while text="while" />
+                <parenthesized_expression>
+                    <"(" text="(" />
+                    <identifier text="timeout" />
+                    <")" text=")" />
+                </parenthesized_expression>
+                <";" text=";" />
+            </do_statement>
+            <"}" text="}" />
+        </compound_statement>
+    </function_definition>
+    <function_definition>
+        <storage_class_specifier>
+            <static text="static" />
+        </storage_class_specifier>
+        <primitive_type text="void" />
+        <function_declarator>
+            <identifier text="kb_wait_3" />
+            <parameter_list>
+                <"(" text="(" />
+                <parameter_declaration>
+                    <primitive_type text="void" />
+                </parameter_declaration>
+                <")" text=")" />
+            </parameter_list>
+        </function_declarator>
+        <compound_statement>
+            <"{" text="{" />
+            <declaration>
+                <sized_type_specifier>
+                    <unsigned text="unsigned" />
+                    <long text="long" />
+                </sized_type_specifier>
+                <init_declarator>
+                    <identifier text="timeout" />
+                    <"=" text="=" />
+                    <number_literal text="2" />
+                </init_declarator>
+                <";" text=";" />
+            </declaration>
+            <do_statement>
+                <do text="do" />
+                <compound_statement>
+                    <"{" text="{" />
+                    <if_statement>
+                        <if text="if" />
+                        <parenthesized_expression>
+                            <"(" text="(" />
+                            <number_literal text="1" />
+                            <")" text=")" />
+                        </parenthesized_expression>
+                        <expression_statement>
+                            <call_expression>
+                                <identifier text="printf" />
+                                <argument_list>
+                                    <"(" text="(" />
+                                    <string_literal>
+                                        <"\"" text="\"" />
+                                        <string_content text="timeout=%ld" />
+                                        <escape_sequence text="\\n" />
+                                        <"\"" text="\"" />
+                                    </string_literal>
+                                    <"," text="," />
+                                    <identifier text="timeout" />
+                                    <")" text=")" />
+                                </argument_list>
+                            </call_expression>
+                            <";" text=";" />
+                        </expression_statement>
+                        <else_clause>
+                            <else text="else" />
+                            <compound_statement>
+                                <"{" text="{" />
+                                <declaration>
+                                    <primitive_type text="int" />
+                                    <init_declarator>
+                                        <identifier text="i" />
+                                        <"=" text="=" />
+                                        <number_literal text="1" />
+                                    </init_declarator>
+                                    <";" text=";" />
+                                </declaration>
+                                <goto_statement>
+                                    <goto text="goto" />
+                                    <statement_identifier text="label" />
+                                    <";" text=";" />
+                                </goto_statement>
+                                <expression_statement>
+                                    <assignment_expression>
+                                        <identifier text="i" />
+                                        <"=" text="=" />
+                                        <binary_expression>
+                                            <identifier text="i" />
+                                            <"+" text="+" />
+                                            <number_literal text="2" />
+                                        </binary_expression>
+                                    </assignment_expression>
+                                    <";" text=";" />
+                                </expression_statement>
+                                <labeled_statement>
+                                    <statement_identifier text="label" />
+                                    <":" text=":" />
+                                    <expression_statement>
+                                        <assignment_expression>
+                                            <identifier text="i" />
+                                            <"=" text="=" />
+                                            <binary_expression>
+                                                <identifier text="i" />
+                                                <"+" text="+" />
+                                                <number_literal text="3" />
+                                            </binary_expression>
+                                        </assignment_expression>
+                                        <";" text=";" />
+                                    </expression_statement>
+                                </labeled_statement>
+                                <"}" text="}" />
+                            </compound_statement>
+                        </else_clause>
+                    </if_statement>
+                    <expression_statement>
+                        <update_expression>
+                            <identifier text="timeout" />
+                            <"--" text="--" />
+                        </update_expression>
+                        <";" text=";" />
+                    </expression_statement>
+                    <"}" text="}" />
+                </compound_statement>
+                <while text="while" />
+                <parenthesized_expression>
+                    <"(" text="(" />
+                    <identifier text="timeout" />
+                    <")" text=")" />
+                </parenthesized_expression>
+                <";" text=";" />
+            </do_statement>
+            <"}" text="}" />
+        </compound_statement>
+    </function_definition>
+    <function_definition>
+        <storage_class_specifier>
+            <static text="static" />
+        </storage_class_specifier>
+        <primitive_type text="void" />
+        <function_declarator>
+            <identifier text="kb_wait_4" />
+            <parameter_list>
+                <"(" text="(" />
+                <parameter_declaration>
+                    <primitive_type text="void" />
+                </parameter_declaration>
+                <")" text=")" />
+            </parameter_list>
+        </function_declarator>
+        <compound_statement>
+            <"{" text="{" />
+            <declaration>
+                <sized_type_specifier>
+                    <unsigned text="unsigned" />
+                    <long text="long" />
+                </sized_type_specifier>
+                <init_declarator>
+                    <identifier text="timeout" />
+                    <"=" text="=" />
+                    <number_literal text="2" />
+                </init_declarator>
+                <";" text=";" />
+            </declaration>
+            <do_statement>
+                <do text="do" />
+                <compound_statement>
+                    <"{" text="{" />
+                    <if_statement>
+                        <if text="if" />
+                        <parenthesized_expression>
+                            <"(" text="(" />
+                            <number_literal text="1" />
+                            <")" text=")" />
+                        </parenthesized_expression>
+                        <expression_statement>
+                            <call_expression>
+                                <identifier text="printf" />
+                                <argument_list>
+                                    <"(" text="(" />
+                                    <string_literal>
+                                        <"\"" text="\"" />
+                                        <string_content text="timeout=%ld" />
+                                        <escape_sequence text="\\n" />
+                                        <"\"" text="\"" />
+                                    </string_literal>
+                                    <"," text="," />
+                                    <identifier text="timeout" />
+                                    <")" text=")" />
+                                </argument_list>
+                            </call_expression>
+                            <";" text=";" />
+                        </expression_statement>
+                        <else_clause>
+                            <else text="else" />
+                            <compound_statement>
+                                <"{" text="{" />
+                                <switch_statement>
+                                    <switch text="switch" />
+                                    <parenthesized_expression>
+                                        <"(" text="(" />
+                                        <identifier text="timeout" />
+                                        <")" text=")" />
+                                    </parenthesized_expression>
+                                    <compound_statement>
+                                        <"{" text="{" />
+                                        <case_statement>
+                                            <case text="case" />
+                                            <number_literal text="2" />
+                                            <":" text=":" />
+                                            <expression_statement>
+                                                <call_expression>
+                                                    <identifier text="printf" />
+                                                    <argument_list>
+                                                        <"(" text="(" />
+                                                        <string_literal>
+                                                            <"\"" text="\"" />
+                                                            <string_content text="timeout is 2" />
+                                                            <"\"" text="\"" />
+                                                        </string_literal>
+                                                        <")" text=")" />
+                                                    </argument_list>
+                                                </call_expression>
+                                                <";" text=";" />
+                                            </expression_statement>
+                                            <break_statement>
+                                                <break text="break" />
+                                                <";" text=";" />
+                                            </break_statement>
+                                        </case_statement>
+                                        <case_statement>
+                                            <case text="case" />
+                                            <number_literal text="1" />
+                                            <":" text=":" />
+                                            <expression_statement>
+                                                <call_expression>
+                                                    <identifier text="printf" />
+                                                    <argument_list>
+                                                        <"(" text="(" />
+                                                        <string_literal>
+                                                            <"\"" text="\"" />
+                                                            <string_content text="timeout is 1" />
+                                                            <"\"" text="\"" />
+                                                        </string_literal>
+                                                        <")" text=")" />
+                                                    </argument_list>
+                                                </call_expression>
+                                                <";" text=";" />
+                                            </expression_statement>
+                                            <break_statement>
+                                                <break text="break" />
+                                                <";" text=";" />
+                                            </break_statement>
+                                        </case_statement>
+                                        <case_statement>
+                                            <default text="default" />
+                                            <":" text=":" />
+                                            <expression_statement>
+                                                <call_expression>
+                                                    <identifier text="printf" />
+                                                    <argument_list>
+                                                        <"(" text="(" />
+                                                        <string_literal>
+                                                            <"\"" text="\"" />
+                                                            <string_content text="timeout is 0?" />
+                                                            <"\"" text="\"" />
+                                                        </string_literal>
+                                                        <")" text=")" />
+                                                    </argument_list>
+                                                </call_expression>
+                                                <";" text=";" />
+                                            </expression_statement>
+                                            <break_statement>
+                                                <break text="break" />
+                                                <";" text=";" />
+                                            </break_statement>
+                                        </case_statement>
+                                        <"}" text="}" />
+                                    </compound_statement>
+                                </switch_statement>
+                                <expression_statement>
+                                    <";" text=";" />
+                                </expression_statement>
+                                <comment text="/* return; */" />
+                                <"}" text="}" />
+                            </compound_statement>
+                        </else_clause>
+                    </if_statement>
+                    <expression_statement>
+                        <update_expression>
+                            <identifier text="timeout" />
+                            <"--" text="--" />
+                        </update_expression>
+                        <";" text=";" />
+                    </expression_statement>
+                    <"}" text="}" />
+                </compound_statement>
+                <while text="while" />
+                <parenthesized_expression>
+                    <"(" text="(" />
+                    <identifier text="timeout" />
+                    <")" text=")" />
+                </parenthesized_expression>
+                <";" text=";" />
+            </do_statement>
+            <"}" text="}" />
+        </compound_statement>
+    </function_definition>
+    <function_definition>
+        <primitive_type text="int" />
+        <function_declarator>
+            <identifier text="main" />
+            <parameter_list>
+                <"(" text="(" />
+                <")" text=")" />
+            </parameter_list>
+        </function_declarator>
+        <compound_statement>
+            <"{" text="{" />
+            <expression_statement>
+                <call_expression>
+                    <identifier text="printf" />
+                    <argument_list>
+                        <"(" text="(" />
+                        <string_literal>
+                            <"\"" text="\"" />
+                            <string_content text="begin" />
+                            <escape_sequence text="\\n" />
+                            <"\"" text="\"" />
+                        </string_literal>
+                        <")" text=")" />
+                    </argument_list>
+                </call_expression>
+                <";" text=";" />
+            </expression_statement>
+            <expression_statement>
+                <call_expression>
+                    <identifier text="kb_wait_1" />
+                    <argument_list>
+                        <"(" text="(" />
+                        <")" text=")" />
+                    </argument_list>
+                </call_expression>
+                <";" text=";" />
+            </expression_statement>
+            <expression_statement>
+                <call_expression>
+                    <identifier text="kb_wait_2" />
+                    <argument_list>
+                        <"(" text="(" />
+                        <")" text=")" />
+                    </argument_list>
+                </call_expression>
+                <";" text=";" />
+            </expression_statement>
+            <expression_statement>
+                <call_expression>
+                    <identifier text="kb_wait_2_1" />
+                    <argument_list>
+                        <"(" text="(" />
+                        <")" text=")" />
+                    </argument_list>
+                </call_expression>
+                <";" text=";" />
+            </expression_statement>
+            <expression_statement>
+                <call_expression>
+                    <identifier text="kb_wait_2_2" />
+                    <argument_list>
+                        <"(" text="(" />
+                        <")" text=")" />
+                    </argument_list>
+                </call_expression>
+                <";" text=";" />
+            </expression_statement>
+            <expression_statement>
+                <call_expression>
+                    <identifier text="kb_wait_3" />
+                    <argument_list>
+                        <"(" text="(" />
+                        <")" text=")" />
+                    </argument_list>
+                </call_expression>
+                <";" text=";" />
+            </expression_statement>
+            <expression_statement>
+                <call_expression>
+                    <identifier text="kb_wait_4" />
+                    <argument_list>
+                        <"(" text="(" />
+                        <")" text=")" />
+                    </argument_list>
+                </call_expression>
+                <";" text=";" />
+            </expression_statement>
+            <expression_statement>
+                <call_expression>
+                    <identifier text="printf" />
+                    <argument_list>
+                        <"(" text="(" />
+                        <string_literal>
+                            <"\"" text="\"" />
+                            <string_content text="end" />
+                            <escape_sequence text="\\n" />
+                            <"\"" text="\"" />
+                        </string_literal>
+                        <")" text=")" />
+                    </argument_list>
+                </call_expression>
+                <";" text=";" />
+            </expression_statement>
+            <return_statement>
+                <return text="return" />
+                <number_literal text="0" />
+                <";" text=";" />
+            </return_statement>
+            <"}" text="}" />
+        </compound_statement>
+    </function_definition>
+</translation_unit>

@@ -1,0 +1,92 @@
+<translation_unit>
+    <declaration>
+        <storage_class_specifier>
+            <extern text="extern" />
+        </storage_class_specifier>
+        <primitive_type text="int" />
+        <function_declarator>
+            <identifier text="printf" />
+            <parameter_list>
+                <"(" text="(" />
+                <parameter_declaration>
+                    <type_qualifier>
+                        <const text="const" />
+                    </type_qualifier>
+                    <primitive_type text="char" />
+                    <pointer_declarator>
+                        <"*" text="*" />
+                        <identifier text="format" />
+                    </pointer_declarator>
+                </parameter_declaration>
+                <"," text="," />
+                <variadic_parameter>
+                    <"..." text="..." />
+                </variadic_parameter>
+                <")" text=")" />
+            </parameter_list>
+        </function_declarator>
+        <";" text=";" />
+    </declaration>
+    <preproc_def>
+        <#define text="#define" />
+        <identifier text="ACPI_TYPE_INVALID" />
+        <preproc_arg text="0x1E" />
+    </preproc_def>
+    <preproc_def>
+        <#define text="#define" />
+        <identifier text="NUM_NS_TYPES" />
+        <preproc_arg text="ACPI_TYPE_INVALID+1" />
+    </preproc_def>
+    <declaration>
+        <primitive_type text="int" />
+        <array_declarator>
+            <identifier text="array" />
+            <"[" text="[" />
+            <identifier text="NUM_NS_TYPES" />
+            <"]" text="]" />
+        </array_declarator>
+        <";" text=";" />
+    </declaration>
+    <preproc_def>
+        <#define text="#define" />
+        <identifier text="n" />
+        <preproc_arg text="0xe" />
+    </preproc_def>
+    <function_definition>
+        <primitive_type text="int" />
+        <function_declarator>
+            <identifier text="main" />
+            <parameter_list>
+                <"(" text="(" />
+                <")" text=")" />
+            </parameter_list>
+        </function_declarator>
+        <compound_statement>
+            <"{" text="{" />
+            <expression_statement>
+                <call_expression>
+                    <identifier text="printf" />
+                    <argument_list>
+                        <"(" text="(" />
+                        <string_literal>
+                            <"\"" text="\"" />
+                            <string_content text="n+1 = %d" />
+                            <escape_sequence text="\\n" />
+                            <"\"" text="\"" />
+                        </string_literal>
+                        <"," text="," />
+                        <binary_expression>
+                            <identifier text="n" />
+                            <"+" text="+" />
+                            <number_literal text="1" />
+                        </binary_expression>
+                        <")" text=")" />
+                    </argument_list>
+                </call_expression>
+                <";" text=";" />
+            </expression_statement>
+            <comment text="//    printf(\"n+1 = %d\\n\", 0xe+1);" />
+            <"}" text="}" />
+        </compound_statement>
+    </function_definition>
+</translation_unit>

@@ -1,0 +1,213 @@
+<translation_unit>
+    <preproc_def>
+        <#define text="#define" />
+        <identifier text="FOO" />
+    </preproc_def>
+    <preproc_ifdef>
+        <#ifdef text="#ifdef" />
+        <identifier text="FOO" />
+        <declaration>
+            <primitive_type text="int" />
+            <identifier text="a" />
+            <";" text=";" />
+        </declaration>
+        <declaration>
+            <primitive_type text="int" />
+            <identifier text="b" />
+            <";" text=";" />
+        </declaration>
+        <preproc_call>
+            <preproc_directive text="#undef" />
+            <preproc_arg text="FOO" />
+        </preproc_call>
+        <preproc_ifdef>
+            <#ifndef text="#ifndef" />
+            <identifier text="FOO" />
+            <declaration>
+                <primitive_type text="int" />
+                <identifier text="c" />
+                <";" text=";" />
+            </declaration>
+            <declaration>
+                <primitive_type text="int" />
+                <identifier text="d" />
+                <";" text=";" />
+            </declaration>
+            <preproc_else>
+                <#else text="#else" />
+                <declaration>
+                    <primitive_type text="int" />
+                    <identifier text="e" />
+                    <";" text=";" />
+                </declaration>
+                <declaration>
+                    <primitive_type text="int" />
+                    <identifier text="f" />
+                    <";" text=";" />
+                </declaration>
+            </preproc_else>
+            <#endif text="#endif" />
+        </preproc_ifdef>
+        <declaration>
+            <primitive_type text="int" />
+            <identifier text="e" />
+            <";" text=";" />
+        </declaration>
+        <declaration>
+            <primitive_type text="int" />
+            <identifier text="f" />
+            <";" text=";" />
+        </declaration>
+        <preproc_ifdef>
+            <#ifdef text="#ifdef" />
+            <identifier text="FOO" />
+            <declaration>
+                <primitive_type text="int" />
+                <identifier text="c_" />
+                <";" text=";" />
+            </declaration>
+            <declaration>
+                <primitive_type text="int" />
+                <identifier text="d_" />
+                <";" text=";" />
+            </declaration>
+            <preproc_else>
+                <#else text="#else" />
+                <declaration>
+                    <primitive_type text="int" />
+                    <identifier text="e_" />
+                    <";" text=";" />
+                </declaration>
+                <declaration>
+                    <primitive_type text="int" />
+                    <identifier text="f_" />
+                    <";" text=";" />
+                </declaration>
+            </preproc_else>
+            <#endif text="#endif" />
+        </preproc_ifdef>
+        <declaration>
+            <primitive_type text="int" />
+            <identifier text="e_" />
+            <";" text=";" />
+        </declaration>
+        <declaration>
+            <primitive_type text="int" />
+            <identifier text="f_" />
+            <";" text=";" />
+        </declaration>
+        <function_definition>
+            <primitive_type text="int" />
+            <function_declarator>
+                <identifier text="main" />
+                <parameter_list>
+                    <"(" text="(" />
+                    <")" text=")" />
+                </parameter_list>
+            </function_declarator>
+            <compound_statement>
+                <"{" text="{" />
+                <return_statement>
+                    <return text="return" />
+                    <number_literal text="0" />
+                    <";" text=";" />
+                </return_statement>
+                <"}" text="}" />
+            </compound_statement>
+        </function_definition>
+        <preproc_else>
+            <#else text="#else" />
+            <declaration>
+                <primitive_type text="int" />
+                <identifier text="j" />
+                <";" text=";" />
+            </declaration>
+            <declaration>
+                <primitive_type text="int" />
+                <identifier text="k" />
+                <";" text=";" />
+            </declaration>
+            <preproc_ifdef>
+                <#ifdef text="#ifdef" />
+                <identifier text="FOO" />
+                <declaration>
+                    <primitive_type text="int" />
+                    <identifier text="j" />
+                    <";" text=";" />
+                </declaration>
+                <declaration>
+                    <primitive_type text="int" />
+                    <identifier text="k" />
+                    <";" text=";" />
+                </declaration>
+                <preproc_else>
+                    <#else text="#else" />
+                    <declaration>
+                        <primitive_type text="int" />
+                        <identifier text="n" />
+                        <";" text=";" />
+                    </declaration>
+                    <declaration>
+                        <primitive_type text="int" />
+                        <identifier text="o" />
+                        <";" text=";" />
+                    </declaration>
+                </preproc_else>
+                <#endif text="#endif" />
+            </preproc_ifdef>
+            <declaration>
+                <primitive_type text="int" />
+                <identifier text="n" />
+                <";" text=";" />
+            </declaration>
+            <declaration>
+                <primitive_type text="int" />
+                <identifier text="o" />
+                <";" text=";" />
+            </declaration>
+            <preproc_ifdef>
+                <#ifndef text="#ifndef" />
+                <identifier text="FOO" />
+                <declaration>
+                    <primitive_type text="int" />
+                    <identifier text="r" />
+                    <";" text=";" />
+                </declaration>
+                <declaration>
+                    <primitive_type text="int" />
+                    <identifier text="s" />
+                    <";" text=";" />
+                </declaration>
+                <preproc_else>
+                    <#else text="#else" />
+                    <declaration>
+                        <primitive_type text="int" />
+                        <identifier text="t" />
+                        <";" text=";" />
+                    </declaration>
+                    <declaration>
+                        <primitive_type text="int" />
+                        <identifier text="u" />
+                        <";" text=";" />
+                    </declaration>
+                </preproc_else>
+                <#endif text="#endif" />
+            </preproc_ifdef>
+            <declaration>
+                <primitive_type text="int" />
+                <identifier text="t" />
+                <";" text=";" />
+            </declaration>
+            <declaration>
+                <primitive_type text="int" />
+                <identifier text="u" />
+                <";" text=";" />
+            </declaration>
+            <preproc_call>
+                <preproc_directive text="#error" />
+                <preproc_arg text="bad branch" />
+            </preproc_call>
+        </preproc_else>
+        <#endif text="#endif" />
+    </preproc_ifdef>
+</translation_unit>

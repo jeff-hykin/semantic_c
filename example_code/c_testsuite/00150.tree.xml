@@ -1,0 +1,332 @@
+<translation_unit>
+    <struct_specifier>
+        <struct text="struct" />
+        <type_identifier text="S1" />
+        <field_declaration_list>
+            <"{" text="{" />
+            <field_declaration>
+                <primitive_type text="int" />
+                <field_identifier text="a" />
+                <";" text=";" />
+            </field_declaration>
+            <field_declaration>
+                <primitive_type text="int" />
+                <field_identifier text="b" />
+                <";" text=";" />
+            </field_declaration>
+            <"}" text="}" />
+        </field_declaration_list>
+    </struct_specifier>
+    <";" text=";" />
+    <struct_specifier>
+        <struct text="struct" />
+        <type_identifier text="S2" />
+        <field_declaration_list>
+            <"{" text="{" />
+            <field_declaration>
+                <struct_specifier>
+                    <struct text="struct" />
+                    <type_identifier text="S1" />
+                </struct_specifier>
+                <field_identifier text="s1" />
+                <";" text=";" />
+            </field_declaration>
+            <field_declaration>
+                <struct_specifier>
+                    <struct text="struct" />
+                    <type_identifier text="S1" />
+                </struct_specifier>
+                <pointer_declarator>
+                    <"*" text="*" />
+                    <field_identifier text="ps1" />
+                </pointer_declarator>
+                <";" text=";" />
+            </field_declaration>
+            <field_declaration>
+                <primitive_type text="int" />
+                <array_declarator>
+                    <field_identifier text="arr" />
+                    <"[" text="[" />
+                    <number_literal text="2" />
+                    <"]" text="]" />
+                </array_declarator>
+                <";" text=";" />
+            </field_declaration>
+            <"}" text="}" />
+        </field_declaration_list>
+    </struct_specifier>
+    <";" text=";" />
+    <declaration>
+        <struct_specifier>
+            <struct text="struct" />
+            <type_identifier text="S1" />
+        </struct_specifier>
+        <init_declarator>
+            <identifier text="gs1" />
+            <"=" text="=" />
+            <initializer_list>
+                <"{" text="{" />
+                <initializer_pair>
+                    <field_designator>
+                        <"." text="." />
+                        <field_identifier text="a" />
+                    </field_designator>
+                    <"=" text="=" />
+                    <number_literal text="1" />
+                </initializer_pair>
+                <"," text="," />
+                <number_literal text="2" />
+                <"}" text="}" />
+            </initializer_list>
+        </init_declarator>
+        <";" text=";" />
+    </declaration>
+    <declaration>
+        <struct_specifier>
+            <struct text="struct" />
+            <type_identifier text="S2" />
+        </struct_specifier>
+        <init_declarator>
+            <pointer_declarator>
+                <"*" text="*" />
+                <identifier text="s" />
+            </pointer_declarator>
+            <"=" text="=" />
+            <pointer_expression>
+                <"&" text="&" />
+                <compound_literal_expression>
+                    <"(" text="(" />
+                    <type_descriptor>
+                        <struct_specifier>
+                            <struct text="struct" />
+                            <type_identifier text="S2" />
+                        </struct_specifier>
+                    </type_descriptor>
+                    <")" text=")" />
+                    <initializer_list>
+                        <"{" text="{" />
+                        <initializer_list>
+                            <"{" text="{" />
+                            <initializer_pair>
+                                <field_designator>
+                                    <"." text="." />
+                                    <field_identifier text="b" />
+                                </field_designator>
+                                <"=" text="=" />
+                                <number_literal text="2" />
+                            </initializer_pair>
+                            <"," text="," />
+                            <initializer_pair>
+                                <field_designator>
+                                    <"." text="." />
+                                    <field_identifier text="a" />
+                                </field_designator>
+                                <"=" text="=" />
+                                <number_literal text="1" />
+                            </initializer_pair>
+                            <"}" text="}" />
+                        </initializer_list>
+                        <"," text="," />
+                        <pointer_expression>
+                            <"&" text="&" />
+                            <identifier text="gs1" />
+                        </pointer_expression>
+                        <"," text="," />
+                        <initializer_list>
+                            <"{" text="{" />
+                            <initializer_pair>
+                                <subscript_designator>
+                                    <"[" text="[" />
+                                    <number_literal text="0" />
+                                    <"]" text="]" />
+                                </subscript_designator>
+                                <"=" text="=" />
+                                <number_literal text="1" />
+                            </initializer_pair>
+                            <"," text="," />
+                            <binary_expression>
+                                <number_literal text="1" />
+                                <"+" text="+" />
+                                <number_literal text="1" />
+                            </binary_expression>
+                            <"}" text="}" />
+                        </initializer_list>
+                        <"}" text="}" />
+                    </initializer_list>
+                </compound_literal_expression>
+            </pointer_expression>
+        </init_declarator>
+        <";" text=";" />
+    </declaration>
+    <function_definition>
+        <primitive_type text="int" />
+        <function_declarator>
+            <identifier text="main" />
+            <parameter_list>
+                <"(" text="(" />
+                <")" text=")" />
+            </parameter_list>
+        </function_declarator>
+        <compound_statement>
+            <"{" text="{" />
+            <if_statement>
+                <if text="if" />
+                <parenthesized_expression>
+                    <"(" text="(" />
+                    <binary_expression>
+                        <field_expression>
+                            <field_expression>
+                                <identifier text="s" />
+                                <"->" text="->" />
+                                <field_identifier text="s1" />
+                            </field_expression>
+                            <"." text="." />
+                            <field_identifier text="a" />
+                        </field_expression>
+                        <"!=" text="!=" />
+                        <number_literal text="1" />
+                    </binary_expression>
+                    <")" text=")" />
+                </parenthesized_expression>
+                <return_statement>
+                    <return text="return" />
+                    <number_literal text="1" />
+                    <";" text=";" />
+                </return_statement>
+            </if_statement>
+            <if_statement>
+                <if text="if" />
+                <parenthesized_expression>
+                    <"(" text="(" />
+                    <binary_expression>
+                        <field_expression>
+                            <field_expression>
+                                <identifier text="s" />
+                                <"->" text="->" />
+                                <field_identifier text="s1" />
+                            </field_expression>
+                            <"." text="." />
+                            <field_identifier text="b" />
+                        </field_expression>
+                        <"!=" text="!=" />
+                        <number_literal text="2" />
+                    </binary_expression>
+                    <")" text=")" />
+                </parenthesized_expression>
+                <return_statement>
+                    <return text="return" />
+                    <number_literal text="2" />
+                    <";" text=";" />
+                </return_statement>
+            </if_statement>
+            <if_statement>
+                <if text="if" />
+                <parenthesized_expression>
+                    <"(" text="(" />
+                    <binary_expression>
+                        <field_expression>
+                            <field_expression>
+                                <identifier text="s" />
+                                <"->" text="->" />
+                                <field_identifier text="ps1" />
+                            </field_expression>
+                            <"->" text="->" />
+                            <field_identifier text="a" />
+                        </field_expression>
+                        <"!=" text="!=" />
+                        <number_literal text="1" />
+                    </binary_expression>
+                    <")" text=")" />
+                </parenthesized_expression>
+                <return_statement>
+                    <return text="return" />
+                    <number_literal text="3" />
+                    <";" text=";" />
+                </return_statement>
+            </if_statement>
+            <if_statement>
+                <if text="if" />
+                <parenthesized_expression>
+                    <"(" text="(" />
+                    <binary_expression>
+                        <field_expression>
+                            <field_expression>
+                                <identifier text="s" />
+                                <"->" text="->" />
+                                <field_identifier text="ps1" />
+                            </field_expression>
+                            <"->" text="->" />
+                            <field_identifier text="b" />
+                        </field_expression>
+                        <"!=" text="!=" />
+                        <number_literal text="2" />
+                    </binary_expression>
+                    <")" text=")" />
+                </parenthesized_expression>
+                <return_statement>
+                    <return text="return" />
+                    <number_literal text="4" />
+                    <";" text=";" />
+                </return_statement>
+            </if_statement>
+            <if_statement>
+                <if text="if" />
+                <parenthesized_expression>
+                    <"(" text="(" />
+                    <binary_expression>
+                        <subscript_expression>
+                            <field_expression>
+                                <identifier text="s" />
+                                <"->" text="->" />
+                                <field_identifier text="arr" />
+                            </field_expression>
+                            <"[" text="[" />
+                            <number_literal text="0" />
+                            <"]" text="]" />
+                        </subscript_expression>
+                        <"!=" text="!=" />
+                        <number_literal text="1" />
+                    </binary_expression>
+                    <")" text=")" />
+                </parenthesized_expression>
+                <return_statement>
+                    <return text="return" />
+                    <number_literal text="5" />
+                    <";" text=";" />
+                </return_statement>
+            </if_statement>
+            <if_statement>
+                <if text="if" />
+                <parenthesized_expression>
+                    <"(" text="(" />
+                    <binary_expression>
+                        <subscript_expression>
+                            <field_expression>
+                                <identifier text="s" />
+                                <"->" text="->" />
+                                <field_identifier text="arr" />
+                            </field_expression>
+                            <"[" text="[" />
+                            <number_literal text="1" />
+                            <"]" text="]" />
+                        </subscript_expression>
+                        <"!=" text="!=" />
+                        <number_literal text="2" />
+                    </binary_expression>
+                    <")" text=")" />
+                </parenthesized_expression>
+                <return_statement>
+                    <return text="return" />
+                    <number_literal text="6" />
+                    <";" text=";" />
+                </return_statement>
+            </if_statement>
+            <return_statement>
+                <return text="return" />
+                <number_literal text="0" />
+                <";" text=";" />
+            </return_statement>
+            <"}" text="}" />
+        </compound_statement>
+    </function_definition>
+</translation_unit>

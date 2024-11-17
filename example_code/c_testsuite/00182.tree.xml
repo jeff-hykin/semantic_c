@@ -1,0 +1,1495 @@
+<translation_unit>
+    <comment text="/* example from http://barnyard.syr.edu/quickies/led.c */" />
+    <comment text="/* led.c: print out number as if on 7 line led display. I.e., write integer\n   given on command line like this:  \n      _   _       _  \n   |  _|  _| |_| |_  \n   | |_   _|   |  _| etc.\n\n   We assume the terminal behaves like a classical teletype. So the top\n   lines of all digits have to be printed first, then the middle lines of\n   all digits, etc.\n\n   By Terry R. McConnell\n\ncompile: cc -o led led.c\n\nIf you just want to link in the subroutine print_led that does all the\nwork, compile with -DNO_MAIN, and declare the following in any source file\nthat uses the call:\n\nextern void print_led(unsigned long x, char *buf);\n\nBug: you cannot call repeatedly to print more than one number to a line.\nThat would require curses or some other terminal API that allows moving the\ncursor to a previous line.\n\n*/" />
+    <preproc_include>
+        <#include text="#include" />
+        <system_lib_string text="<stdlib.h>" />
+    </preproc_include>
+    <preproc_include>
+        <#include text="#include" />
+        <system_lib_string text="<stdio.h>" />
+    </preproc_include>
+    <preproc_def>
+        <#define text="#define" />
+        <identifier text="MAX_DIGITS" />
+        <preproc_arg text="32" />
+    </preproc_def>
+    <preproc_def>
+        <#define text="#define" />
+        <identifier text="NO_MAIN" />
+    </preproc_def>
+    <comment text="/* Print the top line of the digit d into buffer. \n   Does not null terminate buffer. */" />
+    <function_definition>
+        <primitive_type text="void" />
+        <function_declarator>
+            <identifier text="topline" />
+            <parameter_list>
+                <"(" text="(" />
+                <parameter_declaration>
+                    <primitive_type text="int" />
+                    <identifier text="d" />
+                </parameter_declaration>
+                <"," text="," />
+                <parameter_declaration>
+                    <primitive_type text="char" />
+                    <pointer_declarator>
+                        <"*" text="*" />
+                        <identifier text="p" />
+                    </pointer_declarator>
+                </parameter_declaration>
+                <")" text=")" />
+            </parameter_list>
+        </function_declarator>
+        <compound_statement>
+            <"{" text="{" />
+            <expression_statement>
+                <assignment_expression>
+                    <pointer_expression>
+                        <"*" text="*" />
+                        <update_expression>
+                            <identifier text="p" />
+                            <"++" text="++" />
+                        </update_expression>
+                    </pointer_expression>
+                    <"=" text="=" />
+                    <char_literal>
+                        <"'" text="'" />
+                        <character text=" " />
+                        <"'" text="'" />
+                    </char_literal>
+                </assignment_expression>
+                <";" text=";" />
+            </expression_statement>
+            <switch_statement>
+                <switch text="switch" />
+                <parenthesized_expression>
+                    <"(" text="(" />
+                    <identifier text="d" />
+                    <")" text=")" />
+                </parenthesized_expression>
+                <compound_statement>
+                    <"{" text="{" />
+                    <comment text="/* all these have _ on top line */" />
+                    <case_statement>
+                        <case text="case" />
+                        <number_literal text="0" />
+                        <":" text=":" />
+                    </case_statement>
+                    <case_statement>
+                        <case text="case" />
+                        <number_literal text="2" />
+                        <":" text=":" />
+                    </case_statement>
+                    <case_statement>
+                        <case text="case" />
+                        <number_literal text="3" />
+                        <":" text=":" />
+                    </case_statement>
+                    <case_statement>
+                        <case text="case" />
+                        <number_literal text="5" />
+                        <":" text=":" />
+                    </case_statement>
+                    <case_statement>
+                        <case text="case" />
+                        <number_literal text="7" />
+                        <":" text=":" />
+                    </case_statement>
+                    <case_statement>
+                        <case text="case" />
+                        <number_literal text="8" />
+                        <":" text=":" />
+                    </case_statement>
+                    <case_statement>
+                        <case text="case" />
+                        <number_literal text="9" />
+                        <":" text=":" />
+                        <expression_statement>
+                            <assignment_expression>
+                                <pointer_expression>
+                                    <"*" text="*" />
+                                    <update_expression>
+                                        <identifier text="p" />
+                                        <"++" text="++" />
+                                    </update_expression>
+                                </pointer_expression>
+                                <"=" text="=" />
+                                <char_literal>
+                                    <"'" text="'" />
+                                    <character text="_" />
+                                    <"'" text="'" />
+                                </char_literal>
+                            </assignment_expression>
+                            <";" text=";" />
+                        </expression_statement>
+                        <break_statement>
+                            <break text="break" />
+                            <";" text=";" />
+                        </break_statement>
+                    </case_statement>
+                    <case_statement>
+                        <default text="default" />
+                        <":" text=":" />
+                        <expression_statement>
+                            <assignment_expression>
+                                <pointer_expression>
+                                    <"*" text="*" />
+                                    <update_expression>
+                                        <identifier text="p" />
+                                        <"++" text="++" />
+                                    </update_expression>
+                                </pointer_expression>
+                                <"=" text="=" />
+                                <char_literal>
+                                    <"'" text="'" />
+                                    <character text=" " />
+                                    <"'" text="'" />
+                                </char_literal>
+                            </assignment_expression>
+                            <";" text=";" />
+                        </expression_statement>
+                    </case_statement>
+                    <"}" text="}" />
+                </compound_statement>
+            </switch_statement>
+            <expression_statement>
+                <assignment_expression>
+                    <pointer_expression>
+                        <"*" text="*" />
+                        <update_expression>
+                            <identifier text="p" />
+                            <"++" text="++" />
+                        </update_expression>
+                    </pointer_expression>
+                    <"=" text="=" />
+                    <char_literal>
+                        <"'" text="'" />
+                        <character text=" " />
+                        <"'" text="'" />
+                    </char_literal>
+                </assignment_expression>
+                <";" text=";" />
+            </expression_statement>
+            <"}" text="}" />
+        </compound_statement>
+    </function_definition>
+    <comment text="/* Print the middle line of the digit d into the buffer. \n   Does not null terminate. */" />
+    <function_definition>
+        <primitive_type text="void" />
+        <function_declarator>
+            <identifier text="midline" />
+            <parameter_list>
+                <"(" text="(" />
+                <parameter_declaration>
+                    <primitive_type text="int" />
+                    <identifier text="d" />
+                </parameter_declaration>
+                <"," text="," />
+                <parameter_declaration>
+                    <primitive_type text="char" />
+                    <pointer_declarator>
+                        <"*" text="*" />
+                        <identifier text="p" />
+                    </pointer_declarator>
+                </parameter_declaration>
+                <")" text=")" />
+            </parameter_list>
+        </function_declarator>
+        <compound_statement>
+            <"{" text="{" />
+            <switch_statement>
+                <switch text="switch" />
+                <parenthesized_expression>
+                    <"(" text="(" />
+                    <identifier text="d" />
+                    <")" text=")" />
+                </parenthesized_expression>
+                <compound_statement>
+                    <"{" text="{" />
+                    <comment text="/* those that have leading | on middle line */" />
+                    <case_statement>
+                        <case text="case" />
+                        <number_literal text="0" />
+                        <":" text=":" />
+                    </case_statement>
+                    <case_statement>
+                        <case text="case" />
+                        <number_literal text="4" />
+                        <":" text=":" />
+                    </case_statement>
+                    <case_statement>
+                        <case text="case" />
+                        <number_literal text="5" />
+                        <":" text=":" />
+                    </case_statement>
+                    <case_statement>
+                        <case text="case" />
+                        <number_literal text="6" />
+                        <":" text=":" />
+                    </case_statement>
+                    <case_statement>
+                        <case text="case" />
+                        <number_literal text="8" />
+                        <":" text=":" />
+                    </case_statement>
+                    <case_statement>
+                        <case text="case" />
+                        <number_literal text="9" />
+                        <":" text=":" />
+                        <expression_statement>
+                            <assignment_expression>
+                                <pointer_expression>
+                                    <"*" text="*" />
+                                    <update_expression>
+                                        <identifier text="p" />
+                                        <"++" text="++" />
+                                    </update_expression>
+                                </pointer_expression>
+                                <"=" text="=" />
+                                <char_literal>
+                                    <"'" text="'" />
+                                    <character text="|" />
+                                    <"'" text="'" />
+                                </char_literal>
+                            </assignment_expression>
+                            <";" text=";" />
+                        </expression_statement>
+                        <break_statement>
+                            <break text="break" />
+                            <";" text=";" />
+                        </break_statement>
+                    </case_statement>
+                    <case_statement>
+                        <default text="default" />
+                        <":" text=":" />
+                        <expression_statement>
+                            <assignment_expression>
+                                <pointer_expression>
+                                    <"*" text="*" />
+                                    <update_expression>
+                                        <identifier text="p" />
+                                        <"++" text="++" />
+                                    </update_expression>
+                                </pointer_expression>
+                                <"=" text="=" />
+                                <char_literal>
+                                    <"'" text="'" />
+                                    <character text=" " />
+                                    <"'" text="'" />
+                                </char_literal>
+                            </assignment_expression>
+                            <";" text=";" />
+                        </expression_statement>
+                    </case_statement>
+                    <"}" text="}" />
+                </compound_statement>
+            </switch_statement>
+            <switch_statement>
+                <switch text="switch" />
+                <parenthesized_expression>
+                    <"(" text="(" />
+                    <identifier text="d" />
+                    <")" text=")" />
+                </parenthesized_expression>
+                <compound_statement>
+                    <"{" text="{" />
+                    <comment text="/* those that have _ on middle line */" />
+                    <case_statement>
+                        <case text="case" />
+                        <number_literal text="2" />
+                        <":" text=":" />
+                    </case_statement>
+                    <case_statement>
+                        <case text="case" />
+                        <number_literal text="3" />
+                        <":" text=":" />
+                    </case_statement>
+                    <case_statement>
+                        <case text="case" />
+                        <number_literal text="4" />
+                        <":" text=":" />
+                    </case_statement>
+                    <case_statement>
+                        <case text="case" />
+                        <number_literal text="5" />
+                        <":" text=":" />
+                    </case_statement>
+                    <case_statement>
+                        <case text="case" />
+                        <number_literal text="6" />
+                        <":" text=":" />
+                    </case_statement>
+                    <case_statement>
+                        <case text="case" />
+                        <number_literal text="8" />
+                        <":" text=":" />
+                    </case_statement>
+                    <case_statement>
+                        <case text="case" />
+                        <number_literal text="9" />
+                        <":" text=":" />
+                        <expression_statement>
+                            <assignment_expression>
+                                <pointer_expression>
+                                    <"*" text="*" />
+                                    <update_expression>
+                                        <identifier text="p" />
+                                        <"++" text="++" />
+                                    </update_expression>
+                                </pointer_expression>
+                                <"=" text="=" />
+                                <char_literal>
+                                    <"'" text="'" />
+                                    <character text="_" />
+                                    <"'" text="'" />
+                                </char_literal>
+                            </assignment_expression>
+                            <";" text=";" />
+                        </expression_statement>
+                        <break_statement>
+                            <break text="break" />
+                            <";" text=";" />
+                        </break_statement>
+                    </case_statement>
+                    <case_statement>
+                        <default text="default" />
+                        <":" text=":" />
+                        <expression_statement>
+                            <assignment_expression>
+                                <pointer_expression>
+                                    <"*" text="*" />
+                                    <update_expression>
+                                        <identifier text="p" />
+                                        <"++" text="++" />
+                                    </update_expression>
+                                </pointer_expression>
+                                <"=" text="=" />
+                                <char_literal>
+                                    <"'" text="'" />
+                                    <character text=" " />
+                                    <"'" text="'" />
+                                </char_literal>
+                            </assignment_expression>
+                            <";" text=";" />
+                        </expression_statement>
+                    </case_statement>
+                    <"}" text="}" />
+                </compound_statement>
+            </switch_statement>
+            <switch_statement>
+                <switch text="switch" />
+                <parenthesized_expression>
+                    <"(" text="(" />
+                    <identifier text="d" />
+                    <")" text=")" />
+                </parenthesized_expression>
+                <compound_statement>
+                    <"{" text="{" />
+                    <comment text="/* those that have closing | on middle line */" />
+                    <case_statement>
+                        <case text="case" />
+                        <number_literal text="0" />
+                        <":" text=":" />
+                    </case_statement>
+                    <case_statement>
+                        <case text="case" />
+                        <number_literal text="1" />
+                        <":" text=":" />
+                    </case_statement>
+                    <case_statement>
+                        <case text="case" />
+                        <number_literal text="2" />
+                        <":" text=":" />
+                    </case_statement>
+                    <case_statement>
+                        <case text="case" />
+                        <number_literal text="3" />
+                        <":" text=":" />
+                    </case_statement>
+                    <case_statement>
+                        <case text="case" />
+                        <number_literal text="4" />
+                        <":" text=":" />
+                    </case_statement>
+                    <case_statement>
+                        <case text="case" />
+                        <number_literal text="7" />
+                        <":" text=":" />
+                    </case_statement>
+                    <case_statement>
+                        <case text="case" />
+                        <number_literal text="8" />
+                        <":" text=":" />
+                    </case_statement>
+                    <case_statement>
+                        <case text="case" />
+                        <number_literal text="9" />
+                        <":" text=":" />
+                        <expression_statement>
+                            <assignment_expression>
+                                <pointer_expression>
+                                    <"*" text="*" />
+                                    <update_expression>
+                                        <identifier text="p" />
+                                        <"++" text="++" />
+                                    </update_expression>
+                                </pointer_expression>
+                                <"=" text="=" />
+                                <char_literal>
+                                    <"'" text="'" />
+                                    <character text="|" />
+                                    <"'" text="'" />
+                                </char_literal>
+                            </assignment_expression>
+                            <";" text=";" />
+                        </expression_statement>
+                        <break_statement>
+                            <break text="break" />
+                            <";" text=";" />
+                        </break_statement>
+                    </case_statement>
+                    <case_statement>
+                        <default text="default" />
+                        <":" text=":" />
+                        <expression_statement>
+                            <assignment_expression>
+                                <pointer_expression>
+                                    <"*" text="*" />
+                                    <update_expression>
+                                        <identifier text="p" />
+                                        <"++" text="++" />
+                                    </update_expression>
+                                </pointer_expression>
+                                <"=" text="=" />
+                                <char_literal>
+                                    <"'" text="'" />
+                                    <character text=" " />
+                                    <"'" text="'" />
+                                </char_literal>
+                            </assignment_expression>
+                            <";" text=";" />
+                        </expression_statement>
+                    </case_statement>
+                    <"}" text="}" />
+                </compound_statement>
+            </switch_statement>
+            <"}" text="}" />
+        </compound_statement>
+    </function_definition>
+    <comment text="/* Print the bottom line of the digit d. Does not null terminate. */" />
+    <function_definition>
+        <primitive_type text="void" />
+        <function_declarator>
+            <identifier text="botline" />
+            <parameter_list>
+                <"(" text="(" />
+                <parameter_declaration>
+                    <primitive_type text="int" />
+                    <identifier text="d" />
+                </parameter_declaration>
+                <"," text="," />
+                <parameter_declaration>
+                    <primitive_type text="char" />
+                    <pointer_declarator>
+                        <"*" text="*" />
+                        <identifier text="p" />
+                    </pointer_declarator>
+                </parameter_declaration>
+                <")" text=")" />
+            </parameter_list>
+        </function_declarator>
+        <compound_statement>
+            <"{" text="{" />
+            <switch_statement>
+                <switch text="switch" />
+                <parenthesized_expression>
+                    <"(" text="(" />
+                    <identifier text="d" />
+                    <")" text=")" />
+                </parenthesized_expression>
+                <compound_statement>
+                    <"{" text="{" />
+                    <comment text="/* those that have leading | on bottom line */" />
+                    <case_statement>
+                        <case text="case" />
+                        <number_literal text="0" />
+                        <":" text=":" />
+                    </case_statement>
+                    <case_statement>
+                        <case text="case" />
+                        <number_literal text="2" />
+                        <":" text=":" />
+                    </case_statement>
+                    <case_statement>
+                        <case text="case" />
+                        <number_literal text="6" />
+                        <":" text=":" />
+                    </case_statement>
+                    <case_statement>
+                        <case text="case" />
+                        <number_literal text="8" />
+                        <":" text=":" />
+                        <expression_statement>
+                            <assignment_expression>
+                                <pointer_expression>
+                                    <"*" text="*" />
+                                    <update_expression>
+                                        <identifier text="p" />
+                                        <"++" text="++" />
+                                    </update_expression>
+                                </pointer_expression>
+                                <"=" text="=" />
+                                <char_literal>
+                                    <"'" text="'" />
+                                    <character text="|" />
+                                    <"'" text="'" />
+                                </char_literal>
+                            </assignment_expression>
+                            <";" text=";" />
+                        </expression_statement>
+                        <break_statement>
+                            <break text="break" />
+                            <";" text=";" />
+                        </break_statement>
+                    </case_statement>
+                    <case_statement>
+                        <default text="default" />
+                        <":" text=":" />
+                        <expression_statement>
+                            <assignment_expression>
+                                <pointer_expression>
+                                    <"*" text="*" />
+                                    <update_expression>
+                                        <identifier text="p" />
+                                        <"++" text="++" />
+                                    </update_expression>
+                                </pointer_expression>
+                                <"=" text="=" />
+                                <char_literal>
+                                    <"'" text="'" />
+                                    <character text=" " />
+                                    <"'" text="'" />
+                                </char_literal>
+                            </assignment_expression>
+                            <";" text=";" />
+                        </expression_statement>
+                    </case_statement>
+                    <"}" text="}" />
+                </compound_statement>
+            </switch_statement>
+            <switch_statement>
+                <switch text="switch" />
+                <parenthesized_expression>
+                    <"(" text="(" />
+                    <identifier text="d" />
+                    <")" text=")" />
+                </parenthesized_expression>
+                <compound_statement>
+                    <"{" text="{" />
+                    <comment text="/* those that have _ on bottom line */" />
+                    <case_statement>
+                        <case text="case" />
+                        <number_literal text="0" />
+                        <":" text=":" />
+                    </case_statement>
+                    <case_statement>
+                        <case text="case" />
+                        <number_literal text="2" />
+                        <":" text=":" />
+                    </case_statement>
+                    <case_statement>
+                        <case text="case" />
+                        <number_literal text="3" />
+                        <":" text=":" />
+                    </case_statement>
+                    <case_statement>
+                        <case text="case" />
+                        <number_literal text="5" />
+                        <":" text=":" />
+                    </case_statement>
+                    <case_statement>
+                        <case text="case" />
+                        <number_literal text="6" />
+                        <":" text=":" />
+                    </case_statement>
+                    <case_statement>
+                        <case text="case" />
+                        <number_literal text="8" />
+                        <":" text=":" />
+                        <expression_statement>
+                            <assignment_expression>
+                                <pointer_expression>
+                                    <"*" text="*" />
+                                    <update_expression>
+                                        <identifier text="p" />
+                                        <"++" text="++" />
+                                    </update_expression>
+                                </pointer_expression>
+                                <"=" text="=" />
+                                <char_literal>
+                                    <"'" text="'" />
+                                    <character text="_" />
+                                    <"'" text="'" />
+                                </char_literal>
+                            </assignment_expression>
+                            <";" text=";" />
+                        </expression_statement>
+                        <break_statement>
+                            <break text="break" />
+                            <";" text=";" />
+                        </break_statement>
+                    </case_statement>
+                    <case_statement>
+                        <default text="default" />
+                        <":" text=":" />
+                        <expression_statement>
+                            <assignment_expression>
+                                <pointer_expression>
+                                    <"*" text="*" />
+                                    <update_expression>
+                                        <identifier text="p" />
+                                        <"++" text="++" />
+                                    </update_expression>
+                                </pointer_expression>
+                                <"=" text="=" />
+                                <char_literal>
+                                    <"'" text="'" />
+                                    <character text=" " />
+                                    <"'" text="'" />
+                                </char_literal>
+                            </assignment_expression>
+                            <";" text=";" />
+                        </expression_statement>
+                    </case_statement>
+                    <"}" text="}" />
+                </compound_statement>
+            </switch_statement>
+            <switch_statement>
+                <switch text="switch" />
+                <parenthesized_expression>
+                    <"(" text="(" />
+                    <identifier text="d" />
+                    <")" text=")" />
+                </parenthesized_expression>
+                <compound_statement>
+                    <"{" text="{" />
+                    <comment text="/* those that have closing | on bottom line */" />
+                    <case_statement>
+                        <case text="case" />
+                        <number_literal text="0" />
+                        <":" text=":" />
+                    </case_statement>
+                    <case_statement>
+                        <case text="case" />
+                        <number_literal text="1" />
+                        <":" text=":" />
+                    </case_statement>
+                    <case_statement>
+                        <case text="case" />
+                        <number_literal text="3" />
+                        <":" text=":" />
+                    </case_statement>
+                    <case_statement>
+                        <case text="case" />
+                        <number_literal text="4" />
+                        <":" text=":" />
+                    </case_statement>
+                    <case_statement>
+                        <case text="case" />
+                        <number_literal text="5" />
+                        <":" text=":" />
+                    </case_statement>
+                    <case_statement>
+                        <case text="case" />
+                        <number_literal text="6" />
+                        <":" text=":" />
+                    </case_statement>
+                    <case_statement>
+                        <case text="case" />
+                        <number_literal text="7" />
+                        <":" text=":" />
+                    </case_statement>
+                    <case_statement>
+                        <case text="case" />
+                        <number_literal text="8" />
+                        <":" text=":" />
+                    </case_statement>
+                    <case_statement>
+                        <case text="case" />
+                        <number_literal text="9" />
+                        <":" text=":" />
+                        <expression_statement>
+                            <assignment_expression>
+                                <pointer_expression>
+                                    <"*" text="*" />
+                                    <update_expression>
+                                        <identifier text="p" />
+                                        <"++" text="++" />
+                                    </update_expression>
+                                </pointer_expression>
+                                <"=" text="=" />
+                                <char_literal>
+                                    <"'" text="'" />
+                                    <character text="|" />
+                                    <"'" text="'" />
+                                </char_literal>
+                            </assignment_expression>
+                            <";" text=";" />
+                        </expression_statement>
+                        <break_statement>
+                            <break text="break" />
+                            <";" text=";" />
+                        </break_statement>
+                    </case_statement>
+                    <case_statement>
+                        <default text="default" />
+                        <":" text=":" />
+                        <expression_statement>
+                            <assignment_expression>
+                                <pointer_expression>
+                                    <"*" text="*" />
+                                    <update_expression>
+                                        <identifier text="p" />
+                                        <"++" text="++" />
+                                    </update_expression>
+                                </pointer_expression>
+                                <"=" text="=" />
+                                <char_literal>
+                                    <"'" text="'" />
+                                    <character text=" " />
+                                    <"'" text="'" />
+                                </char_literal>
+                            </assignment_expression>
+                            <";" text=";" />
+                        </expression_statement>
+                    </case_statement>
+                    <"}" text="}" />
+                </compound_statement>
+            </switch_statement>
+            <"}" text="}" />
+        </compound_statement>
+    </function_definition>
+    <comment text="/* Write the led representation of integer to string buffer. */" />
+    <function_definition>
+        <primitive_type text="void" />
+        <function_declarator>
+            <identifier text="print_led" />
+            <parameter_list>
+                <"(" text="(" />
+                <parameter_declaration>
+                    <sized_type_specifier>
+                        <unsigned text="unsigned" />
+                        <long text="long" />
+                    </sized_type_specifier>
+                    <identifier text="x" />
+                </parameter_declaration>
+                <"," text="," />
+                <parameter_declaration>
+                    <primitive_type text="char" />
+                    <pointer_declarator>
+                        <"*" text="*" />
+                        <identifier text="buf" />
+                    </pointer_declarator>
+                </parameter_declaration>
+                <")" text=")" />
+            </parameter_list>
+        </function_declarator>
+        <compound_statement>
+            <"{" text="{" />
+            <declaration>
+                <primitive_type text="int" />
+                <init_declarator>
+                    <identifier text="i" />
+                    <"=" text="=" />
+                    <number_literal text="0" />
+                </init_declarator>
+                <"," text="," />
+                <identifier text="n" />
+                <";" text=";" />
+            </declaration>
+            <declaration>
+                <storage_class_specifier>
+                    <static text="static" />
+                </storage_class_specifier>
+                <primitive_type text="int" />
+                <array_declarator>
+                    <identifier text="d" />
+                    <"[" text="[" />
+                    <identifier text="MAX_DIGITS" />
+                    <"]" text="]" />
+                </array_declarator>
+                <";" text=";" />
+            </declaration>
+            <comment text="/* extract digits from x */" />
+            <expression_statement>
+                <assignment_expression>
+                    <identifier text="n" />
+                    <"=" text="=" />
+                    <parenthesized_expression>
+                        <"(" text="(" />
+                        <conditional_expression>
+                            <binary_expression>
+                                <identifier text="x" />
+                                <"==" text="==" />
+                                <number_literal text="0L" />
+                            </binary_expression>
+                            <"?" text="?" />
+                            <number_literal text="1" />
+                            <":" text=":" />
+                            <number_literal text="0" />
+                        </conditional_expression>
+                        <")" text=")" />
+                    </parenthesized_expression>
+                </assignment_expression>
+                <";" text=";" />
+            </expression_statement>
+            <comment text="/* 0 is a digit, hence a special case */" />
+            <while_statement>
+                <while text="while" />
+                <parenthesized_expression>
+                    <"(" text="(" />
+                    <identifier text="x" />
+                    <")" text=")" />
+                </parenthesized_expression>
+                <compound_statement>
+                    <"{" text="{" />
+                    <expression_statement>
+                        <assignment_expression>
+                            <subscript_expression>
+                                <identifier text="d" />
+                                <"[" text="[" />
+                                <update_expression>
+                                    <identifier text="n" />
+                                    <"++" text="++" />
+                                </update_expression>
+                                <"]" text="]" />
+                            </subscript_expression>
+                            <"=" text="=" />
+                            <cast_expression>
+                                <"(" text="(" />
+                                <type_descriptor>
+                                    <primitive_type text="int" />
+                                </type_descriptor>
+                                <")" text=")" />
+                                <parenthesized_expression>
+                                    <"(" text="(" />
+                                    <binary_expression>
+                                        <identifier text="x" />
+                                        <"%" text="%" />
+                                        <number_literal text="10L" />
+                                    </binary_expression>
+                                    <")" text=")" />
+                                </parenthesized_expression>
+                            </cast_expression>
+                        </assignment_expression>
+                        <";" text=";" />
+                    </expression_statement>
+                    <if_statement>
+                        <if text="if" />
+                        <parenthesized_expression>
+                            <"(" text="(" />
+                            <binary_expression>
+                                <identifier text="n" />
+                                <">=" text=">=" />
+                                <identifier text="MAX_DIGITS" />
+                            </binary_expression>
+                            <")" text=")" />
+                        </parenthesized_expression>
+                        <break_statement>
+                            <break text="break" />
+                            <";" text=";" />
+                        </break_statement>
+                    </if_statement>
+                    <expression_statement>
+                        <assignment_expression>
+                            <identifier text="x" />
+                            <"=" text="=" />
+                            <binary_expression>
+                                <identifier text="x" />
+                                <"/" text="/" />
+                                <number_literal text="10L" />
+                            </binary_expression>
+                        </assignment_expression>
+                        <";" text=";" />
+                    </expression_statement>
+                    <"}" text="}" />
+                </compound_statement>
+            </while_statement>
+            <comment text="/* print top lines of all digits */" />
+            <for_statement>
+                <for text="for" />
+                <"(" text="(" />
+                <assignment_expression>
+                    <identifier text="i" />
+                    <"=" text="=" />
+                    <binary_expression>
+                        <identifier text="n" />
+                        <"-" text="-" />
+                        <number_literal text="1" />
+                    </binary_expression>
+                </assignment_expression>
+                <";" text=";" />
+                <binary_expression>
+                    <identifier text="i" />
+                    <">=" text=">=" />
+                    <number_literal text="0" />
+                </binary_expression>
+                <";" text=";" />
+                <update_expression>
+                    <identifier text="i" />
+                    <"--" text="--" />
+                </update_expression>
+                <")" text=")" />
+                <compound_statement>
+                    <"{" text="{" />
+                    <expression_statement>
+                        <call_expression>
+                            <identifier text="topline" />
+                            <argument_list>
+                                <"(" text="(" />
+                                <subscript_expression>
+                                    <identifier text="d" />
+                                    <"[" text="[" />
+                                    <identifier text="i" />
+                                    <"]" text="]" />
+                                </subscript_expression>
+                                <"," text="," />
+                                <identifier text="buf" />
+                                <")" text=")" />
+                            </argument_list>
+                        </call_expression>
+                        <";" text=";" />
+                    </expression_statement>
+                    <expression_statement>
+                        <assignment_expression>
+                            <identifier text="buf" />
+                            <"+=" text="+=" />
+                            <number_literal text="3" />
+                        </assignment_expression>
+                        <";" text=";" />
+                    </expression_statement>
+                    <expression_statement>
+                        <assignment_expression>
+                            <pointer_expression>
+                                <"*" text="*" />
+                                <update_expression>
+                                    <identifier text="buf" />
+                                    <"++" text="++" />
+                                </update_expression>
+                            </pointer_expression>
+                            <"=" text="=" />
+                            <char_literal>
+                                <"'" text="'" />
+                                <character text=" " />
+                                <"'" text="'" />
+                            </char_literal>
+                        </assignment_expression>
+                        <";" text=";" />
+                    </expression_statement>
+                    <"}" text="}" />
+                </compound_statement>
+            </for_statement>
+            <expression_statement>
+                <assignment_expression>
+                    <pointer_expression>
+                        <"*" text="*" />
+                        <update_expression>
+                            <identifier text="buf" />
+                            <"++" text="++" />
+                        </update_expression>
+                    </pointer_expression>
+                    <"=" text="=" />
+                    <char_literal>
+                        <"'" text="'" />
+                        <escape_sequence text="\\n" />
+                        <"'" text="'" />
+                    </char_literal>
+                </assignment_expression>
+                <";" text=";" />
+            </expression_statement>
+            <comment text="/* move teletype to next line */" />
+            <comment text="/* print middle lines of all digits */" />
+            <for_statement>
+                <for text="for" />
+                <"(" text="(" />
+                <assignment_expression>
+                    <identifier text="i" />
+                    <"=" text="=" />
+                    <binary_expression>
+                        <identifier text="n" />
+                        <"-" text="-" />
+                        <number_literal text="1" />
+                    </binary_expression>
+                </assignment_expression>
+                <";" text=";" />
+                <binary_expression>
+                    <identifier text="i" />
+                    <">=" text=">=" />
+                    <number_literal text="0" />
+                </binary_expression>
+                <";" text=";" />
+                <update_expression>
+                    <identifier text="i" />
+                    <"--" text="--" />
+                </update_expression>
+                <")" text=")" />
+                <compound_statement>
+                    <"{" text="{" />
+                    <expression_statement>
+                        <call_expression>
+                            <identifier text="midline" />
+                            <argument_list>
+                                <"(" text="(" />
+                                <subscript_expression>
+                                    <identifier text="d" />
+                                    <"[" text="[" />
+                                    <identifier text="i" />
+                                    <"]" text="]" />
+                                </subscript_expression>
+                                <"," text="," />
+                                <identifier text="buf" />
+                                <")" text=")" />
+                            </argument_list>
+                        </call_expression>
+                        <";" text=";" />
+                    </expression_statement>
+                    <expression_statement>
+                        <assignment_expression>
+                            <identifier text="buf" />
+                            <"+=" text="+=" />
+                            <number_literal text="3" />
+                        </assignment_expression>
+                        <";" text=";" />
+                    </expression_statement>
+                    <expression_statement>
+                        <assignment_expression>
+                            <pointer_expression>
+                                <"*" text="*" />
+                                <update_expression>
+                                    <identifier text="buf" />
+                                    <"++" text="++" />
+                                </update_expression>
+                            </pointer_expression>
+                            <"=" text="=" />
+                            <char_literal>
+                                <"'" text="'" />
+                                <character text=" " />
+                                <"'" text="'" />
+                            </char_literal>
+                        </assignment_expression>
+                        <";" text=";" />
+                    </expression_statement>
+                    <"}" text="}" />
+                </compound_statement>
+            </for_statement>
+            <expression_statement>
+                <assignment_expression>
+                    <pointer_expression>
+                        <"*" text="*" />
+                        <update_expression>
+                            <identifier text="buf" />
+                            <"++" text="++" />
+                        </update_expression>
+                    </pointer_expression>
+                    <"=" text="=" />
+                    <char_literal>
+                        <"'" text="'" />
+                        <escape_sequence text="\\n" />
+                        <"'" text="'" />
+                    </char_literal>
+                </assignment_expression>
+                <";" text=";" />
+            </expression_statement>
+            <comment text="/* print bottom lines of all digits */" />
+            <for_statement>
+                <for text="for" />
+                <"(" text="(" />
+                <assignment_expression>
+                    <identifier text="i" />
+                    <"=" text="=" />
+                    <binary_expression>
+                        <identifier text="n" />
+                        <"-" text="-" />
+                        <number_literal text="1" />
+                    </binary_expression>
+                </assignment_expression>
+                <";" text=";" />
+                <binary_expression>
+                    <identifier text="i" />
+                    <">=" text=">=" />
+                    <number_literal text="0" />
+                </binary_expression>
+                <";" text=";" />
+                <update_expression>
+                    <identifier text="i" />
+                    <"--" text="--" />
+                </update_expression>
+                <")" text=")" />
+                <compound_statement>
+                    <"{" text="{" />
+                    <expression_statement>
+                        <call_expression>
+                            <identifier text="botline" />
+                            <argument_list>
+                                <"(" text="(" />
+                                <subscript_expression>
+                                    <identifier text="d" />
+                                    <"[" text="[" />
+                                    <identifier text="i" />
+                                    <"]" text="]" />
+                                </subscript_expression>
+                                <"," text="," />
+                                <identifier text="buf" />
+                                <")" text=")" />
+                            </argument_list>
+                        </call_expression>
+                        <";" text=";" />
+                    </expression_statement>
+                    <expression_statement>
+                        <assignment_expression>
+                            <identifier text="buf" />
+                            <"+=" text="+=" />
+                            <number_literal text="3" />
+                        </assignment_expression>
+                        <";" text=";" />
+                    </expression_statement>
+                    <expression_statement>
+                        <assignment_expression>
+                            <pointer_expression>
+                                <"*" text="*" />
+                                <update_expression>
+                                    <identifier text="buf" />
+                                    <"++" text="++" />
+                                </update_expression>
+                            </pointer_expression>
+                            <"=" text="=" />
+                            <char_literal>
+                                <"'" text="'" />
+                                <character text=" " />
+                                <"'" text="'" />
+                            </char_literal>
+                        </assignment_expression>
+                        <";" text=";" />
+                    </expression_statement>
+                    <"}" text="}" />
+                </compound_statement>
+            </for_statement>
+            <expression_statement>
+                <assignment_expression>
+                    <pointer_expression>
+                        <"*" text="*" />
+                        <update_expression>
+                            <identifier text="buf" />
+                            <"++" text="++" />
+                        </update_expression>
+                    </pointer_expression>
+                    <"=" text="=" />
+                    <char_literal>
+                        <"'" text="'" />
+                        <escape_sequence text="\\n" />
+                        <"'" text="'" />
+                    </char_literal>
+                </assignment_expression>
+                <";" text=";" />
+            </expression_statement>
+            <expression_statement>
+                <assignment_expression>
+                    <pointer_expression>
+                        <"*" text="*" />
+                        <identifier text="buf" />
+                    </pointer_expression>
+                    <"=" text="=" />
+                    <char_literal>
+                        <"'" text="'" />
+                        <escape_sequence text="\\0" />
+                        <"'" text="'" />
+                    </char_literal>
+                </assignment_expression>
+                <";" text=";" />
+            </expression_statement>
+            <"}" text="}" />
+        </compound_statement>
+    </function_definition>
+    <function_definition>
+        <primitive_type text="int" />
+        <function_declarator>
+            <identifier text="main" />
+            <parameter_list>
+                <"(" text="(" />
+                <")" text=")" />
+            </parameter_list>
+        </function_declarator>
+        <compound_statement>
+            <"{" text="{" />
+            <declaration>
+                <primitive_type text="char" />
+                <array_declarator>
+                    <identifier text="buf" />
+                    <"[" text="[" />
+                    <binary_expression>
+                        <number_literal text="5" />
+                        <"*" text="*" />
+                        <identifier text="MAX_DIGITS" />
+                    </binary_expression>
+                    <"]" text="]" />
+                </array_declarator>
+                <";" text=";" />
+            </declaration>
+            <expression_statement>
+                <call_expression>
+                    <identifier text="print_led" />
+                    <argument_list>
+                        <"(" text="(" />
+                        <number_literal text="1234567" />
+                        <"," text="," />
+                        <identifier text="buf" />
+                        <")" text=")" />
+                    </argument_list>
+                </call_expression>
+                <";" text=";" />
+            </expression_statement>
+            <expression_statement>
+                <call_expression>
+                    <identifier text="printf" />
+                    <argument_list>
+                        <"(" text="(" />
+                        <string_literal>
+                            <"\"" text="\"" />
+                            <string_content text="%s" />
+                            <escape_sequence text="\\n" />
+                            <"\"" text="\"" />
+                        </string_literal>
+                        <"," text="," />
+                        <identifier text="buf" />
+                        <")" text=")" />
+                    </argument_list>
+                </call_expression>
+                <";" text=";" />
+            </expression_statement>
+            <return_statement>
+                <return text="return" />
+                <number_literal text="0" />
+                <";" text=";" />
+            </return_statement>
+            <"}" text="}" />
+        </compound_statement>
+    </function_definition>
+    <preproc_ifdef>
+        <#ifndef text="#ifndef" />
+        <identifier text="NO_MAIN" />
+        <function_definition>
+            <primitive_type text="int" />
+            <function_declarator>
+                <identifier text="main" />
+                <parameter_list>
+                    <"(" text="(" />
+                    <parameter_declaration>
+                        <primitive_type text="int" />
+                        <identifier text="argc" />
+                    </parameter_declaration>
+                    <"," text="," />
+                    <parameter_declaration>
+                        <primitive_type text="char" />
+                        <pointer_declarator>
+                            <"*" text="*" />
+                            <pointer_declarator>
+                                <"*" text="*" />
+                                <identifier text="argv" />
+                            </pointer_declarator>
+                        </pointer_declarator>
+                    </parameter_declaration>
+                    <")" text=")" />
+                </parameter_list>
+            </function_declarator>
+            <compound_statement>
+                <"{" text="{" />
+                <declaration>
+                    <primitive_type text="int" />
+                    <init_declarator>
+                        <identifier text="i" />
+                        <"=" text="=" />
+                        <number_literal text="0" />
+                    </init_declarator>
+                    <"," text="," />
+                    <identifier text="n" />
+                    <";" text=";" />
+                </declaration>
+                <declaration>
+                    <sized_type_specifier>
+                        <long text="long" />
+                    </sized_type_specifier>
+                    <identifier text="x" />
+                    <";" text=";" />
+                </declaration>
+                <declaration>
+                    <storage_class_specifier>
+                        <static text="static" />
+                    </storage_class_specifier>
+                    <primitive_type text="int" />
+                    <array_declarator>
+                        <identifier text="d" />
+                        <"[" text="[" />
+                        <identifier text="MAX_DIGITS" />
+                        <"]" text="]" />
+                    </array_declarator>
+                    <";" text=";" />
+                </declaration>
+                <declaration>
+                    <primitive_type text="char" />
+                    <array_declarator>
+                        <identifier text="buf" />
+                        <"[" text="[" />
+                        <binary_expression>
+                            <number_literal text="5" />
+                            <"*" text="*" />
+                            <identifier text="MAX_DIGITS" />
+                        </binary_expression>
+                        <"]" text="]" />
+                    </array_declarator>
+                    <";" text=";" />
+                </declaration>
+                <if_statement>
+                    <if text="if" />
+                    <parenthesized_expression>
+                        <"(" text="(" />
+                        <binary_expression>
+                            <identifier text="argc" />
+                            <"!=" text="!=" />
+                            <number_literal text="2" />
+                        </binary_expression>
+                        <")" text=")" />
+                    </parenthesized_expression>
+                    <compound_statement>
+                        <"{" text="{" />
+                        <expression_statement>
+                            <call_expression>
+                                <identifier text="fprintf" />
+                                <argument_list>
+                                    <"(" text="(" />
+                                    <identifier text="stderr" />
+                                    <"," text="," />
+                                    <string_literal>
+                                        <"\"" text="\"" />
+                                        <string_content text="led: usage: led integer" />
+                                        <escape_sequence text="\\n" />
+                                        <"\"" text="\"" />
+                                    </string_literal>
+                                    <")" text=")" />
+                                </argument_list>
+                            </call_expression>
+                            <";" text=";" />
+                        </expression_statement>
+                        <return_statement>
+                            <return text="return" />
+                            <number_literal text="1" />
+                            <";" text=";" />
+                        </return_statement>
+                        <"}" text="}" />
+                    </compound_statement>
+                </if_statement>
+                <comment text="/* fetch argument from command line */" />
+                <expression_statement>
+                    <assignment_expression>
+                        <identifier text="x" />
+                        <"=" text="=" />
+                        <call_expression>
+                            <identifier text="atol" />
+                            <argument_list>
+                                <"(" text="(" />
+                                <subscript_expression>
+                                    <identifier text="argv" />
+                                    <"[" text="[" />
+                                    <number_literal text="1" />
+                                    <"]" text="]" />
+                                </subscript_expression>
+                                <")" text=")" />
+                            </argument_list>
+                        </call_expression>
+                    </assignment_expression>
+                    <";" text=";" />
+                </expression_statement>
+                <comment text="/* sanity check */" />
+                <if_statement>
+                    <if text="if" />
+                    <parenthesized_expression>
+                        <"(" text="(" />
+                        <binary_expression>
+                            <identifier text="x" />
+                            <"<" text="<" />
+                            <number_literal text="0" />
+                        </binary_expression>
+                        <")" text=")" />
+                    </parenthesized_expression>
+                    <compound_statement>
+                        <"{" text="{" />
+                        <expression_statement>
+                            <call_expression>
+                                <identifier text="fprintf" />
+                                <argument_list>
+                                    <"(" text="(" />
+                                    <identifier text="stderr" />
+                                    <"," text="," />
+                                    <string_literal>
+                                        <"\"" text="\"" />
+                                        <string_content text="led: %d must be non-negative" />
+                                        <escape_sequence text="\\n" />
+                                        <"\"" text="\"" />
+                                    </string_literal>
+                                    <"," text="," />
+                                    <identifier text="x" />
+                                    <")" text=")" />
+                                </argument_list>
+                            </call_expression>
+                            <";" text=";" />
+                        </expression_statement>
+                        <return_statement>
+                            <return text="return" />
+                            <number_literal text="1" />
+                            <";" text=";" />
+                        </return_statement>
+                        <"}" text="}" />
+                    </compound_statement>
+                </if_statement>
+                <expression_statement>
+                    <call_expression>
+                        <identifier text="print_led" />
+                        <argument_list>
+                            <"(" text="(" />
+                            <identifier text="x" />
+                            <"," text="," />
+                            <identifier text="buf" />
+                            <")" text=")" />
+                        </argument_list>
+                    </call_expression>
+                    <";" text=";" />
+                </expression_statement>
+                <expression_statement>
+                    <call_expression>
+                        <identifier text="printf" />
+                        <argument_list>
+                            <"(" text="(" />
+                            <string_literal>
+                                <"\"" text="\"" />
+                                <string_content text="%s" />
+                                <escape_sequence text="\\n" />
+                                <"\"" text="\"" />
+                            </string_literal>
+                            <"," text="," />
+                            <identifier text="buf" />
+                            <")" text=")" />
+                        </argument_list>
+                    </call_expression>
+                    <";" text=";" />
+                </expression_statement>
+                <return_statement>
+                    <return text="return" />
+                    <number_literal text="0" />
+                    <";" text=";" />
+                </return_statement>
+                <"}" text="}" />
+            </compound_statement>
+        </function_definition>
+        <#endif text="#endif" />
+    </preproc_ifdef>
+    <comment text="/* vim: set expandtab ts=4 sw=3 sts=3 tw=80 :*/" />
+</translation_unit>

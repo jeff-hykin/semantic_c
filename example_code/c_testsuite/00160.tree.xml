@@ -1,0 +1,127 @@
+<translation_unit>
+    <preproc_include>
+        <#include text="#include" />
+        <system_lib_string text="<stdio.h>" />
+    </preproc_include>
+    <function_definition>
+        <primitive_type text="int" />
+        <function_declarator>
+            <identifier text="main" />
+            <parameter_list>
+                <"(" text="(" />
+                <")" text=")" />
+            </parameter_list>
+        </function_declarator>
+        <compound_statement>
+            <"{" text="{" />
+            <declaration>
+                <primitive_type text="int" />
+                <identifier text="a" />
+                <";" text=";" />
+            </declaration>
+            <declaration>
+                <primitive_type text="int" />
+                <identifier text="p" />
+                <";" text=";" />
+            </declaration>
+            <declaration>
+                <primitive_type text="int" />
+                <identifier text="t" />
+                <";" text=";" />
+            </declaration>
+            <expression_statement>
+                <assignment_expression>
+                    <identifier text="a" />
+                    <"=" text="=" />
+                    <number_literal text="1" />
+                </assignment_expression>
+                <";" text=";" />
+            </expression_statement>
+            <expression_statement>
+                <assignment_expression>
+                    <identifier text="p" />
+                    <"=" text="=" />
+                    <number_literal text="0" />
+                </assignment_expression>
+                <";" text=";" />
+            </expression_statement>
+            <expression_statement>
+                <assignment_expression>
+                    <identifier text="t" />
+                    <"=" text="=" />
+                    <number_literal text="0" />
+                </assignment_expression>
+                <";" text=";" />
+            </expression_statement>
+            <while_statement>
+                <while text="while" />
+                <parenthesized_expression>
+                    <"(" text="(" />
+                    <binary_expression>
+                        <identifier text="a" />
+                        <"<" text="<" />
+                        <number_literal text="100" />
+                    </binary_expression>
+                    <")" text=")" />
+                </parenthesized_expression>
+                <compound_statement>
+                    <"{" text="{" />
+                    <expression_statement>
+                        <call_expression>
+                            <identifier text="printf" />
+                            <argument_list>
+                                <"(" text="(" />
+                                <string_literal>
+                                    <"\"" text="\"" />
+                                    <string_content text="%d" />
+                                    <escape_sequence text="\\n" />
+                                    <"\"" text="\"" />
+                                </string_literal>
+                                <"," text="," />
+                                <identifier text="a" />
+                                <")" text=")" />
+                            </argument_list>
+                        </call_expression>
+                        <";" text=";" />
+                    </expression_statement>
+                    <expression_statement>
+                        <assignment_expression>
+                            <identifier text="t" />
+                            <"=" text="=" />
+                            <identifier text="a" />
+                        </assignment_expression>
+                        <";" text=";" />
+                    </expression_statement>
+                    <expression_statement>
+                        <assignment_expression>
+                            <identifier text="a" />
+                            <"=" text="=" />
+                            <binary_expression>
+                                <identifier text="t" />
+                                <"+" text="+" />
+                                <identifier text="p" />
+                            </binary_expression>
+                        </assignment_expression>
+                        <";" text=";" />
+                    </expression_statement>
+                    <expression_statement>
+                        <assignment_expression>
+                            <identifier text="p" />
+                            <"=" text="=" />
+                            <identifier text="t" />
+                        </assignment_expression>
+                        <";" text=";" />
+                    </expression_statement>
+                    <"}" text="}" />
+                </compound_statement>
+            </while_statement>
+            <return_statement>
+                <return text="return" />
+                <number_literal text="0" />
+                <";" text=";" />
+            </return_statement>
+            <"}" text="}" />
+        </compound_statement>
+    </function_definition>
+    <comment text="// vim: set expandtab ts=4 sw=3 sts=3 tw=80 :" />
+</translation_unit>

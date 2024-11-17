@@ -1,0 +1,57 @@
+<translation_unit>
+    <function_definition>
+        <primitive_type text="int" />
+        <function_declarator>
+            <identifier text="main" />
+            <parameter_list>
+                <"(" text="(" />
+                <")" text=")" />
+            </parameter_list>
+        </function_declarator>
+        <compound_statement>
+            <"{" text="{" />
+            <labeled_statement>
+                <statement_identifier text="start" />
+                <":" text=":" />
+                <goto_statement>
+                    <goto text="goto" />
+                    <statement_identifier text="next" />
+                    <";" text=";" />
+                </goto_statement>
+            </labeled_statement>
+            <return_statement>
+                <return text="return" />
+                <number_literal text="1" />
+                <";" text=";" />
+            </return_statement>
+            <labeled_statement>
+                <statement_identifier text="success" />
+                <":" text=":" />
+                <return_statement>
+                    <return text="return" />
+                    <number_literal text="0" />
+                    <";" text=";" />
+                </return_statement>
+            </labeled_statement>
+            <labeled_statement>
+                <statement_identifier text="next" />
+                <":" text=":" />
+                <labeled_statement>
+                    <statement_identifier text="foo" />
+                    <":" text=":" />
+                    <goto_statement>
+                        <goto text="goto" />
+                        <statement_identifier text="success" />
+                        <";" text=";" />
+                    </goto_statement>
+                </labeled_statement>
+            </labeled_statement>
+            <return_statement>
+                <return text="return" />
+                <number_literal text="1" />
+                <";" text=";" />
+            </return_statement>
+            <"}" text="}" />
+        </compound_statement>
+    </function_definition>
+</translation_unit>

@@ -1,0 +1,56 @@
+<translation_unit>
+    <declaration>
+        <primitive_type text="int" />
+        <init_declarator>
+            <function_declarator>
+                <parenthesized_declarator>
+                    <"(" text="(" />
+                    <pointer_declarator>
+                        <"*" text="*" />
+                        <identifier text="fptr" />
+                    </pointer_declarator>
+                    <")" text=")" />
+                </parenthesized_declarator>
+                <parameter_list>
+                    <"(" text="(" />
+                    <")" text=")" />
+                </parameter_list>
+            </function_declarator>
+            <"=" text="=" />
+            <number_literal text="0" />
+        </init_declarator>
+        <";" text=";" />
+    </declaration>
+    <function_definition>
+        <primitive_type text="int" />
+        <function_declarator>
+            <identifier text="main" />
+            <parameter_list>
+                <"(" text="(" />
+                <")" text=")" />
+            </parameter_list>
+        </function_declarator>
+        <compound_statement>
+            <"{" text="{" />
+            <if_statement>
+                <if text="if" />
+                <parenthesized_expression>
+                    <"(" text="(" />
+                    <identifier text="fptr" />
+                    <")" text=")" />
+                </parenthesized_expression>
+                <return_statement>
+                    <return text="return" />
+                    <number_literal text="1" />
+                    <";" text=";" />
+                </return_statement>
+            </if_statement>
+            <return_statement>
+                <return text="return" />
+                <number_literal text="0" />
+                <";" text=";" />
+            </return_statement>
+            <"}" text="}" />
+        </compound_statement>
+    </function_definition>
+</translation_unit>

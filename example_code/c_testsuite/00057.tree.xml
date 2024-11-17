@@ -1,0 +1,69 @@
+<translation_unit>
+    <function_definition>
+        <primitive_type text="int" />
+        <function_declarator>
+            <identifier text="main" />
+            <parameter_list>
+                <"(" text="(" />
+                <")" text=")" />
+            </parameter_list>
+        </function_declarator>
+        <compound_statement>
+            <"{" text="{" />
+            <declaration>
+                <primitive_type text="char" />
+                <array_declarator>
+                    <identifier text="a" />
+                    <"[" text="[" />
+                    <number_literal text="16" />
+                    <"]" text="]" />
+                </array_declarator>
+                <"," text="," />
+                <array_declarator>
+                    <identifier text="b" />
+                    <"[" text="[" />
+                    <number_literal text="16" />
+                    <"]" text="]" />
+                </array_declarator>
+                <";" text=";" />
+            </declaration>
+            <if_statement>
+                <if text="if" />
+                <parenthesized_expression>
+                    <"(" text="(" />
+                    <binary_expression>
+                        <sizeof_expression>
+                            <sizeof text="sizeof" />
+                            <parenthesized_expression>
+                                <"(" text="(" />
+                                <identifier text="a" />
+                                <")" text=")" />
+                            </parenthesized_expression>
+                        </sizeof_expression>
+                        <"!=" text="!=" />
+                        <sizeof_expression>
+                            <sizeof text="sizeof" />
+                            <parenthesized_expression>
+                                <"(" text="(" />
+                                <identifier text="b" />
+                                <")" text=")" />
+                            </parenthesized_expression>
+                        </sizeof_expression>
+                    </binary_expression>
+                    <")" text=")" />
+                </parenthesized_expression>
+                <return_statement>
+                    <return text="return" />
+                    <number_literal text="1" />
+                    <";" text=";" />
+                </return_statement>
+            </if_statement>
+            <return_statement>
+                <return text="return" />
+                <number_literal text="0" />
+                <";" text=";" />
+            </return_statement>
+            <"}" text="}" />
+        </compound_statement>
+    </function_definition>
+</translation_unit>

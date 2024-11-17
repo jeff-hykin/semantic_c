@@ -1,0 +1,50 @@
+<translation_unit>
+    <type_definition>
+        <typedef text="typedef" />
+        <primitive_type text="int" />
+        <type_identifier text="myint" />
+        <";" text=";" />
+    </type_definition>
+    <declaration>
+        <type_identifier text="myint" />
+        <init_declarator>
+            <identifier text="x" />
+            <"=" text="=" />
+            <cast_expression>
+                <"(" text="(" />
+                <type_descriptor>
+                    <type_identifier text="myint" />
+                </type_descriptor>
+                <")" text=")" />
+                <number_literal text="1" />
+            </cast_expression>
+        </init_declarator>
+        <";" text=";" />
+    </declaration>
+    <function_definition>
+        <primitive_type text="int" />
+        <function_declarator>
+            <identifier text="main" />
+            <parameter_list>
+                <"(" text="(" />
+                <parameter_declaration>
+                    <primitive_type text="void" />
+                </parameter_declaration>
+                <")" text=")" />
+            </parameter_list>
+        </function_declarator>
+        <compound_statement>
+            <"{" text="{" />
+            <return_statement>
+                <return text="return" />
+                <binary_expression>
+                    <identifier text="x" />
+                    <"-" text="-" />
+                    <number_literal text="1" />
+                </binary_expression>
+                <";" text=";" />
+            </return_statement>
+            <"}" text="}" />
+        </compound_statement>
+    </function_definition>
+</translation_unit>

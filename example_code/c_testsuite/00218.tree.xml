@@ -1,0 +1,352 @@
+<translation_unit>
+    <comment text="/* This checks if enums needing 8 bit but only having positive\n   values are correctly zero extended (instead of sign extended)\n   when stored into/loaded from a 8 bit bit-field of enum type (which\n   itself is implementation defined, so isn't necessarily supported by all\n   other compilers).  */" />
+    <enum_specifier>
+        <enum text="enum" />
+        <type_identifier text="tree_code" />
+        <enumerator_list>
+            <"{" text="{" />
+            <enumerator>
+                <identifier text="SOME_CODE" />
+                <"=" text="=" />
+                <number_literal text="148" />
+            </enumerator>
+            <"," text="," />
+            <comment text="/* has bit 7 set, and hence all further enum values as well */" />
+            <enumerator>
+                <identifier text="LAST_AND_UNUSED_TREE_CODE" />
+            </enumerator>
+            <"}" text="}" />
+        </enumerator_list>
+    </enum_specifier>
+    <";" text=";" />
+    <type_definition>
+        <typedef text="typedef" />
+        <union_specifier>
+            <union text="union" />
+            <type_identifier text="tree_node" />
+        </union_specifier>
+        <pointer_declarator>
+            <"*" text="*" />
+            <type_identifier text="tree" />
+        </pointer_declarator>
+        <";" text=";" />
+    </type_definition>
+    <struct_specifier>
+        <struct text="struct" />
+        <type_identifier text="tree_common" />
+        <field_declaration_list>
+            <"{" text="{" />
+            <field_declaration>
+                <union_specifier>
+                    <union text="union" />
+                    <type_identifier text="tree_node" />
+                </union_specifier>
+                <pointer_declarator>
+                    <"*" text="*" />
+                    <field_identifier text="chain" />
+                </pointer_declarator>
+                <";" text=";" />
+            </field_declaration>
+            <field_declaration>
+                <union_specifier>
+                    <union text="union" />
+                    <type_identifier text="tree_node" />
+                </union_specifier>
+                <pointer_declarator>
+                    <"*" text="*" />
+                    <field_identifier text="type" />
+                </pointer_declarator>
+                <";" text=";" />
+            </field_declaration>
+            <field_declaration>
+                <enum_specifier>
+                    <enum text="enum" />
+                    <type_identifier text="tree_code" />
+                </enum_specifier>
+                <field_identifier text="code" />
+                <bitfield_clause>
+                    <":" text=":" />
+                    <number_literal text="8" />
+                </bitfield_clause>
+                <";" text=";" />
+            </field_declaration>
+            <field_declaration>
+                <sized_type_specifier>
+                    <unsigned text="unsigned" />
+                </sized_type_specifier>
+                <field_identifier text="side_effects_flag" />
+                <bitfield_clause>
+                    <":" text=":" />
+                    <number_literal text="1" />
+                </bitfield_clause>
+                <";" text=";" />
+            </field_declaration>
+            <"}" text="}" />
+        </field_declaration_list>
+    </struct_specifier>
+    <";" text=";" />
+    <union_specifier>
+        <union text="union" />
+        <type_identifier text="tree_node" />
+        <field_declaration_list>
+            <"{" text="{" />
+            <field_declaration>
+                <struct_specifier>
+                    <struct text="struct" />
+                    <type_identifier text="tree_common" />
+                </struct_specifier>
+                <field_identifier text="common" />
+                <";" text=";" />
+            </field_declaration>
+            <"}" text="}" />
+        </field_declaration_list>
+    </union_specifier>
+    <";" text=";" />
+    <enum_specifier>
+        <enum text="enum" />
+        <type_identifier text="c_tree_code" />
+        <enumerator_list>
+            <"{" text="{" />
+            <enumerator>
+                <identifier text="C_DUMMY_TREE_CODE" />
+                <"=" text="=" />
+                <identifier text="LAST_AND_UNUSED_TREE_CODE" />
+            </enumerator>
+            <"," text="," />
+            <enumerator>
+                <identifier text="STMT_EXPR" />
+            </enumerator>
+            <"," text="," />
+            <enumerator>
+                <identifier text="LAST_C_TREE_CODE" />
+            </enumerator>
+            <"}" text="}" />
+        </enumerator_list>
+    </enum_specifier>
+    <";" text=";" />
+    <enum_specifier>
+        <enum text="enum" />
+        <type_identifier text="cplus_tree_code" />
+        <enumerator_list>
+            <"{" text="{" />
+            <enumerator>
+                <identifier text="CP_DUMMY_TREE_CODE" />
+                <"=" text="=" />
+                <identifier text="LAST_C_TREE_CODE" />
+            </enumerator>
+            <"," text="," />
+            <enumerator>
+                <identifier text="AMBIG_CONV" />
+            </enumerator>
+            <"," text="," />
+            <enumerator>
+                <identifier text="LAST_CPLUS_TREE_CODE" />
+            </enumerator>
+            <"}" text="}" />
+        </enumerator_list>
+    </enum_specifier>
+    <";" text=";" />
+    <declaration>
+        <storage_class_specifier>
+            <extern text="extern" />
+        </storage_class_specifier>
+        <primitive_type text="int" />
+        <function_declarator>
+            <identifier text="printf" />
+            <parameter_list>
+                <"(" text="(" />
+                <parameter_declaration>
+                    <type_qualifier>
+                        <const text="const" />
+                    </type_qualifier>
+                    <primitive_type text="char" />
+                    <abstract_pointer_declarator>
+                        <"*" text="*" />
+                    </abstract_pointer_declarator>
+                </parameter_declaration>
+                <"," text="," />
+                <variadic_parameter>
+                    <"..." text="..." />
+                </variadic_parameter>
+                <")" text=")" />
+            </parameter_list>
+        </function_declarator>
+        <";" text=";" />
+    </declaration>
+    <function_definition>
+        <primitive_type text="int" />
+        <function_declarator>
+            <identifier text="blah" />
+            <parameter_list>
+                <"(" text="(" />
+                <")" text=")" />
+            </parameter_list>
+        </function_declarator>
+        <compound_statement>
+            <"{" text="{" />
+            <return_statement>
+                <return text="return" />
+                <number_literal text="0" />
+                <";" text=";" />
+            </return_statement>
+            <"}" text="}" />
+        </compound_statement>
+    </function_definition>
+    <function_definition>
+        <primitive_type text="int" />
+        <function_declarator>
+            <identifier text="convert_like_real" />
+            <parameter_list>
+                <"(" text="(" />
+                <parameter_declaration>
+                    <type_identifier text="tree" />
+                    <identifier text="convs" />
+                </parameter_declaration>
+                <")" text=")" />
+            </parameter_list>
+        </function_declarator>
+        <compound_statement>
+            <"{" text="{" />
+            <switch_statement>
+                <switch text="switch" />
+                <parenthesized_expression>
+                    <"(" text="(" />
+                    <parenthesized_expression>
+                        <"(" text="(" />
+                        <cast_expression>
+                            <"(" text="(" />
+                            <type_descriptor>
+                                <enum_specifier>
+                                    <enum text="enum" />
+                                    <type_identifier text="tree_code" />
+                                </enum_specifier>
+                            </type_descriptor>
+                            <")" text=")" />
+                            <field_expression>
+                                <field_expression>
+                                    <parenthesized_expression>
+                                        <"(" text="(" />
+                                        <identifier text="convs" />
+                                        <")" text=")" />
+                                    </parenthesized_expression>
+                                    <"->" text="->" />
+                                    <field_identifier text="common" />
+                                </field_expression>
+                                <"." text="." />
+                                <field_identifier text="code" />
+                            </field_expression>
+                        </cast_expression>
+                        <")" text=")" />
+                    </parenthesized_expression>
+                    <")" text=")" />
+                </parenthesized_expression>
+                <compound_statement>
+                    <"{" text="{" />
+                    <case_statement>
+                        <case text="case" />
+                        <identifier text="AMBIG_CONV" />
+                        <":" text=":" />
+                        <comment text="/* This has bit 7 set, which must not be the sign\n\t\t\tbit in tree_common.code, i.e. the bitfield must\n\t\t\tbe somehow marked unsigned.  */" />
+                        <return_statement>
+                            <return text="return" />
+                            <call_expression>
+                                <identifier text="blah" />
+                                <argument_list>
+                                    <"(" text="(" />
+                                    <")" text=")" />
+                                </argument_list>
+                            </call_expression>
+                            <";" text=";" />
+                        </return_statement>
+                    </case_statement>
+                    <case_statement>
+                        <default text="default" />
+                        <":" text=":" />
+                        <break_statement>
+                            <break text="break" />
+                            <";" text=";" />
+                        </break_statement>
+                    </case_statement>
+                    <"}" text="}" />
+                </compound_statement>
+            </switch_statement>
+            <expression_statement>
+                <";" text=";" />
+            </expression_statement>
+            <expression_statement>
+                <call_expression>
+                    <identifier text="printf" />
+                    <argument_list>
+                        <"(" text="(" />
+                        <string_literal>
+                            <"\"" text="\"" />
+                            <string_content text="unsigned enum bit-fields broken" />
+                            <escape_sequence text="\\n" />
+                            <"\"" text="\"" />
+                        </string_literal>
+                        <")" text=")" />
+                    </argument_list>
+                </call_expression>
+                <";" text=";" />
+            </expression_statement>
+            <"}" text="}" />
+        </compound_statement>
+    </function_definition>
+    <function_definition>
+        <primitive_type text="int" />
+        <function_declarator>
+            <identifier text="main" />
+            <parameter_list>
+                <"(" text="(" />
+                <")" text=")" />
+            </parameter_list>
+        </function_declarator>
+        <compound_statement>
+            <"{" text="{" />
+            <declaration>
+                <union_specifier>
+                    <union text="union" />
+                    <type_identifier text="tree_node" />
+                </union_specifier>
+                <identifier text="convs" />
+                <";" text=";" />
+            </declaration>
+            <expression_statement>
+                <assignment_expression>
+                    <field_expression>
+                        <field_expression>
+                            <identifier text="convs" />
+                            <"." text="." />
+                            <field_identifier text="common" />
+                        </field_expression>
+                        <"." text="." />
+                        <field_identifier text="code" />
+                    </field_expression>
+                    <"=" text="=" />
+                    <identifier text="AMBIG_CONV" />
+                </assignment_expression>
+                <";" text=";" />
+            </expression_statement>
+            <expression_statement>
+                <call_expression>
+                    <identifier text="convert_like_real" />
+                    <argument_list>
+                        <"(" text="(" />
+                        <pointer_expression>
+                            <"&" text="&" />
+                            <identifier text="convs" />
+                        </pointer_expression>
+                        <")" text=")" />
+                    </argument_list>
+                </call_expression>
+                <";" text=";" />
+            </expression_statement>
+            <return_statement>
+                <return text="return" />
+                <number_literal text="0" />
+                <";" text=";" />
+            </return_statement>
+            <"}" text="}" />
+        </compound_statement>
+    </function_definition>
+</translation_unit>

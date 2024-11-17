@@ -1,0 +1,277 @@
+<translation_unit>
+    <function_definition>
+        <primitive_type text="int" />
+        <function_declarator>
+            <identifier text="foo" />
+            <parameter_list>
+                <"(" text="(" />
+                <parameter_declaration>
+                    <primitive_type text="int" />
+                    <array_declarator>
+                        <identifier text="x" />
+                        <"[" text="[" />
+                        <number_literal text="100" />
+                        <"]" text="]" />
+                    </array_declarator>
+                </parameter_declaration>
+                <")" text=")" />
+            </parameter_list>
+        </function_declarator>
+        <compound_statement>
+            <"{" text="{" />
+            <declaration>
+                <primitive_type text="int" />
+                <array_declarator>
+                    <identifier text="y" />
+                    <"[" text="[" />
+                    <number_literal text="100" />
+                    <"]" text="]" />
+                </array_declarator>
+                <";" text=";" />
+            </declaration>
+            <declaration>
+                <primitive_type text="int" />
+                <pointer_declarator>
+                    <"*" text="*" />
+                    <identifier text="p" />
+                </pointer_declarator>
+                <";" text=";" />
+            </declaration>
+            <expression_statement>
+                <assignment_expression>
+                    <subscript_expression>
+                        <identifier text="y" />
+                        <"[" text="[" />
+                        <number_literal text="0" />
+                        <"]" text="]" />
+                    </subscript_expression>
+                    <"=" text="=" />
+                    <number_literal text="2000" />
+                </assignment_expression>
+                <";" text=";" />
+            </expression_statement>
+            <if_statement>
+                <if text="if" />
+                <parenthesized_expression>
+                    <"(" text="(" />
+                    <binary_expression>
+                        <subscript_expression>
+                            <identifier text="x" />
+                            <"[" text="[" />
+                            <number_literal text="0" />
+                            <"]" text="]" />
+                        </subscript_expression>
+                        <"!=" text="!=" />
+                        <number_literal text="1000" />
+                    </binary_expression>
+                    <")" text=")" />
+                </parenthesized_expression>
+                <compound_statement>
+                    <"{" text="{" />
+                    <return_statement>
+                        <return text="return" />
+                        <number_literal text="1" />
+                        <";" text=";" />
+                    </return_statement>
+                    <"}" text="}" />
+                </compound_statement>
+            </if_statement>
+            <expression_statement>
+                <assignment_expression>
+                    <identifier text="p" />
+                    <"=" text="=" />
+                    <identifier text="x" />
+                </assignment_expression>
+                <";" text=";" />
+            </expression_statement>
+            <if_statement>
+                <if text="if" />
+                <parenthesized_expression>
+                    <"(" text="(" />
+                    <binary_expression>
+                        <subscript_expression>
+                            <identifier text="p" />
+                            <"[" text="[" />
+                            <number_literal text="0" />
+                            <"]" text="]" />
+                        </subscript_expression>
+                        <"!=" text="!=" />
+                        <number_literal text="1000" />
+                    </binary_expression>
+                    <")" text=")" />
+                </parenthesized_expression>
+                <compound_statement>
+                    <"{" text="{" />
+                    <return_statement>
+                        <return text="return" />
+                        <number_literal text="2" />
+                        <";" text=";" />
+                    </return_statement>
+                    <"}" text="}" />
+                </compound_statement>
+            </if_statement>
+            <expression_statement>
+                <assignment_expression>
+                    <identifier text="p" />
+                    <"=" text="=" />
+                    <identifier text="y" />
+                </assignment_expression>
+                <";" text=";" />
+            </expression_statement>
+            <if_statement>
+                <if text="if" />
+                <parenthesized_expression>
+                    <"(" text="(" />
+                    <binary_expression>
+                        <subscript_expression>
+                            <identifier text="p" />
+                            <"[" text="[" />
+                            <number_literal text="0" />
+                            <"]" text="]" />
+                        </subscript_expression>
+                        <"!=" text="!=" />
+                        <number_literal text="2000" />
+                    </binary_expression>
+                    <")" text=")" />
+                </parenthesized_expression>
+                <compound_statement>
+                    <"{" text="{" />
+                    <return_statement>
+                        <return text="return" />
+                        <number_literal text="3" />
+                        <";" text=";" />
+                    </return_statement>
+                    <"}" text="}" />
+                </compound_statement>
+            </if_statement>
+            <if_statement>
+                <if text="if" />
+                <parenthesized_expression>
+                    <"(" text="(" />
+                    <binary_expression>
+                        <sizeof_expression>
+                            <sizeof text="sizeof" />
+                            <parenthesized_expression>
+                                <"(" text="(" />
+                                <identifier text="x" />
+                                <")" text=")" />
+                            </parenthesized_expression>
+                        </sizeof_expression>
+                        <"!=" text="!=" />
+                        <sizeof_expression>
+                            <sizeof text="sizeof" />
+                            <"(" text="(" />
+                            <type_descriptor>
+                                <primitive_type text="void" />
+                                <abstract_pointer_declarator>
+                                    <"*" text="*" />
+                                </abstract_pointer_declarator>
+                            </type_descriptor>
+                            <")" text=")" />
+                        </sizeof_expression>
+                    </binary_expression>
+                    <")" text=")" />
+                </parenthesized_expression>
+                <compound_statement>
+                    <"{" text="{" />
+                    <return_statement>
+                        <return text="return" />
+                        <number_literal text="4" />
+                        <";" text=";" />
+                    </return_statement>
+                    <"}" text="}" />
+                </compound_statement>
+            </if_statement>
+            <if_statement>
+                <if text="if" />
+                <parenthesized_expression>
+                    <"(" text="(" />
+                    <binary_expression>
+                        <sizeof_expression>
+                            <sizeof text="sizeof" />
+                            <parenthesized_expression>
+                                <"(" text="(" />
+                                <identifier text="y" />
+                                <")" text=")" />
+                            </parenthesized_expression>
+                        </sizeof_expression>
+                        <"<=" text="<=" />
+                        <sizeof_expression>
+                            <sizeof text="sizeof" />
+                            <parenthesized_expression>
+                                <"(" text="(" />
+                                <identifier text="x" />
+                                <")" text=")" />
+                            </parenthesized_expression>
+                        </sizeof_expression>
+                    </binary_expression>
+                    <")" text=")" />
+                </parenthesized_expression>
+                <compound_statement>
+                    <"{" text="{" />
+                    <return_statement>
+                        <return text="return" />
+                        <number_literal text="5" />
+                        <";" text=";" />
+                    </return_statement>
+                    <"}" text="}" />
+                </compound_statement>
+            </if_statement>
+            <return_statement>
+                <return text="return" />
+                <number_literal text="0" />
+                <";" text=";" />
+            </return_statement>
+            <"}" text="}" />
+        </compound_statement>
+    </function_definition>
+    <function_definition>
+        <primitive_type text="int" />
+        <function_declarator>
+            <identifier text="main" />
+            <parameter_list>
+                <"(" text="(" />
+                <")" text=")" />
+            </parameter_list>
+        </function_declarator>
+        <compound_statement>
+            <"{" text="{" />
+            <declaration>
+                <primitive_type text="int" />
+                <array_declarator>
+                    <identifier text="x" />
+                    <"[" text="[" />
+                    <number_literal text="100" />
+                    <"]" text="]" />
+                </array_declarator>
+                <";" text=";" />
+            </declaration>
+            <expression_statement>
+                <assignment_expression>
+                    <subscript_expression>
+                        <identifier text="x" />
+                        <"[" text="[" />
+                        <number_literal text="0" />
+                        <"]" text="]" />
+                    </subscript_expression>
+                    <"=" text="=" />
+                    <number_literal text="1000" />
+                </assignment_expression>
+                <";" text=";" />
+            </expression_statement>
+            <return_statement>
+                <return text="return" />
+                <call_expression>
+                    <identifier text="foo" />
+                    <argument_list>
+                        <"(" text="(" />
+                        <identifier text="x" />
+                        <")" text=")" />
+                    </argument_list>
+                </call_expression>
+                <";" text=";" />
+            </return_statement>
+            <"}" text="}" />
+        </compound_statement>
+    </function_definition>
+</translation_unit>

@@ -1,0 +1,721 @@
+<translation_unit>
+    <preproc_include>
+        <#include text="#include" />
+        <system_lib_string text="<stdio.h>" />
+    </preproc_include>
+    <preproc_include>
+        <#include text="#include" />
+        <system_lib_string text="<string.h>" />
+    </preproc_include>
+    <function_definition>
+        <primitive_type text="int" />
+        <function_declarator>
+            <identifier text="main" />
+            <parameter_list>
+                <"(" text="(" />
+                <")" text=")" />
+            </parameter_list>
+        </function_declarator>
+        <compound_statement>
+            <"{" text="{" />
+            <declaration>
+                <primitive_type text="char" />
+                <array_declarator>
+                    <identifier text="a" />
+                    <"[" text="[" />
+                    <number_literal text="10" />
+                    <"]" text="]" />
+                </array_declarator>
+                <";" text=";" />
+            </declaration>
+            <expression_statement>
+                <call_expression>
+                    <identifier text="strcpy" />
+                    <argument_list>
+                        <"(" text="(" />
+                        <identifier text="a" />
+                        <"," text="," />
+                        <string_literal>
+                            <"\"" text="\"" />
+                            <string_content text="hello" />
+                            <"\"" text="\"" />
+                        </string_literal>
+                        <")" text=")" />
+                    </argument_list>
+                </call_expression>
+                <";" text=";" />
+            </expression_statement>
+            <expression_statement>
+                <call_expression>
+                    <identifier text="printf" />
+                    <argument_list>
+                        <"(" text="(" />
+                        <string_literal>
+                            <"\"" text="\"" />
+                            <string_content text="%s" />
+                            <escape_sequence text="\\n" />
+                            <"\"" text="\"" />
+                        </string_literal>
+                        <"," text="," />
+                        <identifier text="a" />
+                        <")" text=")" />
+                    </argument_list>
+                </call_expression>
+                <";" text=";" />
+            </expression_statement>
+            <expression_statement>
+                <call_expression>
+                    <identifier text="strncpy" />
+                    <argument_list>
+                        <"(" text="(" />
+                        <identifier text="a" />
+                        <"," text="," />
+                        <string_literal>
+                            <"\"" text="\"" />
+                            <string_content text="gosh" />
+                            <"\"" text="\"" />
+                        </string_literal>
+                        <"," text="," />
+                        <number_literal text="2" />
+                        <")" text=")" />
+                    </argument_list>
+                </call_expression>
+                <";" text=";" />
+            </expression_statement>
+            <expression_statement>
+                <call_expression>
+                    <identifier text="printf" />
+                    <argument_list>
+                        <"(" text="(" />
+                        <string_literal>
+                            <"\"" text="\"" />
+                            <string_content text="%s" />
+                            <escape_sequence text="\\n" />
+                            <"\"" text="\"" />
+                        </string_literal>
+                        <"," text="," />
+                        <identifier text="a" />
+                        <")" text=")" />
+                    </argument_list>
+                </call_expression>
+                <";" text=";" />
+            </expression_statement>
+            <expression_statement>
+                <call_expression>
+                    <identifier text="printf" />
+                    <argument_list>
+                        <"(" text="(" />
+                        <string_literal>
+                            <"\"" text="\"" />
+                            <string_content text="%d" />
+                            <escape_sequence text="\\n" />
+                            <"\"" text="\"" />
+                        </string_literal>
+                        <"," text="," />
+                        <binary_expression>
+                            <call_expression>
+                                <identifier text="strcmp" />
+                                <argument_list>
+                                    <"(" text="(" />
+                                    <identifier text="a" />
+                                    <"," text="," />
+                                    <string_literal>
+                                        <"\"" text="\"" />
+                                        <string_content text="apple" />
+                                        <"\"" text="\"" />
+                                    </string_literal>
+                                    <")" text=")" />
+                                </argument_list>
+                            </call_expression>
+                            <">" text=">" />
+                            <number_literal text="0" />
+                        </binary_expression>
+                        <")" text=")" />
+                    </argument_list>
+                </call_expression>
+                <";" text=";" />
+            </expression_statement>
+            <expression_statement>
+                <call_expression>
+                    <identifier text="printf" />
+                    <argument_list>
+                        <"(" text="(" />
+                        <string_literal>
+                            <"\"" text="\"" />
+                            <string_content text="%d" />
+                            <escape_sequence text="\\n" />
+                            <"\"" text="\"" />
+                        </string_literal>
+                        <"," text="," />
+                        <binary_expression>
+                            <call_expression>
+                                <identifier text="strcmp" />
+                                <argument_list>
+                                    <"(" text="(" />
+                                    <identifier text="a" />
+                                    <"," text="," />
+                                    <string_literal>
+                                        <"\"" text="\"" />
+                                        <string_content text="goere" />
+                                        <"\"" text="\"" />
+                                    </string_literal>
+                                    <")" text=")" />
+                                </argument_list>
+                            </call_expression>
+                            <">" text=">" />
+                            <number_literal text="0" />
+                        </binary_expression>
+                        <")" text=")" />
+                    </argument_list>
+                </call_expression>
+                <";" text=";" />
+            </expression_statement>
+            <expression_statement>
+                <call_expression>
+                    <identifier text="printf" />
+                    <argument_list>
+                        <"(" text="(" />
+                        <string_literal>
+                            <"\"" text="\"" />
+                            <string_content text="%d" />
+                            <escape_sequence text="\\n" />
+                            <"\"" text="\"" />
+                        </string_literal>
+                        <"," text="," />
+                        <binary_expression>
+                            <call_expression>
+                                <identifier text="strcmp" />
+                                <argument_list>
+                                    <"(" text="(" />
+                                    <identifier text="a" />
+                                    <"," text="," />
+                                    <string_literal>
+                                        <"\"" text="\"" />
+                                        <string_content text="zebra" />
+                                        <"\"" text="\"" />
+                                    </string_literal>
+                                    <")" text=")" />
+                                </argument_list>
+                            </call_expression>
+                            <"<" text="<" />
+                            <number_literal text="0" />
+                        </binary_expression>
+                        <")" text=")" />
+                    </argument_list>
+                </call_expression>
+                <";" text=";" />
+            </expression_statement>
+            <expression_statement>
+                <call_expression>
+                    <identifier text="printf" />
+                    <argument_list>
+                        <"(" text="(" />
+                        <string_literal>
+                            <"\"" text="\"" />
+                            <string_content text="%d" />
+                            <escape_sequence text="\\n" />
+                            <"\"" text="\"" />
+                        </string_literal>
+                        <"," text="," />
+                        <call_expression>
+                            <identifier text="strlen" />
+                            <argument_list>
+                                <"(" text="(" />
+                                <identifier text="a" />
+                                <")" text=")" />
+                            </argument_list>
+                        </call_expression>
+                        <")" text=")" />
+                    </argument_list>
+                </call_expression>
+                <";" text=";" />
+            </expression_statement>
+            <expression_statement>
+                <call_expression>
+                    <identifier text="strcat" />
+                    <argument_list>
+                        <"(" text="(" />
+                        <identifier text="a" />
+                        <"," text="," />
+                        <string_literal>
+                            <"\"" text="\"" />
+                            <string_content text="!" />
+                            <"\"" text="\"" />
+                        </string_literal>
+                        <")" text=")" />
+                    </argument_list>
+                </call_expression>
+                <";" text=";" />
+            </expression_statement>
+            <expression_statement>
+                <call_expression>
+                    <identifier text="printf" />
+                    <argument_list>
+                        <"(" text="(" />
+                        <string_literal>
+                            <"\"" text="\"" />
+                            <string_content text="%s" />
+                            <escape_sequence text="\\n" />
+                            <"\"" text="\"" />
+                        </string_literal>
+                        <"," text="," />
+                        <identifier text="a" />
+                        <")" text=")" />
+                    </argument_list>
+                </call_expression>
+                <";" text=";" />
+            </expression_statement>
+            <expression_statement>
+                <call_expression>
+                    <identifier text="printf" />
+                    <argument_list>
+                        <"(" text="(" />
+                        <string_literal>
+                            <"\"" text="\"" />
+                            <string_content text="%d" />
+                            <escape_sequence text="\\n" />
+                            <"\"" text="\"" />
+                        </string_literal>
+                        <"," text="," />
+                        <binary_expression>
+                            <call_expression>
+                                <identifier text="strncmp" />
+                                <argument_list>
+                                    <"(" text="(" />
+                                    <identifier text="a" />
+                                    <"," text="," />
+                                    <string_literal>
+                                        <"\"" text="\"" />
+                                        <string_content text="apple" />
+                                        <"\"" text="\"" />
+                                    </string_literal>
+                                    <"," text="," />
+                                    <number_literal text="2" />
+                                    <")" text=")" />
+                                </argument_list>
+                            </call_expression>
+                            <">" text=">" />
+                            <number_literal text="0" />
+                        </binary_expression>
+                        <")" text=")" />
+                    </argument_list>
+                </call_expression>
+                <";" text=";" />
+            </expression_statement>
+            <expression_statement>
+                <call_expression>
+                    <identifier text="printf" />
+                    <argument_list>
+                        <"(" text="(" />
+                        <string_literal>
+                            <"\"" text="\"" />
+                            <string_content text="%d" />
+                            <escape_sequence text="\\n" />
+                            <"\"" text="\"" />
+                        </string_literal>
+                        <"," text="," />
+                        <binary_expression>
+                            <call_expression>
+                                <identifier text="strncmp" />
+                                <argument_list>
+                                    <"(" text="(" />
+                                    <identifier text="a" />
+                                    <"," text="," />
+                                    <string_literal>
+                                        <"\"" text="\"" />
+                                        <string_content text="goere" />
+                                        <"\"" text="\"" />
+                                    </string_literal>
+                                    <"," text="," />
+                                    <number_literal text="2" />
+                                    <")" text=")" />
+                                </argument_list>
+                            </call_expression>
+                            <"==" text="==" />
+                            <number_literal text="0" />
+                        </binary_expression>
+                        <")" text=")" />
+                    </argument_list>
+                </call_expression>
+                <";" text=";" />
+            </expression_statement>
+            <expression_statement>
+                <call_expression>
+                    <identifier text="printf" />
+                    <argument_list>
+                        <"(" text="(" />
+                        <string_literal>
+                            <"\"" text="\"" />
+                            <string_content text="%d" />
+                            <escape_sequence text="\\n" />
+                            <"\"" text="\"" />
+                        </string_literal>
+                        <"," text="," />
+                        <binary_expression>
+                            <call_expression>
+                                <identifier text="strncmp" />
+                                <argument_list>
+                                    <"(" text="(" />
+                                    <identifier text="a" />
+                                    <"," text="," />
+                                    <string_literal>
+                                        <"\"" text="\"" />
+                                        <string_content text="goerg" />
+                                        <"\"" text="\"" />
+                                    </string_literal>
+                                    <"," text="," />
+                                    <number_literal text="2" />
+                                    <")" text=")" />
+                                </argument_list>
+                            </call_expression>
+                            <"==" text="==" />
+                            <number_literal text="0" />
+                        </binary_expression>
+                        <")" text=")" />
+                    </argument_list>
+                </call_expression>
+                <";" text=";" />
+            </expression_statement>
+            <expression_statement>
+                <call_expression>
+                    <identifier text="printf" />
+                    <argument_list>
+                        <"(" text="(" />
+                        <string_literal>
+                            <"\"" text="\"" />
+                            <string_content text="%d" />
+                            <escape_sequence text="\\n" />
+                            <"\"" text="\"" />
+                        </string_literal>
+                        <"," text="," />
+                        <binary_expression>
+                            <call_expression>
+                                <identifier text="strncmp" />
+                                <argument_list>
+                                    <"(" text="(" />
+                                    <identifier text="a" />
+                                    <"," text="," />
+                                    <string_literal>
+                                        <"\"" text="\"" />
+                                        <string_content text="zebra" />
+                                        <"\"" text="\"" />
+                                    </string_literal>
+                                    <"," text="," />
+                                    <number_literal text="2" />
+                                    <")" text=")" />
+                                </argument_list>
+                            </call_expression>
+                            <"<" text="<" />
+                            <number_literal text="0" />
+                        </binary_expression>
+                        <")" text=")" />
+                    </argument_list>
+                </call_expression>
+                <";" text=";" />
+            </expression_statement>
+            <expression_statement>
+                <call_expression>
+                    <identifier text="printf" />
+                    <argument_list>
+                        <"(" text="(" />
+                        <string_literal>
+                            <"\"" text="\"" />
+                            <string_content text="%s" />
+                            <escape_sequence text="\\n" />
+                            <"\"" text="\"" />
+                        </string_literal>
+                        <"," text="," />
+                        <call_expression>
+                            <identifier text="strchr" />
+                            <argument_list>
+                                <"(" text="(" />
+                                <identifier text="a" />
+                                <"," text="," />
+                                <char_literal>
+                                    <"'" text="'" />
+                                    <character text="o" />
+                                    <"'" text="'" />
+                                </char_literal>
+                                <")" text=")" />
+                            </argument_list>
+                        </call_expression>
+                        <")" text=")" />
+                    </argument_list>
+                </call_expression>
+                <";" text=";" />
+            </expression_statement>
+            <expression_statement>
+                <call_expression>
+                    <identifier text="printf" />
+                    <argument_list>
+                        <"(" text="(" />
+                        <string_literal>
+                            <"\"" text="\"" />
+                            <string_content text="%s" />
+                            <escape_sequence text="\\n" />
+                            <"\"" text="\"" />
+                        </string_literal>
+                        <"," text="," />
+                        <call_expression>
+                            <identifier text="strrchr" />
+                            <argument_list>
+                                <"(" text="(" />
+                                <identifier text="a" />
+                                <"," text="," />
+                                <char_literal>
+                                    <"'" text="'" />
+                                    <character text="l" />
+                                    <"'" text="'" />
+                                </char_literal>
+                                <")" text=")" />
+                            </argument_list>
+                        </call_expression>
+                        <")" text=")" />
+                    </argument_list>
+                </call_expression>
+                <";" text=";" />
+            </expression_statement>
+            <expression_statement>
+                <call_expression>
+                    <identifier text="printf" />
+                    <argument_list>
+                        <"(" text="(" />
+                        <string_literal>
+                            <"\"" text="\"" />
+                            <string_content text="%d" />
+                            <escape_sequence text="\\n" />
+                            <"\"" text="\"" />
+                        </string_literal>
+                        <"," text="," />
+                        <binary_expression>
+                            <call_expression>
+                                <identifier text="strrchr" />
+                                <argument_list>
+                                    <"(" text="(" />
+                                    <identifier text="a" />
+                                    <"," text="," />
+                                    <char_literal>
+                                        <"'" text="'" />
+                                        <character text="x" />
+                                        <"'" text="'" />
+                                    </char_literal>
+                                    <")" text=")" />
+                                </argument_list>
+                            </call_expression>
+                            <"==" text="==" />
+                            <null>
+                                <NULL text="NULL" />
+                            </null>
+                        </binary_expression>
+                        <")" text=")" />
+                    </argument_list>
+                </call_expression>
+                <";" text=";" />
+            </expression_statement>
+            <expression_statement>
+                <call_expression>
+                    <identifier text="memset" />
+                    <argument_list>
+                        <"(" text="(" />
+                        <pointer_expression>
+                            <"&" text="&" />
+                            <subscript_expression>
+                                <identifier text="a" />
+                                <"[" text="[" />
+                                <number_literal text="1" />
+                                <"]" text="]" />
+                            </subscript_expression>
+                        </pointer_expression>
+                        <"," text="," />
+                        <char_literal>
+                            <"'" text="'" />
+                            <character text="r" />
+                            <"'" text="'" />
+                        </char_literal>
+                        <"," text="," />
+                        <number_literal text="4" />
+                        <")" text=")" />
+                    </argument_list>
+                </call_expression>
+                <";" text=";" />
+            </expression_statement>
+            <expression_statement>
+                <call_expression>
+                    <identifier text="printf" />
+                    <argument_list>
+                        <"(" text="(" />
+                        <string_literal>
+                            <"\"" text="\"" />
+                            <string_content text="%s" />
+                            <escape_sequence text="\\n" />
+                            <"\"" text="\"" />
+                        </string_literal>
+                        <"," text="," />
+                        <identifier text="a" />
+                        <")" text=")" />
+                    </argument_list>
+                </call_expression>
+                <";" text=";" />
+            </expression_statement>
+            <expression_statement>
+                <call_expression>
+                    <identifier text="memcpy" />
+                    <argument_list>
+                        <"(" text="(" />
+                        <pointer_expression>
+                            <"&" text="&" />
+                            <subscript_expression>
+                                <identifier text="a" />
+                                <"[" text="[" />
+                                <number_literal text="2" />
+                                <"]" text="]" />
+                            </subscript_expression>
+                        </pointer_expression>
+                        <"," text="," />
+                        <identifier text="a" />
+                        <"," text="," />
+                        <number_literal text="2" />
+                        <")" text=")" />
+                    </argument_list>
+                </call_expression>
+                <";" text=";" />
+            </expression_statement>
+            <expression_statement>
+                <call_expression>
+                    <identifier text="printf" />
+                    <argument_list>
+                        <"(" text="(" />
+                        <string_literal>
+                            <"\"" text="\"" />
+                            <string_content text="%s" />
+                            <escape_sequence text="\\n" />
+                            <"\"" text="\"" />
+                        </string_literal>
+                        <"," text="," />
+                        <identifier text="a" />
+                        <")" text=")" />
+                    </argument_list>
+                </call_expression>
+                <";" text=";" />
+            </expression_statement>
+            <expression_statement>
+                <call_expression>
+                    <identifier text="printf" />
+                    <argument_list>
+                        <"(" text="(" />
+                        <string_literal>
+                            <"\"" text="\"" />
+                            <string_content text="%d" />
+                            <escape_sequence text="\\n" />
+                            <"\"" text="\"" />
+                        </string_literal>
+                        <"," text="," />
+                        <binary_expression>
+                            <call_expression>
+                                <identifier text="memcmp" />
+                                <argument_list>
+                                    <"(" text="(" />
+                                    <identifier text="a" />
+                                    <"," text="," />
+                                    <string_literal>
+                                        <"\"" text="\"" />
+                                        <string_content text="apple" />
+                                        <"\"" text="\"" />
+                                    </string_literal>
+                                    <"," text="," />
+                                    <number_literal text="4" />
+                                    <")" text=")" />
+                                </argument_list>
+                            </call_expression>
+                            <">" text=">" />
+                            <number_literal text="0" />
+                        </binary_expression>
+                        <")" text=")" />
+                    </argument_list>
+                </call_expression>
+                <";" text=";" />
+            </expression_statement>
+            <expression_statement>
+                <call_expression>
+                    <identifier text="printf" />
+                    <argument_list>
+                        <"(" text="(" />
+                        <string_literal>
+                            <"\"" text="\"" />
+                            <string_content text="%d" />
+                            <escape_sequence text="\\n" />
+                            <"\"" text="\"" />
+                        </string_literal>
+                        <"," text="," />
+                        <binary_expression>
+                            <call_expression>
+                                <identifier text="memcmp" />
+                                <argument_list>
+                                    <"(" text="(" />
+                                    <identifier text="a" />
+                                    <"," text="," />
+                                    <string_literal>
+                                        <"\"" text="\"" />
+                                        <string_content text="grgr" />
+                                        <"\"" text="\"" />
+                                    </string_literal>
+                                    <"," text="," />
+                                    <number_literal text="4" />
+                                    <")" text=")" />
+                                </argument_list>
+                            </call_expression>
+                            <"==" text="==" />
+                            <number_literal text="0" />
+                        </binary_expression>
+                        <")" text=")" />
+                    </argument_list>
+                </call_expression>
+                <";" text=";" />
+            </expression_statement>
+            <expression_statement>
+                <call_expression>
+                    <identifier text="printf" />
+                    <argument_list>
+                        <"(" text="(" />
+                        <string_literal>
+                            <"\"" text="\"" />
+                            <string_content text="%d" />
+                            <escape_sequence text="\\n" />
+                            <"\"" text="\"" />
+                        </string_literal>
+                        <"," text="," />
+                        <binary_expression>
+                            <call_expression>
+                                <identifier text="memcmp" />
+                                <argument_list>
+                                    <"(" text="(" />
+                                    <identifier text="a" />
+                                    <"," text="," />
+                                    <string_literal>
+                                        <"\"" text="\"" />
+                                        <string_content text="zebra" />
+                                        <"\"" text="\"" />
+                                    </string_literal>
+                                    <"," text="," />
+                                    <number_literal text="4" />
+                                    <")" text=")" />
+                                </argument_list>
+                            </call_expression>
+                            <"<" text="<" />
+                            <number_literal text="0" />
+                        </binary_expression>
+                        <")" text=")" />
+                    </argument_list>
+                </call_expression>
+                <";" text=";" />
+            </expression_statement>
+            <return_statement>
+                <return text="return" />
+                <number_literal text="0" />
+                <";" text=";" />
+            </return_statement>
+            <"}" text="}" />
+        </compound_statement>
+    </function_definition>
+    <comment text="/* vim: set expandtab ts=4 sw=3 sts=3 tw=80 :*/" />
+</translation_unit>

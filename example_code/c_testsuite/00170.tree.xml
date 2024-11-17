@@ -1,0 +1,430 @@
+<translation_unit>
+    <preproc_include>
+        <#include text="#include" />
+        <system_lib_string text="<stdio.h>" />
+    </preproc_include>
+    <enum_specifier>
+        <enum text="enum" />
+        <type_identifier text="fred" />
+        <enumerator_list>
+            <"{" text="{" />
+            <enumerator>
+                <identifier text="a" />
+            </enumerator>
+            <"," text="," />
+            <enumerator>
+                <identifier text="b" />
+            </enumerator>
+            <"," text="," />
+            <enumerator>
+                <identifier text="c" />
+            </enumerator>
+            <"," text="," />
+            <enumerator>
+                <identifier text="d" />
+            </enumerator>
+            <"," text="," />
+            <enumerator>
+                <identifier text="e" />
+                <"=" text="=" />
+                <number_literal text="54" />
+            </enumerator>
+            <"," text="," />
+            <enumerator>
+                <identifier text="f" />
+                <"=" text="=" />
+                <number_literal text="73" />
+            </enumerator>
+            <"," text="," />
+            <enumerator>
+                <identifier text="g" />
+            </enumerator>
+            <"," text="," />
+            <enumerator>
+                <identifier text="h" />
+            </enumerator>
+            <"}" text="}" />
+        </enumerator_list>
+    </enum_specifier>
+    <";" text=";" />
+    <comment text="/* All following uses of enum efoo should compile\n   without warning.  While forward enums aren't ISO C,\n   it's accepted by GCC also in strict mode, and only warned\n   about with -pedantic.  This happens in the real world.  */" />
+    <comment text="/* Strict ISO C doesn't allow this kind of forward declaration of\n   enums, but GCC accepts it (and gives only pedantic warning), and\n   it occurs in the wild.  */" />
+    <enum_specifier>
+        <enum text="enum" />
+        <type_identifier text="efoo" />
+    </enum_specifier>
+    <";" text=";" />
+    <struct_specifier>
+        <struct text="struct" />
+        <type_identifier text="Sforward_use" />
+        <field_declaration_list>
+            <"{" text="{" />
+            <field_declaration>
+                <primitive_type text="int" />
+                <function_declarator>
+                    <parenthesized_declarator>
+                        <"(" text="(" />
+                        <pointer_declarator>
+                            <"*" text="*" />
+                            <field_identifier text="fmember" />
+                        </pointer_declarator>
+                        <")" text=")" />
+                    </parenthesized_declarator>
+                    <parameter_list>
+                        <"(" text="(" />
+                        <parameter_declaration>
+                            <enum_specifier>
+                                <enum text="enum" />
+                                <type_identifier text="efoo" />
+                            </enum_specifier>
+                            <identifier text="x" />
+                        </parameter_declaration>
+                        <")" text=")" />
+                    </parameter_list>
+                </function_declarator>
+                <";" text=";" />
+            </field_declaration>
+            <"}" text="}" />
+        </field_declaration_list>
+    </struct_specifier>
+    <";" text=";" />
+    <declaration>
+        <storage_class_specifier>
+            <extern text="extern" />
+        </storage_class_specifier>
+        <enum_specifier>
+            <enum text="enum" />
+            <type_identifier text="efoo" />
+        </enum_specifier>
+        <function_declarator>
+            <identifier text="it_real_fn" />
+            <parameter_list>
+                <"(" text="(" />
+                <parameter_declaration>
+                    <primitive_type text="void" />
+                </parameter_declaration>
+                <")" text=")" />
+            </parameter_list>
+        </function_declarator>
+        <";" text=";" />
+    </declaration>
+    <enum_specifier>
+        <enum text="enum" />
+        <type_identifier text="efoo" />
+        <enumerator_list>
+            <"{" text="{" />
+            <enumerator>
+                <identifier text="ONE" />
+            </enumerator>
+            <"," text="," />
+            <enumerator>
+                <identifier text="TWO" />
+            </enumerator>
+            <"," text="," />
+            <"}" text="}" />
+        </enumerator_list>
+    </enum_specifier>
+    <";" text=";" />
+    <struct_specifier>
+        <struct text="struct" />
+        <type_identifier text="S2" />
+        <field_declaration_list>
+            <"{" text="{" />
+            <field_declaration>
+                <enum_specifier>
+                    <enum text="enum" />
+                    <type_identifier text="efoo" />
+                </enum_specifier>
+                <function_declarator>
+                    <parenthesized_declarator>
+                        <"(" text="(" />
+                        <pointer_declarator>
+                            <"*" text="*" />
+                            <field_identifier text="f2" />
+                        </pointer_declarator>
+                        <")" text=")" />
+                    </parenthesized_declarator>
+                    <parameter_list>
+                        <"(" text="(" />
+                        <parameter_declaration>
+                            <primitive_type text="void" />
+                        </parameter_declaration>
+                        <")" text=")" />
+                    </parameter_list>
+                </function_declarator>
+                <";" text=";" />
+            </field_declaration>
+            <"}" text="}" />
+        </field_declaration_list>
+    </struct_specifier>
+    <";" text=";" />
+    <function_definition>
+        <primitive_type text="void" />
+        <function_declarator>
+            <identifier text="should_compile" />
+            <parameter_list>
+                <"(" text="(" />
+                <parameter_declaration>
+                    <struct_specifier>
+                        <struct text="struct" />
+                        <type_identifier text="S2" />
+                    </struct_specifier>
+                    <pointer_declarator>
+                        <"*" text="*" />
+                        <identifier text="s" />
+                    </pointer_declarator>
+                </parameter_declaration>
+                <")" text=")" />
+            </parameter_list>
+        </function_declarator>
+        <compound_statement>
+            <"{" text="{" />
+            <expression_statement>
+                <assignment_expression>
+                    <field_expression>
+                        <identifier text="s" />
+                        <"->" text="->" />
+                        <field_identifier text="f2" />
+                    </field_expression>
+                    <"=" text="=" />
+                    <identifier text="it_real_fn" />
+                </assignment_expression>
+                <";" text=";" />
+            </expression_statement>
+            <"}" text="}" />
+        </compound_statement>
+    </function_definition>
+    <function_definition>
+        <enum_specifier>
+            <enum text="enum" />
+            <type_identifier text="efoo" />
+        </enum_specifier>
+        <function_declarator>
+            <identifier text="it_real_fn" />
+            <parameter_list>
+                <"(" text="(" />
+                <parameter_declaration>
+                    <primitive_type text="void" />
+                </parameter_declaration>
+                <")" text=")" />
+            </parameter_list>
+        </function_declarator>
+        <compound_statement>
+            <"{" text="{" />
+            <return_statement>
+                <return text="return" />
+                <identifier text="TWO" />
+                <";" text=";" />
+            </return_statement>
+            <"}" text="}" />
+        </compound_statement>
+    </function_definition>
+    <function_definition>
+        <storage_class_specifier>
+            <static text="static" />
+        </storage_class_specifier>
+        <sized_type_specifier>
+            <unsigned text="unsigned" />
+            <primitive_type text="int" />
+        </sized_type_specifier>
+        <function_declarator>
+            <identifier text="deref_uintptr" />
+            <parameter_list>
+                <"(" text="(" />
+                <parameter_declaration>
+                    <sized_type_specifier>
+                        <unsigned text="unsigned" />
+                        <primitive_type text="int" />
+                    </sized_type_specifier>
+                    <pointer_declarator>
+                        <"*" text="*" />
+                        <identifier text="p" />
+                    </pointer_declarator>
+                </parameter_declaration>
+                <")" text=")" />
+            </parameter_list>
+        </function_declarator>
+        <compound_statement>
+            <"{" text="{" />
+            <return_statement>
+                <return text="return" />
+                <pointer_expression>
+                    <"*" text="*" />
+                    <identifier text="p" />
+                </pointer_expression>
+                <";" text=";" />
+            </return_statement>
+            <"}" text="}" />
+        </compound_statement>
+    </function_definition>
+    <enum_specifier>
+        <enum text="enum" />
+        <type_identifier text="Epositive" />
+        <enumerator_list>
+            <"{" text="{" />
+            <enumerator>
+                <identifier text="epos_one" />
+            </enumerator>
+            <"," text="," />
+            <enumerator>
+                <identifier text="epos_two" />
+            </enumerator>
+            <"}" text="}" />
+        </enumerator_list>
+    </enum_specifier>
+    <";" text=";" />
+    <function_definition>
+        <primitive_type text="int" />
+        <function_declarator>
+            <identifier text="main" />
+            <parameter_list>
+                <"(" text="(" />
+                <")" text=")" />
+            </parameter_list>
+        </function_declarator>
+        <compound_statement>
+            <"{" text="{" />
+            <declaration>
+                <enum_specifier>
+                    <enum text="enum" />
+                    <type_identifier text="fred" />
+                </enum_specifier>
+                <identifier text="frod" />
+                <";" text=";" />
+            </declaration>
+            <declaration>
+                <enum_specifier>
+                    <enum text="enum" />
+                    <type_identifier text="Epositive" />
+                </enum_specifier>
+                <init_declarator>
+                    <identifier text="epos" />
+                    <"=" text="=" />
+                    <identifier text="epos_two" />
+                </init_declarator>
+                <";" text=";" />
+            </declaration>
+            <expression_statement>
+                <call_expression>
+                    <identifier text="printf" />
+                    <argument_list>
+                        <"(" text="(" />
+                        <string_literal>
+                            <"\"" text="\"" />
+                            <string_content text="%d %d %d %d %d %d %d %d" />
+                            <escape_sequence text="\\n" />
+                            <"\"" text="\"" />
+                        </string_literal>
+                        <"," text="," />
+                        <identifier text="a" />
+                        <"," text="," />
+                        <identifier text="b" />
+                        <"," text="," />
+                        <identifier text="c" />
+                        <"," text="," />
+                        <identifier text="d" />
+                        <"," text="," />
+                        <identifier text="e" />
+                        <"," text="," />
+                        <identifier text="f" />
+                        <"," text="," />
+                        <identifier text="g" />
+                        <"," text="," />
+                        <identifier text="h" />
+                        <")" text=")" />
+                    </argument_list>
+                </call_expression>
+                <";" text=";" />
+            </expression_statement>
+            <comment text="/* printf(\"%d\\n\", frod); */" />
+            <expression_statement>
+                <assignment_expression>
+                    <identifier text="frod" />
+                    <"=" text="=" />
+                    <number_literal text="12" />
+                </assignment_expression>
+                <";" text=";" />
+            </expression_statement>
+            <expression_statement>
+                <call_expression>
+                    <identifier text="printf" />
+                    <argument_list>
+                        <"(" text="(" />
+                        <string_literal>
+                            <"\"" text="\"" />
+                            <string_content text="%d" />
+                            <escape_sequence text="\\n" />
+                            <"\"" text="\"" />
+                        </string_literal>
+                        <"," text="," />
+                        <identifier text="frod" />
+                        <")" text=")" />
+                    </argument_list>
+                </call_expression>
+                <";" text=";" />
+            </expression_statement>
+            <expression_statement>
+                <assignment_expression>
+                    <identifier text="frod" />
+                    <"=" text="=" />
+                    <identifier text="e" />
+                </assignment_expression>
+                <";" text=";" />
+            </expression_statement>
+            <expression_statement>
+                <call_expression>
+                    <identifier text="printf" />
+                    <argument_list>
+                        <"(" text="(" />
+                        <string_literal>
+                            <"\"" text="\"" />
+                            <string_content text="%d" />
+                            <escape_sequence text="\\n" />
+                            <"\"" text="\"" />
+                        </string_literal>
+                        <"," text="," />
+                        <identifier text="frod" />
+                        <")" text=")" />
+                    </argument_list>
+                </call_expression>
+                <";" text=";" />
+            </expression_statement>
+            <comment text="/* Following should compile without warning.  */" />
+            <expression_statement>
+                <call_expression>
+                    <identifier text="printf" />
+                    <argument_list>
+                        <"(" text="(" />
+                        <string_literal>
+                            <"\"" text="\"" />
+                            <string_content text="enum to int: %u" />
+                            <escape_sequence text="\\n" />
+                            <"\"" text="\"" />
+                        </string_literal>
+                        <"," text="," />
+                        <call_expression>
+                            <identifier text="deref_uintptr" />
+                            <argument_list>
+                                <"(" text="(" />
+                                <pointer_expression>
+                                    <"&" text="&" />
+                                    <identifier text="epos" />
+                                </pointer_expression>
+                                <")" text=")" />
+                            </argument_list>
+                        </call_expression>
+                        <")" text=")" />
+                    </argument_list>
+                </call_expression>
+                <";" text=";" />
+            </expression_statement>
+            <return_statement>
+                <return text="return" />
+                <number_literal text="0" />
+                <";" text=";" />
+            </return_statement>
+            <"}" text="}" />
+        </compound_statement>
+    </function_definition>
+    <comment text="/* vim: set expandtab ts=4 sw=3 sts=3 tw=80 :*/" />
+</translation_unit>

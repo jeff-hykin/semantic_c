@@ -1,0 +1,148 @@
+<translation_unit>
+    <preproc_include>
+        <#include text="#include" />
+        <system_lib_string text="<stdio.h>" />
+    </preproc_include>
+    <preproc_function_def>
+        <#define text="#define" />
+        <identifier text="P" />
+        <preproc_params>
+            <"(" text="(" />
+            <identifier text="A" />
+            <"," text="," />
+            <identifier text="B" />
+            <")" text=")" />
+        </preproc_params>
+        <preproc_arg text="A ## B ; bob" />
+    </preproc_function_def>
+    <preproc_function_def>
+        <#define text="#define" />
+        <identifier text="Q" />
+        <preproc_params>
+            <"(" text="(" />
+            <identifier text="A" />
+            <"," text="," />
+            <identifier text="B" />
+            <")" text=")" />
+        </preproc_params>
+        <preproc_arg text="A ## B+" />
+    </preproc_function_def>
+    <function_definition>
+        <primitive_type text="int" />
+        <function_declarator>
+            <identifier text="main" />
+            <parameter_list>
+                <"(" text="(" />
+                <parameter_declaration>
+                    <primitive_type text="void" />
+                </parameter_declaration>
+                <")" text=")" />
+            </parameter_list>
+        </function_declarator>
+        <compound_statement>
+            <"{" text="{" />
+            <declaration>
+                <primitive_type text="int" />
+                <identifier text="bob" />
+                <"," text="," />
+                <init_declarator>
+                    <identifier text="jim" />
+                    <"=" text="=" />
+                    <number_literal text="21" />
+                </init_declarator>
+                <";" text=";" />
+            </declaration>
+            <expression_statement>
+                <assignment_expression>
+                    <identifier text="bob" />
+                    <"=" text="=" />
+                    <assignment_expression>
+                        <call_expression>
+                            <identifier text="P" />
+                            <argument_list>
+                                <"(" text="(" />
+                                <identifier text="jim" />
+                                <ERROR>
+                                    <"," text="," />
+                                </ERROR>
+                                <")" text=")" />
+                            </argument_list>
+                        </call_expression>
+                        <"*=" text="*=" />
+                        <number_literal text="2" />
+                    </assignment_expression>
+                </assignment_expression>
+                <";" text=";" />
+            </expression_statement>
+            <expression_statement>
+                <call_expression>
+                    <identifier text="printf" />
+                    <argument_list>
+                        <"(" text="(" />
+                        <string_literal>
+                            <"\"" text="\"" />
+                            <string_content text="jim: %d, bob: %d" />
+                            <escape_sequence text="\\n" />
+                            <"\"" text="\"" />
+                        </string_literal>
+                        <"," text="," />
+                        <identifier text="jim" />
+                        <"," text="," />
+                        <identifier text="bob" />
+                        <")" text=")" />
+                    </argument_list>
+                </call_expression>
+                <";" text=";" />
+            </expression_statement>
+            <expression_statement>
+                <assignment_expression>
+                    <identifier text="jim" />
+                    <"=" text="=" />
+                    <ERROR>
+                        <number_literal text="60" />
+                    </ERROR>
+                    <call_expression>
+                        <identifier text="Q" />
+                        <argument_list>
+                            <"(" text="(" />
+                            <unary_expression>
+                                <"+" text="+" />
+                                <ERROR>
+                                    <"," text="," />
+                                    <")" text=")" />
+                                </ERROR>
+                                <number_literal text="3" />
+                            </unary_expression>
+                            <")" text="" />
+                        </argument_list>
+                    </call_expression>
+                </assignment_expression>
+                <";" text=";" />
+            </expression_statement>
+            <expression_statement>
+                <call_expression>
+                    <identifier text="printf" />
+                    <argument_list>
+                        <"(" text="(" />
+                        <string_literal>
+                            <"\"" text="\"" />
+                            <string_content text="jim: %d" />
+                            <escape_sequence text="\\n" />
+                            <"\"" text="\"" />
+                        </string_literal>
+                        <"," text="," />
+                        <identifier text="jim" />
+                        <")" text=")" />
+                    </argument_list>
+                </call_expression>
+                <";" text=";" />
+            </expression_statement>
+            <return_statement>
+                <return text="return" />
+                <number_literal text="0" />
+                <";" text=";" />
+            </return_statement>
+            <"}" text="}" />
+        </compound_statement>
+    </function_definition>
+</translation_unit>

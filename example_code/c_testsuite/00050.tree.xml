@@ -1,0 +1,240 @@
+<translation_unit>
+    <struct_specifier>
+        <struct text="struct" />
+        <type_identifier text="S1" />
+        <field_declaration_list>
+            <"{" text="{" />
+            <field_declaration>
+                <primitive_type text="int" />
+                <field_identifier text="a" />
+                <";" text=";" />
+            </field_declaration>
+            <field_declaration>
+                <primitive_type text="int" />
+                <field_identifier text="b" />
+                <";" text=";" />
+            </field_declaration>
+            <"}" text="}" />
+        </field_declaration_list>
+    </struct_specifier>
+    <";" text=";" />
+    <struct_specifier>
+        <struct text="struct" />
+        <type_identifier text="S2" />
+        <field_declaration_list>
+            <"{" text="{" />
+            <field_declaration>
+                <primitive_type text="int" />
+                <field_identifier text="a" />
+                <";" text=";" />
+            </field_declaration>
+            <field_declaration>
+                <primitive_type text="int" />
+                <field_identifier text="b" />
+                <";" text=";" />
+            </field_declaration>
+            <field_declaration>
+                <union_specifier>
+                    <union text="union" />
+                    <field_declaration_list>
+                        <"{" text="{" />
+                        <field_declaration>
+                            <primitive_type text="int" />
+                            <field_identifier text="c" />
+                            <";" text=";" />
+                        </field_declaration>
+                        <field_declaration>
+                            <primitive_type text="int" />
+                            <field_identifier text="d" />
+                            <";" text=";" />
+                        </field_declaration>
+                        <"}" text="}" />
+                    </field_declaration_list>
+                </union_specifier>
+                <";" text=";" />
+            </field_declaration>
+            <field_declaration>
+                <struct_specifier>
+                    <struct text="struct" />
+                    <type_identifier text="S1" />
+                </struct_specifier>
+                <field_identifier text="s" />
+                <";" text=";" />
+            </field_declaration>
+            <"}" text="}" />
+        </field_declaration_list>
+    </struct_specifier>
+    <";" text=";" />
+    <declaration>
+        <struct_specifier>
+            <struct text="struct" />
+            <type_identifier text="S2" />
+        </struct_specifier>
+        <init_declarator>
+            <identifier text="v" />
+            <"=" text="=" />
+            <initializer_list>
+                <"{" text="{" />
+                <number_literal text="1" />
+                <"," text="," />
+                <number_literal text="2" />
+                <"," text="," />
+                <number_literal text="3" />
+                <"," text="," />
+                <initializer_list>
+                    <"{" text="{" />
+                    <number_literal text="4" />
+                    <"," text="," />
+                    <number_literal text="5" />
+                    <"}" text="}" />
+                </initializer_list>
+                <"}" text="}" />
+            </initializer_list>
+        </init_declarator>
+        <";" text=";" />
+    </declaration>
+    <function_definition>
+        <primitive_type text="int" />
+        <function_declarator>
+            <identifier text="main" />
+            <parameter_list>
+                <"(" text="(" />
+                <")" text=")" />
+            </parameter_list>
+        </function_declarator>
+        <compound_statement>
+            <"{" text="{" />
+            <if_statement>
+                <if text="if" />
+                <parenthesized_expression>
+                    <"(" text="(" />
+                    <binary_expression>
+                        <field_expression>
+                            <identifier text="v" />
+                            <"." text="." />
+                            <field_identifier text="a" />
+                        </field_expression>
+                        <"!=" text="!=" />
+                        <number_literal text="1" />
+                    </binary_expression>
+                    <")" text=")" />
+                </parenthesized_expression>
+                <return_statement>
+                    <return text="return" />
+                    <number_literal text="1" />
+                    <";" text=";" />
+                </return_statement>
+            </if_statement>
+            <if_statement>
+                <if text="if" />
+                <parenthesized_expression>
+                    <"(" text="(" />
+                    <binary_expression>
+                        <field_expression>
+                            <identifier text="v" />
+                            <"." text="." />
+                            <field_identifier text="b" />
+                        </field_expression>
+                        <"!=" text="!=" />
+                        <number_literal text="2" />
+                    </binary_expression>
+                    <")" text=")" />
+                </parenthesized_expression>
+                <return_statement>
+                    <return text="return" />
+                    <number_literal text="2" />
+                    <";" text=";" />
+                </return_statement>
+            </if_statement>
+            <if_statement>
+                <if text="if" />
+                <parenthesized_expression>
+                    <"(" text="(" />
+                    <binary_expression>
+                        <binary_expression>
+                            <field_expression>
+                                <identifier text="v" />
+                                <"." text="." />
+                                <field_identifier text="c" />
+                            </field_expression>
+                            <"!=" text="!=" />
+                            <number_literal text="3" />
+                        </binary_expression>
+                        <"||" text="||" />
+                        <binary_expression>
+                            <field_expression>
+                                <identifier text="v" />
+                                <"." text="." />
+                                <field_identifier text="d" />
+                            </field_expression>
+                            <"!=" text="!=" />
+                            <number_literal text="3" />
+                        </binary_expression>
+                    </binary_expression>
+                    <")" text=")" />
+                </parenthesized_expression>
+                <return_statement>
+                    <return text="return" />
+                    <number_literal text="3" />
+                    <";" text=";" />
+                </return_statement>
+            </if_statement>
+            <if_statement>
+                <if text="if" />
+                <parenthesized_expression>
+                    <"(" text="(" />
+                    <binary_expression>
+                        <field_expression>
+                            <field_expression>
+                                <identifier text="v" />
+                                <"." text="." />
+                                <field_identifier text="s" />
+                            </field_expression>
+                            <"." text="." />
+                            <field_identifier text="a" />
+                        </field_expression>
+                        <"!=" text="!=" />
+                        <number_literal text="4" />
+                    </binary_expression>
+                    <")" text=")" />
+                </parenthesized_expression>
+                <return_statement>
+                    <return text="return" />
+                    <number_literal text="4" />
+                    <";" text=";" />
+                </return_statement>
+            </if_statement>
+            <if_statement>
+                <if text="if" />
+                <parenthesized_expression>
+                    <"(" text="(" />
+                    <binary_expression>
+                        <field_expression>
+                            <field_expression>
+                                <identifier text="v" />
+                                <"." text="." />
+                                <field_identifier text="s" />
+                            </field_expression>
+                            <"." text="." />
+                            <field_identifier text="b" />
+                        </field_expression>
+                        <"!=" text="!=" />
+                        <number_literal text="5" />
+                    </binary_expression>
+                    <")" text=")" />
+                </parenthesized_expression>
+                <return_statement>
+                    <return text="return" />
+                    <number_literal text="5" />
+                    <";" text=";" />
+                </return_statement>
+            </if_statement>
+            <return_statement>
+                <return text="return" />
+                <number_literal text="0" />
+                <";" text=";" />
+            </return_statement>
+            <"}" text="}" />
+        </compound_statement>
+    </function_definition>
+</translation_unit>

@@ -1,0 +1,48 @@
+<translation_unit>
+    <preproc_call>
+        <preproc_directive text="#undef" />
+        <preproc_arg text="line" />
+    </preproc_call>
+    <preproc_def>
+        <#define text="#define" />
+        <identifier text="line" />
+        <preproc_arg text="1000" />
+    </preproc_def>
+    <preproc_call>
+        <preproc_directive text="#line" />
+        <preproc_arg text="line" />
+    </preproc_call>
+    <preproc_if>
+        <#if text="#if" />
+        <binary_expression>
+            <number_literal text="1000" />
+            <"!=" text="!=" />
+            <identifier text="__LINE__" />
+        </binary_expression>
+        <"\n" text="\n" />
+        <preproc_call>
+            <preproc_directive text="#error" />
+            <preproc_arg text="\"  # line line\" not work as expected" />
+        </preproc_call>
+        <#endif text="#endif" />
+    </preproc_if>
+    <function_definition>
+        <primitive_type text="int" />
+        <function_declarator>
+            <identifier text="main" />
+            <parameter_list>
+                <"(" text="(" />
+                <")" text=")" />
+            </parameter_list>
+        </function_declarator>
+        <compound_statement>
+            <"{" text="{" />
+            <return_statement>
+                <return text="return" />
+                <number_literal text="0" />
+                <";" text=";" />
+            </return_statement>
+            <"}" text="}" />
+        </compound_statement>
+    </function_definition>
+</translation_unit>

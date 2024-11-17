@@ -1,0 +1,175 @@
+<translation_unit>
+    <preproc_include>
+        <#include text="#include" />
+        <system_lib_string text="<stdio.h>" />
+    </preproc_include>
+    <function_definition>
+        <primitive_type text="int" />
+        <function_declarator>
+            <identifier text="fred" />
+            <parameter_list>
+                <"(" text="(" />
+                <parameter_declaration>
+                    <primitive_type text="int" />
+                    <identifier text="p" />
+                </parameter_declaration>
+                <")" text=")" />
+            </parameter_list>
+        </function_declarator>
+        <compound_statement>
+            <"{" text="{" />
+            <expression_statement>
+                <call_expression>
+                    <identifier text="printf" />
+                    <argument_list>
+                        <"(" text="(" />
+                        <string_literal>
+                            <"\"" text="\"" />
+                            <string_content text="yo %d" />
+                            <escape_sequence text="\\n" />
+                            <"\"" text="\"" />
+                        </string_literal>
+                        <"," text="," />
+                        <identifier text="p" />
+                        <")" text=")" />
+                    </argument_list>
+                </call_expression>
+                <";" text=";" />
+            </expression_statement>
+            <return_statement>
+                <return text="return" />
+                <number_literal text="42" />
+                <";" text=";" />
+            </return_statement>
+            <"}" text="}" />
+        </compound_statement>
+    </function_definition>
+    <declaration>
+        <primitive_type text="int" />
+        <init_declarator>
+            <function_declarator>
+                <parenthesized_declarator>
+                    <"(" text="(" />
+                    <pointer_declarator>
+                        <"*" text="*" />
+                        <identifier text="f" />
+                    </pointer_declarator>
+                    <")" text=")" />
+                </parenthesized_declarator>
+                <parameter_list>
+                    <"(" text="(" />
+                    <parameter_declaration>
+                        <primitive_type text="int" />
+                    </parameter_declaration>
+                    <")" text=")" />
+                </parameter_list>
+            </function_declarator>
+            <"=" text="=" />
+            <pointer_expression>
+                <"&" text="&" />
+                <identifier text="fred" />
+            </pointer_expression>
+        </init_declarator>
+        <";" text=";" />
+    </declaration>
+    <comment text="/* To test what this is supposed to test the destination function\n   (fprint here) must not be called directly anywhere in the test.  */" />
+    <declaration>
+        <primitive_type text="int" />
+        <init_declarator>
+            <function_declarator>
+                <parenthesized_declarator>
+                    <"(" text="(" />
+                    <pointer_declarator>
+                        <"*" text="*" />
+                        <identifier text="fprintfptr" />
+                    </pointer_declarator>
+                    <")" text=")" />
+                </parenthesized_declarator>
+                <parameter_list>
+                    <"(" text="(" />
+                    <parameter_declaration>
+                        <type_identifier text="FILE" />
+                        <abstract_pointer_declarator>
+                            <"*" text="*" />
+                        </abstract_pointer_declarator>
+                    </parameter_declaration>
+                    <"," text="," />
+                    <parameter_declaration>
+                        <type_qualifier>
+                            <const text="const" />
+                        </type_qualifier>
+                        <primitive_type text="char" />
+                        <abstract_pointer_declarator>
+                            <"*" text="*" />
+                        </abstract_pointer_declarator>
+                    </parameter_declaration>
+                    <"," text="," />
+                    <variadic_parameter>
+                        <"..." text="..." />
+                    </variadic_parameter>
+                    <")" text=")" />
+                </parameter_list>
+            </function_declarator>
+            <"=" text="=" />
+            <pointer_expression>
+                <"&" text="&" />
+                <identifier text="fprintf" />
+            </pointer_expression>
+        </init_declarator>
+        <";" text=";" />
+    </declaration>
+    <function_definition>
+        <primitive_type text="int" />
+        <function_declarator>
+            <identifier text="main" />
+            <parameter_list>
+                <"(" text="(" />
+                <")" text=")" />
+            </parameter_list>
+        </function_declarator>
+        <compound_statement>
+            <"{" text="{" />
+            <expression_statement>
+                <call_expression>
+                    <identifier text="fprintfptr" />
+                    <argument_list>
+                        <"(" text="(" />
+                        <identifier text="stdout" />
+                        <"," text="," />
+                        <string_literal>
+                            <"\"" text="\"" />
+                            <string_content text="%d" />
+                            <escape_sequence text="\\n" />
+                            <"\"" text="\"" />
+                        </string_literal>
+                        <"," text="," />
+                        <call_expression>
+                            <parenthesized_expression>
+                                <"(" text="(" />
+                                <pointer_expression>
+                                    <"*" text="*" />
+                                    <identifier text="f" />
+                                </pointer_expression>
+                                <")" text=")" />
+                            </parenthesized_expression>
+                            <argument_list>
+                                <"(" text="(" />
+                                <number_literal text="24" />
+                                <")" text=")" />
+                            </argument_list>
+                        </call_expression>
+                        <")" text=")" />
+                    </argument_list>
+                </call_expression>
+                <";" text=";" />
+            </expression_statement>
+            <return_statement>
+                <return text="return" />
+                <number_literal text="0" />
+                <";" text=";" />
+            </return_statement>
+            <"}" text="}" />
+        </compound_statement>
+    </function_definition>
+    <comment text="/* vim: set expandtab ts=4 sw=3 sts=3 tw=80 :*/" />
+</translation_unit>

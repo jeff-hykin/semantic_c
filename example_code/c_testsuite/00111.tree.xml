@@ -1,0 +1,51 @@
+<translation_unit>
+    <function_definition>
+        <primitive_type text="int" />
+        <function_declarator>
+            <identifier text="main" />
+            <parameter_list>
+                <"(" text="(" />
+                <")" text=")" />
+            </parameter_list>
+        </function_declarator>
+        <compound_statement>
+            <"{" text="{" />
+            <declaration>
+                <sized_type_specifier>
+                    <short text="short" />
+                </sized_type_specifier>
+                <init_declarator>
+                    <identifier text="s" />
+                    <"=" text="=" />
+                    <number_literal text="1" />
+                </init_declarator>
+                <";" text=";" />
+            </declaration>
+            <declaration>
+                <sized_type_specifier>
+                    <long text="long" />
+                </sized_type_specifier>
+                <init_declarator>
+                    <identifier text="l" />
+                    <"=" text="=" />
+                    <number_literal text="1" />
+                </init_declarator>
+                <";" text=";" />
+            </declaration>
+            <expression_statement>
+                <assignment_expression>
+                    <identifier text="s" />
+                    <"-=" text="-=" />
+                    <identifier text="l" />
+                </assignment_expression>
+                <";" text=";" />
+            </expression_statement>
+            <return_statement>
+                <return text="return" />
+                <identifier text="s" />
+                <";" text=";" />
+            </return_statement>
+            <"}" text="}" />
+        </compound_statement>
+    </function_definition>
+</translation_unit>

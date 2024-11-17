@@ -1,0 +1,497 @@
+<translation_unit>
+    <declaration>
+        <primitive_type text="void" />
+        <function_declarator>
+            <identifier text="foo" />
+            <parameter_list>
+                <"(" text="(" />
+                <parameter_declaration>
+                    <primitive_type text="int" />
+                    <abstract_array_declarator>
+                        <"[" text="[" />
+                        <number_literal text="5" />
+                        <"]" text="]" />
+                    </abstract_array_declarator>
+                </parameter_declaration>
+                <")" text=")" />
+            </parameter_list>
+        </function_declarator>
+        <";" text=";" />
+    </declaration>
+    <declaration>
+        <primitive_type text="void" />
+        <function_declarator>
+            <identifier text="fooc" />
+            <parameter_list>
+                <"(" text="(" />
+                <parameter_declaration>
+                    <primitive_type text="int" />
+                    <array_declarator>
+                        <identifier text="x" />
+                        <"[" text="[" />
+                        <type_qualifier>
+                            <const text="const" />
+                        </type_qualifier>
+                        <number_literal text="5" />
+                        <"]" text="]" />
+                    </array_declarator>
+                </parameter_declaration>
+                <")" text=")" />
+            </parameter_list>
+        </function_declarator>
+        <";" text=";" />
+    </declaration>
+    <declaration>
+        <primitive_type text="void" />
+        <function_declarator>
+            <identifier text="foos" />
+            <parameter_list>
+                <"(" text="(" />
+                <parameter_declaration>
+                    <primitive_type text="int" />
+                    <array_declarator>
+                        <identifier text="x" />
+                        <"[" text="[" />
+                        <identifier text="static" />
+                        <ERROR>
+                            <number_literal text="5" />
+                        </ERROR>
+                        <"]" text="]" />
+                    </array_declarator>
+                </parameter_declaration>
+                <")" text=")" />
+            </parameter_list>
+        </function_declarator>
+        <";" text=";" />
+    </declaration>
+    <declaration>
+        <primitive_type text="void" />
+        <function_declarator>
+            <identifier text="foov" />
+            <parameter_list>
+                <"(" text="(" />
+                <parameter_declaration>
+                    <primitive_type text="int" />
+                    <array_declarator>
+                        <identifier text="x" />
+                        <"[" text="[" />
+                        <type_qualifier>
+                            <volatile text="volatile" />
+                        </type_qualifier>
+                        <number_literal text="5" />
+                        <"]" text="]" />
+                    </array_declarator>
+                </parameter_declaration>
+                <")" text=")" />
+            </parameter_list>
+        </function_declarator>
+        <";" text=";" />
+    </declaration>
+    <declaration>
+        <primitive_type text="void" />
+        <function_declarator>
+            <identifier text="foor" />
+            <parameter_list>
+                <"(" text="(" />
+                <parameter_declaration>
+                    <primitive_type text="int" />
+                    <array_declarator>
+                        <identifier text="x" />
+                        <"[" text="[" />
+                        <type_qualifier>
+                            <restrict text="restrict" />
+                        </type_qualifier>
+                        <number_literal text="5" />
+                        <"]" text="]" />
+                    </array_declarator>
+                </parameter_declaration>
+                <")" text=")" />
+            </parameter_list>
+        </function_declarator>
+        <";" text=";" />
+    </declaration>
+    <declaration>
+        <primitive_type text="void" />
+        <function_declarator>
+            <identifier text="fooc" />
+            <parameter_list>
+                <"(" text="(" />
+                <parameter_declaration>
+                    <primitive_type text="int" />
+                    <abstract_array_declarator>
+                        <"[" text="[" />
+                        <type_qualifier>
+                            <const text="const" />
+                        </type_qualifier>
+                        <number_literal text="5" />
+                        <"]" text="]" />
+                    </abstract_array_declarator>
+                </parameter_declaration>
+                <")" text=")" />
+            </parameter_list>
+        </function_declarator>
+        <";" text=";" />
+    </declaration>
+    <declaration>
+        <primitive_type text="void" />
+        <function_declarator>
+            <identifier text="foos" />
+            <parameter_list>
+                <"(" text="(" />
+                <parameter_declaration>
+                    <primitive_type text="int" />
+                    <abstract_array_declarator>
+                        <"[" text="[" />
+                        <identifier text="static" />
+                        <ERROR>
+                            <number_literal text="5" />
+                        </ERROR>
+                        <"]" text="]" />
+                    </abstract_array_declarator>
+                </parameter_declaration>
+                <")" text=")" />
+            </parameter_list>
+        </function_declarator>
+        <";" text=";" />
+    </declaration>
+    <declaration>
+        <primitive_type text="void" />
+        <function_declarator>
+            <identifier text="foov" />
+            <parameter_list>
+                <"(" text="(" />
+                <parameter_declaration>
+                    <primitive_type text="int" />
+                    <abstract_array_declarator>
+                        <"[" text="[" />
+                        <type_qualifier>
+                            <volatile text="volatile" />
+                        </type_qualifier>
+                        <number_literal text="5" />
+                        <"]" text="]" />
+                    </abstract_array_declarator>
+                </parameter_declaration>
+                <")" text=")" />
+            </parameter_list>
+        </function_declarator>
+        <";" text=";" />
+    </declaration>
+    <declaration>
+        <primitive_type text="void" />
+        <function_declarator>
+            <identifier text="foor" />
+            <parameter_list>
+                <"(" text="(" />
+                <parameter_declaration>
+                    <primitive_type text="int" />
+                    <abstract_array_declarator>
+                        <"[" text="[" />
+                        <type_qualifier>
+                            <restrict text="restrict" />
+                        </type_qualifier>
+                        <number_literal text="5" />
+                        <"]" text="]" />
+                    </abstract_array_declarator>
+                </parameter_declaration>
+                <")" text=")" />
+            </parameter_list>
+        </function_declarator>
+        <";" text=";" />
+    </declaration>
+    <declaration>
+        <primitive_type text="void" />
+        <function_declarator>
+            <identifier text="fooc" />
+            <parameter_list>
+                <"(" text="(" />
+                <parameter_declaration>
+                    <primitive_type text="int" />
+                    <parenthesized_declarator>
+                        <"(" text="(" />
+                        <pointer_declarator>
+                            <"*" text="*" />
+                            <type_qualifier>
+                                <const text="const" />
+                            </type_qualifier>
+                            <identifier text="x" />
+                        </pointer_declarator>
+                        <")" text=")" />
+                    </parenthesized_declarator>
+                </parameter_declaration>
+                <")" text=")" />
+            </parameter_list>
+        </function_declarator>
+        <";" text=";" />
+    </declaration>
+    <declaration>
+        <primitive_type text="void" />
+        <function_declarator>
+            <identifier text="foos" />
+            <parameter_list>
+                <"(" text="(" />
+                <parameter_declaration>
+                    <primitive_type text="int" />
+                    <pointer_declarator>
+                        <"*" text="*" />
+                        <identifier text="x" />
+                    </pointer_declarator>
+                </parameter_declaration>
+                <")" text=")" />
+            </parameter_list>
+        </function_declarator>
+        <";" text=";" />
+    </declaration>
+    <declaration>
+        <primitive_type text="void" />
+        <function_declarator>
+            <identifier text="foov" />
+            <parameter_list>
+                <"(" text="(" />
+                <parameter_declaration>
+                    <primitive_type text="int" />
+                    <pointer_declarator>
+                        <"*" text="*" />
+                        <type_qualifier>
+                            <volatile text="volatile" />
+                        </type_qualifier>
+                        <identifier text="x" />
+                    </pointer_declarator>
+                </parameter_declaration>
+                <")" text=")" />
+            </parameter_list>
+        </function_declarator>
+        <";" text=";" />
+    </declaration>
+    <declaration>
+        <primitive_type text="void" />
+        <function_declarator>
+            <identifier text="foor" />
+            <parameter_list>
+                <"(" text="(" />
+                <parameter_declaration>
+                    <primitive_type text="int" />
+                    <pointer_declarator>
+                        <"*" text="*" />
+                        <type_qualifier>
+                            <restrict text="restrict" />
+                        </type_qualifier>
+                        <identifier text="x" />
+                    </pointer_declarator>
+                </parameter_declaration>
+                <")" text=")" />
+            </parameter_list>
+        </function_declarator>
+        <";" text=";" />
+    </declaration>
+    <function_definition>
+        <primitive_type text="void" />
+        <function_declarator>
+            <identifier text="fooc" />
+            <parameter_list>
+                <"(" text="(" />
+                <parameter_declaration>
+                    <primitive_type text="int" />
+                    <array_declarator>
+                        <identifier text="x" />
+                        <"[" text="[" />
+                        <type_qualifier>
+                            <volatile text="volatile" />
+                        </type_qualifier>
+                        <number_literal text="5" />
+                        <"]" text="]" />
+                    </array_declarator>
+                </parameter_declaration>
+                <")" text=")" />
+            </parameter_list>
+        </function_declarator>
+        <compound_statement>
+            <"{" text="{" />
+            <expression_statement>
+                <assignment_expression>
+                    <subscript_expression>
+                        <identifier text="x" />
+                        <"[" text="[" />
+                        <number_literal text="3" />
+                        <"]" text="]" />
+                    </subscript_expression>
+                    <"=" text="=" />
+                    <number_literal text="42" />
+                </assignment_expression>
+                <";" text=";" />
+            </expression_statement>
+            <preproc_ifdef>
+                <#ifdef text="#ifdef" />
+                <identifier text="INVALID" />
+                <expression_statement>
+                    <assignment_expression>
+                        <identifier text="x" />
+                        <"=" text="=" />
+                        <number_literal text="0" />
+                    </assignment_expression>
+                    <";" text=";" />
+                </expression_statement>
+                <#endif text="#endif" />
+            </preproc_ifdef>
+            <"}" text="}" />
+        </compound_statement>
+    </function_definition>
+    <declaration>
+        <primitive_type text="void" />
+        <function_declarator>
+            <identifier text="foovm" />
+            <parameter_list>
+                <"(" text="(" />
+                <parameter_declaration>
+                    <primitive_type text="int" />
+                    <array_declarator>
+                        <identifier text="x" />
+                        <"[" text="[" />
+                        <type_qualifier>
+                            <const text="const" />
+                        </type_qualifier>
+                        <"*" text="*" />
+                        <"]" text="]" />
+                    </array_declarator>
+                </parameter_declaration>
+                <")" text=")" />
+            </parameter_list>
+        </function_declarator>
+        <";" text=";" />
+    </declaration>
+    <declaration>
+        <primitive_type text="void" />
+        <function_declarator>
+            <identifier text="foovm" />
+            <parameter_list>
+                <"(" text="(" />
+                <parameter_declaration>
+                    <primitive_type text="int" />
+                    <pointer_declarator>
+                        <"*" text="*" />
+                        <type_qualifier>
+                            <const text="const" />
+                        </type_qualifier>
+                        <identifier text="x" />
+                    </pointer_declarator>
+                </parameter_declaration>
+                <")" text=")" />
+            </parameter_list>
+        </function_declarator>
+        <";" text=";" />
+    </declaration>
+    <preproc_ifdef>
+        <#ifdef text="#ifdef" />
+        <identifier text="INVALID" />
+        <declaration>
+            <primitive_type text="void" />
+            <function_declarator>
+                <identifier text="wrongc" />
+                <parameter_list>
+                    <"(" text="(" />
+                    <parameter_declaration>
+                        <primitive_type text="int" />
+                        <array_declarator>
+                            <array_declarator>
+                                <identifier text="x" />
+                                <"[" text="[" />
+                                <number_literal text="3" />
+                                <"]" text="]" />
+                            </array_declarator>
+                            <"[" text="[" />
+                            <type_qualifier>
+                                <const text="const" />
+                            </type_qualifier>
+                            <number_literal text="4" />
+                            <"]" text="]" />
+                        </array_declarator>
+                    </parameter_declaration>
+                    <")" text=")" />
+                </parameter_list>
+            </function_declarator>
+            <";" text=";" />
+        </declaration>
+        <declaration>
+            <primitive_type text="void" />
+            <function_declarator>
+                <identifier text="wrongvm" />
+                <parameter_list>
+                    <"(" text="(" />
+                    <parameter_declaration>
+                        <primitive_type text="int" />
+                        <array_declarator>
+                            <identifier text="x" />
+                            <"[" text="[" />
+                            <binary_expression>
+                                <identifier text="static" />
+                                <"*" text="*" />
+                                <identifier text="" />
+                            </binary_expression>
+                            <"]" text="]" />
+                        </array_declarator>
+                    </parameter_declaration>
+                    <")" text=")" />
+                </parameter_list>
+            </function_declarator>
+            <";" text=";" />
+        </declaration>
+        <function_definition>
+            <primitive_type text="void" />
+            <function_declarator>
+                <identifier text="foovm" />
+                <parameter_list>
+                    <"(" text="(" />
+                    <parameter_declaration>
+                        <primitive_type text="int" />
+                        <array_declarator>
+                            <identifier text="x" />
+                            <"[" text="[" />
+                            <type_qualifier>
+                                <const text="const" />
+                            </type_qualifier>
+                            <"*" text="*" />
+                            <"]" text="]" />
+                        </array_declarator>
+                    </parameter_declaration>
+                    <")" text=")" />
+                </parameter_list>
+            </function_declarator>
+            <compound_statement>
+                <"{" text="{" />
+                <expression_statement>
+                    <assignment_expression>
+                        <subscript_expression>
+                            <identifier text="x" />
+                            <"[" text="[" />
+                            <number_literal text="2" />
+                            <"]" text="]" />
+                        </subscript_expression>
+                        <"=" text="=" />
+                        <number_literal text="1" />
+                    </assignment_expression>
+                    <";" text=";" />
+                </expression_statement>
+                <"}" text="}" />
+            </compound_statement>
+        </function_definition>
+        <#endif text="#endif" />
+    </preproc_ifdef>
+    <function_definition>
+        <primitive_type text="int" />
+        <function_declarator>
+            <identifier text="main" />
+            <parameter_list>
+                <"(" text="(" />
+                <")" text=")" />
+            </parameter_list>
+        </function_declarator>
+        <compound_statement>
+            <"{" text="{" />
+            <return_statement>
+                <return text="return" />
+                <number_literal text="0" />
+                <";" text=";" />
+            </return_statement>
+            <"}" text="}" />
+        </compound_statement>
+    </function_definition>
+</translation_unit>

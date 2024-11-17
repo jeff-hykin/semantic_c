@@ -1,0 +1,291 @@
+<translation_unit>
+    <declaration>
+        <primitive_type text="int" />
+        <identifier text="g" />
+        <";" text=";" />
+    </declaration>
+    <function_definition>
+        <primitive_type text="int" />
+        <function_declarator>
+            <identifier text="effect" />
+            <parameter_list>
+                <"(" text="(" />
+                <")" text=")" />
+            </parameter_list>
+        </function_declarator>
+        <compound_statement>
+            <"{" text="{" />
+            <expression_statement>
+                <assignment_expression>
+                    <identifier text="g" />
+                    <"=" text="=" />
+                    <number_literal text="1" />
+                </assignment_expression>
+                <";" text=";" />
+            </expression_statement>
+            <return_statement>
+                <return text="return" />
+                <number_literal text="1" />
+                <";" text=";" />
+            </return_statement>
+            <"}" text="}" />
+        </compound_statement>
+    </function_definition>
+    <function_definition>
+        <primitive_type text="int" />
+        <function_declarator>
+            <identifier text="main" />
+            <parameter_list>
+                <"(" text="(" />
+                <")" text=")" />
+            </parameter_list>
+        </function_declarator>
+        <compound_statement>
+            <"{" text="{" />
+            <declaration>
+                <primitive_type text="int" />
+                <identifier text="x" />
+                <";" text=";" />
+            </declaration>
+            <expression_statement>
+                <assignment_expression>
+                    <identifier text="g" />
+                    <"=" text="=" />
+                    <number_literal text="0" />
+                </assignment_expression>
+                <";" text=";" />
+            </expression_statement>
+            <expression_statement>
+                <assignment_expression>
+                    <identifier text="x" />
+                    <"=" text="=" />
+                    <number_literal text="0" />
+                </assignment_expression>
+                <";" text=";" />
+            </expression_statement>
+            <if_statement>
+                <if text="if" />
+                <parenthesized_expression>
+                    <"(" text="(" />
+                    <binary_expression>
+                        <identifier text="x" />
+                        <"&&" text="&&" />
+                        <call_expression>
+                            <identifier text="effect" />
+                            <argument_list>
+                                <"(" text="(" />
+                                <")" text=")" />
+                            </argument_list>
+                        </call_expression>
+                    </binary_expression>
+                    <")" text=")" />
+                </parenthesized_expression>
+                <return_statement>
+                    <return text="return" />
+                    <number_literal text="1" />
+                    <";" text=";" />
+                </return_statement>
+            </if_statement>
+            <if_statement>
+                <if text="if" />
+                <parenthesized_expression>
+                    <"(" text="(" />
+                    <identifier text="g" />
+                    <")" text=")" />
+                </parenthesized_expression>
+                <return_statement>
+                    <return text="return" />
+                    <number_literal text="2" />
+                    <";" text=";" />
+                </return_statement>
+            </if_statement>
+            <expression_statement>
+                <assignment_expression>
+                    <identifier text="x" />
+                    <"=" text="=" />
+                    <number_literal text="1" />
+                </assignment_expression>
+                <";" text=";" />
+            </expression_statement>
+            <if_statement>
+                <if text="if" />
+                <parenthesized_expression>
+                    <"(" text="(" />
+                    <binary_expression>
+                        <identifier text="x" />
+                        <"&&" text="&&" />
+                        <call_expression>
+                            <identifier text="effect" />
+                            <argument_list>
+                                <"(" text="(" />
+                                <")" text=")" />
+                            </argument_list>
+                        </call_expression>
+                    </binary_expression>
+                    <")" text=")" />
+                </parenthesized_expression>
+                <compound_statement>
+                    <"{" text="{" />
+                    <if_statement>
+                        <if text="if" />
+                        <parenthesized_expression>
+                            <"(" text="(" />
+                            <binary_expression>
+                                <identifier text="g" />
+                                <"!=" text="!=" />
+                                <number_literal text="1" />
+                            </binary_expression>
+                            <")" text=")" />
+                        </parenthesized_expression>
+                        <return_statement>
+                            <return text="return" />
+                            <number_literal text="3" />
+                            <";" text=";" />
+                        </return_statement>
+                    </if_statement>
+                    <"}" text="}" />
+                </compound_statement>
+                <else_clause>
+                    <else text="else" />
+                    <compound_statement>
+                        <"{" text="{" />
+                        <return_statement>
+                            <return text="return" />
+                            <number_literal text="4" />
+                            <";" text=";" />
+                        </return_statement>
+                        <"}" text="}" />
+                    </compound_statement>
+                </else_clause>
+            </if_statement>
+            <expression_statement>
+                <assignment_expression>
+                    <identifier text="g" />
+                    <"=" text="=" />
+                    <number_literal text="0" />
+                </assignment_expression>
+                <";" text=";" />
+            </expression_statement>
+            <expression_statement>
+                <assignment_expression>
+                    <identifier text="x" />
+                    <"=" text="=" />
+                    <number_literal text="1" />
+                </assignment_expression>
+                <";" text=";" />
+            </expression_statement>
+            <if_statement>
+                <if text="if" />
+                <parenthesized_expression>
+                    <"(" text="(" />
+                    <binary_expression>
+                        <identifier text="x" />
+                        <"||" text="||" />
+                        <call_expression>
+                            <identifier text="effect" />
+                            <argument_list>
+                                <"(" text="(" />
+                                <")" text=")" />
+                            </argument_list>
+                        </call_expression>
+                    </binary_expression>
+                    <")" text=")" />
+                </parenthesized_expression>
+                <compound_statement>
+                    <"{" text="{" />
+                    <if_statement>
+                        <if text="if" />
+                        <parenthesized_expression>
+                            <"(" text="(" />
+                            <identifier text="g" />
+                            <")" text=")" />
+                        </parenthesized_expression>
+                        <return_statement>
+                            <return text="return" />
+                            <number_literal text="5" />
+                            <";" text=";" />
+                        </return_statement>
+                    </if_statement>
+                    <"}" text="}" />
+                </compound_statement>
+                <else_clause>
+                    <else text="else" />
+                    <compound_statement>
+                        <"{" text="{" />
+                        <return_statement>
+                            <return text="return" />
+                            <number_literal text="6" />
+                            <";" text=";" />
+                        </return_statement>
+                        <"}" text="}" />
+                    </compound_statement>
+                </else_clause>
+            </if_statement>
+            <expression_statement>
+                <assignment_expression>
+                    <identifier text="x" />
+                    <"=" text="=" />
+                    <number_literal text="0" />
+                </assignment_expression>
+                <";" text=";" />
+            </expression_statement>
+            <if_statement>
+                <if text="if" />
+                <parenthesized_expression>
+                    <"(" text="(" />
+                    <binary_expression>
+                        <identifier text="x" />
+                        <"||" text="||" />
+                        <call_expression>
+                            <identifier text="effect" />
+                            <argument_list>
+                                <"(" text="(" />
+                                <")" text=")" />
+                            </argument_list>
+                        </call_expression>
+                    </binary_expression>
+                    <")" text=")" />
+                </parenthesized_expression>
+                <compound_statement>
+                    <"{" text="{" />
+                    <if_statement>
+                        <if text="if" />
+                        <parenthesized_expression>
+                            <"(" text="(" />
+                            <binary_expression>
+                                <identifier text="g" />
+                                <"!=" text="!=" />
+                                <number_literal text="1" />
+                            </binary_expression>
+                            <")" text=")" />
+                        </parenthesized_expression>
+                        <return_statement>
+                            <return text="return" />
+                            <number_literal text="7" />
+                            <";" text=";" />
+                        </return_statement>
+                    </if_statement>
+                    <"}" text="}" />
+                </compound_statement>
+                <else_clause>
+                    <else text="else" />
+                    <compound_statement>
+                        <"{" text="{" />
+                        <return_statement>
+                            <return text="return" />
+                            <number_literal text="8" />
+                            <";" text=";" />
+                        </return_statement>
+                        <"}" text="}" />
+                    </compound_statement>
+                </else_clause>
+            </if_statement>
+            <return_statement>
+                <return text="return" />
+                <number_literal text="0" />
+                <";" text=";" />
+            </return_statement>
+            <"}" text="}" />
+        </compound_statement>
+    </function_definition>
+</translation_unit>

@@ -1,0 +1,157 @@
+<translation_unit>
+    <type_definition>
+        <typedef text="typedef" />
+        <struct_specifier>
+            <struct text="struct" />
+            <type_identifier text="s" />
+        </struct_specifier>
+        <type_identifier text="s" />
+        <";" text=";" />
+    </type_definition>
+    <declaration>
+        <struct_specifier>
+            <struct text="struct" />
+            <type_identifier text="s" />
+            <field_declaration_list>
+                <"{" text="{" />
+                <field_declaration>
+                    <struct_specifier>
+                        <struct text="struct" />
+                        <type_identifier text="s1" />
+                        <field_declaration_list>
+                            <"{" text="{" />
+                            <field_declaration>
+                                <primitive_type text="int" />
+                                <field_identifier text="s" />
+                                <";" text=";" />
+                            </field_declaration>
+                            <field_declaration>
+                                <struct_specifier>
+                                    <struct text="struct" />
+                                    <type_identifier text="s2" />
+                                    <field_declaration_list>
+                                        <"{" text="{" />
+                                        <field_declaration>
+                                            <primitive_type text="int" />
+                                            <field_identifier text="s" />
+                                            <";" text=";" />
+                                        </field_declaration>
+                                        <"}" text="}" />
+                                    </field_declaration_list>
+                                </struct_specifier>
+                                <field_identifier text="s1" />
+                                <";" text=";" />
+                            </field_declaration>
+                            <"}" text="}" />
+                        </field_declaration_list>
+                    </struct_specifier>
+                    <field_identifier text="s" />
+                    <";" text=";" />
+                </field_declaration>
+                <"}" text="}" />
+            </field_declaration_list>
+        </struct_specifier>
+        <identifier text="s2" />
+        <";" text=";" />
+    </declaration>
+    <preproc_def>
+        <#define text="#define" />
+        <identifier text="s" />
+        <preproc_arg text="s" />
+    </preproc_def>
+    <function_definition>
+        <primitive_type text="int" />
+        <function_declarator>
+            <identifier text="main" />
+            <parameter_list>
+                <"(" text="(" />
+                <parameter_declaration>
+                    <primitive_type text="void" />
+                </parameter_declaration>
+                <")" text=")" />
+            </parameter_list>
+        </function_declarator>
+        <compound_statement>
+            <"{" text="{" />
+            <preproc_call>
+                <preproc_directive text="#undef" />
+                <preproc_arg text="s" />
+            </preproc_call>
+            <goto_statement>
+                <goto text="goto" />
+                <statement_identifier text="s" />
+                <";" text=";" />
+            </goto_statement>
+            <declaration>
+                <struct_specifier>
+                    <struct text="struct" />
+                    <type_identifier text="s" />
+                </struct_specifier>
+                <identifier text="s" />
+                <";" text=";" />
+            </declaration>
+            <compound_statement>
+                <"{" text="{" />
+                <declaration>
+                    <primitive_type text="int" />
+                    <identifier text="s" />
+                    <";" text=";" />
+                </declaration>
+                <return_statement>
+                    <return text="return" />
+                    <identifier text="s" />
+                    <";" text=";" />
+                </return_statement>
+                <"}" text="}" />
+            </compound_statement>
+            <return_statement>
+                <return text="return" />
+                <binary_expression>
+                    <field_expression>
+                        <field_expression>
+                            <identifier text="s" />
+                            <"." text="." />
+                            <field_identifier text="s" />
+                        </field_expression>
+                        <"." text="." />
+                        <field_identifier text="s" />
+                    </field_expression>
+                    <"+" text="+" />
+                    <field_expression>
+                        <field_expression>
+                            <field_expression>
+                                <identifier text="s" />
+                                <"." text="." />
+                                <field_identifier text="s" />
+                            </field_expression>
+                            <"." text="." />
+                            <field_identifier text="s1" />
+                        </field_expression>
+                        <"." text="." />
+                        <field_identifier text="s" />
+                    </field_expression>
+                </binary_expression>
+                <";" text=";" />
+            </return_statement>
+            <labeled_statement>
+                <statement_identifier text="s" />
+                <":" text=":" />
+                <compound_statement>
+                    <"{" text="{" />
+                    <return_statement>
+                        <return text="return" />
+                        <number_literal text="0" />
+                        <";" text=";" />
+                    </return_statement>
+                    <"}" text="}" />
+                </compound_statement>
+            </labeled_statement>
+            <return_statement>
+                <return text="return" />
+                <number_literal text="1" />
+                <";" text=";" />
+            </return_statement>
+            <"}" text="}" />
+        </compound_statement>
+    </function_definition>
+</translation_unit>

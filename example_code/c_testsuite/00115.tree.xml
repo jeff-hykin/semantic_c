@@ -1,0 +1,155 @@
+<translation_unit>
+    <preproc_def>
+        <#define text="#define" />
+        <identifier text="B" />
+        <preproc_arg text="\"b\"" />
+    </preproc_def>
+    <declaration>
+        <primitive_type text="char" />
+        <init_declarator>
+            <array_declarator>
+                <identifier text="s" />
+                <"[" text="[" />
+                <"]" text="]" />
+            </array_declarator>
+            <"=" text="=" />
+            <concatenated_string>
+                <string_literal>
+                    <"\"" text="\"" />
+                    <string_content text="a" />
+                    <"\"" text="\"" />
+                </string_literal>
+                <identifier text="B" />
+                <string_literal>
+                    <"\"" text="\"" />
+                    <string_content text="c" />
+                    <"\"" text="\"" />
+                </string_literal>
+            </concatenated_string>
+        </init_declarator>
+        <";" text=";" />
+    </declaration>
+    <function_definition>
+        <primitive_type text="int" />
+        <function_declarator>
+            <identifier text="main" />
+            <parameter_list>
+                <"(" text="(" />
+                <")" text=")" />
+            </parameter_list>
+        </function_declarator>
+        <compound_statement>
+            <"{" text="{" />
+            <if_statement>
+                <if text="if" />
+                <parenthesized_expression>
+                    <"(" text="(" />
+                    <binary_expression>
+                        <subscript_expression>
+                            <identifier text="s" />
+                            <"[" text="[" />
+                            <number_literal text="0" />
+                            <"]" text="]" />
+                        </subscript_expression>
+                        <"!=" text="!=" />
+                        <char_literal>
+                            <"'" text="'" />
+                            <character text="a" />
+                            <"'" text="'" />
+                        </char_literal>
+                    </binary_expression>
+                    <")" text=")" />
+                </parenthesized_expression>
+                <return_statement>
+                    <return text="return" />
+                    <number_literal text="1" />
+                    <";" text=";" />
+                </return_statement>
+            </if_statement>
+            <if_statement>
+                <if text="if" />
+                <parenthesized_expression>
+                    <"(" text="(" />
+                    <binary_expression>
+                        <subscript_expression>
+                            <identifier text="s" />
+                            <"[" text="[" />
+                            <number_literal text="1" />
+                            <"]" text="]" />
+                        </subscript_expression>
+                        <"!=" text="!=" />
+                        <char_literal>
+                            <"'" text="'" />
+                            <character text="b" />
+                            <"'" text="'" />
+                        </char_literal>
+                    </binary_expression>
+                    <")" text=")" />
+                </parenthesized_expression>
+                <return_statement>
+                    <return text="return" />
+                    <number_literal text="2" />
+                    <";" text=";" />
+                </return_statement>
+            </if_statement>
+            <if_statement>
+                <if text="if" />
+                <parenthesized_expression>
+                    <"(" text="(" />
+                    <binary_expression>
+                        <subscript_expression>
+                            <identifier text="s" />
+                            <"[" text="[" />
+                            <number_literal text="2" />
+                            <"]" text="]" />
+                        </subscript_expression>
+                        <"!=" text="!=" />
+                        <char_literal>
+                            <"'" text="'" />
+                            <character text="c" />
+                            <"'" text="'" />
+                        </char_literal>
+                    </binary_expression>
+                    <")" text=")" />
+                </parenthesized_expression>
+                <return_statement>
+                    <return text="return" />
+                    <number_literal text="3" />
+                    <";" text=";" />
+                </return_statement>
+            </if_statement>
+            <if_statement>
+                <if text="if" />
+                <parenthesized_expression>
+                    <"(" text="(" />
+                    <binary_expression>
+                        <subscript_expression>
+                            <identifier text="s" />
+                            <"[" text="[" />
+                            <number_literal text="3" />
+                            <"]" text="]" />
+                        </subscript_expression>
+                        <"!=" text="!=" />
+                        <char_literal>
+                            <"'" text="'" />
+                            <escape_sequence text="\\0" />
+                            <"'" text="'" />
+                        </char_literal>
+                    </binary_expression>
+                    <")" text=")" />
+                </parenthesized_expression>
+                <return_statement>
+                    <return text="return" />
+                    <number_literal text="4" />
+                    <";" text=";" />
+                </return_statement>
+            </if_statement>
+            <return_statement>
+                <return text="return" />
+                <number_literal text="0" />
+                <";" text=";" />
+            </return_statement>
+            <"}" text="}" />
+        </compound_statement>
+    </function_definition>
+</translation_unit>

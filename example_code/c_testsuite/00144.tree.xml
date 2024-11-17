@@ -1,0 +1,194 @@
+<translation_unit>
+    <function_definition>
+        <primitive_type text="int" />
+        <function_declarator>
+            <identifier text="main" />
+            <parameter_list>
+                <"(" text="(" />
+                <parameter_declaration>
+                    <primitive_type text="void" />
+                </parameter_declaration>
+                <")" text=")" />
+            </parameter_list>
+        </function_declarator>
+        <compound_statement>
+            <"{" text="{" />
+            <declaration>
+                <primitive_type text="int" />
+                <identifier text="i" />
+                <"," text="," />
+                <pointer_declarator>
+                    <"*" text="*" />
+                    <identifier text="q" />
+                </pointer_declarator>
+                <";" text=";" />
+            </declaration>
+            <declaration>
+                <primitive_type text="void" />
+                <pointer_declarator>
+                    <"*" text="*" />
+                    <identifier text="p" />
+                </pointer_declarator>
+                <";" text=";" />
+            </declaration>
+            <expression_statement>
+                <assignment_expression>
+                    <identifier text="i" />
+                    <"=" text="=" />
+                    <conditional_expression>
+                        <identifier text="i" />
+                        <"?" text="?" />
+                        <number_literal text="0" />
+                        <":" text=":" />
+                        <number_literal text="0l" />
+                    </conditional_expression>
+                </assignment_expression>
+                <";" text=";" />
+            </expression_statement>
+            <expression_statement>
+                <assignment_expression>
+                    <identifier text="p" />
+                    <"=" text="=" />
+                    <conditional_expression>
+                        <identifier text="i" />
+                        <"?" text="?" />
+                        <cast_expression>
+                            <"(" text="(" />
+                            <type_descriptor>
+                                <primitive_type text="void" />
+                                <abstract_pointer_declarator>
+                                    <"*" text="*" />
+                                </abstract_pointer_declarator>
+                            </type_descriptor>
+                            <")" text=")" />
+                            <number_literal text="0" />
+                        </cast_expression>
+                        <":" text=":" />
+                        <number_literal text="0" />
+                    </conditional_expression>
+                </assignment_expression>
+                <";" text=";" />
+            </expression_statement>
+            <expression_statement>
+                <assignment_expression>
+                    <identifier text="p" />
+                    <"=" text="=" />
+                    <conditional_expression>
+                        <identifier text="i" />
+                        <"?" text="?" />
+                        <number_literal text="0" />
+                        <":" text=":" />
+                        <cast_expression>
+                            <"(" text="(" />
+                            <type_descriptor>
+                                <primitive_type text="void" />
+                                <abstract_pointer_declarator>
+                                    <"*" text="*" />
+                                </abstract_pointer_declarator>
+                            </type_descriptor>
+                            <")" text=")" />
+                            <number_literal text="0" />
+                        </cast_expression>
+                    </conditional_expression>
+                </assignment_expression>
+                <";" text=";" />
+            </expression_statement>
+            <expression_statement>
+                <assignment_expression>
+                    <identifier text="p" />
+                    <"=" text="=" />
+                    <conditional_expression>
+                        <identifier text="i" />
+                        <"?" text="?" />
+                        <number_literal text="0" />
+                        <":" text=":" />
+                        <cast_expression>
+                            <"(" text="(" />
+                            <type_descriptor>
+                                <type_qualifier>
+                                    <const text="const" />
+                                </type_qualifier>
+                                <primitive_type text="void" />
+                                <abstract_pointer_declarator>
+                                    <"*" text="*" />
+                                </abstract_pointer_declarator>
+                            </type_descriptor>
+                            <")" text=")" />
+                            <number_literal text="0" />
+                        </cast_expression>
+                    </conditional_expression>
+                </assignment_expression>
+                <";" text=";" />
+            </expression_statement>
+            <expression_statement>
+                <assignment_expression>
+                    <identifier text="q" />
+                    <"=" text="=" />
+                    <conditional_expression>
+                        <identifier text="i" />
+                        <"?" text="?" />
+                        <number_literal text="0" />
+                        <":" text=":" />
+                        <identifier text="p" />
+                    </conditional_expression>
+                </assignment_expression>
+                <";" text=";" />
+            </expression_statement>
+            <expression_statement>
+                <assignment_expression>
+                    <identifier text="q" />
+                    <"=" text="=" />
+                    <conditional_expression>
+                        <identifier text="i" />
+                        <"?" text="?" />
+                        <identifier text="p" />
+                        <":" text=":" />
+                        <number_literal text="0" />
+                    </conditional_expression>
+                </assignment_expression>
+                <";" text=";" />
+            </expression_statement>
+            <expression_statement>
+                <assignment_expression>
+                    <identifier text="q" />
+                    <"=" text="=" />
+                    <conditional_expression>
+                        <identifier text="i" />
+                        <"?" text="?" />
+                        <identifier text="q" />
+                        <":" text=":" />
+                        <number_literal text="0" />
+                    </conditional_expression>
+                </assignment_expression>
+                <";" text=";" />
+            </expression_statement>
+            <expression_statement>
+                <assignment_expression>
+                    <identifier text="q" />
+                    <"=" text="=" />
+                    <conditional_expression>
+                        <identifier text="i" />
+                        <"?" text="?" />
+                        <number_literal text="0" />
+                        <":" text=":" />
+                        <identifier text="q" />
+                    </conditional_expression>
+                </assignment_expression>
+                <";" text=";" />
+            </expression_statement>
+            <return_statement>
+                <return text="return" />
+                <cast_expression>
+                    <"(" text="(" />
+                    <type_descriptor>
+                        <primitive_type text="int" />
+                    </type_descriptor>
+                    <")" text=")" />
+                    <identifier text="q" />
+                </cast_expression>
+                <";" text=";" />
+            </return_statement>
+            <"}" text="}" />
+        </compound_statement>
+    </function_definition>
+</translation_unit>

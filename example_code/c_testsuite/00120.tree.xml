@@ -1,0 +1,46 @@
+<translation_unit>
+    <declaration>
+        <struct_specifier>
+            <struct text="struct" />
+            <field_declaration_list>
+                <"{" text="{" />
+                <field_declaration>
+                    <enum_specifier>
+                        <enum text="enum" />
+                        <enumerator_list>
+                            <"{" text="{" />
+                            <enumerator>
+                                <identifier text="X" />
+                            </enumerator>
+                            <"}" text="}" />
+                        </enumerator_list>
+                    </enum_specifier>
+                    <field_identifier text="x" />
+                    <";" text=";" />
+                </field_declaration>
+                <"}" text="}" />
+            </field_declaration_list>
+        </struct_specifier>
+        <identifier text="s" />
+        <";" text=";" />
+    </declaration>
+    <function_definition>
+        <primitive_type text="int" />
+        <function_declarator>
+            <identifier text="main" />
+            <parameter_list>
+                <"(" text="(" />
+                <")" text=")" />
+            </parameter_list>
+        </function_declarator>
+        <compound_statement>
+            <"{" text="{" />
+            <return_statement>
+                <return text="return" />
+                <identifier text="X" />
+                <";" text=";" />
+            </return_statement>
+            <"}" text="}" />
+        </compound_statement>
+    </function_definition>
+</translation_unit>

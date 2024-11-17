@@ -9,7 +9,8 @@ import { run, hasCommand, throwIfFails, zipInto, mergeInto, returnAsString, Time
 import { Console, clearAnsiStylesFrom, black, white, red, green, blue, yellow, cyan, magenta, lightBlack, lightWhite, lightRed, lightGreen, lightBlue, lightYellow, lightMagenta, lightCyan, blackBackground, whiteBackground, redBackground, greenBackground, blueBackground, yellowBackground, magentaBackground, cyanBackground, lightBlackBackground, lightRedBackground, lightGreenBackground, lightYellowBackground, lightBlueBackground, lightMagentaBackground, lightCyanBackground, lightWhiteBackground, bold, reset, dim, italic, underline, inverse, strikethrough, gray, grey, lightGray, lightGrey, grayBackground, greyBackground, lightGrayBackground, lightGreyBackground, } from "https://deno.land/x/quickr@0.6.72/main/console.js"
 
 const parser = await parserFromWasm(c)
-await Promise.all((await glob("example_code/**/*.c")).map(async each=>{
+await Promise.all((await glob("example_code/*.c")).map(async each=>{
+// await Promise.all((await glob("example_code/**/*.c")).map(async each=>{
     const [ folders, name, ext ] = FileSystem.pathPieces(each)
     const tree = parser.parse(await FileSystem.read(each))
     return FileSystem.write({

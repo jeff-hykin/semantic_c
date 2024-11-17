@@ -1,0 +1,170 @@
+<translation_unit>
+    <declaration>
+        <primitive_type text="int" />
+        <function_declarator>
+            <identifier text="printf" />
+            <parameter_list>
+                <"(" text="(" />
+                <parameter_declaration>
+                    <type_qualifier>
+                        <const text="const" />
+                    </type_qualifier>
+                    <primitive_type text="char" />
+                    <abstract_pointer_declarator>
+                        <"*" text="*" />
+                    </abstract_pointer_declarator>
+                </parameter_declaration>
+                <"," text="," />
+                <variadic_parameter>
+                    <"..." text="..." />
+                </variadic_parameter>
+                <")" text=")" />
+            </parameter_list>
+        </function_declarator>
+        <";" text=";" />
+    </declaration>
+    <declaration>
+        <primitive_type text="char" />
+        <init_declarator>
+            <array_declarator>
+                <identifier text="t" />
+                <"[" text="[" />
+                <"]" text="]" />
+            </array_declarator>
+            <"=" text="=" />
+            <string_literal>
+                <"\"" text="\"" />
+                <string_content text="012345678" />
+                <"\"" text="\"" />
+            </string_literal>
+        </init_declarator>
+        <";" text=";" />
+    </declaration>
+    <function_definition>
+        <primitive_type text="int" />
+        <function_declarator>
+            <identifier text="main" />
+            <parameter_list>
+                <"(" text="(" />
+                <parameter_declaration>
+                    <primitive_type text="void" />
+                </parameter_declaration>
+                <")" text=")" />
+            </parameter_list>
+        </function_declarator>
+        <compound_statement>
+            <"{" text="{" />
+            <declaration>
+                <primitive_type text="char" />
+                <init_declarator>
+                    <pointer_declarator>
+                        <"*" text="*" />
+                        <identifier text="data" />
+                    </pointer_declarator>
+                    <"=" text="=" />
+                    <identifier text="t" />
+                </init_declarator>
+                <";" text=";" />
+            </declaration>
+            <declaration>
+                <sized_type_specifier>
+                    <unsigned text="unsigned" />
+                    <long text="long" />
+                    <long text="long" />
+                </sized_type_specifier>
+                <init_declarator>
+                    <identifier text="r" />
+                    <"=" text="=" />
+                    <number_literal text="4" />
+                </init_declarator>
+                <";" text=";" />
+            </declaration>
+            <declaration>
+                <sized_type_specifier>
+                    <unsigned text="unsigned" />
+                </sized_type_specifier>
+                <init_declarator>
+                    <identifier text="a" />
+                    <"=" text="=" />
+                    <number_literal text="5" />
+                </init_declarator>
+                <";" text=";" />
+            </declaration>
+            <declaration>
+                <sized_type_specifier>
+                    <unsigned text="unsigned" />
+                    <long text="long" />
+                    <long text="long" />
+                </sized_type_specifier>
+                <init_declarator>
+                    <identifier text="b" />
+                    <"=" text="=" />
+                    <number_literal text="12" />
+                </init_declarator>
+                <";" text=";" />
+            </declaration>
+            <expression_statement>
+                <assignment_expression>
+                    <pointer_expression>
+                        <"*" text="*" />
+                        <cast_expression>
+                            <"(" text="(" />
+                            <type_descriptor>
+                                <sized_type_specifier>
+                                    <unsigned text="unsigned" />
+                                </sized_type_specifier>
+                                <abstract_pointer_declarator>
+                                    <"*" text="*" />
+                                </abstract_pointer_declarator>
+                            </type_descriptor>
+                            <")" text=")" />
+                            <parenthesized_expression>
+                                <"(" text="(" />
+                                <binary_expression>
+                                    <identifier text="data" />
+                                    <"+" text="+" />
+                                    <identifier text="r" />
+                                </binary_expression>
+                                <")" text=")" />
+                            </parenthesized_expression>
+                        </cast_expression>
+                    </pointer_expression>
+                    <"+=" text="+=" />
+                    <binary_expression>
+                        <identifier text="a" />
+                        <"-" text="-" />
+                        <identifier text="b" />
+                    </binary_expression>
+                </assignment_expression>
+                <";" text=";" />
+            </expression_statement>
+            <expression_statement>
+                <call_expression>
+                    <identifier text="printf" />
+                    <argument_list>
+                        <"(" text="(" />
+                        <string_literal>
+                            <"\"" text="\"" />
+                            <string_content text="data = " />
+                            <escape_sequence text="\\\"" />
+                            <string_content text="%s" />
+                            <escape_sequence text="\\\"" />
+                            <escape_sequence text="\\n" />
+                            <"\"" text="\"" />
+                        </string_literal>
+                        <"," text="," />
+                        <identifier text="data" />
+                        <")" text=")" />
+                    </argument_list>
+                </call_expression>
+                <";" text=";" />
+            </expression_statement>
+            <return_statement>
+                <return text="return" />
+                <number_literal text="0" />
+                <";" text=";" />
+            </return_statement>
+            <"}" text="}" />
+        </compound_statement>
+    </function_definition>
+</translation_unit>

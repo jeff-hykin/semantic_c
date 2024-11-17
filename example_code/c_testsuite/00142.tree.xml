@@ -1,0 +1,105 @@
+<translation_unit>
+    <preproc_if>
+        <#if text="#if" />
+        <preproc_defined>
+            <defined text="defined" />
+            <"(" text="(" />
+            <identifier text="FOO" />
+            <")" text=")" />
+        </preproc_defined>
+        <"\n" text="\n" />
+        <declaration>
+            <primitive_type text="int" />
+            <identifier text="a" />
+            <";" text=";" />
+        </declaration>
+        <preproc_elif>
+            <#elif text="#elif" />
+            <binary_expression>
+                <unary_expression>
+                    <"!" text="!" />
+                    <preproc_defined>
+                        <defined text="defined" />
+                        <"(" text="(" />
+                        <identifier text="FOO" />
+                        <")" text=")" />
+                    </preproc_defined>
+                </unary_expression>
+                <"&&" text="&&" />
+                <preproc_defined>
+                    <defined text="defined" />
+                    <"(" text="(" />
+                    <identifier text="BAR" />
+                    <")" text=")" />
+                </preproc_defined>
+            </binary_expression>
+            <"\n" text="\n" />
+            <declaration>
+                <primitive_type text="int" />
+                <identifier text="b" />
+                <";" text=";" />
+            </declaration>
+            <preproc_elif>
+                <#elif text="#elif" />
+                <binary_expression>
+                    <unary_expression>
+                        <"!" text="!" />
+                        <preproc_defined>
+                            <defined text="defined" />
+                            <"(" text="(" />
+                            <identifier text="FOO" />
+                            <")" text=")" />
+                        </preproc_defined>
+                    </unary_expression>
+                    <"&&" text="&&" />
+                    <unary_expression>
+                        <"!" text="!" />
+                        <preproc_defined>
+                            <defined text="defined" />
+                            <"(" text="(" />
+                            <identifier text="BAR" />
+                            <")" text=")" />
+                        </preproc_defined>
+                    </unary_expression>
+                </binary_expression>
+                <"\n" text="\n" />
+                <declaration>
+                    <primitive_type text="int" />
+                    <identifier text="c" />
+                    <";" text=";" />
+                </declaration>
+                <preproc_else>
+                    <#else text="#else" />
+                    <declaration>
+                        <primitive_type text="int" />
+                        <identifier text="d" />
+                        <";" text=";" />
+                    </declaration>
+                </preproc_else>
+            </preproc_elif>
+        </preproc_elif>
+        <#endif text="#endif" />
+    </preproc_if>
+    <function_definition>
+        <primitive_type text="int" />
+        <function_declarator>
+            <identifier text="main" />
+            <parameter_list>
+                <"(" text="(" />
+                <parameter_declaration>
+                    <primitive_type text="void" />
+                </parameter_declaration>
+                <")" text=")" />
+            </parameter_list>
+        </function_declarator>
+        <compound_statement>
+            <"{" text="{" />
+            <return_statement>
+                <return text="return" />
+                <identifier text="c" />
+                <";" text=";" />
+            </return_statement>
+            <"}" text="}" />
+        </compound_statement>
+    </function_definition>
+</translation_unit>
