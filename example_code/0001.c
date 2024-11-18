@@ -2,13 +2,28 @@
 // top level declarations
 // 
     int aaa;
+    int; // yep this is valid for some reason
     int global;
     short global2;
     struct AAAAAA { } aaaaaa;
     long long** var_dec_4;
     short const int** var_dec_5[22]; // breaks tree sitter (locally), but is valid C
     static const int *var_dec_6[22];
-
+    double (*c_arrays_suck)[2][3][4]; 
+    double *(**(*(**c_arrays_suck_a_lot)[2])[3])[4], im_a_double, **trash; 
+    int *(*an_array_of_func_ptr[69])(
+        int,
+        char *argv[],
+        const short int**[],
+        long long***,
+        void (*)(
+            double *(**(*(**)[2])[3])[4],
+            double (*)[2][3][4]
+        )
+    ),
+    im_an_int, // normal int
+    * (*pArr)[12]; // pArr is a pointer to array of 12 int-pointers
+    
 // 
 // function declare
 // 
@@ -54,6 +69,7 @@
     typedef unsigned char u8;
     typedef int (*fptr)(int);
     typedef struct {} empty_s;
+    typedef const short int** long_and_complicated_short;
 
 // 
 // structs
@@ -249,7 +265,23 @@ int test_zero_init (void) {
     return 0;
 }
 
-int main() {
+// static inline void* sx__aligned_alloc(const sx_alloc* alloc, size_t size, uint32_t align, const char* file, const char* func, uint32_t line) {
+//     align = ({
+//         typeof((int)align) var__a = ((int)align);
+//         typeof(8) var__b = (8);
+//         (void)(&var__a == &var__b);
+//         var__a > 8 ? var__a : var__b;
+//     });
+//     const size_t total = size + align + sizeof(uint32_t);
+//     uint8_t* ptr = (uint8_t*)sx__malloc(alloc, total, 0, file, func, line);
+//     ;
+//     uint8_t* aligned = (uint8_t*)sx_align_ptr(ptr, sizeof(uint32_t), align);
+//     uint32_t* header = (uint32_t*)aligned - 1;
+//     *header = (uint32_t)(uintptr_t)(aligned - ptr);
+//     return aligned;
+// }
+
+int main(int argc, char *argv[]) {
     foo(&gw, &phdr);
     //printf("q: %s\n", q);
     test_compound_with_relocs();

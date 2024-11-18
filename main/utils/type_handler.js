@@ -203,6 +203,7 @@ export function parseConcreteType(stack, typeNodeOrArray, handleIdentifierUpdate
         let modifiers = []
         remaining.length = 0
         // TODO: note the error case is because of a bug in the tree sitter grammar
+        // FIXME: the newer version of tree sitter doesn't have this bug, but now it has nested type_qualifiers (inside sized_type_specifiers) which breaks this code
         const isRelatedToModifiers = each => each.type === 'primitive_type' || each.type === 'sized_type_specifier' || (each.type === 'ERROR' && primitiveKeywordInfo[each.text])
         // this could certainly be optimized
         const modifiersAndPrimitives = remaining.filter(isRelatedToModifiers).map(each=>each.text).join(" ").split(/\s+/g)
@@ -270,7 +271,18 @@ export function parseConcreteType(stack, typeNodeOrArray, handleIdentifierUpdate
     }
     throw Error(`Unable to parse the concrete type for: ${getErrorArgsAsString()}`)
 }
+
+
+// parsing
+    // skip past any specifiers (struct defintion, enum definition, etc)
+    // find all identifiers in the remaining section (deep)
+    // search the ancestor of the identifier
+        // if its inside of a parameter_declaration, ignore it, go to next identifier
+    // reverse-build the type by looking at ancestors
+        // when dealing with function parameters, get the leaf node
     
+
+// 
     //     <primitive_type text="char" />
     // ---------------------
     //     <type_identifier text="u8" />
