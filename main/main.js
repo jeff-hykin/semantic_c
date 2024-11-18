@@ -17,14 +17,7 @@ const parser = await parserFromWasm(c)
 function parse(code) {
     const tree = parser.parse(code)
     const stack = new ScopeStackManager({
-        defaultInfoCreator: ()=>({
-            varCount: 0,
-            varInfo: {
-                // number
-                // selections
-                // source
-            },
-        })
+        defaultInfoCreator: ()=>({})
     })
 
     let skipUntilClosing
@@ -68,7 +61,8 @@ function parse(code) {
                 const isTypeDefiniton = type == "type_definition"
                 const isFunctionDefinition = type == "function_definition"
                 const isStructAndVarDefinition = type == "declaration" && node.children.some(each=>each.type == "struct_specifier")
-                const isNormalStuctDefinition = type == "struct_specifier" // name = "type_identifier"
+                const isNormalStuctDefinition = type == "struct_specifier" // struct name = "type_identifier"
+                
                 // TODO:
                     // finish: structs
                     // unions
@@ -76,7 +70,13 @@ function parse(code) {
                 
                 // NOTE: edgecase of inline defined structs: struct S gs = ((struct S){1, 2, 3, 4}); // struct definition effectively
                 
-                
+                // handleIdentifierUpdate(stack, identifierName, identifierNode, {
+                //     isDeclaration: true,
+                //     isDefinition: false,
+                //     isVar: false,
+                //     isFunction: false,
+                //     isType: false,
+                // })
             }
                 
             // TODO: inside structs, unions, enums, function definitions
@@ -99,9 +99,9 @@ function parse(code) {
         //
         // if (node.type == "identifier" && direction != "<-") {
         //     const info = stack.info
-        //     const varNode = node
-        //     const varName = varNode.text
-        //     const varSelection = [ varNode.startIndex, varName.length ]
+        //     const identifierNode = node
+        //     const varName = identifierNode.text
+        //     const identifierNode = [ identifierNode.startIndex, varName.length ]
             
         // }
     }
@@ -109,3 +109,65 @@ function parse(code) {
     return 
 }
 
+function handleIdentifierUpdate(stack, identifierName, identifierNode, {isDeclaration, isDefinition, isVar, isFunction, isType, ...otherStaticInfo }) {
+    otherStaticInfo = { isVar, isFunction, isType, ...otherStaticInfo }
+    const localIdentifiers = stack.localIdentifiers
+    const { exists, isLocal, isGlobal, identifierInfo } = stack.identifierInfoFor(identifierName)
+
+    // TODO: make sure a local definition can't satisfy a parent declaration
+    
+    // variable begin declared
+    if (isDeclaration) {
+        // new local var created
+        if (!isLocal) {
+            return localIdentifiers[identifierName] = {
+                number: Object.keys(localIdentifiers).length,
+                nodes: [
+                    identifierNode,
+                ],
+                source: stack.position,
+                declaration: identifierNode,
+                ...otherStaticInfo,
+            }
+        // if there's already a local thing with the same name, it's a redeclaration issue
+        } else {
+            throw Error(`Variable delcared twice in the same scope: ${identifierName}\n${identifierNode}`)
+        }
+    } else if (isDefinition) {
+        // new local var created
+        if (!isLocal) {
+            return localIdentifiers[identifierName] = {
+                number: Object.keys(localIdentifiers).length,
+                nodes: [
+                    identifierNode,
+                ],
+                source: stack.position,
+                declaration: identifierNode,
+                definition: identifierNode,
+                ...otherStaticInfo,
+            }
+        // if there's already a local thing, it could be fine so long as it's a matching definition of a declaration (and not a var)
+        } else {
+            if (isVar) {
+                throw Error(`Variable delcared twice in the same scope: ${identifierName}\n${identifierNode}`)
+            } else if (identifierInfo.definition) {
+                throw Error(`Identifier defined twice in the same scope: ${identifierName}\n${identifierNode}`)
+            } else {
+                identifierInfo.nodes.push(identifierNode)
+                identifierInfo.definition = identifierNod
+                return identifierInfo
+            }
+        }
+    // usage
+    } else {
+        // pull parent into local scope
+        if (!isLocal) {
+            localIdentifiers[identifierName] = identifierInfo
+            localIdentifiers[identifierName].nodes.push(identifierNode)
+            return identifierInfo
+        } else {
+            identifierInfo.nodes.push(identifierNode)
+            return identifierInfo
+        }
+    }
+}
