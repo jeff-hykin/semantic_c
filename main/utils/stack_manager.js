@@ -51,39 +51,3 @@ export class StackManager {
         this._nextStackDepth.pop()
     }
 }
-
-export const parseTreeAsHtmlLikeString = (tree) => {
-    const outputs = []
-    let indent = ""
-    for (const [ parents, node, direction ] of tree.rootNode.traverse()) {
-        const isLeafNode = direction == "-"
-        if (isLeafNode) {
-            outputs.push(`${indent}<${node.type} text=${JSON.stringify(node.text)} />`)
-        } if (direction == "->") {
-            outputs.push(`${indent}<${node.type}>`)
-            indent += "    "
-        } else if (direction == "<-") {
-            indent = indent.slice(0,-4)
-            outputs.push(`${indent}</${node.type}>`)
-        }
-    }
-    return outputs.join("\n")
-}
-
-export const replaceSequence = ({code, selections, replacer})=>{
-    let prevIndex = 0
-    const stringChunks = []
-    let index = 0
-    for (const [eachStart, eachLength, ...otherArgs] of selections) {
-        stringChunks.push(code.slice(prevIndex, eachStart))
-        if (replacer instanceof Array) {
-            stringChunks.push(replacer.shift())
-        } else {
-            stringChunks.push(replacer(...otherArgs, index))
-        }
-        prevIndex = eachStart+eachLength
-        index += 1
-    }
-    stringChunks.push(code.slice(prevIndex,))
-    return stringChunks.join("")
-}
