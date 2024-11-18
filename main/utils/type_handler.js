@@ -67,7 +67,7 @@ export const fullySpecifiedPrimitives = {
     double: [ ["double"], ],
     long_double: [ ["long", "double"], ],
 }
-const primitiveStorageMapping = new Map()
+const primitiveStorageMapping = new Map([["",null], ["void", "void"]])
 for (const [key, value] of Object.entries(fullySpecifiedPrimitives)) {
     for (const each of value) {
         each.sort()
@@ -83,65 +83,67 @@ export function getFullySpecifiedPrimitive(stringList) {
     }
 }
 
-class Type {
-    constructor({ baseName, primitiveCore, declareNode, qualifiers, storageClassSpecifiers, pointerInformation, ...other}) {
+export class Type {
+    constructor({ baseName, identifierInfo, qualifiers, storageClassSpecifiers, pointerInformation, ...other}) {
         this.baseName = baseName
-        this.primitiveCore = primitiveCore
-        this.declareNode = declareNode
-        this.qualifiers = qualifiers
-        this.storageClassSpecifiers = storageClassSpecifiers
+        this.identifierInfo = identifierInfo
+        this.qualifiers = qualifiers || []
+        this.storageClassSpecifiers = storageClassSpecifiers || []
         this.pointerInformation = pointerInformation
         Object.assign(this, other)
     }
     get isPrimitive() {
-        return !!this.declareNode
+        return !!this.identifierInfo
     }
     get isPointer() {
         return !!this.pointerInformation
     }
 }
 
-function parseType(stack, typeNodeOrArray) {
+function parseConcreteType(stack, typeNodeOrArray) {
+    // FIXME: make this error report its location in the code
+    const getErrorArgsAsString = ()=>typeNodeOrArray instanceof Array ? JSON.stringify(typeNodeOrArray.map(each=>each.text).join(" ")) : JSON.stringify(typeNodeOrArray.text)
+
     // trivial primitive
     if (typeNodeOrArray.type === 'primitive_type') {
         return {
             type: new Type({
                 baseName: typeNodeOrArray.text,
-                declareNode: null,
-                modifiers: [],
-            }),
-            remainingNodes: [],
-        }
-    }
-    
-    // trivial custom
-    if (typeNodeOrArray.type === 'type_identifier') {
-        const { exists, isLocal, isGlobal, identifierInfo } = stack.identifierInfoFor(identifierName)
-        if (!exists) {
-            // FIXME: make this error report its location in the code
-            throw Error(`Trying to use the ${JSON.stringify(typeNodeOrArray.text)} type, but it hasn't been declared yet`)
-        }
-        return {
-            type: new Type({
-                baseName: typeNodeOrArray.text,
-                declareNode: identifierInfo,
-                modifiers: [],
+                identifierInfo: null,
             }),
             remainingNodes: [],
         }
     }
 
+    // trivial custom
+    if (typeNodeOrArray.type === 'type_identifier') {
+        const { exists, isLocal, isGlobal, identifierInfo } = stack.identifierInfoFor(identifierName)
+        if (!exists) {
+            throw Error(`Trying to use the ${getErrorArgsAsString()} type, but it hasn't been declared yet`)
+        }
+        return {
+            type: new Type({
+                baseName: typeNodeOrArray.text,
+                identifierInfo,
+            }),
+            remainingNodes: [],
+        }
+    }
+    
+    // FIXME: handle edge case of struct definition
+    // FIXME: handle edge case of being given some other argument
+    
     if (typeNodeOrArray instanceof Array) {
         // 
         // extract: const, extern, inline, static, register, auto
         // 
-        let typeQualifiers = []
+        let qualifiers = []
         let storageClassSpecifiers = []
         let remaining = []
         for (const each of typeNodeOrArray) {
             // ex: const 
             if (each.type === 'type_qualifier') {
-                typeQualifiers.push(each.text)
+                qualifiers.push(each.text)
                 continue
             }
             // ex: extern, inline, static, register
@@ -158,34 +160,67 @@ function parseType(stack, typeNodeOrArray) {
         //
         let possibleMainType
         let modifiers = []
-        const current = [...remaining]
         remaining.length = 0
-        for (const each of current) {
-            if (!possibleMainType) {
-                // basic
-                if (each.type === 'primitive_type') {
-                    possibleMainType = each.text
-                    continue
-                }
-                // TODO: can type_identifier appear here?
-
-                if (each.type === 'sized_type_specifier') {
-                    for (const eachInner of each.children) {
-                        // if there is a non-modifier, then it is the main type of the size
-                        if (eachInner.type !== 'primitive_type') {
-                            possibleMainType = eachInner.text
-                            break
-                        }
-                        modifiers.push(eachInner.text)
-                    }
-                    continue
-                }
+        // TODO: note the error case is because of a bug in the tree sitter grammar
+        const isRelatedToModifiers = each => each.type === 'primitive_type' || each.type === 'sized_type_specifier' || (each.type === 'ERROR' && primitiveKeywordInfo[each.text])
+        // this could certainly be optimized
+        const modifiersAndPrimitives = remaining.filter(isRelatedToModifiers).map(each=>each.text).join(" ").split(/\s+/g)
+        remaining = remaining.filter(each=>!isRelatedToModifiers(each))
+        const fullySpecifiedPrimitiveType = getFullySpecifiedPrimitive(modifiersAndPrimitives)
+        
+        if (!fullySpecifiedPrimitiveType && modifiersAndPrimitives.length > 0) {
+            throw Error(`There's an issue with how the storage modifiers are being given for ${getErrorArgsAsString()}`)
+        }
+        
+        // 
+        // find out if pointer or func or custom type
+        // 
+        let typeIdentifers = remaining.filter(each=>each.type === 'type_identifier')
+        let structSpecifier = remaining.filter(each=>each.type === 'struct_specifier')
+        let totalConcreteTypes = (fullySpecifiedPrimitiveType ? 1 : 0) + typeIdentifers.length + structSpecifier.length
+        if (totalConcreteTypes > 1 || totalConcreteTypes == 0) {
+            if (totalConcreteTypes == 0) {
+                throw Error(`This type might have modifiers, but its lacking any concrete type: ${getErrorArgsAsString()}`)
+            } else {
+                throw Error(`This type has multiple concrete types: ${getErrorArgsAsString()}\nOnly one concrete type is allowed.`)
             }
-            remaining.push(each)
-            // <primitive_type
-            // <sized_type_specifier
-            // <type_identifier
-            // <struct_specifier
+        }
+        
+        // 
+        // primitive (with extras)
+        // 
+        if (fullySpecifiedPrimitiveType) {
+            return {
+                type: new Type({
+                    baseName: fullySpecifiedPrimitiveType.replace(/_/g, " "),
+                    declareNode: null,
+                    qualifiers,
+                    storageClassSpecifiers,
+                    pointerInformation: null,
+                }),
+                remainingNodes: remaining,
+            }
+        
+        // 
+        // custom (with extras)
+        // 
+        } else if (typeIdentifers.length == 1 || structSpecifier.length == 1) {
+            const node = typeIdentifers.concat(structSpecifier)[0]
+            const baseName = node.text
+            const { exists, isLocal, isGlobal, identifierInfo } = stack.identifierInfoFor(baseName)
+            if (!exists) {
+                throw Error(`Trying to use ${baseName} (from ${getErrorArgsAsString()} type), but it hasn't been declared yet`)
+            }
+            return {
+                type: new Type({
+                    baseName,
+                    identifierInfo,
+                    qualifiers,
+                    storageClassSpecifiers,
+                    pointerInformation: null,
+                }),
+                remainingNodes: remaining.filter(each=>each.type !== 'type_identifier' || each.type !== 'struct_specifier'),
+            }
         }
     }
 

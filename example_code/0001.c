@@ -3,6 +3,7 @@
 // 
     int aaa;
     int global;
+    short global2;
     struct AAAAAA { } aaaaaa;
     long long** var_dec_4;
     short const int** var_dec_5[22]; // breaks tree sitter (locally), but is valid C
