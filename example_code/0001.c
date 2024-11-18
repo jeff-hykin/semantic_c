@@ -3,7 +3,13 @@
 // 
     int aaa;
     int global;
+    struct AAAAAA { } aaaaaa;
 
+// 
+// function declare
+// 
+    int inc_global (void);
+    
 // 
 // function definitions
 // 
@@ -19,6 +25,11 @@
         int aaa = 0;
         global++;
         return aaa;
+    }
+    
+    AAAAAA inc_global_2 (void)
+    {
+        return aaaaaa;
     }
 
 // 

@@ -12,6 +12,35 @@
         <identifier text="global" />
         <";" text=";" />
     </declaration>
+    <declaration>
+        <struct_specifier>
+            <struct text="struct" />
+            <type_identifier text="AAAAAA" />
+            <field_declaration_list>
+                <"{" text="{" />
+                <"}" text="}" />
+            </field_declaration_list>
+        </struct_specifier>
+        <identifier text="aaaaaa" />
+        <";" text=";" />
+    </declaration>
+    <comment text="// " />
+    <comment text="// function declare" />
+    <comment text="// " />
+    <declaration>
+        <primitive_type text="int" />
+        <function_declarator>
+            <identifier text="inc_global" />
+            <parameter_list>
+                <"(" text="(" />
+                <parameter_declaration>
+                    <primitive_type text="void" />
+                </parameter_declaration>
+                <")" text=")" />
+            </parameter_list>
+        </function_declarator>
+        <";" text=";" />
+    </declaration>
     <comment text="// " />
     <comment text="// function definitions" />
     <comment text="// " />
@@ -89,6 +118,28 @@
             <return_statement>
                 <return text="return" />
                 <identifier text="aaa" />
+                <";" text=";" />
+            </return_statement>
+            <"}" text="}" />
+        </compound_statement>
+    </function_definition>
+    <function_definition>
+        <type_identifier text="AAAAAA" />
+        <function_declarator>
+            <identifier text="inc_global_2" />
+            <parameter_list>
+                <"(" text="(" />
+                <parameter_declaration>
+                    <primitive_type text="void" />
+                </parameter_declaration>
+                <")" text=")" />
+            </parameter_list>
+        </function_declarator>
+        <compound_statement>
+            <"{" text="{" />
+            <return_statement>
+                <return text="return" />
+                <identifier text="aaaaaa" />
                 <";" text=";" />
             </return_statement>
             <"}" text="}" />
