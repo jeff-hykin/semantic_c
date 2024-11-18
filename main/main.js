@@ -1,6 +1,6 @@
 import { Parser, parserFromWasm } from "https://deno.land/x/deno_tree_sitter@0.2.6.0/main.js"
 import c from "https://github.com/jeff-hykin/common_tree_sitter_languages/raw/a1c34a3a73a173f82657e25468efc76e9e593843/main/c.js"
-import { StackManager, replaceSequence } from "./utils/stack_manager.js"
+import { ScopeStackManager } from "./utils/stack_manager.js"
 import { processFiles } from "vsce/out/package.js"
 
 const parser = await parserFromWasm(c)
@@ -16,7 +16,7 @@ const parser = await parserFromWasm(c)
 
 function parse(code) {
     const tree = parser.parse(code)
-    const stack = new StackManager({
+    const stack = new ScopeStackManager({
         defaultInfoCreator: ()=>({
             varCount: 0,
             varInfo: {
