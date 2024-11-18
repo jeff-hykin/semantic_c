@@ -8,7 +8,7 @@ const parser = await parserFromWasm(c)
 // type handling
     // "storage_class_specifier" // static, extern, auto, register
     // "type_qualifier" // const, volatile, restrict
-    // "primitive_type" // void, char, short, int, long, float, double, signed, unsigned, bool
+    // "primitive_type" // void, char, short, int, long, float, double, signed, unsigned
     // "struct_specifier"  // struct A a; 
     // "union_specifier"
     // "enum_specifier"
@@ -53,23 +53,28 @@ function parse(code) {
         //
         if (direction == "->") {
             if (isTopLevel) {
+                const isTypeDef = type == "type_definition"
+                
+                const isStuctStatement = type == "struct_specifier" // struct name = "type_identifier"
+                const isStructDeclare = isStuctStatement && node.children.some(each=>each.type == "field_declaration_list")
+                const isStructDefinition = isStuctStatement && !isStructDeclare
+
+                // TODO: union and enum
+                
+                const isFunctionDefinition = type == "function_definition"
                 const isFunctionDeclare = type == "declaration" && node.children.some(each=>each.type == "function_declarator")
-                const isVarStatement = type == "declaration" && !isFunctionDeclare
+                
+                // NOTE: two types of var declarations: normal and at the end of a struct
+                // TODO: unions and enums
+                const isVarStatement = (type == "declaration" && !isFunctionDeclare) || (isStructDefinition && node.children.some(each=>each.type == "identifier"))
                 const isVarDefinition = type == isVarStatement && node.children.some(each=>each.type == "init_declarator")
                 const isVarDeclare = isVarStatement && !isVarDefinition
-                    // 
-                const isTypeDefiniton = type == "type_definition"
-                const isFunctionDefinition = type == "function_definition"
-                const isStructAndVarDefinition = type == "declaration" && node.children.some(each=>each.type == "struct_specifier")
-                const isNormalStuctDefinition = type == "struct_specifier" // struct name = "type_identifier"
                 
-                // TODO:
-                    // finish: structs
-                    // unions
-                    // enums
-                
-                // NOTE: edgecase of inline defined structs: struct S gs = ((struct S){1, 2, 3, 4}); // struct definition effectively
-                
+                // multi vs single
+                if (isTypeDef) {
+                    
+                }
+
                 // handleIdentifierUpdate(stack, identifierName, identifierNode, {
                 //     isDeclaration: true,
                 //     isDefinition: false,

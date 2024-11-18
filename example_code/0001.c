@@ -4,8 +4,9 @@
     int aaa;
     int global;
     struct AAAAAA { } aaaaaa;
-    const short int** var_dec_4;
-    static const int *var_dec_5[22];
+    long long** var_dec_4;
+    short const int** var_dec_5[22]; // breaks tree sitter (locally), but is valid C
+    static const int *var_dec_6[22];
 
 // 
 // function declare
@@ -15,6 +16,7 @@
     extern inline AAAAAA extern_inline_2(void);
     extern inline struct AAAAAA extern_inline_3(void);
     const short int** func_dec_4(void);
+    const short int** func_dec_5(register int a);
     
 // 
 // function definitions
@@ -43,6 +45,7 @@
 // 
     const int a = 0;
     const int assignment1 = 1, assignment2 = 2;
+    const short int** var_def = NULL;
 
 // 
 // typedefs

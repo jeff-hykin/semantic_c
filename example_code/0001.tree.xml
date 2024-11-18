@@ -25,18 +25,39 @@
         <";" text=";" />
     </declaration>
     <declaration>
-        <type_qualifier>
-            <const text="const" />
-        </type_qualifier>
         <sized_type_specifier>
-            <short text="short" />
-            <primitive_type text="int" />
+            <long text="long" />
+            <long text="long" />
         </sized_type_specifier>
         <pointer_declarator>
             <"*" text="*" />
             <pointer_declarator>
                 <"*" text="*" />
                 <identifier text="var_dec_4" />
+            </pointer_declarator>
+        </pointer_declarator>
+        <";" text=";" />
+    </declaration>
+    <declaration>
+        <sized_type_specifier>
+            <short text="short" />
+        </sized_type_specifier>
+        <type_qualifier>
+            <const text="const" />
+        </type_qualifier>
+        <ERROR>
+            <identifier text="int" />
+        </ERROR>
+        <pointer_declarator>
+            <"*" text="*" />
+            <pointer_declarator>
+                <"*" text="*" />
+                <array_declarator>
+                    <identifier text="var_dec_5" />
+                    <"[" text="[" />
+                    <number_literal text="22" />
+                    <"]" text="]" />
+                </array_declarator>
             </pointer_declarator>
         </pointer_declarator>
         <";" text=";" />
@@ -52,7 +73,7 @@
         <pointer_declarator>
             <"*" text="*" />
             <array_declarator>
-                <identifier text="var_dec_5" />
+                <identifier text="var_dec_6" />
                 <"[" text="[" />
                 <number_literal text="22" />
                 <"]" text="]" />
@@ -158,6 +179,36 @@
                         <"(" text="(" />
                         <parameter_declaration>
                             <primitive_type text="void" />
+                        </parameter_declaration>
+                        <")" text=")" />
+                    </parameter_list>
+                </function_declarator>
+            </pointer_declarator>
+        </pointer_declarator>
+        <";" text=";" />
+    </declaration>
+    <declaration>
+        <type_qualifier>
+            <const text="const" />
+        </type_qualifier>
+        <sized_type_specifier>
+            <short text="short" />
+            <primitive_type text="int" />
+        </sized_type_specifier>
+        <pointer_declarator>
+            <"*" text="*" />
+            <pointer_declarator>
+                <"*" text="*" />
+                <function_declarator>
+                    <identifier text="func_dec_5" />
+                    <parameter_list>
+                        <"(" text="(" />
+                        <parameter_declaration>
+                            <storage_class_specifier>
+                                <register text="register" />
+                            </storage_class_specifier>
+                            <primitive_type text="int" />
+                            <identifier text="a" />
                         </parameter_declaration>
                         <")" text=")" />
                     </parameter_list>
@@ -300,6 +351,29 @@
             <identifier text="assignment2" />
             <"=" text="=" />
             <number_literal text="2" />
+        </init_declarator>
+        <";" text=";" />
+    </declaration>
+    <declaration>
+        <type_qualifier>
+            <const text="const" />
+        </type_qualifier>
+        <sized_type_specifier>
+            <short text="short" />
+            <primitive_type text="int" />
+        </sized_type_specifier>
+        <init_declarator>
+            <pointer_declarator>
+                <"*" text="*" />
+                <pointer_declarator>
+                    <"*" text="*" />
+                    <identifier text="var_def" />
+                </pointer_declarator>
+            </pointer_declarator>
+            <"=" text="=" />
+            <null>
+                <NULL text="NULL" />
+            </null>
         </init_declarator>
         <";" text=";" />
     </declaration>
