@@ -24,6 +24,42 @@
         <identifier text="aaaaaa" />
         <";" text=";" />
     </declaration>
+    <declaration>
+        <type_qualifier>
+            <const text="const" />
+        </type_qualifier>
+        <sized_type_specifier>
+            <short text="short" />
+            <primitive_type text="int" />
+        </sized_type_specifier>
+        <pointer_declarator>
+            <"*" text="*" />
+            <pointer_declarator>
+                <"*" text="*" />
+                <identifier text="var_dec_4" />
+            </pointer_declarator>
+        </pointer_declarator>
+        <";" text=";" />
+    </declaration>
+    <declaration>
+        <storage_class_specifier>
+            <static text="static" />
+        </storage_class_specifier>
+        <type_qualifier>
+            <const text="const" />
+        </type_qualifier>
+        <primitive_type text="int" />
+        <pointer_declarator>
+            <"*" text="*" />
+            <array_declarator>
+                <identifier text="var_dec_5" />
+                <"[" text="[" />
+                <number_literal text="22" />
+                <"]" text="]" />
+            </array_declarator>
+        </pointer_declarator>
+        <";" text=";" />
+    </declaration>
     <comment text="// " />
     <comment text="// function declare" />
     <comment text="// " />
@@ -39,6 +75,95 @@
                 <")" text=")" />
             </parameter_list>
         </function_declarator>
+        <";" text=";" />
+    </declaration>
+    <declaration>
+        <storage_class_specifier>
+            <extern text="extern" />
+        </storage_class_specifier>
+        <storage_class_specifier>
+            <inline text="inline" />
+        </storage_class_specifier>
+        <primitive_type text="void" />
+        <function_declarator>
+            <identifier text="extern_inline_1" />
+            <parameter_list>
+                <"(" text="(" />
+                <parameter_declaration>
+                    <primitive_type text="void" />
+                </parameter_declaration>
+                <")" text=")" />
+            </parameter_list>
+        </function_declarator>
+        <";" text=";" />
+    </declaration>
+    <declaration>
+        <storage_class_specifier>
+            <extern text="extern" />
+        </storage_class_specifier>
+        <storage_class_specifier>
+            <inline text="inline" />
+        </storage_class_specifier>
+        <type_identifier text="AAAAAA" />
+        <function_declarator>
+            <identifier text="extern_inline_2" />
+            <parameter_list>
+                <"(" text="(" />
+                <parameter_declaration>
+                    <primitive_type text="void" />
+                </parameter_declaration>
+                <")" text=")" />
+            </parameter_list>
+        </function_declarator>
+        <";" text=";" />
+    </declaration>
+    <declaration>
+        <storage_class_specifier>
+            <extern text="extern" />
+        </storage_class_specifier>
+        <storage_class_specifier>
+            <inline text="inline" />
+        </storage_class_specifier>
+        <struct_specifier>
+            <struct text="struct" />
+            <type_identifier text="AAAAAA" />
+        </struct_specifier>
+        <function_declarator>
+            <identifier text="extern_inline_3" />
+            <parameter_list>
+                <"(" text="(" />
+                <parameter_declaration>
+                    <primitive_type text="void" />
+                </parameter_declaration>
+                <")" text=")" />
+            </parameter_list>
+        </function_declarator>
+        <";" text=";" />
+    </declaration>
+    <declaration>
+        <type_qualifier>
+            <const text="const" />
+        </type_qualifier>
+        <sized_type_specifier>
+            <short text="short" />
+            <primitive_type text="int" />
+        </sized_type_specifier>
+        <pointer_declarator>
+            <"*" text="*" />
+            <pointer_declarator>
+                <"*" text="*" />
+                <function_declarator>
+                    <identifier text="func_dec_4" />
+                    <parameter_list>
+                        <"(" text="(" />
+                        <parameter_declaration>
+                            <primitive_type text="void" />
+                        </parameter_declaration>
+                        <")" text=")" />
+                    </parameter_list>
+                </function_declarator>
+            </pointer_declarator>
+        </pointer_declarator>
         <";" text=";" />
     </declaration>
     <comment text="// " />
@@ -160,6 +285,24 @@
         </init_declarator>
         <";" text=";" />
     </declaration>
+    <declaration>
+        <type_qualifier>
+            <const text="const" />
+        </type_qualifier>
+        <primitive_type text="int" />
+        <init_declarator>
+            <identifier text="assignment1" />
+            <"=" text="=" />
+            <number_literal text="1" />
+        </init_declarator>
+        <"," text="," />
+        <init_declarator>
+            <identifier text="assignment2" />
+            <"=" text="=" />
+            <number_literal text="2" />
+        </init_declarator>
+        <";" text=";" />
+    </declaration>
     <comment text="// " />
     <comment text="// typedefs" />
     <comment text="// " />
@@ -212,27 +355,35 @@
     <struct_specifier>
         <struct text="struct" />
         <type_identifier text="contains_empty" />
-        <field_declaration_list>
-            <"{" text="{" />
-            <field_declaration>
-                <type_identifier text="u8" />
-                <field_identifier text="a" />
-                <";" text=";" />
-            </field_declaration>
-            <field_declaration>
-                <type_identifier text="empty_s" />
-                <field_identifier text="empty" />
-                <";" text=";" />
-            </field_declaration>
-            <field_declaration>
-                <type_identifier text="u8" />
-                <field_identifier text="b" />
-                <";" text=";" />
-            </field_declaration>
-            <"}" text="}" />
-        </field_declaration_list>
     </struct_specifier>
     <";" text=";" />
+    <declaration>
+        <struct_specifier>
+            <struct text="struct" />
+            <type_identifier text="contains_empty" />
+            <field_declaration_list>
+                <"{" text="{" />
+                <field_declaration>
+                    <type_identifier text="u8" />
+                    <field_identifier text="a" />
+                    <";" text=";" />
+                </field_declaration>
+                <field_declaration>
+                    <type_identifier text="empty_s" />
+                    <field_identifier text="empty" />
+                    <";" text=";" />
+                </field_declaration>
+                <field_declaration>
+                    <type_identifier text="u8" />
+                    <field_identifier text="b" />
+                    <";" text=";" />
+                </field_declaration>
+                <"}" text="}" />
+            </field_declaration_list>
+        </struct_specifier>
+        <identifier text="struct_var" />
+        <";" text=";" />
+    </declaration>
     <declaration>
         <struct_specifier>
             <struct text="struct" />
@@ -278,7 +429,7 @@
     <declaration>
         <struct_specifier>
             <struct text="struct" />
-            <type_identifier text="S" />
+            <type_identifier text="SpecialInlineStruct" />
         </struct_specifier>
         <init_declarator>
             <identifier text="gs" />
@@ -290,7 +441,7 @@
                     <type_descriptor>
                         <struct_specifier>
                             <struct text="struct" />
-                            <type_identifier text="S" />
+                            <type_identifier text="SpecialInlineStruct" />
                         </struct_specifier>
                     </type_descriptor>
                     <")" text=")" />
@@ -314,7 +465,7 @@
     <declaration>
         <struct_specifier>
             <struct text="struct" />
-            <type_identifier text="S" />
+            <type_identifier text="SpecialInlineStruct" />
         </struct_specifier>
         <init_declarator>
             <identifier text="gs2" />
@@ -533,7 +684,7 @@
     <declaration>
         <struct_specifier>
             <struct text="struct" />
-            <type_identifier text="S" />
+            <type_identifier text="SpecialInlineStruct" />
         </struct_specifier>
         <init_declarator>
             <identifier text="gs3" />
@@ -652,7 +803,7 @@
                     <type_descriptor>
                         <struct_specifier>
                             <struct text="struct" />
-                            <type_identifier text="S" />
+                            <type_identifier text="SpecialInlineStruct" />
                         </struct_specifier>
                     </type_descriptor>
                     <")" text=")" />
@@ -709,7 +860,7 @@
                         <type_descriptor>
                             <struct_specifier>
                                 <struct text="struct" />
-                                <type_identifier text="S" />
+                                <type_identifier text="SpecialInlineStruct" />
                             </struct_specifier>
                         </type_descriptor>
                         <")" text=")" />
@@ -879,7 +1030,7 @@
             <field_declaration>
                 <struct_specifier>
                     <struct text="struct" />
-                    <type_identifier text="S" />
+                    <type_identifier text="SpecialInlineStruct" />
                 </struct_specifier>
                 <field_identifier text="s" />
                 <";" text=";" />
@@ -978,7 +1129,7 @@
         </init_declarator>
         <";" text=";" />
     </declaration>
-    <comment text="/* Under -fms-extensions also the following is valid:\n    union UV2 {\n        struct Anon {u8 a,b;};    // unnamed member, but tagged struct, ...\n        struct S s;\n    };\n    struct Anon gan = { 10, 11 }; // ... which makes it available here.\n    union UV2 guv4 = {{4,3}};     // and the other inits from above as well\n    */" />
+    <comment text="/* Under -fms-extensions also the following is valid:\n    union UV2 {\n        struct Anon {u8 a,b;};    // unnamed member, but tagged struct, ...\n        struct SpecialInlineStruct s;\n    };\n    struct Anon gan = { 10, 11 }; // ... which makes it available here.\n    union UV2 guv4 = {{4,3}};     // and the other inits from above as well\n    */" />
     <comment text="// " />
     <comment text="// inline union" />
     <comment text="// " />
@@ -1169,7 +1320,7 @@
             <declaration>
                 <struct_specifier>
                     <struct text="struct" />
-                    <type_identifier text="S" />
+                    <type_identifier text="SpecialInlineStruct" />
                 </struct_specifier>
                 <init_declarator>
                     <identifier text="ls" />
@@ -1191,7 +1342,7 @@
             <declaration>
                 <struct_specifier>
                     <struct text="struct" />
-                    <type_identifier text="S" />
+                    <type_identifier text="SpecialInlineStruct" />
                 </struct_specifier>
                 <init_declarator>
                     <identifier text="ls2" />
@@ -1344,7 +1495,7 @@
                 </type_qualifier>
                 <struct_specifier>
                     <struct text="struct" />
-                    <type_identifier text="S" />
+                    <type_identifier text="SpecialInlineStruct" />
                 </struct_specifier>
                 <init_declarator>
                     <pointer_declarator>
@@ -1362,7 +1513,7 @@
             <declaration>
                 <struct_specifier>
                     <struct text="struct" />
-                    <type_identifier text="S" />
+                    <type_identifier text="SpecialInlineStruct" />
                 </struct_specifier>
                 <init_declarator>
                     <identifier text="ls21" />
@@ -1528,7 +1679,7 @@
             <declaration>
                 <struct_specifier>
                     <struct text="struct" />
-                    <type_identifier text="S" />
+                    <type_identifier text="SpecialInlineStruct" />
                 </struct_specifier>
                 <init_declarator>
                     <identifier text="ls3" />
@@ -1635,7 +1786,7 @@
                             <type_descriptor>
                                 <struct_specifier>
                                     <struct text="struct" />
-                                    <type_identifier text="S" />
+                                    <type_identifier text="SpecialInlineStruct" />
                                 </struct_specifier>
                             </type_descriptor>
                             <")" text=")" />
@@ -1686,7 +1837,7 @@
                                 <type_descriptor>
                                     <struct_specifier>
                                         <struct text="struct" />
-                                        <type_identifier text="S" />
+                                        <type_identifier text="SpecialInlineStruct" />
                                     </struct_specifier>
                                 </type_descriptor>
                                 <")" text=")" />

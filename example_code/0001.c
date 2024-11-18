@@ -4,11 +4,17 @@
     int aaa;
     int global;
     struct AAAAAA { } aaaaaa;
+    const short int** var_dec_4;
+    static const int *var_dec_5[22];
 
 // 
 // function declare
 // 
     int inc_global (void);
+    extern inline void extern_inline_1(void);
+    extern inline AAAAAA extern_inline_2(void);
+    extern inline struct AAAAAA extern_inline_3(void);
+    const short int** func_dec_4(void);
     
 // 
 // function definitions
@@ -36,6 +42,7 @@
 // top level assignment
 // 
     const int a = 0;
+    const int assignment1 = 1, assignment2 = 2;
 
 // 
 // typedefs
@@ -47,18 +54,19 @@
 // 
 // structs
 // 
+    struct contains_empty;
     struct contains_empty {
         u8 a;
         empty_s empty;
         u8 b;
-    };
+    } struct_var;
     struct contains_empty ce = { { (1) }, (empty_s){}, 022, };
 
 // 
 // struct assignment
 // 
-    struct S gs = ((struct S){1, 2, 3, 4});
-    struct S gs2 = {1, 2, {3, 4}};
+    struct SpecialInlineStruct gs = ((struct SpecialInlineStruct){1, 2, 3, 4});
+    struct SpecialInlineStruct gs2 = {1, 2, {3, 4}};
     struct T gt = {"hello", 42};
     struct U gu = {3, 5,6,7,8, 4, "huhu", 43};
     struct U gu2 = {3, {5,6,7,8}, 4, {"huhu", 43}};
@@ -68,13 +76,13 @@
     /* Many superfluous braces and leaving out one initializer for U.s.c[1] */
     struct U gu4 = { 3, {5,6,7,},  5, { "bla", {44}} };
     /* Superfluous braces and useless parens around values */
-    struct S gs3 = { (1), {(2)}, {(((3))), {4}}};
+    struct SpecialInlineStruct gs3 = { (1), {(2)}, {(((3))), {4}}};
     /* Superfluous braces, and leaving out braces for V.t, plus cast */
     struct V gv = {{{3},4,{5,6}}, "haha", (u8)45, 46};
     /* Compound literal */
-    struct V gv2 = {(struct S){7,8,{9,10}}, {"hihi", 47}, 48};
+    struct V gv2 = {(struct SpecialInlineStruct){7,8,{9,10}}, {"hihi", 47}, 48};
     /* Parens around compound literal */
-    struct V gv3 = {((struct S){7,8,{9,10}}), {"hoho", 49}, 50};
+    struct V gv3 = {((struct SpecialInlineStruct){7,8,{9,10}}), {"hoho", 49}, 50};
     /* Initialization of a flex array member (warns in GCC) */
     struct W gw = {{1,2,3,4}, {1,2,3,4,5}};
 
@@ -96,7 +104,7 @@
     extension.  See below for further extensions to that under -fms-extension.*/
     union UV {
         struct {u8 a,b;};
-        struct S s;
+        struct SpecialInlineStruct s;
     };
     union UV guv = {{6,5}};
     union UV guv2 = {{.b = 7, .a = 8}};
@@ -105,7 +113,7 @@
     /* Under -fms-extensions also the following is valid:
     union UV2 {
         struct Anon {u8 a,b;};    // unnamed member, but tagged struct, ...
-        struct S s;
+        struct SpecialInlineStruct s;
     };
     struct Anon gan = { 10, 11 }; // ... which makes it available here.
     union UV2 guv4 = {{4,3}};     // and the other inits from above as well
@@ -159,14 +167,14 @@
     // };
 
 void foo (struct W *w, struct pkthdr *phdr_) {
-    struct S ls = {1, 2, 3, 4};
-    struct S ls2 = {1, 2, {3, 4}};
+    struct SpecialInlineStruct ls = {1, 2, 3, 4};
+    struct SpecialInlineStruct ls2 = {1, 2, {3, 4}};
     struct T lt = {"hello", 42};
     struct U lu = {3, 5,6,7,8, 4, "huhu", 43};
     struct U lu1 = {3, ls, 4, {"huhu", 43}};
     struct U lu2 = {3, (ls), 4, {"huhu", 43}};
-    const struct S *pls = &ls;
-    struct S ls21 = *pls;
+    const struct SpecialInlineStruct *pls = &ls;
+    struct SpecialInlineStruct ls21 = *pls;
     struct U lu22 = {3, *pls, 4, {"huhu", 43}};
     /* Incomplete bracing.  */
     struct U lu21 = {3, ls, 4, "huhu", 43};
@@ -175,13 +183,13 @@ void foo (struct W *w, struct pkthdr *phdr_) {
     /* Many superfluous braces and leaving out one initializer for U.s.c[1] */
     struct U lu4 = { 3, {5,6,7,},  5, { "bla", 44} };
     /* Superfluous braces and useless parens around values */
-    struct S ls3 = { (1), (2), {(((3))), 4}};
+    struct SpecialInlineStruct ls3 = { (1), (2), {(((3))), 4}};
     /* Superfluous braces, and leaving out braces for V.t, plus cast */
     struct V lv = {{3,4,{5,6}}, "haha", (u8)45, 46};
     /* Compound literal */
-    struct V lv2 = {(struct S)w->t.s, {"hihi", 47}, 48};
+    struct V lv2 = {(struct SpecialInlineStruct)w->t.s, {"hihi", 47}, 48};
     /* Parens around compound literal */
-    struct V lv3 = {((struct S){7,8,{9,10}}), ((const struct W *)w)->t.t, 50};
+    struct V lv3 = {((struct SpecialInlineStruct){7,8,{9,10}}), ((const struct W *)w)->t.t, 50};
     const struct pkthdr *phdr = phdr_;
     struct flowi6 flow = { .daddr = phdr->daddr, .saddr = phdr->saddr };
     int elt = 0x42;
