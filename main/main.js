@@ -1,7 +1,7 @@
 import { Parser, parserFromWasm } from "https://deno.land/x/deno_tree_sitter@0.2.6.0/main.js"
 import c from "https://github.com/jeff-hykin/common_tree_sitter_languages/raw/a1c34a3a73a173f82657e25468efc76e9e593843/main/c.js"
 import { ScopeStackManager } from "./utils/stack_manager.js"
-import { processFiles } from "vsce/out/package.js"
+import { parseConcreteType } from "./utils/type_handler.js"
 
 const parser = await parserFromWasm(c)
 
@@ -123,7 +123,7 @@ function handleIdentifierUpdate(stack, identifierName, identifierNode, {isDeclar
     
     // variable begin declared
     if (isDeclaration) {
-        // new local var created
+        // new local identifier created
         if (!isLocal) {
             return localIdentifiers[identifierName] = {
                 number: Object.keys(localIdentifiers).length,
@@ -139,7 +139,7 @@ function handleIdentifierUpdate(stack, identifierName, identifierNode, {isDeclar
             throw Error(`Variable delcared twice in the same scope: ${identifierName}\n${identifierNode}`)
         }
     } else if (isDefinition) {
-        // new local var created
+        // new local identifier created
         if (!isLocal) {
             return localIdentifiers[identifierName] = {
                 number: Object.keys(localIdentifiers).length,

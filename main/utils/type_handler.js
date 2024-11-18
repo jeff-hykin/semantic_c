@@ -84,11 +84,12 @@ export function getFullySpecifiedPrimitive(stringList) {
 }
 
 export class Type {
-    constructor({ baseName, identifierInfo, qualifiers, storageClassSpecifiers, pointerInformation, ...other}) {
+    constructor({ baseName, identifierInfo, qualifiers, storageClassSpecifiers, pointerInformation, anonymousInfo, ...other}) {
         this.baseName = baseName
         this.identifierInfo = identifierInfo
         this.qualifiers = qualifiers || []
         this.storageClassSpecifiers = storageClassSpecifiers || []
+        this.anonymousInfo = anonymousInfo
         this.pointerInformation = pointerInformation
         Object.assign(this, other)
     }
@@ -100,10 +101,23 @@ export class Type {
     }
 }
 
-function parseConcreteType(stack, typeNodeOrArray) {
+/**
+ * parseConcreteType
+ *
+ * @note
+ *     only parses the front of pointers, arrays, and function
+ * 
+ * @example
+ *     var { type, remainingNodes } = parseConcreteType(stack, typeNodeOrArray, handleIdentifierUpdate)
+ */
+export function parseConcreteType(stack, typeNodeOrArray, handleIdentifierUpdate) {
+    // FIXME:
+        // handle unions and enums
+        // test arrays
+
     // FIXME: make this error report its location in the code
     const getErrorArgsAsString = ()=>typeNodeOrArray instanceof Array ? JSON.stringify(typeNodeOrArray.map(each=>each.text).join(" ")) : JSON.stringify(typeNodeOrArray.text)
-
+    
     // trivial primitive
     if (typeNodeOrArray.type === 'primitive_type') {
         return {
@@ -113,10 +127,8 @@ function parseConcreteType(stack, typeNodeOrArray) {
             }),
             remainingNodes: [],
         }
-    }
-
     // trivial custom
-    if (typeNodeOrArray.type === 'type_identifier') {
+    } else if (typeNodeOrArray.type === 'type_identifier') {
         const { exists, isLocal, isGlobal, identifierInfo } = stack.identifierInfoFor(identifierName)
         if (!exists) {
             throw Error(`Trying to use the ${getErrorArgsAsString()} type, but it hasn't been declared yet`)
@@ -128,12 +140,41 @@ function parseConcreteType(stack, typeNodeOrArray) {
             }),
             remainingNodes: [],
         }
-    }
-    
-    // FIXME: handle edge case of struct definition
-    // FIXME: handle edge case of being given some other argument
-    
-    if (typeNodeOrArray instanceof Array) {
+    // struct definition
+    } else if (typeNodeOrArray.type === 'struct_specifier') {
+        // TODO: if not has fields, error (unintented usage)
+        const hasName = typeNodeOrArray.children.some(each=>each.type === 'type_identifier')
+        if (!hasName) {
+            return {
+                type: new Type({
+                    baseName: "<anonymous>",
+                    identifierInfo: {
+                        isAnonymous: true,
+                        nodes: [
+                            typeNodeOrArray,
+                        ],
+                        source: stack.position,
+                        declaration: typeNodeOrArray,
+                    },
+                }),
+                remainingNodes: [],
+            }
+        } else {
+            const identifierNode = typeNodeOrArray.children.filter(each=>each.type === 'type_identifier')[0]
+            const identifierName = identifierNode.text
+            const identifierInfo = handleIdentifierUpdate(stack, identifierName, identifierNode, {isDeclaration: false, isDefinition: true, isVar: false, isFunction: false, isType: true, })
+            if (!exists) {
+                throw Error(`Trying to use the ${getErrorArgsAsString()} type, but it hasn't been declared yet`)
+            }
+            return {
+                type: new Type({
+                    baseName: identifierName,
+                    identifierInfo,
+                }),
+                remainingNodes: [],
+            }
+        }
+    } else if (typeNodeOrArray instanceof Array) {
         // 
         // extract: const, extern, inline, static, register, auto
         // 
@@ -205,7 +246,11 @@ function parseConcreteType(stack, typeNodeOrArray) {
         // custom (with extras)
         // 
         } else if (typeIdentifers.length == 1 || structSpecifier.length == 1) {
-            const node = typeIdentifers.concat(structSpecifier)[0]
+            let node = typeIdentifers.concat(structSpecifier)[0]
+            // TODO: if somehow this struct_specifier does have fields, error (unintented usage)
+            if (node.type === 'struct_specifier') {
+                node = node.children.filter(each=>each.type === 'type_identifier')[0]
+            }
             const baseName = node.text
             const { exists, isLocal, isGlobal, identifierInfo } = stack.identifierInfoFor(baseName)
             if (!exists) {
@@ -223,10 +268,8 @@ function parseConcreteType(stack, typeNodeOrArray) {
             }
         }
     }
-
-    
-
-    // TODO: handle arrays
+    throw Error(`Unable to parse the concrete type for: ${getErrorArgsAsString()}`)
+}
     
     //     <primitive_type text="char" />
     // ---------------------
@@ -321,5 +364,3 @@ function parseConcreteType(stack, typeNodeOrArray) {
         // _Bool // check
         // _Complex // check
         // _Imaginary // check
-    
-}

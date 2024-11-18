@@ -1,4 +1,4 @@
-import { StackManager, replaceSequence } from "../tooling.js"
+import { ScopeStackManager, replaceSequence } from "../tooling.js"
 import { Parser, parserFromWasm } from "https://deno.land/x/deno_tree_sitter@0.1.3.0/main.js"
 import python from "https://deno.land/x/common_tree_sitter_languages@1.0.0.3/main/python.js"
 
@@ -46,7 +46,7 @@ export const removeComments = ({ code, debugging=false, parser=defaultParser })=
 }
 
 export const autoRenameVars = ({ code, useGloballyUniqueNames=false, nameGenerator=(id)=>`var_${id}`, debugging=false, parser=defaultParser })=> {
-    const stack = new StackManager({
+    const stack = new ScopeStackManager({
         defaultInfoCreator: ()=>({
             varCount: 0,
             varInfo: {
@@ -219,7 +219,7 @@ export const autoRenameVars = ({ code, useGloballyUniqueNames=false, nameGenerat
 
     return {
         newCode,
-        stackManager: stack,
+        ScopeStackManager: stack,
         varSelections: allSelections,
     }
 }
